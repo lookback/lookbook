@@ -1,0 +1,42 @@
+/*
+CODE AND PREFORMATTED TEXT
+----------------------------------------------------------------*/
+
+code,
+pre,
+tt {
+  @apply font-mono;
+}
+
+pre {
+  @apply rounded text-sm p-4 text-blue-80;
+  background-color: config('colors.grey-20');
+}
+
+code,
+kbd {
+  @apply font-mono text-sm border;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  margin: 0 2px;
+  background-color: #fdfdfd;
+}
+
+code {
+  color: config('colors.purple-60');
+  border-color: config('colors.purple-30');
+}
+
+pre code {
+  font-size: inherit;
+  padding: 0;
+  background: none;
+  border: 0;
+  color: inherit;
+}
+
+kbd {
+  color: config('colors.blue-80');
+  border-color: config('colors.grey-20');
+  box-shadow: rgba(config('borderColors.main'), 0.5) 0 1px 0;
+}

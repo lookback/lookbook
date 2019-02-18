@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+[[ -z "${NODE_ENV}" ]] && env="production" || env="${NODE_ENV}"
+
+file=src/lookbook.css
+dir=dist
+
+echo "🕐 Building $file for $env..."
+
+NODE_ENV=$env npx postcss "$file" --dir "$dir" --ext dist.css "$@"
+
+status=$?
+
+size="$(ls -lah dist/lookbook.dist.css | awk -F " " {'print $5'})"
+
+echo "✅ Done! Built into $dir/lookbook.dist.css ($size)" && exit $status

@@ -1,0 +1,22 @@
+@charset "utf8";
+
+ol li {
+  padding-left: 1.5em;
+}
+
+.container {
+  @apply max-w-2xl py-10;
+  margin: 0 auto;
+}
+
+.chapter-heading {
+  @apply font-light text-title mb-10;
+}
+
+.section-heading {
+  @apply uppercase font-bold text-sm tracking-wide mb-10 border-b pb-4;
+}
+
+main section {
+  @apply mb-24;
+}

@@ -1,0 +1,113 @@
+/*
+BUTTONS
+----------------------------------------------------------------*/
+
+@define-mixin btn-disabled $background {
+  box-shadow: none;
+  cursor: default;
+  background-color: color($background tint(70%) saturation(- 60%));
+  color: color($background saturation(- 90%));
+}
+
+@define-mixin btn-focused $base-color {
+  box-shadow: rgba($base-color, 0.3) 0 0 0 4px;
+}
+
+.btn {
+  @apply rounded bg-blue-50 text-white font-bold inline-block relative;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  user-select: none;
+  white-space: nowrap;
+  border: 0;
+
+  padding: 0.5em 1em;
+  transition: box-shadow 0.2s ease-out;
+
+  &:focus {
+    outline: 0;
+    @mixin btn-focused config('colors.blue-50');
+  }
+
+  &:hover {
+    background-color: color(config('colors.blue-50') shade(5%));
+  }
+
+  &:active {
+    background-color: color(config('colors.blue-60') shade(10%));
+  }
+
+  &[disabled] {
+    @mixin btn-disabled config('colors.blue-50');
+  }
+}
+
+.btn-secondary {
+  @apply bg-grey-20 text-blue-80;
+
+  &:focus {
+    @mixin btn-focused config('colors.grey-30');
+  }
+
+  &:hover {
+    background-color: config('colors.grey-30');
+  }
+
+  &:active {
+    background-color: config('colors.grey-40');
+  }
+
+  &[disabled] {
+    @mixin btn-disabled config('colors.grey-50');
+  }
+}
+
+.btn-primary {
+  @apply bg-green-50;
+
+  &:focus {
+    @mixin btn-focused config('colors.green-50');
+  }
+
+  &:hover {
+    background-color: config('colors.green-60');
+  }
+
+  &:active {
+    background-color: color(config('colors.green-60') shade(20%));
+  }
+
+  &[disabled] {
+    @mixin btn-disabled config('colors.green-50');
+  }
+}
+
+.btn-link {
+  @apply text-blue-50;
+  transition: none;
+  background-color: transparent;
+  position: relative;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: transparent;
+    box-shadow: none;
+    text-decoration: underline;
+  }
+
+  &:hover {
+    color: config('colors.blue-60');
+  }
+
+  &:active {
+    top: 1px;
+  }
+
+  &[disabled] {
+    background-color: transparent;
+    color: color(config('colors.blue-50') saturation(- 90%));
+    opacity: 0.8;
+    text-decoration: none;
+  }
+}

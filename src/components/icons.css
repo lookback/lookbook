@@ -1,0 +1,16 @@
+/* =ICONS
+--------------------------------------------- */
+
+.icon {
+  /* Will be inherited from parent's 'color' property. */
+  fill: currentColor;
+  /* In case the icon is of paths only */
+  stroke: currentColor;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+}
+
+a .icon {
+  cursor: pointer;
+}

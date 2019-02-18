@@ -1,0 +1,32 @@
+/*
+HTML ELEMENTS
+----------------------------------------------------------------*/
+
+abbr[title],
+abbr[data-tooltip] {
+  cursor: help;
+}
+
+a {
+  color: config('colors.blue-50');
+}
+
+mark {
+  @apply rounded-sm;
+  padding: 0 0.25em;
+  background-color: config('colors.orange-20');
+}
+
+dt {
+  font-weight: 600;
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+
+  &,
+  &:focus {
+    outline: 0;
+  }
+}
