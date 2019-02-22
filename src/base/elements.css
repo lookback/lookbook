@@ -30,3 +30,9 @@ details summary {
     outline: 0;
   }
 }
+
+/* Remove default list styling */
+nav ul,
+nav ol {
+  @apply list-reset;
+}
