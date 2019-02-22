@@ -1,6 +1,6 @@
 {
   "name": "lookbook",
-  "version": "2.0.0",
+  "version": "2.0.0-alpha.1",
   "description": "The design system of Lookback",
   "scripts": {
     "test": "stylelint src/**/*.css",
@@ -8,7 +8,8 @@
     "build:dev": "NODE_ENV=development scripts/build",
     "watch": "NODE_ENV=development scripts/build --watch --verbose",
     "start": "npx postcss test/index.css --dir test --ext dist.css --watch --verbose",
-    "fetch-colors": "node scripts/fetch-figma-colors.js"
+    "fetch-colors": "node scripts/fetch-figma-colors.js",
+    "release": "node scripts/distribute.js dist/lookbook.dist.css"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
   },
   "homepage": "https://github.com/lookback/lookbook#readme",
   "devDependencies": {
+    "aws-sdk": "^2.408.0",
     "dotenv": "^6.2.0",
     "eslint": "^5.8.0",
     "stylelint": "^9.10.1",

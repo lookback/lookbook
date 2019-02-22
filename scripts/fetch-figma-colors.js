@@ -51,13 +51,10 @@ const fetchStyles = async (teamId) => {
     return json.meta.styles;
 };
 
-const fetchFile = async (key) => {
-    return await doFetch(`/files/${key}`);
-};
+const fetchFile = async (key) => await doFetch(`/files/${key}`);
 
-const fetchStyle = async (key) => {
-    return await doFetch(`/styles/${key}`);
-};
+// eslint-disable-next-line
+const fetchStyle = async (key) => await doFetch(`/styles/${key}`);
 
 /**
  * Fetches all color styles from the Figma doc and returns an object
