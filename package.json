@@ -21,7 +21,7 @@
     "system",
     "components"
   ],
-  "author": "Johan Brook",
+  "author": "Johan Brook <johan@lookback.io>",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
     "url": "https://github.com/lookback/lookbook/issues"
@@ -34,9 +34,6 @@
     "stylelint": "^9.10.1",
     "stylelint-config-recommended": "^2.1.0"
   },
-  "browserslist": [
-    "last 2 versions"
-  ],
   "dependencies": {
     "autoprefixer": "^9.3.1",
     "cssnano": "^4.1.7",
