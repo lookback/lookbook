@@ -59,10 +59,10 @@ const stylesheetExistsInBucket = (filename, version) =>
 const uploadFile = async (pathToFile) => {
     console.log('-> Releasing to S3...');
 
+    const version = pkgVersion;
     const contents = await readFile(pathToFile);
     const filename = path.basename(pathToFile);
-    const key = await makeKeyName(filename);
-    const version = pkgVersion;
+    const key = await makeKeyName(filename, version);
 
     const opts = {
         Bucket: bucket,
