@@ -1,3 +1,19 @@
+/*
+ * This script fetches all color styles from a Figma team/document.
+ *
+ * Due to a limitation in the Figma /styles endpoint, we need to use a
+ * document for actually using the colors in a color grid 🙄That's why
+ * we're both fetching from /styles and /files below.
+ *
+ * For now, you need to input the page and team IDs, as well as the file keys.
+ * The team ID is in the Figma URL of your team, and the file key is the long
+ * string in the full URL of a Figma file. The page ID is visible in the JSON
+ * payload when you call /files 🤷‍♂️
+ */
+const PAGE_ID = '182:0';
+const TEAM_ID = '536579955360410320';
+const FILE_KEY = 'bMb57SxaX0ugGmWMmi7KVzIP';
+
 const fetch = require('node-fetch');
 const dotenv = require('dotenv');
 const fs = require('fs');
@@ -82,10 +98,10 @@ const fetchStyle = async (key) => await doFetch(`/styles/${key}`);
  ```
  */
 const fetchAllColorStyles = async () => {
-    const styles = await fetchStyles('536579955360410320');
-    const file = await fetchFile('bMb57SxaX0ugGmWMmi7KVzIP');
+    const styles = await fetchStyles(TEAM_ID);
+    const file = await fetchFile(FILE_KEY);
 
-    const canvas = file.document.children.find((page) => page.id === '182:0');
+    const canvas = file.document.children.find((page) => page.id === PAGE_ID);
 
     return (
         canvas &&
