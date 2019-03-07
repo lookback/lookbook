@@ -71,59 +71,6 @@ Built with Tailwind - The Utility-First CSS Framework. View the full documentati
 |
 | http://chir.ag/projects/name-that-color
 */
-
-const colors1 = {
-    transparent: 'transparent',
-
-    black: '#22292f',
-
-    grey: '#668EA7',
-
-    'grey-darker': '#5E7D90',
-
-    'grey-lighter': '#8FB1C7',
-
-    'grey-lightest': '#CCDFEC',
-
-    white: '#fff',
-
-    red: '#ED213E',
-
-    orange: '#F3B109',
-
-    green: '#00DE87',
-
-    'green-darker': '#00C779',
-
-    orient: '#005C81',
-
-    'orient-darker': '#124C68',
-
-    'orient-lighter': '#5A90A6',
-
-    'orient-lightest': '#B9E1F2',
-
-    'picton-blue': '#49C9E2',
-
-    'picton-blue-darker': '#22606C',
-
-    'picton-blue-lightest': '#EDF8FD',
-
-    blue: '#1DABF2',
-
-    'blue-darker': '#0092D2',
-
-    'blue-lightest': '#F6FAFC',
-
-    'blue-faded': '#4D9FC7',
-
-    purple: '#8188F1',
-
-    'purple-darker': '#595fc1',
-
-    'purple-lighter': '#c7d0f9',
-};
-
 const colors = {
     ...styleColors,
     'off-white': '#fefefe',
@@ -310,7 +257,14 @@ module.exports = {
 
     textColors: {
         default: colors['blue-80'],
-        ...pick(colors, ['white', 'blue-50', 'blue-80', 'green-50', 'grey-50']),
+        ...pick(colors, [
+            'white',
+            'blue-50',
+            'blue-70',
+            'blue-80',
+            'green-50',
+            'grey-50',
+        ]),
     },
 
     /*
