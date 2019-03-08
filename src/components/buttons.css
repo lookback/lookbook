@@ -2,19 +2,18 @@
 BUTTONS
 ----------------------------------------------------------------*/
 
-@define-mixin btn-disabled $background {
-  box-shadow: none;
-  cursor: default;
-  background-color: color($background tint(70%) saturation(- 60%));
-  color: color($background saturation(- 90%));
-}
-
-@define-mixin btn-focused $base-color {
-  box-shadow: rgba($base-color, 0.3) 0 0 0 4px;
-}
-
 .btn {
-  @apply rounded bg-blue-50 text-white font-bold inline-block relative;
+  --background: config('colors.blue-50');
+  --text: #fff;
+  --focused: color(config('colors.blue-50') shade(10%));
+  --hover: color(config('colors.blue-50') shade(10%));
+  --active: color(config('colors.blue-60') shade(10%));
+  --disabled-bg: color(config('colors.blue-50') tint(70%) saturation(- 60%));
+  --disabled-color: color(config('colors.blue-50') saturation(- 90%));
+
+  @apply rounded font-bold inline-block relative;
+  background-color: var(--background);
+  color: var(--text);
   -webkit-tap-highlight-color: transparent;
   text-decoration: none;
   user-select: none;
@@ -22,70 +21,52 @@ BUTTONS
   border: 0;
 
   padding: 0.5em 1em;
-  transition: box-shadow 0.2s ease-out;
+  transition: box-shadow 0.2s ease-out, background-color 0.2s ease-out;
 
   &:focus {
     outline: 0;
-    @mixin btn-focused config('colors.blue-50');
+    background-color: var(--focused);
   }
 
   &:hover {
-    background-color: color(config('colors.blue-50') shade(5%));
+    background-color: var(--hover);
   }
 
   &:active {
-    background-color: color(config('colors.blue-60') shade(10%));
+    background-color: var(--active);
   }
 
   &[disabled] {
-    @mixin btn-disabled config('colors.blue-50');
+    box-shadow: none;
+    cursor: default;
+    background-color: var(--disabled-bg);
+    color: var(--disabled-color);
   }
 }
 
 .btn-secondary {
-  @apply bg-grey-20 text-blue-80;
-
-  &:focus {
-    @mixin btn-focused config('colors.grey-30');
-  }
-
-  &:hover {
-    background-color: config('colors.grey-30');
-  }
-
-  &:active {
-    background-color: config('colors.grey-40');
-  }
-
-  &[disabled] {
-    @mixin btn-disabled config('colors.grey-50');
-  }
+  --text: config('colors.blue-80');
+  --background: config('colors.grey-20');
+  --focused: config('colors.grey-30');
+  --hover: color(config('colors.grey-20') shade(10%));
+  --active: config('colors.grey-40');
+  --disabled-bg: color(config('colors.grey-50') tint(70%) saturation(- 60%));
+  --disabled-color: color(config('colors.grey-50') saturation(- 90%));
 }
 
 .btn-primary {
-  @apply bg-green-50;
-
-  &:focus {
-    @mixin btn-focused config('colors.green-50');
-  }
-
-  &:hover {
-    background-color: config('colors.green-60');
-  }
-
-  &:active {
-    background-color: color(config('colors.green-60') shade(20%));
-  }
-
-  &[disabled] {
-    @mixin btn-disabled config('colors.green-50');
-  }
+  --background: config('colors.green-50');
+  --focused: config('colors.green-60');
+  --hover: config('colors.green-60');
+  --active: color(config('colors.green-60') shade(20%));
+  --disabled-bg: color(config('colors.green-50') tint(70%) saturation(- 60%));
+  --disabled-color: color(config('colors.green-50') saturation(- 90%));
 }
 
 .btn-link {
-  @apply text-blue-50;
+  --background: transparent;
+  --text: config('colors.blue-50');
   transition: none;
-  background-color: transparent;
   position: relative;
 
   &:hover,
@@ -94,9 +75,6 @@ BUTTONS
     background-color: transparent;
     box-shadow: none;
     text-decoration: underline;
-  }
-
-  &:hover {
     color: config('colors.blue-60');
   }
 
