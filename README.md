@@ -24,15 +24,15 @@ This CSS file is cached with `immutable, max-age: 31536000`.
 
 ### 2. Custom use with PostCSS
 
-If you'd like to use the variables in your custom CSS, you can install this Lookbook as an npm module and use its exported `config` in a PostCSS setup:
+If you'd like to use the variables in your custom CSS, you can install this Lookbook as an npm module and use its exported `postCssConfig` in a PostCSS setup:
 
 ```js
-import { config } from 'lookbook';
+import { postCssConfig } from 'lookbook';
 
 const compileCss = () =>
   gulp
     .src('src/stylesheets/*.css')
-    .pipe(postcss(config.plugins))
+    .pipe(postcss(postCssConfig.plugins))
     .pipe(gulp.dest('./dist'));
 
 gulp.task('css', () => compileCss());

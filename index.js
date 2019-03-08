@@ -1,5 +1,7 @@
-const postCSSConfig = require('./postcss.config');
+const postCssConfig = require('./postcss.config');
 const colors = require('./colors');
+const tailwindConfig = require('./tailwind.config');
 
-exports.config = postCSSConfig;
+exports.postCssConfig = postCssConfig;
 exports.colors = colors;
+exports.tailwindConfig = tailwindConfig;
