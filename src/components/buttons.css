@@ -42,6 +42,10 @@ BUTTONS
     background-color: var(--disabled-bg);
     color: var(--disabled-color);
   }
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
 }
 
 .btn-secondary {
