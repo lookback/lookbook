@@ -1,5 +1,5 @@
 /* eslint-disable */
-/* Updated at Thu, 07 Mar 2019 14:28:59 GMT*/
+/* Updated at Fri, 08 Mar 2019 14:37:48 GMT*/
 module.exports = {
     'orange-10': '#fef7ea',
     'orange-20': '#fef3d7',
@@ -17,10 +17,10 @@ module.exports = {
     'blue-40': '#7cd7ff',
     /** Good for buttons and links. */
     'blue-50': '#00aaf5',
-    'blue-60': '#3894b8',
+    'blue-60': '#318bb2',
     'blue-70': '#005c81',
-    'blue-80': '#124c68',
-    'blue-90': '#0f3b4e',
+    'blue-80': '#00445b',
+    'blue-90': '#002a38',
     'green-10': '#ebfff7',
     'green-20': '#bdffe5',
     'green-30': '#75ebbd',
