@@ -1,10 +1,10 @@
 const path = require('path');
 
-const pathToTailwindConf = path.resolve(
+const LOOKBOOK_TAILWIND_CONF = path.resolve(
     path.join(__dirname, 'tailwind.config.js')
 );
 
-module.exports = {
+module.exports = ({ pathToTailwindConf = LOOKBOOK_TAILWIND_CONF } = {}) => ({
     map: 'inline', // Sourcemaps
     plugins: [
         require('postcss-import')(),
@@ -15,4 +15,4 @@ module.exports = {
         require('autoprefixer')(),
         require('cssnano')({ preset: 'default' }),
     ],
-};
+});
