@@ -1,6 +1,6 @@
 {
   "name": "lookbook",
-  "version": "2.0.0-alpha.4",
+  "version": "2.0.0-alpha.5",
   "description": "The design system of Lookback",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "build": "NODE_ENV=production scripts/build",
     "build:dev": "NODE_ENV=development scripts/build",
     "watch": "NODE_ENV=development scripts/build --watch --verbose",
-    "start": "npx postcss test/index.css --dir test --ext dist.css --watch --verbose",
+    "start": "postcss test/index.css --dir test --ext dist.css --watch --verbose",
     "fetch-colors": "node scripts/fetch-figma-colors.js",
     "release": "node scripts/distribute.js dist/lookbook.dist.css"
   },
