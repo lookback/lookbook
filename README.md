@@ -22,6 +22,14 @@ Add a `link` element to a `head` tag:
 
 This CSS file is cached with `immutable, max-age: 31536000`.
 
+If you want to be on the bleeding edge, use `latest` as version:
+
+```html
+<link rel="stylesheet" href="<CDNPATH>/latest/lookbook.dist.css" />
+```
+
+TODO: Document caching strategy for `latest`.
+
 ### 2. Custom use with PostCSS
 
 If you'd like to use the variables in your custom CSS, you can install this Lookbook as an npm module and use its exported `postCssConfig` in a PostCSS setup:
