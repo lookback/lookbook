@@ -10,7 +10,7 @@ tt {
 
 pre {
   @apply rounded text-sm p-4 text-blue-80;
-  background-color: config('colors.grey-20');
+  background-color: theme('colors.grey-20');
 }
 
 code,
@@ -23,8 +23,8 @@ kbd {
 }
 
 code {
-  color: config('colors.purple-60');
-  border-color: config('colors.purple-30');
+  color: theme('colors.purple-60');
+  border-color: theme('colors.purple-30');
 }
 
 pre code {
@@ -36,7 +36,7 @@ pre code {
 }
 
 kbd {
-  color: config('colors.blue-80');
-  border-color: config('colors.grey-20');
-  box-shadow: rgba(config('borderColors.main'), 0.5) 0 1px 0;
+  color: theme('colors.blue-80');
+  border-color: theme('colors.grey-20');
+  box-shadow: rgba(theme('borderColors.main'), 0.5) 0 1px 0;
 }

@@ -1,7 +1,7 @@
 const postcss = require('postcss');
 
 module.exports = function(prefix = 'dark') {
-    return function({ addVariant }) {
+    return function({ addVariant, e }) {
         addVariant('dark', ({ container, separator }) => {
             const supportsRule = postcss.atRule({
                 name: 'media',
@@ -12,7 +12,9 @@ module.exports = function(prefix = 'dark') {
             container.nodes = [supportsRule];
 
             supportsRule.walkRules((rule) => {
-                rule.selector = `.${prefix}${separator}${rule.selector}`;
+                rule.selector = `.${e(
+                    `${prefix}${separator}${rule.selector}`
+                )}`;
             });
         });
     };

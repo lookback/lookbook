@@ -20,8 +20,8 @@ input[type='number'],
 textarea {
   @apply font-sans inline-block border border-main rounded;
   padding: 0.4em;
-  color: rgba(config('colors.blue-80'), 0.9);
-  background-color: config('colors.off-white');
+  color: rgba(theme('colors.blue-80'), 0.9);
+  background-color: theme('colors.off-white');
   box-shadow: inset rgba(#000, 0.05) 0 1px 2px;
   transition: color 0.15s ease-out, border-color 0.2s ease;
 
@@ -32,7 +32,7 @@ textarea {
   &:focus {
     @apply text-blue-80 border-active;
     outline: 0;
-    box-shadow: rgba(config('colors.blue-faded'), 0.2) 0 0 0 2px;
+    box-shadow: rgba(theme('colors.blue-faded'), 0.2) 0 0 0 2px;
     background-color: #fff;
   }
 }

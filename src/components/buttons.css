@@ -3,13 +3,13 @@ BUTTONS
 ----------------------------------------------------------------*/
 
 .btn {
-  --background: config('colors.blue-50');
+  --background: theme('colors.blue-50');
   --text: #fff;
-  --focused: color(config('colors.blue-50') shade(10%));
-  --hover: color(config('colors.blue-50') shade(10%));
-  --active: color(config('colors.blue-60') shade(10%));
-  --disabled-bg: color(config('colors.blue-50') tint(80%) saturation(- 60%));
-  --disabled-color: color(config('colors.blue-50') saturation(- 90%));
+  --focused: color(theme('colors.blue-50') shade(10%));
+  --hover: color(theme('colors.blue-50') shade(10%));
+  --active: color(theme('colors.blue-60') shade(10%));
+  --disabled-bg: color(theme('colors.blue-50') tint(80%) saturation(- 60%));
+  --disabled-color: color(theme('colors.blue-50') saturation(- 90%));
 
   @apply rounded font-bold inline-block relative;
   background-color: var(--background);
@@ -38,16 +38,16 @@ BUTTONS
   }
 
   &.dark {
-    --text: config('colors.blue-90');
-    --background: config('colors.blue-40');
-    --hover: color(config('colors.blue-40') tint(30%));
-    --focused: config('colors.blue-30');
-    --active: color(config('colors.blue-40') shade(20%));
+    --text: theme('colors.blue-90');
+    --background: theme('colors.blue-40');
+    --hover: color(theme('colors.blue-40') tint(30%));
+    --focused: theme('colors.blue-30');
+    --active: color(theme('colors.blue-40') shade(20%));
 
     &[disabled] {
-      --disabled-color: color(config('colors.blue-80') saturation(- 30%));
+      --disabled-color: color(theme('colors.blue-80') saturation(- 30%));
       --disabled-bg: color(
-        config('colors.blue-40') saturation(- 50%) alpha(60%)
+        theme('colors.blue-40') saturation(- 50%) alpha(60%)
       );
     }
   }
@@ -66,47 +66,47 @@ BUTTONS
 }
 
 .btn-secondary {
-  --text: config('colors.blue-80');
-  --background: config('colors.grey-20');
-  --focused: config('colors.grey-30');
-  --hover: color(config('colors.grey-20') shade(5%));
-  --active: color(config('colors.grey-30') shade(10%));
-  --disabled-bg: color(config('colors.grey-50') tint(80%));
-  --disabled-color: color(config('colors.grey-50') saturation(- 10%));
+  --text: theme('colors.blue-80');
+  --background: theme('colors.grey-20');
+  --focused: theme('colors.grey-30');
+  --hover: color(theme('colors.grey-20') shade(5%));
+  --active: color(theme('colors.grey-30') shade(10%));
+  --disabled-bg: color(theme('colors.grey-50') tint(80%));
+  --disabled-color: color(theme('colors.grey-50') saturation(- 10%));
 
   &.dark {
-    --background: config('colors.grey-30');
-    --hover: color(config('colors.grey-30') tint(30%));
-    --focused: config('colors.grey-20');
-    --active: color(config('colors.grey-30') shade(20%));
+    --background: theme('colors.grey-30');
+    --hover: color(theme('colors.grey-30') tint(30%));
+    --focused: theme('colors.grey-20');
+    --active: color(theme('colors.grey-30') shade(20%));
 
     &[disabled] {
-      --disabled-color: color(config('colors.blue-80') saturation(- 30%));
+      --disabled-color: color(theme('colors.blue-80') saturation(- 30%));
       --disabled-bg: color(
-        config('colors.grey-50') saturation(- 10%) alpha(80%)
+        theme('colors.grey-50') saturation(- 10%) alpha(80%)
       );
     }
   }
 }
 
 .btn-primary {
-  --background: config('colors.green-50');
-  --focused: config('colors.green-60');
-  --hover: config('colors.green-60');
-  --active: color(config('colors.green-60') shade(20%));
-  --disabled-bg: color(config('colors.green-50') tint(80%) saturation(- 60%));
-  --disabled-color: color(config('colors.green-50') saturation(- 90%));
+  --background: theme('colors.green-50');
+  --focused: theme('colors.green-60');
+  --hover: theme('colors.green-60');
+  --active: color(theme('colors.green-60') shade(20%));
+  --disabled-bg: color(theme('colors.green-50') tint(80%) saturation(- 60%));
+  --disabled-color: color(theme('colors.green-50') saturation(- 90%));
 
   &.dark {
-    --background: config('colors.green-40');
-    --hover: config('colors.green-30');
-    --focused: config('colors.green-30');
-    --active: color(config('colors.green-40') shade(20%));
+    --background: theme('colors.green-40');
+    --hover: theme('colors.green-30');
+    --focused: theme('colors.green-30');
+    --active: color(theme('colors.green-40') shade(20%));
 
     &[disabled] {
-      --disabled-color: color(config('colors.green-80') saturation(- 30%));
+      --disabled-color: color(theme('colors.green-80') saturation(- 30%));
       --disabled-bg: color(
-        config('colors.green-40') saturation(- 50%) alpha(60%)
+        theme('colors.green-40') saturation(- 50%) alpha(60%)
       );
     }
   }
@@ -114,8 +114,8 @@ BUTTONS
 
 .btn-link {
   --background: transparent;
-  --text: config('colors.blue-50');
-  --disabled-color: color(config('colors.blue-50') saturation(- 90%));
+  --text: theme('colors.blue-50');
+  --disabled-color: color(theme('colors.blue-50') saturation(- 90%));
   transition: none;
   position: relative;
 
@@ -125,7 +125,7 @@ BUTTONS
     background-color: transparent;
     box-shadow: none;
     text-decoration: underline;
-    color: config('colors.blue-60');
+    color: theme('colors.blue-60');
   }
 
   &:active {
@@ -139,15 +139,15 @@ BUTTONS
   }
 
   &.dark {
-    --text: config('colors.blue-40');
+    --text: theme('colors.blue-40');
     --background: transparent;
 
     &:hover {
-      color: config('colors.blue-50');
+      color: theme('colors.blue-50');
     }
 
     &[disabled] {
-      --disabled-color: color(config('colors.blue-40') saturation(- 90%));
+      --disabled-color: color(theme('colors.blue-40') saturation(- 90%));
     }
   }
 }

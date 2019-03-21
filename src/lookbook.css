@@ -6,7 +6,7 @@
 * Copyright Lookback
 */
 
-@import 'tailwindcss/preflight';
+@import 'tailwindcss/base';
 
 @import 'tailwindcss/components';
 

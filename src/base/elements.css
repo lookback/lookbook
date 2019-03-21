@@ -8,13 +8,13 @@ abbr[data-tooltip] {
 }
 
 a {
-  color: config('colors.blue-50');
+  color: theme('colors.blue-50');
 }
 
 mark {
   @apply rounded-sm;
   padding: 0 0.25em;
-  background-color: config('colors.orange-20');
+  background-color: theme('colors.orange-20');
 }
 
 dt {
@@ -29,10 +29,4 @@ details summary {
   &:focus {
     outline: 0;
   }
-}
-
-/* Remove default list styling */
-nav ul,
-nav ol {
-  @apply list-reset;
 }
