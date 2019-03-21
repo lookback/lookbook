@@ -6,8 +6,7 @@
   "scripts": {
     "test": "stylelint src/**/*.css",
     "build": "NODE_ENV=production scripts/build",
-    "build:dev": "NODE_ENV=development scripts/build",
-    "watch": "NODE_ENV=development scripts/build --watch --verbose",
+    "watch": "scripts/build --watch --verbose",
     "start": "postcss test/index.css --dir test --ext dist.css --watch --verbose",
     "fetch-colors": "node scripts/fetch-figma-colors.js",
     "release": "node scripts/distribute.js dist/lookbook.dist.css"
