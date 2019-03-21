@@ -1,5 +1,5 @@
 /* eslint-disable */
-/* Updated at Thu, 21 Mar 2019 20:16:46 GMT*/
+/* Updated at Thu, 21 Mar 2019 21:06:58 GMT*/
 module.exports = {
     'orange-10': '#fef7ea',
     'orange-20': '#f2ebd8',
@@ -31,6 +31,7 @@ module.exports = {
     'green-30': '#97e8c8',
     'green-40': '#52dfa7',
     'green-50': '#1ab577',
+    'green-60': '#188359',
     'green-70': '#0f6543',
     'green-80': '#0f432f',
     'green-90': '#0a281d',
