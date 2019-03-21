@@ -1,4 +1,5 @@
 const path = require('path');
+const { version } = require('./package.json');
 
 const LOOKBOOK_TAILWIND_CONF = path.resolve(
     path.join(__dirname, 'tailwind.config.js')
@@ -13,6 +14,9 @@ module.exports = ({ pathToTailwindConf = LOOKBOOK_TAILWIND_CONF } = {}) => ({
         require('postcss-color-function')(),
         require('postcss-hexrgba')(),
         require('autoprefixer')(),
+        require('./src/plugins/postcss-header')({
+            header: `/*! lookbook.css v${version} */`,
+        }),
         require('cssnano')({ preset: 'default' }),
     ],
 });

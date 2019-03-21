@@ -1,0 +1,20 @@
+// Inlined from https://github.com/fengyuanchen/postcss-header (MIT)
+
+const postcss = require('postcss');
+
+module.exports = postcss.plugin('postcss-header', (options = {}) => {
+    options = Object.assign(
+        {
+            header: '',
+        },
+        options
+    );
+
+    return (css) => {
+        const header = options.header || options.banner;
+
+        if (header) {
+            css.prepend({ text: header });
+        }
+    };
+});
