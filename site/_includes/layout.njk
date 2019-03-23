@@ -10,44 +10,61 @@
       rel="stylesheet"
     />
     <!-- Lookbook CSS -->
-    <link rel="stylesheet" href="{{ 'assets/lookbook.dist.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/assets/lookbook.dist.css' | url }}" />
     <!-- Site CSS -->
-    <link rel="stylesheet" href="{{ 'assets/site.dist.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/assets/site.dist.css' | url }}" />
     <link rel="shortcut icon" href="https://lookback.io/favicon.ico" />
   </head>
   <body>
   <aside role="navigation">
-      <a href="#" class="inline-block mb-24 opacity-80 hover:opacity-100">
-        <img src="assets/lookback-logo.svg" alt="Lookback logo" />
+      <a href="/" class="inline-block mb-32 opacity-80 hover:opacity-100">
+        <img src="{{ '/assets/lookback-logo.svg' | url }}" alt="Lookback logo" />
+      </a>
+
+      <a href="http://github.com/lookback/lookbook" class="flex items-center mb-24 hover:no-underline text-grey-60">
+        <div class="mr-3">
+          {% include 'github-icon.njk' %}
+        </div>
+        <div class="leading-none">
+          <span class="block text-f5 text-blue-60">GitHub</span>
+          <small>{{ pkg.version }}</small>
+        </div>
       </a>
 
       <nav role="navigation">
         <h2>Get started</h2>
 
         <ul>
-          <li>
-            <a href="#">Use the CSS</a>
+          <li class="{% if page.fileSlug == 'css'%}nav-active{% endif %}">
+            <a href="/css">Use the CSS</a>
           </li>
-          <li>
-            <a href="#">Colors</a>
+          <li class="{% if page.fileSlug == 'colors'%}nav-active{% endif %}">
+            <a href="/colors">Colors</a>
           </li>
-          <li>
-            <a href="#">Logotype &amp; Brand</a>
+          <li class="{% if page.fileSlug == 'brand'%}nav-active{% endif %}">
+            <a href="/brand">Logotype &amp; Brand</a>
+          </li>
+        </ul>
+
+        <h2>Styling</h2>
+
+        <ul>
+          <li class="{% if page.fileSlug == 'styles'%}nav-active{% endif %}">
+            <a href="/styles">Styles</a>
+          </li>
+        </ul>
+
+        <h2>Components</h2>
+
+        <ul>
+          <li class="{% if page.fileSlug == 'buttons'%}nav-active{% endif %}">
+            <a href="/components/buttons">Buttons</a>
           </li>
         </ul>
       </nav>
     </aside>
 
     <main role="main" class="pt-32">
-      <header>
-        <h1 class="text-huge mb-6">The Lookbook</h1>
-        <p class="max-w-md mb-24 text-grey-60 text-f5">
-          The Lookbook is the main source of visual design language at Lookback.
-          It includes the traditional color schemes we use in our products, as
-          well as CSS resources for building scalable web frontends.
-        </p>
-      </header>
-
       {{ content | safe }}
     </main>
   </body>
