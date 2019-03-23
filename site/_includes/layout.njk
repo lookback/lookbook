@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Lookbook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i"
+      rel="stylesheet"
+    />
+    <!-- Lookbook CSS -->
+    <link rel="stylesheet" href="{{ 'assets/lookbook.dist.css' | url }}" />
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="{{ 'assets/site.dist.css' | url }}" />
+    <link rel="shortcut icon" href="https://lookback.io/favicon.ico" />
+  </head>
+  <body>
+  <aside role="navigation">
+      <a href="#" class="inline-block mb-24 opacity-80 hover:opacity-100">
+        <img src="assets/lookback-logo.svg" alt="Lookback logo" />
+      </a>
+
+      <nav role="navigation">
+        <h2>Get started</h2>
+
+        <ul>
+          <li>
+            <a href="#">Use the CSS</a>
+          </li>
+          <li>
+            <a href="#">Colors</a>
+          </li>
+          <li>
+            <a href="#">Logotype &amp; Brand</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main role="main" class="pt-32">
+      <header>
+        <h1 class="text-huge mb-6">The Lookbook</h1>
+        <p class="max-w-md mb-24 text-grey-60 text-f5">
+          The Lookbook is the main source of visual design language at Lookback.
+          It includes the traditional color schemes we use in our products, as
+          well as CSS resources for building scalable web frontends.
+        </p>
+      </header>
+
+      {{ content | safe }}
+    </main>
+  </body>
+</html>
