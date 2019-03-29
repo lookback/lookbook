@@ -1,7 +1,14 @@
-const postCssConfig = require('./postcss.config');
 const colors = require('./colors');
 const tailwindConfig = require('./tailwind.config');
+const { defaultPlugins } = require('./conf/postcss-plugins');
 
-exports.postCssConfig = postCssConfig;
 exports.colors = colors;
 exports.tailwindConfig = tailwindConfig;
+
+/** PostCSS config for external use. */
+exports.postCssConfig = ({ pathToTailwindConf } = {}) => () => ({
+    map: 'inline', // Sourcemaps
+    plugins: defaultPlugins({ pathToTailwindConf }),
+});
+
+exports.defaultPostCssPlugins = defaultPlugins;

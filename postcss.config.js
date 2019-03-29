@@ -1,22 +1,13 @@
-const path = require('path');
 const { version } = require('./package.json');
+const { defaultPlugins } = require('./conf/postcss-plugins');
 
-const LOOKBOOK_TAILWIND_CONF = path.resolve(
-    path.join(__dirname, 'tailwind.config.js')
-);
-
-module.exports = ({ pathToTailwindConf = LOOKBOOK_TAILWIND_CONF } = {}) => ({
+// Internal config, used to build *this* .css.
+module.exports = () => ({
     map: 'inline', // Sourcemaps
     plugins: [
-        require('postcss-import')(),
-        require('tailwindcss')(pathToTailwindConf),
-        require('postcss-nested')(),
-        require('postcss-color-function')(),
-        require('postcss-hexrgba')(),
-        require('autoprefixer')(),
+        ...defaultPlugins(),
         require('./src/plugins/postcss-header')({
-            header: `/*! lookbook.css v${version} */`,
+            header: `lookbook.css v${version}`,
         }),
-        require('cssnano')({ preset: 'default' }),
     ],
 });
