@@ -592,8 +592,10 @@ module.exports = {
         |
     */
 
-        margin: {
+        margin: (theme) => ({
             auto: 'auto',
+            /** Matches the 'normal' line height. */
+            line: `${theme('lineHeight.normal')}rem`,
             px: '1px',
             '0': '0',
             '1': '0.25rem',
@@ -609,7 +611,7 @@ module.exports = {
             '20': '5rem',
             '24': '6rem',
             '32': '8rem',
-        },
+        }),
 
         /*
         |-----------------------------------------------------------------------------
