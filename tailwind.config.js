@@ -177,16 +177,16 @@ module.exports = {
     */
 
         fontSize: {
-            xs: '.7059rem', // 12px
-            sm: '.8824rem', // 15px
             base: '17px', // 17px
-            f5: '1.1765rem', // 20px
-            f4: '1.4118rem', // 24px
-            f3: '1.7647rem', // 30px
-            f2: '2.1176rem', // 36px
-            f1: '2.4706rem', // 42px
-            title: '3.5294rem', // 60px
-            huge: '5.8824rem', // 100px
+            f7: '.7059rem', // 12px
+            f6: '.8824rem', // 15px
+            f5: '1.1176rem', // 19px
+            f4: '1.2941rem', // 22px
+            f3: '1.5294rem', // 26px
+            f2: '1.7647rem', // 30px
+            f1: '2.8235rem', // 48px
+            f0: '3.5294rem', // 60px
+            huge: '4.7059rem', // 80px
         },
 
         /*
