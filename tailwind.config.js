@@ -263,11 +263,11 @@ module.exports = {
             default: colors['blue-80'],
             ...pick(colors, [
                 'white',
-                'blue-50',
+                'blue-60',
                 'blue-70',
                 'blue-80',
-                'green-50',
-                'grey-50',
+                'green-60',
+                'grey-60',
             ]),
         },
 
@@ -289,11 +289,11 @@ module.exports = {
             ...pick(colors, [
                 'grey-10',
                 'grey-20',
-                'green-50',
-                'blue-50',
+                'green-60',
+                'blue-60',
                 'blue-80',
                 'white',
-                'orange-50',
+                'orange-60',
             ]),
         },
 
@@ -354,7 +354,7 @@ module.exports = {
 
         borderColor: {
             default: colors['grey-20'],
-            main: colors['grey-30'],
+            main: colors['blue-20'],
             hover: colors['grey-40'],
             active: colors['grey-50'],
         },
