@@ -1,5 +1,4 @@
 const AWS = require('aws-sdk');
-const child_process = require('child_process');
 const path = require('path');
 const fs = require('fs');
 const { promisify } = require('util');
@@ -67,18 +66,6 @@ const s3 = new AWS.S3({
 const readFile = promisify(fs.readFile);
 const putObject = promisify(s3.putObject.bind(s3));
 const headObject = promisify(s3.headObject.bind(s3));
-const exec = promisify(child_process.exec);
-
-const makeKeyName = async (filename, version) => {
-    if (typeof version === 'string') {
-        return `${version}/${filename}`;
-    }
-
-    const { stdout } = await exec('git rev-parse HEAD');
-    const shortHash = stdout.trim().substr(0, 10);
-
-    return `${shortHash}/${filename}`;
-};
 
 const stylesheetExistsInBucket = (filename, version) =>
     headObject({
@@ -115,8 +102,10 @@ const releaseFile = async (pathToFile) => {
     const version = pkgVersion;
     const contents = await readFile(pathToFile);
     const filename = path.basename(pathToFile);
-    const versionedKey = await makeKeyName(filename, version);
-    const latestKey = await makeKeyName(filename, LATEST_PREFIX_NAME);
+    // Like: /2.0.0-alpha.1/lookbook.dist.css
+    const versionedKey = `${version}/${filename}`;
+    // Like: /latest/lookbook.dist.css
+    const latestKey = `${LATEST_PREFIX_NAME}/${filename}`;
 
     if (await stylesheetExistsInBucket(filename, version)) {
         printError(
