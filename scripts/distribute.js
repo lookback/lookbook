@@ -94,14 +94,16 @@ const stylesheetExistsInBucket = (filename, version) =>
             throw err;
         });
 
-const uploadToBucket = async ({ contents, key, s3opts = {} }) => {
+const uploadToBucket = async ({ contents, key, isImmutable = true }) => {
     const opts = {
         Bucket: bucket,
         Key: key,
         ContentType: 'text/css',
+        CacheControl: isImmutable
+            ? 'public, max-age=31536000, immutable' // Cache for a year
+            : 'public',
         ACL: 'public-read',
         Body: contents,
-        ...s3opts,
     };
 
     await putObject(opts);
@@ -131,6 +133,7 @@ Please bump the version in package.json and re-run. Nothing has changed on S3 at
     await uploadToBucket({
         contents,
         key: latestKey,
+        isImmutable: false,
     });
 
     return `✅ ${colorize(Color.Green, `Released ${version} to`)}
