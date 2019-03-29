@@ -3,13 +3,13 @@ BUTTONS
 ----------------------------------------------------------------*/
 
 .btn {
-  --background: theme('colors.blue-50');
+  --background: theme('colors.blue-60');
   --text: #fff;
-  --focused: color(theme('colors.blue-50') shade(10%));
-  --hover: color(theme('colors.blue-50') shade(10%));
-  --active: color(theme('colors.blue-60') shade(10%));
-  --disabled-bg: color(theme('colors.blue-50') tint(80%) saturation(- 60%));
-  --disabled-color: color(theme('colors.blue-50') saturation(- 90%));
+  --focused: color(theme('colors.blue-60') shade(10%));
+  --hover: color(theme('colors.blue-60') shade(10%));
+  --active: theme('colors.blue-70');
+  --disabled-bg: color(theme('colors.blue-60') tint(80%) saturation(- 60%));
+  --disabled-color: color(theme('colors.blue-60') saturation(- 90%));
 
   @apply rounded font-bold inline-block relative;
   background-color: var(--background);
@@ -21,7 +21,7 @@ BUTTONS
   border: 0;
 
   padding: 0.5em 1em;
-  transition: box-shadow 0.2s ease-out, background-color 0.2s ease-out;
+  transition: box-shadow 0.2s ease-out;
 
   &:focus {
     outline: 0;
@@ -71,8 +71,8 @@ BUTTONS
   --focused: theme('colors.grey-30');
   --hover: color(theme('colors.grey-20') shade(5%));
   --active: color(theme('colors.grey-30') shade(10%));
-  --disabled-bg: color(theme('colors.grey-50') tint(80%));
-  --disabled-color: color(theme('colors.grey-50') saturation(- 10%));
+  --disabled-bg: color(theme('colors.grey-60') tint(80%));
+  --disabled-color: color(theme('colors.grey-60') saturation(- 10%));
 
   &.dark {
     --background: theme('colors.grey-30');
@@ -83,19 +83,19 @@ BUTTONS
     &[disabled] {
       --disabled-color: color(theme('colors.blue-80') saturation(- 30%));
       --disabled-bg: color(
-        theme('colors.grey-50') saturation(- 10%) alpha(80%)
+        theme('colors.grey-60') saturation(- 10%) alpha(80%)
       );
     }
   }
 }
 
 .btn-primary {
-  --background: theme('colors.green-50');
+  --background: theme('colors.green-60');
   --focused: theme('colors.green-60');
-  --hover: theme('colors.green-60');
-  --active: color(theme('colors.green-60') shade(20%));
-  --disabled-bg: color(theme('colors.green-50') tint(80%) saturation(- 60%));
-  --disabled-color: color(theme('colors.green-50') saturation(- 90%));
+  --hover: color(theme('colors.green-60') shade(10%));
+  --active: theme('colors.green-70');
+  --disabled-bg: color(theme('colors.green-60') tint(80%) saturation(- 60%));
+  --disabled-color: color(theme('colors.green-60') saturation(- 90%));
 
   &.dark {
     --background: theme('colors.green-40');
@@ -114,8 +114,8 @@ BUTTONS
 
 .btn-link {
   --background: transparent;
-  --text: theme('colors.blue-50');
-  --disabled-color: color(theme('colors.blue-50') saturation(- 90%));
+  --text: theme('colors.blue-60');
+  --disabled-color: color(theme('colors.blue-60') saturation(- 90%));
   transition: none;
   position: relative;
 
@@ -125,7 +125,7 @@ BUTTONS
     background-color: transparent;
     box-shadow: none;
     text-decoration: underline;
-    color: theme('colors.blue-60');
+    color: theme('colors.blue-70');
   }
 
   &:active {
@@ -143,7 +143,7 @@ BUTTONS
     --background: transparent;
 
     &:hover {
-      color: theme('colors.blue-50');
+      color: theme('colors.blue-30');
     }
 
     &[disabled] {

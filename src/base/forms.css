@@ -38,7 +38,7 @@ textarea {
 }
 
 select {
-  @apply font-sans text-blue-80 rounded border border-main text-sm;
+  @apply font-sans text-blue-80 rounded border border-main text-f6;
   -webkit-appearance: none;
   padding: 0.4em 0.6em;
   padding-right: 1.5em;

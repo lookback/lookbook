@@ -9,13 +9,13 @@ tt {
 }
 
 pre {
-  @apply rounded text-sm p-4 text-blue-80;
-  background-color: theme('colors.grey-20');
+  @apply rounded text-f6 p-4 text-blue-80 border;
+  background-color: #fff;
 }
 
 code,
 kbd {
-  @apply font-mono text-sm border;
+  @apply font-mono text-f6 border;
   padding: 0.2em 0.4em;
   border-radius: 3px;
   margin: 0 2px;

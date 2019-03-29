@@ -9,7 +9,6 @@ h4,
 h5,
 h6 {
   @apply leading-tight mb-2 text-blue-70;
-  font-weight: bold;
 }
 
 h1 {

@@ -8,7 +8,12 @@ abbr[data-tooltip] {
 }
 
 a {
-  color: theme('colors.blue-50');
+  @apply text-blue-60;
+
+  &:hover {
+    color: theme('colors.blue-70');
+    text-decoration: underline;
+  }
 }
 
 mark {
