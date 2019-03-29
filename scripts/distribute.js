@@ -1,4 +1,5 @@
 const AWS = require('aws-sdk');
+const crypto = require('crypto');
 const path = require('path');
 const fs = require('fs');
 const { promisify } = require('util');
@@ -63,6 +64,8 @@ const s3 = new AWS.S3({
     secretAccessKey,
 });
 
+const cloudfront = new AWS.CloudFront({});
+
 const readFile = promisify(fs.readFile);
 const putObject = promisify(s3.putObject.bind(s3));
 const headObject = promisify(s3.headObject.bind(s3));
@@ -96,6 +99,58 @@ const uploadToBucket = async ({ contents, key, isImmutable = true }) => {
     await putObject(opts);
 };
 
+const hashFile = (filename) =>
+    new Promise((rs, rj) => {
+        const shasum = crypto.createHash('sha1');
+
+        try {
+            const stream = fs.createReadStream(filename);
+            stream.on('data', (data) => shasum.update(data));
+            stream.on('end', () => rs(shasum.digest('hex')));
+        } catch (ex) {
+            rj(ex);
+        }
+    });
+
+const distroId = 'E1ZUX5VR2VIXA8';
+
+/* eslint "no-unused-vars": 0 */
+const invalidate = async (pathToFile, pathPrefix) => {
+    const hash = await hashFile(pathToFile);
+
+    console.log(
+        colorize(
+            Color.Dim,
+            `-> Creating CloudFront invalidation for /latest/${path.basename(
+                pathToFile
+            )}...\n`
+        )
+    );
+    console.log(`The hash is: ${hash}`);
+
+    return new Promise((rs, rj) => {
+        cloudfront.createInvalidation(
+            {
+                DistributionId: distroId,
+                InvalidationBatch: {
+                    Paths: {
+                        Quantity: 1,
+                        Items: [`/${pathPrefix}/*`],
+                    },
+                    CallerReference: `LookbookInvalidation-${hash}`,
+                },
+            },
+            (err) => {
+                console.log(err);
+                if (err) return rj(err);
+
+                console.log(colorize(Color.Green, '✅ Done invalidating!'));
+                rs();
+            }
+        );
+    });
+};
+
 const releaseFile = async (pathToFile) => {
     console.log(colorize(Color.Dim, '-> Releasing to S3...\n'));
 
@@ -110,7 +165,7 @@ const releaseFile = async (pathToFile) => {
     if (await stylesheetExistsInBucket(filename, version)) {
         printError(
             `❌ Version ${version} already exists on S3.
-Please bump the version in package.json and re-run. Nothing has changed on S3 at this point.`
+    Please bump the version in package.json and re-run. Nothing has changed on S3 at this point.`
         );
         process.exit(1);
     }
@@ -125,6 +180,10 @@ Please bump the version in package.json and re-run. Nothing has changed on S3 at
         isImmutable: false,
     });
 
+    // TODO: Invalidate /latest/lookbook.dist.css
+    // Currently fails on access denied for the IAM user.
+    // await invalidate(pathToFile, LATEST_PREFIX_NAME);
+
     return `✅ ${colorize(Color.Green, `Released ${version} to`)}
 
 * ${link(`https://s3.${region}.amazonaws.com/${bucket}/${versionedKey}`)}
@@ -133,4 +192,4 @@ Please bump the version in package.json and re-run. Nothing has changed on S3 at
 
 releaseFile(filePath)
     .then((res) => console.log(res))
-    .catch((err) => printError('❌ There was an error:\n', err.message));
+    .catch((err) => printError('❌ There was an error:\n', err));
