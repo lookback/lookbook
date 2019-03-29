@@ -5,7 +5,7 @@
     "at-rule-no-unknown": [
       true,
       {
-        "ignoreAtRules": ["extends", "tailwind", "apply", "mixin", "define-mixin", "variants"]
+        "ignoreAtRules": ["extends", "tailwind", "screen", "apply", "mixin", "define-mixin", "variants"]
       }
     ]
   }
