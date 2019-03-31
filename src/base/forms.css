@@ -18,8 +18,7 @@ input[type='password'],
 input[type='search'],
 input[type='number'],
 textarea {
-  @apply font-sans inline-block border border-main rounded;
-  padding: 0.4em;
+  @apply font-sans inline-block border border-main rounded p-1;
   color: rgba(theme('colors.blue-80'), 0.9);
   background-color: theme('colors.off-white');
   box-shadow: inset rgba(#000, 0.05) 0 1px 2px;
@@ -30,18 +29,17 @@ textarea {
   }
 
   &:focus {
-    @apply text-blue-80 border-active;
+    @apply text-default border-active;
     outline: 0;
-    box-shadow: rgba(theme('colors.blue-faded'), 0.2) 0 0 0 2px;
+    box-shadow: rgba(theme('colors.blue-60'), 0.1) 0 0 0 2px;
     background-color: #fff;
   }
 }
 
 select {
-  @apply font-sans text-blue-80 rounded border border-main text-f6;
+  @apply font-sans text-default rounded border border-main pr-3;
   -webkit-appearance: none;
   padding: 0.4em 0.6em;
-  padding-right: 1.5em;
   cursor: pointer;
   transition: box-shadow 0.2s ease, border-color 0.2s ease;
   background-color: #fff;

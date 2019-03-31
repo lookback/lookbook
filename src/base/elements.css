@@ -18,8 +18,9 @@ a {
 
 mark {
   @apply rounded-sm;
-  padding: 0 0.25em;
-  background-color: theme('colors.orange-20');
+  padding: 0.1em 0.3em;
+  background-color: theme('colors.orange-30');
+  color: theme('colors.orange-90');
 }
 
 dt {

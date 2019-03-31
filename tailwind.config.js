@@ -1,6 +1,11 @@
 const pick = require('./lib/pick');
 const styleColors = require('./colors.js');
 
+const baseSize = 16;
+const leading = 1.5;
+
+const toRem = (size, base = baseSize) => `${size / base}rem`;
+
 /*
 
 Lookbook – the design system of Lookback
@@ -177,16 +182,105 @@ module.exports = {
     */
 
         fontSize: {
-            base: '17px', // 17px
-            f7: '.7059rem', // 12px
-            f6: '.8824rem', // 15px
-            f5: '1.1176rem', // 19px
-            f4: '1.2941rem', // 22px
-            f3: '1.5294rem', // 26px
-            f2: '1.7647rem', // 30px
-            f1: '2.8235rem', // 48px
-            f0: '3.5294rem', // 60px
-            huge: '4.7059rem', // 80px
+            f7: toRem(12),
+            f6: toRem(14),
+            f5: toRem(16),
+            f4: toRem(20),
+            f3: toRem(24),
+            f2: toRem(32),
+            f1: toRem(40),
+            f0: toRem(60),
+        },
+
+        /*
+        |-----------------------------------------------------------------------------
+        | Padding                                https://tailwindcss.com/docs/padding
+        |-----------------------------------------------------------------------------
+        |
+        | Here is where you define your padding utility sizes. These can be
+        | percentage based, pixels, rems, or any other units. By default we
+        | provide a sensible rem based numeric scale plus a couple other
+        | common use-cases like "1px". You can, of course, modify these
+        | values as needed.
+        |
+        | Class name: .p{side?}-{size}
+        |
+        */
+
+        padding: (theme) => ({
+            line: `${theme('lineHeight.normal')}rem`,
+            px: '1px',
+            '0': 0,
+            '1': `${leading / 4}rem`,
+            '2': `${leading / 2}rem`,
+            '3': `${leading * 1}rem`,
+            '4': `${leading * 2}rem`,
+            '5': `${leading * 3}rem`,
+            '6': `${leading * 4}rem`,
+            '7': `${leading * 5}rem`,
+            '8': `${leading * 6}rem`,
+            '9': `${leading * 7}rem`,
+        }),
+
+        /*
+        |-----------------------------------------------------------------------------
+        | Margin                                  https://tailwindcss.com/docs/margin
+        |-----------------------------------------------------------------------------
+        |
+        | Here is where you define your margin utility sizes. These can be
+        | percentage based, pixels, rems, or any other units. By default we
+        | provide a sensible rem based numeric scale plus a couple other
+        | common use-cases like "1px". You can, of course, modify these
+        | values as needed.
+        |
+        | Class name: .m{side?}-{size}
+        |
+        */
+
+        margin: (theme) => ({
+            auto: 'auto',
+            /** Matches the 'normal' line height. */
+            line: `${theme('lineHeight.normal')}rem`,
+            px: '1px',
+            '0': 0,
+            '1': `${leading / 4}rem`,
+            '2': `${leading / 2}rem`,
+            '3': `${leading * 1}rem`,
+            '4': `${leading * 2}rem`,
+            '5': `${leading * 3}rem`,
+            '6': `${leading * 4}rem`,
+            '7': `${leading * 5}rem`,
+            '8': `${leading * 6}rem`,
+            '9': `${leading * 7}rem`,
+        }),
+
+        /*
+        |-----------------------------------------------------------------------------
+        | Negative margin                https://tailwindcss.com/docs/negative-margin
+        |-----------------------------------------------------------------------------
+        |
+        | Here is where you define your negative margin utility sizes. These can
+        | be percentage based, pixels, rems, or any other units. By default we
+        | provide matching values to the padding scale since these utilities
+        | generally get used together. You can, of course, modify these
+        | values as needed.
+        |
+        | Class name: .-m{side?}-{size}
+        |
+        */
+
+        negativeMargin: {
+            px: '1px',
+            '0': '0',
+            '1': `${leading / 4}rem`,
+            '2': `${leading / 2}rem`,
+            '3': `${leading * 1}rem`,
+            '4': `${leading * 2}rem`,
+            '5': `${leading * 3}rem`,
+            '6': `${leading * 4}rem`,
+            '7': `${leading * 5}rem`,
+            '8': `${leading * 6}rem`,
+            '9': `${leading * 7}rem`,
         },
 
         /*
@@ -224,7 +318,7 @@ module.exports = {
         lineHeight: {
             none: 1,
             tight: 1.25,
-            normal: 1.7,
+            normal: leading,
             loose: 2,
         },
 
@@ -265,7 +359,6 @@ module.exports = {
                 'white',
                 'blue-60',
                 'blue-70',
-                'blue-80',
                 'green-60',
                 'grey-60',
             ]),
@@ -286,15 +379,7 @@ module.exports = {
 
         backgroundColor: {
             default: colors['blue-10'],
-            ...pick(colors, [
-                'grey-10',
-                'grey-20',
-                'green-60',
-                'blue-60',
-                'blue-80',
-                'white',
-                'orange-60',
-            ]),
+            ...pick(colors, ['grey-10', 'green-60', 'blue-80', 'white']),
         },
 
         /*
@@ -354,9 +439,9 @@ module.exports = {
 
         borderColor: {
             default: colors['grey-20'],
-            main: colors['blue-20'],
-            hover: colors['grey-40'],
+            main: colors['grey-30'],
             active: colors['grey-50'],
+            hover: colors['grey-40'],
         },
 
         /*
@@ -547,109 +632,6 @@ module.exports = {
 
         /*
         |-----------------------------------------------------------------------------
-        | Padding                                https://tailwindcss.com/docs/padding
-        |-----------------------------------------------------------------------------
-        |
-        | Here is where you define your padding utility sizes. These can be
-        | percentage based, pixels, rems, or any other units. By default we
-        | provide a sensible rem based numeric scale plus a couple other
-        | common use-cases like "1px". You can, of course, modify these
-        | values as needed.
-        |
-        | Class name: .p{side?}-{size}
-        |
-    */
-
-        padding: (theme) => ({
-            px: '1px',
-            line: `${theme('lineHeight.normal')}rem`,
-            '0': '0',
-            '1': '0.25rem',
-            '2': '0.5rem',
-            '3': '0.75rem',
-            '4': '1rem',
-            '5': '1.25rem',
-            '6': '1.5rem',
-            '8': '2rem',
-            '10': '2.5rem',
-            '12': '3rem',
-            '16': '4rem',
-            '20': '5rem',
-            '24': '6rem',
-            '32': '8rem',
-        }),
-
-        /*
-        |-----------------------------------------------------------------------------
-        | Margin                                  https://tailwindcss.com/docs/margin
-        |-----------------------------------------------------------------------------
-        |
-        | Here is where you define your margin utility sizes. These can be
-        | percentage based, pixels, rems, or any other units. By default we
-        | provide a sensible rem based numeric scale plus a couple other
-        | common use-cases like "1px". You can, of course, modify these
-        | values as needed.
-        |
-        | Class name: .m{side?}-{size}
-        |
-    */
-
-        margin: (theme) => ({
-            auto: 'auto',
-            /** Matches the 'normal' line height. */
-            line: `${theme('lineHeight.normal')}rem`,
-            px: '1px',
-            '0': '0',
-            '1': '0.25rem',
-            '2': '0.5rem',
-            '3': '0.75rem',
-            '4': '1rem',
-            '5': '1.25rem',
-            '6': '1.5rem',
-            '8': '2rem',
-            '10': '2.5rem',
-            '12': '3rem',
-            '16': '4rem',
-            '20': '5rem',
-            '24': '6rem',
-            '32': '8rem',
-        }),
-
-        /*
-        |-----------------------------------------------------------------------------
-        | Negative margin                https://tailwindcss.com/docs/negative-margin
-        |-----------------------------------------------------------------------------
-        |
-        | Here is where you define your negative margin utility sizes. These can
-        | be percentage based, pixels, rems, or any other units. By default we
-        | provide matching values to the padding scale since these utilities
-        | generally get used together. You can, of course, modify these
-        | values as needed.
-        |
-        | Class name: .-m{side?}-{size}
-        |
-    */
-
-        negativeMargin: {
-            px: '1px',
-            '0': '0',
-            '1': '0.25rem',
-            '2': '0.5rem',
-            '3': '0.75rem',
-            '4': '1rem',
-            '5': '1.25rem',
-            '6': '1.5rem',
-            '8': '2rem',
-            '10': '2.5rem',
-            '12': '3rem',
-            '16': '4rem',
-            '20': '5rem',
-            '24': '6rem',
-            '32': '8rem',
-        },
-
-        /*
-        |-----------------------------------------------------------------------------
         | Shadows                                https://tailwindcss.com/docs/shadows
         |-----------------------------------------------------------------------------
         |
@@ -668,6 +650,7 @@ module.exports = {
             default: `rgba(${theme('colors.grey-30')}, .5) 0 4px 25px`,
             large: `rgba(${theme('colors.grey-30')}, .6) 0 6px 45px`,
             small: `rgba(${theme('colors.grey-30')}, .3) 0 2px 10px`,
+            tiny: `rgba(${theme('colors.grey-30')}, .3) 0 1px 3px`,
             none: 'none',
         }),
 
