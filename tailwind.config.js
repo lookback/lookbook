@@ -207,8 +207,7 @@ module.exports = {
         |
         */
 
-        padding: (theme) => ({
-            line: `${theme('lineHeight.normal')}rem`,
+        padding: {
             px: '1px',
             '0': 0,
             '1': `${leading / 4}rem`,
@@ -220,7 +219,7 @@ module.exports = {
             '7': `${leading * 5}rem`,
             '8': `${leading * 6}rem`,
             '9': `${leading * 7}rem`,
-        }),
+        },
 
         /*
         |-----------------------------------------------------------------------------
@@ -237,10 +236,8 @@ module.exports = {
         |
         */
 
-        margin: (theme) => ({
+        margin: {
             auto: 'auto',
-            /** Matches the 'normal' line height. */
-            line: `${theme('lineHeight.normal')}rem`,
             px: '1px',
             '0': 0,
             '1': `${leading / 4}rem`,
@@ -252,7 +249,7 @@ module.exports = {
             '7': `${leading * 5}rem`,
             '8': `${leading * 6}rem`,
             '9': `${leading * 7}rem`,
-        }),
+        },
 
         /*
         |-----------------------------------------------------------------------------
