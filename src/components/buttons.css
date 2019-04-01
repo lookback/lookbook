@@ -5,7 +5,10 @@ BUTTONS
 .btn {
   --background: theme('colors.blue-60');
   --text: #fff;
-  --focused: color(theme('colors.blue-60') shade(10%));
+  --text-hover: #fff;
+  --text-active: #e4e4e4;
+  --focused: color(theme('colors.blue-70'));
+  --focused-shadow: color(theme('colors.blue-60') alpha(30%));
   --hover: color(theme('colors.blue-60') shade(10%));
   --active: theme('colors.blue-70');
   --disabled-bg: color(theme('colors.blue-60') tint(80%) saturation(- 60%));
@@ -23,9 +26,17 @@ BUTTONS
   padding: 0.5em 1em;
   transition: box-shadow 0.2s ease-out;
 
+  &:focus,
+  &:hover,
+  &:active {
+    text-decoration: none;
+    color: var(--text-hover);
+  }
+
   &:focus {
     outline: 0;
     background-color: var(--focused);
+    box-shadow: var(--focused-shadow) 0 0 0 3px;
   }
 
   &:hover {
@@ -34,7 +45,7 @@ BUTTONS
 
   &:active {
     background-color: var(--active);
-    transition: none;
+    color: var(--text-active);
   }
 
   &.dark {
@@ -67,8 +78,11 @@ BUTTONS
 
 .btn-secondary {
   --text: theme('colors.blue-80');
+  --text-hover: theme('colors.blue-80');
+  --text-active: theme('colors.blue-80');
   --background: theme('colors.grey-20');
   --focused: theme('colors.grey-30');
+  --focused-shadow: color(theme('colors.grey-40') alpha(10%));
   --hover: color(theme('colors.grey-20') shade(5%));
   --active: color(theme('colors.grey-30') shade(10%));
   --disabled-bg: color(theme('colors.grey-60') tint(80%));
@@ -91,7 +105,8 @@ BUTTONS
 
 .btn-primary {
   --background: theme('colors.green-60');
-  --focused: theme('colors.green-60');
+  --focused: theme('colors.green-70');
+  --focused-shadow: color(theme('colors.green-50') alpha(30%));
   --hover: color(theme('colors.green-60') shade(10%));
   --active: theme('colors.green-70');
   --disabled-bg: color(theme('colors.green-60') tint(80%) saturation(- 60%));
