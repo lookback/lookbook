@@ -5,9 +5,9 @@ This is a base stylesheet which includes default styling for all
 basic HTML elements.
 ----------------------------------------------------------------*/
 
-@import 'base/body';
-@import 'base/elements';
-@import 'base/selections';
-@import 'base/headings';
-@import 'base/code';
-@import 'base/forms';
+@import 'base/body.css';
+@import 'base/elements.css';
+@import 'base/selections.css';
+@import 'base/headings.css';
+@import 'base/code.css';
+@import 'base/forms.css';
