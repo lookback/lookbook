@@ -2,5 +2,6 @@
 COMPONENTS
 ----------------------------------------------------------------*/
 
-@import 'components/buttons';
-@import 'components/icons';
+@import 'components/buttons.css';
+@import 'components/icons.css';
+@import 'components/loading.css';

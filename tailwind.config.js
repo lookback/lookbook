@@ -351,13 +351,13 @@ module.exports = {
     */
 
         textColor: {
-            default: colors['blue-80'],
+            default: colors['blue-80'], // Body
             ...pick(colors, [
                 'white',
-                'blue-60',
-                'blue-70',
-                'green-60',
-                'grey-60',
+                'blue-60', // Accent
+                'blue-70', // Heading
+                'green-60', // Highlight
+                'grey-60', // Muted
             ]),
         },
 
