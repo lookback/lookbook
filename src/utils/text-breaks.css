@@ -1,0 +1,9 @@
+/*
+TEXT BREAKS
+----------------------------------------------------------------*/
+
+/** Do a hard break in a long string if it's overflowing its container. */
+.break-text {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}

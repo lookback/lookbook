@@ -15,3 +15,5 @@
 @import 'tailwindcss/utilities';
 
 @import 'base';
+
+@import 'utils';
