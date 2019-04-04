@@ -39,6 +39,7 @@ const printError = (...args) => console.error(colorize(Color.Red, ...args));
 
 const accessKeyId = process.env.AWS_ACCESS_KEY_ID;
 const secretAccessKey = process.env.AWS_SECRET_ACCESS_KEY;
+const distroId = process.env.CLOUDFRONT_DISTRO_ID;
 const bucket = process.env.AWS_BUCKET || 'lookbook.lookback.io';
 const region = 'eu-west-1';
 
@@ -48,6 +49,11 @@ if (!accessKeyId || !secretAccessKey) {
     printError(
         '❌ Missing AWS_ACCESS_KEY_ID or AWS_SECRET_ACCESS_KEY as env variables'
     );
+    process.exit(1);
+}
+
+if (!distroId) {
+    printError('❌ Missing CLOUDFRONT_DISTRO_ID as environment variable');
     process.exit(1);
 }
 
@@ -111,8 +117,6 @@ const hashFile = (filename) =>
             rj(ex);
         }
     });
-
-const distroId = 'E1ZUX5VR2VIXA8';
 
 /* eslint "no-unused-vars": 0 */
 const invalidate = async (pathToFile, pathPrefix) => {
