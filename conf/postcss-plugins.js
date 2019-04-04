@@ -13,5 +13,4 @@ exports.defaultPlugins = ({
     require('postcss-color-function')(),
     require('postcss-hexrgba')(),
     require('autoprefixer')(),
-    require('cssnano')({ preset: 'default' }),
 ];
