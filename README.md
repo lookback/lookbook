@@ -17,7 +17,10 @@ You can make use of the Lookbook styles depending on what your needs are. There 
 Add a `link` element to a `head` tag:
 
 ```html
-<link rel="stylesheet" href="<CDNPATH>/<version>/lookbook.dist.css" />
+<link
+  rel="stylesheet"
+  href="http://d3qrqu421jx10s.cloudfront.net/<version>/lookbook.dist.css"
+/>
 ```
 
 This CSS file is cached with `immutable, max-age: 31536000`.
@@ -25,10 +28,11 @@ This CSS file is cached with `immutable, max-age: 31536000`.
 If you want to be on the bleeding edge, use `latest` as version:
 
 ```html
-<link rel="stylesheet" href="<CDNPATH>/latest/lookbook.dist.css" />
+<link
+  rel="stylesheet"
+  href="http://d3qrqu421jx10s.cloudfront.net/latest/lookbook.dist.css"
+/>
 ```
-
-TODO: Document caching strategy for `latest`.
 
 ### 2. Custom use with PostCSS
 
@@ -68,5 +72,5 @@ console.log(colors);
 
 - [x] Color scheme
 - [x] Proper installation and distribution options
-- [ ] Hosting on CDN
+- [x] Hosting on CDN
 - [ ] Docs
