@@ -7,7 +7,7 @@ module.exports = () => ({
     plugins: [
         ...defaultPlugins(),
         require('./src/plugins/postcss-header')({
-            header: `lookbook.css v${version}`,
+            header: `/*! lookbook.css v${version} */`,
         }),
         require('cssnano')({ preset: 'default' }),
     ],

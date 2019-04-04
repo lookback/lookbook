@@ -14,7 +14,7 @@ module.exports = postcss.plugin('postcss-header', (options = {}) => {
         const header = options.header || options.banner;
 
         if (header) {
-            css.prepend({ text: header });
+            css.prepend(header);
         }
     };
 });
