@@ -127,9 +127,33 @@ BUTTONS
   }
 }
 
+.btn-danger {
+  --background: theme('colors.red-60');
+  --focused: theme('colors.red-70');
+  --focused-shadow: color(theme('colors.red-50') alpha(30%));
+  --hover: color(theme('colors.red-60') shade(10%));
+  --active: theme('colors.red-70');
+  --disabled-bg: color(theme('colors.red-60') tint(80%) saturation(- 60%));
+  --disabled-color: color(theme('colors.red-60') saturation(- 90%));
+
+  &.dark {
+    --background: theme('colors.red-40');
+    --hover: theme('colors.red-30');
+    --focused: theme('colors.red-30');
+    --active: color(theme('colors.red-40') shade(20%));
+
+    &[disabled] {
+      --disabled-color: color(theme('colors.red-80') saturation(- 30%));
+      --disabled-bg: color(theme('colors.red-40') saturation(- 50%) alpha(60%));
+    }
+  }
+}
+
 .btn-link {
   --background: transparent;
   --text: theme('colors.blue-60');
+  --text-hover: theme('colors.blue-70');
+  --text-active: theme('colors.blue-80');
   --disabled-color: color(theme('colors.blue-60') saturation(- 90%));
   transition: none;
   position: relative;
@@ -140,7 +164,6 @@ BUTTONS
     background-color: transparent;
     box-shadow: none;
     text-decoration: underline;
-    color: theme('colors.blue-70');
   }
 
   &:active {
@@ -153,13 +176,16 @@ BUTTONS
     text-decoration: none;
   }
 
+  &.btn-link--danger {
+    --text: theme('colors.red-60');
+    --text-hover: theme('colors.red-70');
+    --text-active: theme('colors.red-80');
+  }
+
   &.dark {
     --text: theme('colors.blue-40');
     --background: transparent;
-
-    &:hover {
-      color: theme('colors.blue-30');
-    }
+    --text-hover: theme('colors.blue-30');
 
     &[disabled] {
       --disabled-color: color(theme('colors.blue-40') saturation(- 90%));
