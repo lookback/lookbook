@@ -809,7 +809,7 @@ module.exports = {
         verticalAlign: false,
         visibility: ['responsive'],
         whitespace: false,
-        wordBreak: false,
+        wordBreak: [],
         width: ['responsive'],
         zIndex: [],
     },
@@ -843,7 +843,6 @@ module.exports = {
         userSelect: false,
         verticalAlign: false,
         whitespace: false,
-        wordBreak: false,
     },
 
     /*
