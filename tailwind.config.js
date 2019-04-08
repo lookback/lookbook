@@ -646,8 +646,8 @@ module.exports = {
         boxShadow: (theme) => ({
             default: `rgba(${theme('colors.grey-30')}, .5) 0 4px 25px`,
             large: `rgba(${theme('colors.grey-30')}, .6) 0 6px 45px`,
-            small: `rgba(${theme('colors.grey-30')}, .3) 0 2px 10px`,
-            tiny: `rgba(${theme('colors.grey-30')}, .3) 0 1px 3px`,
+            small: `rgba(${theme('colors.grey-30')}, .5) 0 2px 10px`,
+            tiny: `rgba(${theme('colors.grey-30')}, .4) 0 1px 3px`,
             none: 'none',
         }),
 
