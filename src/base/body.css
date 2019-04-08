@@ -2,6 +2,7 @@
 BODY AND HTML ELEMENTS
 ----------------------------------------------------------------*/
 
-html {
+html,
+body {
   @apply bg-default text-default font-sans text-f5 leading-normal antialiased;
 }
