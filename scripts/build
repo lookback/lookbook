@@ -1,16 +1,21 @@
 #!/usr/bin/env bash
-
-[[ -z "${NODE_ENV}" ]] && env="production" || env="${NODE_ENV}"
-
 file=src/lookbook.css
 dir=dist
 
-echo "🕐 Building $file for $env..."
+echo "🕐 Building $file..."
 
-NODE_ENV=$env npx postcss "$file" --dir "$dir" --ext dist.css "$@"
+# Emit minified and sourcemapped dist/lookbook.css
+NODE_ENV='production' npx postcss "$file" --dir "$dir" --ext dist.css "$@"
 
 status=$?
 
+# Emit non-minified dist/lookbook.css
+# Meant for being included in other projects, before minification and source mapping
+NODE_ENV='development' npx postcss "$file" --no-map --dir "$dir" "$@"
+
+size_nonminified="$(ls -lah dist/lookbook.css | awk -F " " {'print $5'})"
+echo "✅ Built non-minified version into $dir/lookbook.css ($size_nonminified)"
+
 size="$(ls -lah dist/lookbook.dist.css | awk -F " " {'print $5'})"
 
-echo "✅ Done! Built into $dir/lookbook.dist.css ($size)" && exit $status
+echo "✅ Built minified version into $dir/lookbook.dist.css ($size)" && exit $status
