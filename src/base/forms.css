@@ -8,7 +8,7 @@ textarea {
 }
 
 label {
-  font-weight: bold;
+  @apply font-bold;
 }
 
 input[type='text'],
@@ -37,9 +37,10 @@ textarea {
 }
 
 select {
-  @apply font-sans text-default rounded border border-main pr-3;
+  @apply font-sans text-default rounded border border-main;
   -webkit-appearance: none;
   padding: 0.4em 0.6em;
+  padding-right: 1.5em;
   cursor: pointer;
   transition: box-shadow 0.2s ease, border-color 0.2s ease;
   background-color: #fff;
