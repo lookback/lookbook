@@ -6,11 +6,7 @@
   "scripts": {
     "test": "stylelint src/**/*.css",
     "build": "NODE_ENV=production scripts/build",
-    "copy-dist": "mkdir -p build/assets && cp dist/lookbook.dist.css build/assets/lookbook.dist.css",
-    "prestart": "npm run build && npm run copy-dist",
     "watch": "scripts/build --watch --verbose",
-    "start": "eleventy --serve & postcss site/site.css --dir build/assets --ext dist.css --watch --verbose",
-    "site": "eleventy && postcss site/site.css --dir build/assets --ext dist.css && npm run build && npm run copy-dist",
     "fetch-colors": "node scripts/fetch-figma-colors.js",
     "release": "node scripts/distribute.js dist/lookbook.dist.css"
   },
