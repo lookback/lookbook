@@ -1,5 +1,6 @@
 const { version } = require('./package.json');
-const { defaultPlugins } = require('./conf/postcss-plugins');
+const { defaultPlugins } = require('./lib/postcss-plugins');
+const minify = require('./lib/cssnano-default');
 
 // Internal config, used to build *this* .css.
 module.exports = (ctx) => ({
@@ -9,6 +10,6 @@ module.exports = (ctx) => ({
         require('./src/plugins/postcss-header')({
             header: `/*! lookbook.css v${version} */`,
         }),
-        ctx.env === 'production' && require('cssnano')({ preset: 'default' }),
+        ...(ctx.env === 'production' ? minify() : []),
     ],
 });
