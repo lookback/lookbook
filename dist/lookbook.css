@@ -1,4 +1,4 @@
-/*! lookbook.css v2.0.0-alpha.14 */
+/*! lookbook.css v2.0.0-alpha.15 */
 
 @charset "utf-8";
 
@@ -489,6 +489,12 @@ textarea {
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
+  color: inherit;
+  opacity: .5;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
   color: inherit;
   opacity: .5;
 }
