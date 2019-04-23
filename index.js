@@ -1,6 +1,6 @@
 const colors = require('./colors');
 const tailwindConfig = require('./tailwind.config');
-const { defaultPlugins } = require('./conf/postcss-plugins');
+const { defaultPlugins } = require('./lib/postcss-plugins');
 
 exports.colors = colors;
 exports.tailwindConfig = tailwindConfig;
