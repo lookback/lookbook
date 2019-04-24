@@ -68,6 +68,60 @@ console.log(colors);
 */
 ```
 
+## Developing
+
+To hack on the CSS in this repo, remember these things:
+
+1. Your seemingly tiny changes might have huge rings on the water. Like the wings of your butterfly. This CSS might be used in many web products of Lookback. Be sure to _test_ your changes. Even if consumers of this CSS use versioning.
+2. Keep it simple. This CSS should _only_ use the bare minimum to get started when styling a web frontend. Don't add extra kilobytes in vain.
+
+With that said, here are some nifty scripts that might aid development:
+
+### `npm run build`
+
+This builds the final distributable CSS files:
+
+- `dist/lookbook.dist.css` – The minified file, including an inline source map.
+- `dist/lookbook.css` – Unminified file, meant for development or inclusion in other CSS codebases.
+
+### `npm run watch`
+
+Compile the distributable CSS files as you save.
+
+### `scripts/release`
+
+This one is handy when you wanna release a new version of the Lookbook's CSS. The script will accept a version number, like `2.0.1`. _Do not_ prefix with a `v` or similar. Just the number, please.
+
+**Pre-condition:** Bump the `version` field in `package.json`, please.
+
+The script will:
+
+1. Run `build` to build the CSS.
+2. Run `npm install` to get a new version in `package-lock.json`.
+3. Add and commit the files above.
+4. Tag the commit with the version number entered.
+5. Push the commit and tag to the GitHub repo.
+6. Distribute the `dist/lookbook.dist.css` file to the S3 bucket and CDN.
+7. 💥
+
+### `scripts/fetch-figma-colors`
+
+When editing the colour scheme, currently kept as a shared library in Figma, you can use this script to update the Tailwind config with all those colours. We use Figma's nifty web API for that.
+
+### `npm test`
+
+Currently lints the CSS source.
+
+### `scripts/distribute`
+
+Uploads the `dist/lookbook.dist.css` to an S3 bucket.
+
+⚠️ You need to bump the `version` field in `package.json` to distribute a new version to S3!
+
+The script will exit if an existing version exists on S3. These releases are immutable, since we cache them really hard.
+
+See `scripts/release` above for a full release process.
+
 ## To do
 
 - [x] Color scheme

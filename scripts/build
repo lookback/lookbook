@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 file=src/lookbook.css
 dir=dist
 

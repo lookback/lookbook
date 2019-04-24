@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /*
  * This script fetches all color styles from a Figma team/document.
  *
