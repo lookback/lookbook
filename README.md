@@ -90,9 +90,11 @@ Compile the distributable CSS files as you save.
 
 ### `scripts/release`
 
-This one is handy when you wanna release a new version of the Lookbook's CSS. The script will accept a version number, like `2.0.1`. _Do not_ prefix with a `v` or similar. Just the number, please.
+This one is handy when you wanna release a new version of the Lookbook's CSS.
 
 **Pre-condition:** Bump the `version` field in `package.json`, please.
+
+> ☝️ If you don't have [jq](https://stedolan.github.io/jq/) installed, the script will accept a version number, like `2.0.1`. _Do not_ prefix with a `v` or similar. Just the number, please.
 
 The script will:
 

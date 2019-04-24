@@ -10,7 +10,15 @@
 # 1. Bump version string in package.json
 # 2. Done! Run scripts/release
 
-read -p "Input version: " version
+jq_exists=$(command -v jq)
+
+# If user has jq installed, read `version` from package.json. Else, ask for it on the prompt.
+if [ ! -z "$jq_exists" ]; then
+  version=$(cat package.json | jq -r ".version")  # -r for raw strings
+else
+  read -p "Which version should we release? (without any prefix, please. E.g. '2.0.1'): " version
+fi
+
 echo "🕐 Releasing $version..."
 
 npm install && \
