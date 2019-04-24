@@ -707,9 +707,12 @@ module.exports = {
         |
     */
 
-        fill: {
+        fill: (theme) => ({
             current: 'currentColor',
-        },
+            danger: theme('colors.red-50'),
+            warning: theme('colors.orange-50'),
+            positive: theme('colors.green-50'),
+        }),
 
         /*
         |-----------------------------------------------------------------------------
