@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# Read version string from user (like "2.0.1"). Then we build the distro files
+# with the new version, commit and tag, and finally release the new .css files to CDN.
+
+# PRECONS:
+# --------------
+# Do this before running the script:
+#
+# 1. Bump version string in package.json
+# 2. Done! Run scripts/release
+
+read -p "Input version: " version
+echo "🕐 Releasing $version..."
+
+npm install && \
+  npm run build && \
+  git add package.json package-lock.json dist && git commit -m "$version" && \
+  git tag "$version" && \
+  git push origin && git push --tags origin && \
+  npm run release
