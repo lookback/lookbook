@@ -1,4 +1,4 @@
-/*! lookbook.css v2.0.0-alpha.15 */
+/*! lookbook.css v2.0.0-alpha.17 */
 
 @charset "utf-8";
 
@@ -817,12 +817,15 @@ BUTTONS
 .icon {
   /* Will be inherited from parent's 'color' property. */
   fill: currentColor;
-  /* In case the icon is of paths only */
-  stroke: currentColor;
   width: 1em;
   height: 1em;
   vertical-align: middle;
 }
+
+.icon--stroke {
+    /* In case the icon is of paths only */
+    stroke: currentColor;
+  }
 
 a .icon {
   cursor: pointer;
