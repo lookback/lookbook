@@ -1,4 +1,4 @@
-/*! lookbook.css v2.0.0-alpha.17 */
+/*! lookbook.css v2.0.0-alpha.18 */
 
 @charset "utf-8";
 
@@ -2492,6 +2492,18 @@ Usage:
 
 .fill-current {
   fill: currentColor;
+}
+
+.fill-danger {
+  fill: #e95267;
+}
+
+.fill-warning {
+  fill: #f1ae0e;
+}
+
+.fill-positive {
+  fill: #1ab577;
 }
 
 .text-left {
