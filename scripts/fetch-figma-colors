@@ -37,7 +37,10 @@ if (!personalToken) {
 const figmaBase = 'https://api.figma.com/';
 
 const rgbToHex = (r, g, b) =>
-    '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+    '#' +
+    ((1 << 24) + (Math.round(r) << 16) + (Math.round(g) << 8) + Math.round(b))
+        .toString(16)
+        .slice(1);
 
 const slugify = (str) => str.toLowerCase().replace(/\s+/, '-');
 
