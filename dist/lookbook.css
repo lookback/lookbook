@@ -1,4 +1,4 @@
-/*! lookbook.css v2.0.0-alpha.19 */
+/*! lookbook.css v2.0.0-alpha.20 */
 
 @charset "utf-8";
 
@@ -701,12 +701,12 @@ BUTTONS
 .btn-secondary {
   --text: #004260;
   --text-hover: #004260;
-  --text-active: #004260;
-  --background: #eff5f9;
-  --focused: #d3e2eb;
-  --focused-shadow: rgba(157, 188, 209, 0.1);
-  --hover: rgb(227, 233, 237);
-  --active: rgb(190, 203, 212);
+  --text-active: #002b3e;
+  --background: #d3e2eb;
+  --focused: #9dbcd1;
+  --focused-shadow: rgba(102, 142, 167, 0.1);
+  --hover: rgb(200, 215, 223);
+  --active: #9dbcd1;
   --disabled-bg: rgb(222, 228, 232);
   --disabled-color: rgb(102, 117, 127);
 }

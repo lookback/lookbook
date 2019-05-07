@@ -1,6 +1,6 @@
 {
   "name": "lookbook",
-  "version": "2.0.0-alpha.19",
+  "version": "2.0.0-alpha.20",
   "description": "The design system of Lookback",
   "main": "index.js",
   "scripts": {
