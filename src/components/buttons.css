@@ -79,12 +79,12 @@ BUTTONS
 .btn-secondary {
   --text: theme('colors.blue-80');
   --text-hover: theme('colors.blue-80');
-  --text-active: theme('colors.blue-80');
-  --background: theme('colors.grey-20');
-  --focused: theme('colors.grey-30');
-  --focused-shadow: color(theme('colors.grey-40') alpha(10%));
-  --hover: color(theme('colors.grey-20') shade(5%));
-  --active: color(theme('colors.grey-30') shade(10%));
+  --text-active: theme('colors.blue-90');
+  --background: theme('colors.grey-30');
+  --focused: theme('colors.grey-40');
+  --focused-shadow: color(theme('colors.grey-50') alpha(10%));
+  --hover: color(theme('colors.grey-30') shade(5%));
+  --active: theme('colors.grey-40');
   --disabled-bg: color(theme('colors.grey-60') tint(80%));
   --disabled-color: color(theme('colors.grey-60') saturation(- 10%));
 
