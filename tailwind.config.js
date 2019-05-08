@@ -435,10 +435,9 @@ module.exports = {
     */
 
         borderColor: {
-            default: colors['grey-20'],
-            main: colors['grey-30'],
-            active: colors['grey-50'],
+            default: colors['grey-30'],
             hover: colors['grey-40'],
+            active: colors['grey-50'],
         },
 
         /*

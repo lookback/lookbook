@@ -18,7 +18,7 @@ input[type='password'],
 input[type='search'],
 input[type='number'],
 textarea {
-  @apply font-sans inline-block border border-main rounded p-1;
+  @apply font-sans inline-block border rounded p-1;
   color: rgba(theme('colors.blue-80'), 0.9);
   background-color: theme('colors.off-white');
   box-shadow: inset rgba(#000, 0.05) 0 1px 2px;
@@ -37,7 +37,7 @@ textarea {
 }
 
 select {
-  @apply font-sans text-default rounded border border-main;
+  @apply font-sans text-default rounded border;
   -webkit-appearance: none;
   padding: 0.4em 0.6em;
   padding-right: 1.5em;

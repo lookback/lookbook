@@ -36,6 +36,6 @@ pre code {
 }
 
 kbd {
-  @apply border border-main shadow-tiny;
+  @apply border border shadow-tiny;
   color: theme('colors.blue-80');
 }
