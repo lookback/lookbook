@@ -1,4 +1,4 @@
-/*! lookbook.css v2.0.0-alpha.20 */
+/*! lookbook.css v2.0.0-alpha.21 */
 
 @charset "utf-8";
 
@@ -466,7 +466,7 @@ html {
 *::after {
   border-width: 0;
   border-style: solid;
-  border-color: #eff5f9;
+  border-color: #d3e2eb;
 }
 
 /**
@@ -967,16 +967,12 @@ Usage:
   background-color: #fff;
 }
 
-.border-main {
-  border-color: #d3e2eb;
+.border-hover {
+  border-color: #9dbcd1;
 }
 
 .border-active {
   border-color: #668ea7;
-}
-
-.border-hover {
-  border-color: #9dbcd1;
 }
 
 .rounded-none {
@@ -2953,7 +2949,7 @@ pre code {
 
 kbd {
   border-width: 1px;
-  border-color: #d3e2eb;
+  border-width: 1px;
   box-shadow: rgba(211,226,235, .4) 0 1px 3px;
   color: #004260;
 }
@@ -2981,7 +2977,6 @@ textarea {
   font-family: Lato, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
   display: inline-block;
   border-width: 1px;
-  border-color: #d3e2eb;
   border-radius: .25rem;
   padding: .375rem;
   color: rgba(0,66,96, .9);
@@ -3007,7 +3002,6 @@ select {
   color: #004260;
   border-radius: .25rem;
   border-width: 1px;
-  border-color: #d3e2eb;
   -webkit-appearance: none;
   padding: .4em .6em;
   padding-right: 1.5em;
