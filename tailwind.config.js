@@ -843,6 +843,7 @@ module.exports = {
         tableLayout: false,
         verticalAlign: false,
         whitespace: false,
+        order: false,
     },
 
     /*
