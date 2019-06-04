@@ -489,17 +489,44 @@ module.exports = {
             px: '1px',
             '1': '1rem',
             '2': '2rem',
-            '4': '4rem',
-            '6': '6rem',
-            '8': '8rem',
-            '12': '12rem',
-            '16': '16rem',
-            '24': '24rem',
-            '1/2': '50%',
-            '1/3': '33.33333%',
-            '2/3': '66.66667%',
+            '3': '4rem',
+            '4': '6rem',
+            '5': '8rem',
+            '6': '12rem',
+            '7': '16rem',
+            '8': '24rem',
+            '9': '32rem',
             full: '100%',
             screen: '100vw',
+        },
+
+        /*
+        |-----------------------------------------------------------------------------
+        | Maximum width                        https://tailwindcss.com/docs/max-width
+        |-----------------------------------------------------------------------------
+        |
+        | Here is where you define your maximum width utility sizes. These can
+        | be percentage based, pixels, rems, or any other units. By default
+        | we provide a sensible rem based scale and a "full width" size,
+        | which is basically a reset utility. You can, of course,
+        | modify these values as needed.
+        |
+        | Class name: .max-w-{size}
+        |
+        */
+
+        maxWidth: {
+            '0': 'none',
+            '1': '1rem',
+            '2': '2rem',
+            '3': '4rem',
+            '4': '6rem',
+            '5': '8rem',
+            '6': '12rem',
+            '7': '16rem',
+            '8': '24rem',
+            '9': '32rem',
+            full: '100%',
         },
 
         /*
@@ -519,21 +546,6 @@ module.exports = {
 
         height: {
             auto: 'auto',
-            px: '1px',
-            '1': '0.25rem',
-            '2': '0.5rem',
-            '3': '0.75rem',
-            '4': '1rem',
-            '5': '1.25rem',
-            '6': '1.5rem',
-            '8': '2rem',
-            '10': '2.5rem',
-            '12': '3rem',
-            '16': '4rem',
-            '24': '6rem',
-            '32': '8rem',
-            '48': '12rem',
-            '64': '16rem',
             full: '100%',
             screen: '100vh',
         },
@@ -575,36 +587,6 @@ module.exports = {
             '0': '0',
             full: '100%',
             screen: '100vh',
-        },
-
-        /*
-        |-----------------------------------------------------------------------------
-        | Maximum width                        https://tailwindcss.com/docs/max-width
-        |-----------------------------------------------------------------------------
-        |
-        | Here is where you define your maximum width utility sizes. These can
-        | be percentage based, pixels, rems, or any other units. By default
-        | we provide a sensible rem based scale and a "full width" size,
-        | which is basically a reset utility. You can, of course,
-        | modify these values as needed.
-        |
-        | Class name: .max-w-{size}
-        |
-    */
-
-        maxWidth: {
-            '0': 'none',
-            '1': '1rem',
-            '2': '2rem',
-            '4': '4rem',
-            '8': '8rem',
-            '16': '16rem',
-            '24': '24rem',
-            '32': '32rem',
-            '48': '48rem',
-            '64': '64rem',
-            '96': '96rem',
-            full: '100%',
         },
 
         /*
@@ -833,7 +815,6 @@ module.exports = {
         height: false,
         listStylePosition: false,
         maxHeight: false,
-        minHeight: false,
         minWidth: false,
         negativeMargin: false,
         outline: false,
