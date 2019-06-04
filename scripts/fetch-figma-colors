@@ -167,24 +167,43 @@ ${colors}
 
     const originalFile = safeRequire(destPath);
 
-    const originalNumberOfColors = originalFile
-        ? Object.keys(originalFile).length
-        : 0;
-
-    const changed = Object.keys(styles).length - originalNumberOfColors;
-
     await writeFile(destPath, fileContents);
+
+    const numChanged = colorsHaveChanged(safeRequire(destPath), originalFile);
 
     console.log(
         `✅ Wrote ${styles.length} colors to file${
-            changed ? ` (${Math.abs(changed)} changed)` : ''
+            numChanged ? ` (${Math.abs(numChanged)} changed)` : ''
         }`
     );
 
-    changed &&
+    numChanged &&
         console.log(
             dim('☝️ Please inspect the diff of colors.js before committing!')
         );
+};
+
+const colorsHaveChanged = (newColors, oldColors) => {
+    if (!oldColors || !newColors) {
+        return 0;
+    }
+
+    const numChanged =
+        Object.keys(newColors).length - Object.keys(oldColors).length;
+
+    if (numChanged > 0) {
+        return numChanged;
+    }
+
+    let colorsChanged = 0;
+
+    for (const colorName in oldColors) {
+        if (oldColors[colorName] !== newColors[colorName]) {
+            colorsChanged++;
+        }
+    }
+
+    return colorsChanged;
 };
 
 writeColorsFromFigma().catch(console.error);
