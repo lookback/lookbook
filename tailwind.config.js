@@ -841,5 +841,8 @@ module.exports = {
     |
   */
 
-    plugins: [],
+    plugins: [
+        // Use all colors from Figma as CSS variable on the :root element
+        require('./src/plugins/variables')(),
+    ],
 };
