@@ -19,4 +19,4 @@ echo "✅ Built non-minified version into $dir/lookbook.css ($size_nonminified)"
 
 size="$(ls -lah dist/lookbook.dist.css | awk -F " " {'print $5'})"
 
-echo "✅ Built minified version into $dir/lookbook.dist.css ($size)" && exit $status
+echo "✅ Built minified version (with sourcemaps) into $dir/lookbook.dist.css ($size)" && exit $status

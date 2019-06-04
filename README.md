@@ -4,6 +4,26 @@
 
 Lookback's central location for shared colors and styles ✨
 
+## What's included
+
+This repository is a build chain for building a distributable `.css` file for use in various web products of Lookback.
+
+### The CSS file
+
+-   CSS Custom Properties for all Lookback colors.
+-   A CSS reset (Normalize).
+-   Components, such as loading indicators and buttons.
+-   Styled HTML elements.
+-   Utility classes, made with [Tailwind](https://tailwindcss.com/).
+
+### The PostCSS plugin
+
+-   Access to all features of Tailwind (including `theme()`, `@apply`, and other functions and directives) in your CSS.
+-   Nesting
+-   Color functions (`color(#fff alpha(80%))`).
+-   `@import`
+-   Autoprefixer
+
 ## Usage
 
 You can make use of the Lookbook styles depending on what your needs are. There are three use cases:
@@ -12,14 +32,14 @@ You can make use of the Lookbook styles depending on what your needs are. There 
 2. You'd like to use the Lookbook's config variables in your custom stylesheet.
 3. Both of 1) and 2).
 
-### 1. Just the stylesheet
+### Just the stylesheet
 
 Add a `link` element to a `head` tag:
 
 ```html
 <link
-  rel="stylesheet"
-  href="http://d3qrqu421jx10s.cloudfront.net/<version>/lookbook.dist.css"
+    rel="stylesheet"
+    href="http://d3qrqu421jx10s.cloudfront.net/<version>/lookbook.dist.css"
 />
 ```
 
@@ -29,28 +49,26 @@ If you want to be on the bleeding edge, use `latest` as version:
 
 ```html
 <link
-  rel="stylesheet"
-  href="http://d3qrqu421jx10s.cloudfront.net/latest/lookbook.dist.css"
+    rel="stylesheet"
+    href="http://d3qrqu421jx10s.cloudfront.net/latest/lookbook.dist.css"
 />
 ```
 
-### 2. Custom use with PostCSS
+This should work for most sites.
 
-If you'd like to use the variables in your custom CSS, you can install this Lookbook as an npm module and use its exported `postCssConfig` in a PostCSS setup:
+### Custom use with PostCSS
 
-```js
-import { postCssConfig } from 'lookbook';
+For more advanced usage, you can use the Lookbook as a regular PostCSS plugin.
 
-const compileCss = () =>
-  gulp
-    .src('src/stylesheets/*.css')
-    .pipe(postcss(postCssConfig.plugins))
-    .pipe(gulp.dest('./dist'));
+If you'd like to use the Tailwind config values in your custom CSS, you can install this Lookbook as an npm module and use its exported `defaultPlugins` function in a PostCSS setup (see "API" below).
 
-gulp.task('css', () => compileCss());
-```
+Note that you might wanna minify the CSS yourself.
 
-It's now possible to use all variables inside your custom stylesheet, as well as `@apply` directives.
+### Programmatic API
+
+These are the exported members of the `lookbook` module.
+
+### `colors`
 
 If you only want the raw colour codes, they're provided as a hash in the `colors` export:
 
@@ -68,6 +86,45 @@ console.log(colors);
 */
 ```
 
+### `postCssConfig`
+
+A PostCSS config ready for use in a `postcss.config.js`.
+
+### `defaultPostCssPlugins`
+
+A function for getting all the PostCSS plugins we use internally in this Lookbook module as an array. This is handy to attach to PostCSS's `plugin` config flag.
+
+A Gulp example:
+
+```js
+// gulpfile.js
+const { defaultPostCssPlugins } = require('lookbook');
+const postcss = require('gulp-postcss');
+
+const compileCss = () =>
+    gulp
+        .src('src/stylesheets/*.css')
+        .pipe(
+            postcss(
+                // `defaultPostCssPlugins` returns an array of plugins.
+                ...require('lookbook').defaultPostCssPlugins({
+                    // Optionally refer to your own tailwind config:
+                    pathToTailwindConf: './tailwind.config.js',
+                })
+                someOtherPlugin(),
+            )
+        )
+        .pipe(gulp.dest('./dist'));
+
+gulp.task('css', () => compileCss());
+```
+
+Optionally, call the function with a hash where you refer to a local `tailwind.config.js`. In there, you can extend the default one we keep in the Lookbook (this is of course not encouraged).
+
+### `tailwindConfig`
+
+Lookback's [Tailwind config](https://tailwindcss.com/docs/configuration).
+
 ## Developing
 
 To hack on the CSS in this repo, remember these things:
@@ -81,8 +138,8 @@ With that said, here are some nifty scripts that might aid development:
 
 This builds the final distributable CSS files:
 
-- `dist/lookbook.dist.css` – The minified file, including an inline source map.
-- `dist/lookbook.css` – Unminified file, meant for development or inclusion in other CSS codebases.
+-   `dist/lookbook.dist.css` – The minified file, including an inline source map.
+-   `dist/lookbook.css` – Unminified file, meant for development or inclusion in other CSS codebases.
 
 ### `npm run watch`
 
@@ -126,7 +183,7 @@ See `scripts/release` above for a full release process.
 
 ## To do
 
-- [x] Color scheme
-- [x] Proper installation and distribution options
-- [x] Hosting on CDN
-- [ ] Docs
+-   [x] Color scheme
+-   [x] Proper installation and distribution options
+-   [x] Hosting on CDN
+-   [ ] Docs
