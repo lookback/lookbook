@@ -5,37 +5,38 @@ CODE AND PREFORMATTED TEXT
 code,
 pre,
 tt {
-  @apply font-mono;
+    @apply font-mono;
 }
 
 pre {
-  @apply rounded text-f6 p-3 text-default border shadow-small;
-  background-color: #fff;
+    @apply rounded text-f6 p-3 text-default border shadow-small;
+    background-color: #fff;
 }
 
 code,
 kbd {
-  @apply font-mono text-f6 border;
-  padding: 0.2em 0.4em;
-  border-radius: 3px;
-  margin: 0 2px;
-  background-color: #fdfdfd;
+    @apply font-mono border;
+    font-size: 0.875em;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    margin: 0 2px;
+    background-color: #fdfdfd;
 }
 
 code {
-  color: theme('colors.purple-80');
-  border-color: theme('colors.purple-30');
+    color: theme('colors.purple-80');
+    border-color: theme('colors.purple-30');
 }
 
 pre code {
-  font-size: inherit;
-  padding: 0;
-  background: none;
-  border: 0;
-  color: inherit;
+    font-size: inherit;
+    padding: 0;
+    background: none;
+    border: 0;
+    color: inherit;
 }
 
 kbd {
-  @apply border border shadow-tiny;
-  color: theme('colors.blue-80');
+    @apply border border shadow-tiny;
+    color: theme('colors.blue-80');
 }
