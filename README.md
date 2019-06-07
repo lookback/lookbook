@@ -10,19 +10,38 @@ This repository is a build chain for building a distributable `.css` file for us
 
 ### The CSS file
 
--   CSS Custom Properties for all Lookback colors.
--   A CSS reset (Normalize).
--   Components, such as loading indicators and buttons.
--   Styled HTML elements.
--   Utility classes, made with [Tailwind](https://tailwindcss.com/).
+- CSS Custom Properties for all Lookback colors.
+- A CSS reset (Normalize).
+- Components, such as loading indicators and buttons.
+- Styled HTML elements.
+- Utility classes, made with [Tailwind](https://tailwindcss.com/).
+
+#### Build Artefacts
+
+- **`lookbook.css`** – Non-minified. Good for dev or inclusion in other projects through importing the npm module.
+- **`lookback.dist.css`** – Minified with sourcemaps. This is probably what you'd like in production.
+- **`lookback.bare.css`** – Minified without sourcemaps. When you don't need sourcemaps (gives a smaller build).
+
+All of these files are available in the `dist` directory. This means, you can add this module as a dependency in your project, and then `@import` the CSS file you need:
+
+```css
+/* style.css */
+@import 'lookbook/dist/lookbook.css';
+/* or
+ *
+ *  @import 'path/to/node_modules/lookbook/dist/lookbook.css';
+ *
+ * depending on how your local CSS build chain is working with @import
+ */
+```
 
 ### The PostCSS plugin
 
--   Access to all features of Tailwind (including `theme()`, `@apply`, and other functions and directives) in your CSS.
--   Nesting
--   Color functions (`color(#fff alpha(80%))`).
--   `@import`
--   Autoprefixer
+- Access to all features of Tailwind (including `theme()`, `@apply`, and other functions and directives) in your CSS.
+- Nesting
+- Color functions (`color(#fff alpha(80%))`).
+- `@import`
+- Autoprefixer
 
 ## Usage
 
@@ -38,8 +57,8 @@ Add a `link` element to a `head` tag:
 
 ```html
 <link
-    rel="stylesheet"
-    href="http://d3qrqu421jx10s.cloudfront.net/<version>/lookbook.dist.css"
+  rel="stylesheet"
+  href="http://d3qrqu421jx10s.cloudfront.net/<version>/lookbook.dist.css"
 />
 ```
 
@@ -49,12 +68,12 @@ If you want to be on the bleeding edge, use `latest` as version:
 
 ```html
 <link
-    rel="stylesheet"
-    href="http://d3qrqu421jx10s.cloudfront.net/latest/lookbook.dist.css"
+  rel="stylesheet"
+  href="http://d3qrqu421jx10s.cloudfront.net/latest/lookbook.dist.css"
 />
 ```
 
-This should work for most sites.
+This should work for most sites. You can of course also link to the `bare` and non-minified versions of `lookbook.css` too.
 
 ### Custom use with PostCSS
 
@@ -138,8 +157,9 @@ With that said, here are some nifty scripts that might aid development:
 
 This builds the final distributable CSS files:
 
--   `dist/lookbook.dist.css` – The minified file, including an inline source map.
--   `dist/lookbook.css` – Unminified file, meant for development or inclusion in other CSS codebases.
+- `dist/lookbook.dist.css` – Minified CSS, including source maps.
+- `dist/lookbook.css` – Unminified file, meant for development or inclusion in other CSS codebases.
+- `dist/lookbook.bare.css` – Minified CSS.
 
 ### `npm run watch`
 
@@ -160,7 +180,7 @@ The script will:
 3. Add and commit the files above.
 4. Tag the commit with the version number entered.
 5. Push the commit and tag to the GitHub repo.
-6. Distribute the `dist/lookbook.dist.css` file to the S3 bucket and CDN.
+6. Distribute the built files in `dist` to the S3 bucket and CDN. See `scripts/distribute` below.
 7. 💥
 
 ### `scripts/fetch-figma-colors`
@@ -173,17 +193,10 @@ Currently lints the CSS source.
 
 ### `scripts/distribute`
 
-Uploads the `dist/lookbook.dist.css` to an S3 bucket.
+Uploads the CSS files from `dist` to an S3 bucket.
 
 ⚠️ You need to bump the `version` field in `package.json` to distribute a new version to S3!
 
 The script will exit if an existing version exists on S3. These releases are immutable, since we cache them really hard.
 
 See `scripts/release` above for a full release process.
-
-## To do
-
--   [x] Color scheme
--   [x] Proper installation and distribution options
--   [x] Hosting on CDN
--   [ ] Docs

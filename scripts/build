@@ -3,10 +3,13 @@
 file=src/lookbook.css
 dir=dist
 
+ext_min_maps=dist.css
+ext_min=bare.css
+
 echo "🕐 Building $file..."
 
-# Emit minified and sourcemapped dist/lookbook.css
-NODE_ENV='production' npx postcss "$file" --dir "$dir" --ext dist.css "$@"
+# Emit minified and sourcemapped dist/lookbook.dist.css
+NODE_ENV='production' npx postcss "$file" --dir "$dir" --ext "$ext_min_maps" "$@"
 
 status=$?
 
@@ -14,9 +17,15 @@ status=$?
 # Meant for being included in other projects, before minification and source mapping
 NODE_ENV='development' npx postcss "$file" --no-map --dir "$dir" "$@"
 
+# Emit minified, non-sourcemap dist/lookbook.bare.css
+NODE_ENV='production' npx postcss "$file" --no-map --ext "$ext_min" --dir "$dir" "$@"
+
 size_nonminified="$(ls -lah dist/lookbook.css | awk -F " " {'print $5'})"
 echo "✅ Built non-minified version into $dir/lookbook.css ($size_nonminified)"
 
-size="$(ls -lah dist/lookbook.dist.css | awk -F " " {'print $5'})"
+size_nonmap="$(ls -lah dist/lookbook.$ext_min | awk -F " " {'print $5'})"
+echo "✅ Built minified version into $dir/lookbook.$ext_min ($size_nonmap)"
 
-echo "✅ Built minified version (with sourcemaps) into $dir/lookbook.dist.css ($size)" && exit $status
+size="$(ls -lah dist/lookbook.$ext_min_maps | awk -F " " {'print $5'})"
+
+echo "✅ Built minified version (with sourcemaps) into $dir/lookbook.$ext_min_maps ($size)" && exit $status
