@@ -8,7 +8,8 @@ h3,
 h4,
 h5,
 h6 {
-  @apply leading-tight mb-2 text-blue-70;
+  @apply leading-tight mb-2;
+  color: var(--heading-color);
 }
 
 h1 {

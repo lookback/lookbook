@@ -19,8 +19,8 @@ input[type='search'],
 input[type='number'],
 textarea {
   @apply font-sans inline-block border rounded p-1;
-  color: rgba(theme('colors.blue-80'), 0.9);
-  background-color: theme('colors.off-white');
+  color: var(--form-input-color);
+  background-color: var(--form-background-color);
   box-shadow: inset rgba(#000, 0.05) 0 1px 2px;
   transition: color 0.15s ease-out, border-color 0.2s ease;
 
@@ -31,8 +31,8 @@ textarea {
   &:focus {
     @apply text-default border-active;
     outline: 0;
-    box-shadow: rgba(theme('colors.blue-60'), 0.1) 0 0 0 2px;
-    background-color: #fff;
+    box-shadow: var(--form-focus-shadow);
+    background-color: var(--form-background-color-hover);
   }
 }
 

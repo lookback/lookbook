@@ -8,10 +8,10 @@ abbr[data-tooltip] {
 }
 
 a {
-  @apply text-blue-60;
+  color: var(--link-color);
 
   &:hover {
-    color: theme('colors.blue-70');
+    color: var(--link-color-hover);
     text-decoration: underline;
   }
 }
@@ -19,8 +19,8 @@ a {
 mark {
   @apply rounded-sm;
   padding: 0.1em 0.3em;
-  background-color: theme('colors.orange-30');
-  color: theme('colors.orange-90');
+  background-color: var(--mark-background-color);
+  color: var(--mark-color);
 }
 
 dt {

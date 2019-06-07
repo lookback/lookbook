@@ -3,6 +3,6 @@ TEXT SELECTIONS
 ----------------------------------------------------------------*/
 
 ::selection {
-  @apply bg-blue-80;
-  color: #fff;
+  background-color: var(--selection-background);
+  color: var(--selection-color);
 }

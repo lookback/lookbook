@@ -1,0 +1,32 @@
+:root {
+  --selection-background: var(--blue-80);
+  --selection-color: #fff;
+  --background-color: var(--default-background-color);
+  --text-color: var(--default-text-color);
+  --heading-color: var(--blue-70);
+
+  /* Elements */
+
+  /* <a> */
+  --link-color: var(--blue-60);
+  --link-color-hover: var(--blue-70);
+
+  /* <input>, <textarea> */
+  --form-input-color: rgba(theme('colors.blue-80'), 0.9);
+  --form-background-color: var(--off-white);
+  --form-background-color-hover: #fff;
+  --form-focus-shadow: rgba(theme('colors.blue-60'), 0.1) 0 0 0 2px;
+
+  /* <code> */
+  --code-background: #fdfdfd;
+  --code-color: var(--purple-80);
+  --code-border-color: var(--purple-30);
+
+  /* kbd */
+  /* Background is same as <code> */
+  --kbd-color: var(--blue-80);
+
+  /* <mark> */
+  --mark-background-color: var(--orange-30);
+  --mark-color: var(--orange-90);
+}

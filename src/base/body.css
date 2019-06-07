@@ -4,5 +4,7 @@ BODY AND HTML ELEMENTS
 
 html,
 body {
-  @apply bg-default text-default font-sans text-f5 leading-normal antialiased;
+  @apply font-sans text-f5 leading-normal antialiased;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
