@@ -490,6 +490,7 @@ module.exports = {
       '7': '16rem',
       '8': '24rem',
       '9': '32rem',
+      '10': '48rem',
       full: '100%',
       screen: '100vw',
     },
@@ -520,6 +521,7 @@ module.exports = {
       '7': '16rem',
       '8': '24rem',
       '9': '32rem',
+      '10': '48rem',
       full: '100%',
     },
 
