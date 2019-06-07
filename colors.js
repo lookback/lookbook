@@ -1,5 +1,5 @@
 /* eslint-disable */
-/* Updated at Wed, 05 Jun 2019 11:32:58 GMT*/
+/* Updated at Fri, 07 Jun 2019 14:04:15 GMT*/
 module.exports = {
     'orange-10': '#fff9ef',
     'orange-20': '#f9f1dc',
@@ -9,7 +9,7 @@ module.exports = {
     'orange-60': '#9a6e08',
     'orange-70': '#785a14',
     'orange-80': '#59420c',
-    'orange-90': '#2e2308',
+    'orange-90': '#28200b',
     'orange-100': '#1e1707',
     /** Suitable as background color. */
     'blue-10': '#f6fbfd',
@@ -24,7 +24,7 @@ module.exports = {
     'blue-70': '#006693',
     /** Suitable as body text color. */
     'blue-80': '#004260',
-    'blue-90': '#002b3e',
+    'blue-90': '#082532',
     'blue-100': '#041820',
     'green-10': '#f2fffa',
     'green-20': '#d7f8eb',
@@ -45,7 +45,7 @@ module.exports = {
     'grey-60': '#647886',
     'grey-70': '#4a5b65',
     'grey-80': '#334149',
-    'grey-90': '#273138',
+    'grey-90': '#20292f',
     'grey-100': '#151e24',
     'red-10': '#fff2f3',
     'red-20': '#ffebed',
@@ -56,8 +56,8 @@ module.exports = {
     'red-60': '#cf4356',
     'red-70': '#9c3140',
     'red-80': '#602b32',
-    'red-90': '#39191e',
-    'red-100': '#231012',
+    'red-90': '#2c1216',
+    'red-100': '#1e0e10',
     'purple-10': '#f6f6ff',
     'purple-20': '#eff0ff',
     'purple-30': '#d7d9ff',
@@ -66,7 +66,7 @@ module.exports = {
     'purple-60': '#676dcd',
     'purple-70': '#4348a0',
     'purple-80': '#2e3388',
-    'purple-90': '#1d1f43',
+    'purple-90': '#1a1c36',
     'purple-100': '#111220',
     'teal-10': '#f3fdff',
     'teal-20': '#e4f8fc',
@@ -76,6 +76,6 @@ module.exports = {
     'teal-60': '#208092',
     'teal-70': '#326f7a',
     'teal-80': '#1e5f6c',
-    'teal-90': '#133a42',
+    'teal-90': '#0d262b',
     'teal-100': '#0b1e21',
 }
