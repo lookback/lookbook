@@ -1,5 +1,5 @@
 const onlyWhitelist = (colorName) =>
-    !['white', 'transparent'].includes(colorName);
+  !['white', 'transparent'].includes(colorName);
 
 /**
  * Tailwind plugin that adds Lookback's colour variables
@@ -14,17 +14,17 @@ const onlyWhitelist = (colorName) =>
  * ```
  */
 module.exports = function variables(element = ':root') {
-    return function({ addBase, theme }) {
-        const colors = theme('colors');
+  return function({ addBase, theme }) {
+    const colors = theme('colors');
 
-        addBase({
-            [element]: Object.assign(
-                ...Object.keys(colors)
-                    .filter(onlyWhitelist)
-                    .map((color) => ({
-                        [`--${color}`]: colors[color],
-                    }))
-            ),
-        });
-    };
+    addBase({
+      [element]: Object.assign(
+        ...Object.keys(colors)
+          .filter(onlyWhitelist)
+          .map((color) => ({
+            [`--${color}`]: colors[color],
+          }))
+      ),
+    });
+  };
 };
