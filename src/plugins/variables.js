@@ -19,6 +19,11 @@ module.exports = function variables(element = ':root') {
 
     addBase({
       [element]: Object.assign(
+        {
+          '--default-border-color': theme('borderColor.default'),
+          '--default-text-color': theme('textColor.default'),
+          '--default-background-color': theme('backgroundColor.default'),
+        },
         ...Object.keys(colors)
           .filter(onlyWhitelist)
           .map((color) => ({
