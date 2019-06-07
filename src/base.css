@@ -11,3 +11,5 @@ basic HTML elements.
 @import 'base/headings.css';
 @import 'base/code.css';
 @import 'base/forms.css';
+
+@import 'dark-mode.css';

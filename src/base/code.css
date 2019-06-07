@@ -9,8 +9,10 @@ tt {
 }
 
 pre {
-  @apply rounded text-f6 p-3 text-default border shadow-small;
-  background-color: #fff;
+  @apply rounded text-f6 p-3 border shadow-small;
+  background-color: var(--pre-background-color);
+  color: var(--text-color);
+  border-color: var(--pre-border-color);
 }
 
 code,
@@ -20,7 +22,7 @@ kbd {
   padding: 0.2em 0.4em;
   border-radius: 3px;
   margin: 0 2px;
-  background-color: var(--code-background);
+  background-color: var(--code-background-color);
 }
 
 code {

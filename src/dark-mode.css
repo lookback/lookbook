@@ -1,0 +1,28 @@
+/* Read more in https://webkit.org/blog/8840/dark-mode-support-in-webkit/ */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: var(--blue-100);
+    --heading-color: var(--blue-30);
+    --text-color: var(--blue-20);
+    --link-color: var(--blue-40);
+    --link-color-hover: var(--blue-30);
+
+    --form-background-color: var(--grey-90);
+    --form-background-color-hover: var(--grey-80);
+    --form-input-color: var(--text-color);
+    --form-border-color: var(--grey-60);
+
+    --pre-background-color: var(--grey-90);
+    --code-background-color: var(--blue-90);
+    --code-color: var(--blue-30);
+    --code-border-color: var(--blue-80);
+  }
+
+  /* Custom fixes */
+
+  pre {
+    box-shadow: none;
+    border: 0;
+  }
+}

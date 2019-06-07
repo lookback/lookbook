@@ -9,6 +9,7 @@ textarea {
 
 label {
   @apply font-bold;
+  color: var(--label-color);
 }
 
 input[type='text'],
@@ -21,6 +22,7 @@ textarea {
   @apply font-sans inline-block border rounded p-1;
   color: var(--form-input-color);
   background-color: var(--form-background-color);
+  border-color: var(--form-border-color);
   box-shadow: inset rgba(#000, 0.05) 0 1px 2px;
   transition: color 0.15s ease-out, border-color 0.2s ease;
 
@@ -37,13 +39,15 @@ textarea {
 }
 
 select {
-  @apply font-sans text-default rounded border;
+  @apply font-sans rounded border;
+  color: var(--form-input-color);
+  border-color: var(--form-border-color);
+  background-color: var(--form-background-color);
   -webkit-appearance: none;
   padding: 0.4em 0.6em;
   padding-right: 1.5em;
   cursor: pointer;
   transition: box-shadow 0.2s ease, border-color 0.2s ease;
-  background-color: #fff;
 
   background-repeat: no-repeat;
   background-size: 1.5em;

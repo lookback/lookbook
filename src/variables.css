@@ -12,13 +12,17 @@
   --link-color-hover: var(--blue-70);
 
   /* <input>, <textarea> */
+  --label-color: var(--text-color);
   --form-input-color: rgba(theme('colors.blue-80'), 0.9);
   --form-background-color: var(--off-white);
+  --form-border-color: var(--default-border-color);
   --form-background-color-hover: #fff;
   --form-focus-shadow: rgba(theme('colors.blue-60'), 0.1) 0 0 0 2px;
 
   /* <code> */
-  --code-background: #fdfdfd;
+  --pre-background-color: #fff;
+  --pre-border-color: var(--default-border-color);
+  --code-background-color: #fdfdfd;
   --code-color: var(--purple-80);
   --code-border-color: var(--purple-30);
 
