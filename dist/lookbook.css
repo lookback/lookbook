@@ -1,4 +1,4 @@
-/*! lookbook.css v2.0.0-beta.1 */
+/*! lookbook.css v2.0.0-beta.2 */
 
 @charset "utf-8";
 
@@ -610,6 +610,9 @@ video {
 }
 
 :root{
+  --default-border-color: #d7e2e8;
+  --default-text-color: #004260;
+  --default-background-color: #f6fbfd;
   --orange-10: #fff9ef;
   --orange-20: #f9f1dc;
   --orange-30: #f6e1aa;
@@ -618,7 +621,7 @@ video {
   --orange-60: #9a6e08;
   --orange-70: #785a14;
   --orange-80: #59420c;
-  --orange-90: #2e2308;
+  --orange-90: #28200b;
   --orange-100: #1e1707;
   --blue-10: #f6fbfd;
   --blue-20: #e5f7ff;
@@ -628,7 +631,7 @@ video {
   --blue-60: #007db5;
   --blue-70: #006693;
   --blue-80: #004260;
-  --blue-90: #002b3e;
+  --blue-90: #082532;
   --blue-100: #041820;
   --green-10: #f2fffa;
   --green-20: #d7f8eb;
@@ -648,7 +651,7 @@ video {
   --grey-60: #647886;
   --grey-70: #4a5b65;
   --grey-80: #334149;
-  --grey-90: #273138;
+  --grey-90: #20292f;
   --grey-100: #151e24;
   --red-10: #fff2f3;
   --red-20: #ffebed;
@@ -658,8 +661,8 @@ video {
   --red-60: #cf4356;
   --red-70: #9c3140;
   --red-80: #602b32;
-  --red-90: #39191e;
-  --red-100: #231012;
+  --red-90: #2c1216;
+  --red-100: #1e0e10;
   --purple-10: #f6f6ff;
   --purple-20: #eff0ff;
   --purple-30: #d7d9ff;
@@ -668,7 +671,7 @@ video {
   --purple-60: #676dcd;
   --purple-70: #4348a0;
   --purple-80: #2e3388;
-  --purple-90: #1d1f43;
+  --purple-90: #1a1c36;
   --purple-100: #111220;
   --teal-10: #f3fdff;
   --teal-20: #e4f8fc;
@@ -678,7 +681,7 @@ video {
   --teal-60: #208092;
   --teal-70: #326f7a;
   --teal-80: #1e5f6c;
-  --teal-90: #133a42;
+  --teal-90: #0d262b;
   --teal-100: #0b1e21;
   --off-white: #fefefe;
 }
@@ -686,15 +689,32 @@ video {
 :root {
   --selection-background: var(--blue-80);
   --selection-color: #fff;
-  --background-color: #f6fbfd;
-  --text-color: #004260;
+  --background-color: var(--default-background-color);
+  --text-color: var(--default-text-color);
   --heading-color: var(--blue-70);
+  /* Elements */
+  /* <a> */
   --link-color: var(--blue-60);
   --link-color-hover: var(--blue-70);
+  /* <input>, <textarea> */
+  --label-color: var(--text-color);
   --form-input-color: rgba(0,66,96, 0.9);
-  --form-background-color: #fefefe;
+  --form-background-color: var(--off-white);
+  --form-border-color: var(--default-border-color);
   --form-background-color-hover: #fff;
   --form-focus-shadow: rgba(0,125,181, 0.1) 0 0 0 2px;
+  /* <code> */
+  --pre-background-color: #fff;
+  --pre-border-color: var(--default-border-color);
+  --code-background-color: #fdfdfd;
+  --code-color: var(--purple-80);
+  --code-border-color: var(--purple-30);
+  /* kbd */
+  /* Background is same as <code> */
+  --kbd-color: var(--blue-80);
+  /* <mark> */
+  --mark-background-color: var(--orange-30);
+  --mark-color: var(--orange-90);
 }
 
 /*
@@ -757,7 +777,7 @@ BUTTONS
   }
 
 .btn.dark {
-    --text: #002b3e;
+    --text: #082532;
     --background: #60ceff;
     --hover: rgb(144, 221, 255);
     --focused: #a4e3ff;
@@ -787,7 +807,7 @@ BUTTONS
 .btn-secondary {
   --text: #004260;
   --text-hover: #004260;
-  --text-active: #002b3e;
+  --text-active: #082532;
   --background: #d7e2e8;
   --focused: #b4c4cf;
   --focused-shadow: rgba(121, 148, 165, 0.1);
@@ -1043,6 +1063,10 @@ Usage:
 
 .bg-white{
   background-color: #fff;
+}
+
+.bg-blue-80{
+  background-color: #004260;
 }
 
 .border-hover{
@@ -2924,8 +2948,8 @@ a:hover {
 mark {
   border-radius: .125rem;
   padding: 0.1em 0.3em;
-  background-color: #f6e1aa;
-  color: #2e2308;
+  background-color: var(--mark-background-color);
+  color: var(--mark-color);
 }
 
 dt {
@@ -3009,10 +3033,11 @@ pre {
   border-radius: .25rem;
   font-size: 0.875rem;
   padding: 1.5rem;
-  color: #004260;
   border-width: 1px;
   box-shadow: rgba(215,226,232, .5) 0 2px 10px;
-  background-color: #fff;
+  background-color: var(--pre-background-color);
+  color: var(--text-color);
+  border-color: var(--pre-border-color);
 }
 
 code,
@@ -3023,12 +3048,12 @@ kbd {
   padding: 0.2em 0.4em;
   border-radius: 3px;
   margin: 0 2px;
-  background-color: #fdfdfd;
+  background-color: var(--code-background-color);
 }
 
 code {
-  color: #2e3388;
-  border-color: #d7d9ff;
+  color: var(--code-color);
+  border-color: var(--code-border-color);
 }
 
 pre code {
@@ -3043,7 +3068,7 @@ kbd {
   border-width: 1px;
   border-width: 1px;
   box-shadow: rgba(215,226,232, .4) 0 1px 3px;
-  color: #004260;
+  color: var(--kbd-color);
 }
 
 /*
@@ -3057,6 +3082,7 @@ textarea {
 
 label {
   font-weight: 700;
+  color: var(--label-color);
 }
 
 input[type='text'],
@@ -3073,6 +3099,7 @@ textarea {
   padding: 0.375rem;
   color: var(--form-input-color);
   background-color: var(--form-background-color);
+  border-color: var(--form-border-color);
   box-shadow: inset rgba(0,0,0, 0.05) 0 1px 2px;
   transition: color 0.15s ease-out, border-color 0.2s ease;
 }
@@ -3091,15 +3118,16 @@ input[type='text']:focus, input[type='url']:focus, input[type='email']:focus, in
 
 select {
   font-family: Lato, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
-  color: #004260;
   border-radius: .25rem;
   border-width: 1px;
+  color: var(--form-input-color);
+  border-color: var(--form-border-color);
+  background-color: var(--form-background-color);
   -webkit-appearance: none;
   padding: 0.4em 0.6em;
   padding-right: 1.5em;
   cursor: pointer;
   transition: box-shadow 0.2s ease, border-color 0.2s ease;
-  background-color: #fff;
   background-repeat: no-repeat;
   background-size: 1.5em;
   background-position: right center;
@@ -3111,6 +3139,33 @@ select:hover,
     border-color: #b4c4cf;
     outline: 0;
   }
+
+/* Read more in https://webkit.org/blog/8840/dark-mode-support-in-webkit/ */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: var(--blue-100);
+    --heading-color: var(--blue-30);
+    --text-color: var(--blue-20);
+    --link-color: var(--blue-40);
+    --link-color-hover: var(--blue-30);
+    --form-background-color: var(--grey-90);
+    --form-background-color-hover: var(--grey-80);
+    --form-input-color: var(--text-color);
+    --form-border-color: var(--grey-60);
+    --pre-background-color: var(--grey-90);
+    --code-background-color: var(--blue-90);
+    --code-color: var(--blue-30);
+    --code-border-color: var(--blue-80);
+  }
+
+  /* Custom fixes */
+
+  pre {
+    box-shadow: none;
+    border: 0;
+  }
+}
 
 /*
 TEXT BREAKS
