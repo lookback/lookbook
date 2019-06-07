@@ -348,9 +348,7 @@ module.exports = {
       default: colors['blue-80'], // Body
       ...pick(colors, [
         'white',
-        'blue-60', // Accent
-        'blue-70', // Heading
-        'green-60', // Highlight
+        'blue-60', // Main brand
         'grey-60', // Muted
       ]),
     },
@@ -370,7 +368,7 @@ module.exports = {
 
     backgroundColor: {
       default: colors['blue-10'],
-      ...pick(colors, ['grey-10', 'green-60', 'blue-80', 'white']),
+      ...pick(colors, ['grey-10', 'white', 'blue-80']),
     },
 
     /*
