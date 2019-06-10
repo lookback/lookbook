@@ -31,10 +31,11 @@ textarea {
   }
 
   &:focus {
-    @apply text-default border-active;
+    @apply border-active;
+    color: var(--text-color);
     outline: 0;
     box-shadow: var(--form-focus-shadow);
-    background-color: var(--form-background-color-hover);
+    background-color: var(--form-background-color-active);
   }
 }
 

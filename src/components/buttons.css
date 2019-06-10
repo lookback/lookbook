@@ -63,6 +63,25 @@ BUTTONS
     }
   }
 
+  @media (prefers-color-scheme: dark) {
+    --text: var(--blue-90);
+    --text-hover: var(--blue-90);
+    --text-active: var(--blue-80);
+    --background: var(--blue-40);
+    --hover: color(theme('colors.blue-40') tint(30%));
+    --focused: var(--blue-30);
+    --active: color(theme('colors.blue-40') shade(20%));
+
+    &[disabled] {
+      --disabled-color: color(
+        theme('colors.blue-90') saturation(- 30%) alpha(70%)
+      );
+      --disabled-bg: color(
+        theme('colors.blue-50') saturation(- 80%) alpha(60%)
+      );
+    }
+  }
+
   &[disabled] {
     box-shadow: none;
     cursor: default;
@@ -101,6 +120,21 @@ BUTTONS
       );
     }
   }
+
+  @media (prefers-color-scheme: dark) {
+    --background: var(--grey-70);
+    --hover: color(theme('colors.grey-70') tint(10%));
+    --focused: var(--grey-60);
+    --active: color(theme('colors.grey-70') shade(20%));
+    --text: var(--grey-30);
+    --text-hover: var(--grey-20);
+    --text-active: rgba(#fff, 0.5);
+
+    &[disabled] {
+      --disabled-color: color(theme('colors.grey-20') alpha(30%));
+      --disabled-bg: color(theme('colors.grey-70') alpha(50%));
+    }
+  }
 }
 
 .btn-primary {
@@ -119,9 +153,28 @@ BUTTONS
     --active: color(theme('colors.green-40') shade(20%));
 
     &[disabled] {
-      --disabled-color: color(theme('colors.green-80') saturation(- 30%));
+      --disabled-color: color(
+        theme('colors.green-90') saturation(- 30%) alpha(70%)
+      );
       --disabled-bg: color(
-        theme('colors.green-40') saturation(- 50%) alpha(60%)
+        theme('colors.green-50') saturation(- 80%) alpha(60%)
+      );
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    --background: var(--green-40);
+    --hover: color(theme('colors.green-40') tint(30%));
+    --focused: var(--green-30);
+    --active: color(theme('colors.green-40') shade(20%));
+    --text: var(--green-90);
+    --text-hover: var(--green-90);
+    --text-active: var(--green-80);
+
+    &[disabled] {
+      --disabled-color: color(theme('colors.green-90') alpha(90%));
+      --disabled-bg: color(
+        theme('colors.green-50') saturation(- 50%) alpha(60%)
       );
     }
   }
@@ -145,6 +198,23 @@ BUTTONS
     &[disabled] {
       --disabled-color: color(theme('colors.red-80') saturation(- 30%));
       --disabled-bg: color(theme('colors.red-40') saturation(- 50%) alpha(60%));
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    --background: var(--red-40);
+    --hover: color(theme('colors.red-40') tint(30%));
+    --focused: var(--red-30);
+    --active: color(theme('colors.red-40') shade(20%));
+    --text: var(--red-90);
+    --text-hover: var(--red-90);
+    --text-active: var(--red-80);
+
+    &[disabled] {
+      --disabled-color: color(
+        theme('colors.red-90') saturation(- 30%) alpha(90%)
+      );
+      --disabled-bg: color(theme('colors.red-70') saturation(- 40%) alpha(60%));
     }
   }
 }
@@ -189,6 +259,23 @@ BUTTONS
 
     &[disabled] {
       --disabled-color: color(theme('colors.blue-40') saturation(- 90%));
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    --background: transparent;
+    --text: var(--blue-40);
+    --text-hover: var(--blue-30);
+    --text-active: var(--blue-50);
+
+    &[disabled] {
+      --disabled-color: color(theme('colors.blue-40') saturation(- 90%));
+    }
+
+    &.btn-link--danger {
+      --text: var(--red-50);
+      --text-hover: var(--red-40);
+      --text-active: var(--red-60);
     }
   }
 }

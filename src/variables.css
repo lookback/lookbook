@@ -15,8 +15,8 @@
   --label-color: var(--text-color);
   --form-input-color: rgba(theme('colors.blue-80'), 0.9);
   --form-background-color: var(--off-white);
+  --form-background-color-active: #fff;
   --form-border-color: var(--default-border-color);
-  --form-background-color-hover: #fff;
   --form-focus-shadow: rgba(theme('colors.blue-60'), 0.1) 0 0 0 2px;
 
   /* <code> */

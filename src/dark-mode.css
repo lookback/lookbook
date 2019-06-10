@@ -2,21 +2,24 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: var(--blue-100);
+    /* Selection backgrounds don't seem to work as variables in Dark mode.. */
+    --selection-background: var(--grey-60);
+    --background-color: var(--grey-80);
     --heading-color: var(--blue-30);
     --text-color: var(--blue-20);
     --link-color: var(--blue-40);
     --link-color-hover: var(--blue-30);
 
     --form-background-color: var(--grey-90);
-    --form-background-color-hover: var(--grey-80);
+    --form-background-color-active: var(--grey-100);
     --form-input-color: var(--text-color);
     --form-border-color: var(--grey-60);
+    --form-focus-shadow: var(--blue-70) 0 0 0 2px;
 
     --pre-background-color: var(--grey-90);
-    --code-background-color: var(--blue-90);
+    --code-background-color: var(--grey-90);
     --code-color: var(--blue-30);
-    --code-border-color: var(--blue-80);
+    --code-border-color: var(--grey-80);
   }
 
   /* Custom fixes */
@@ -24,5 +27,11 @@
   pre {
     box-shadow: none;
     border: 0;
+  }
+
+  html,
+  body {
+    line-height: 1.7;
+    word-spacing: 0.05em;
   }
 }
