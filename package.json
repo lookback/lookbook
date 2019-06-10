@@ -59,8 +59,8 @@
     "postcss-reduce-initial": "^4.0.3",
     "postcss-reduce-transforms": "^4.0.2",
     "postcss-unique-selectors": "^4.0.1",
-    "stylelint": "^9.10.1",
-    "stylelint-config-recommended": "^2.1.0"
+    "stylelint": "^10.1",
+    "stylelint-config-recommended": "^2.2"
   },
   "dependencies": {
     "autoprefixer": "^9.5.1",
