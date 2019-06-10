@@ -1,4 +1,4 @@
-/*! lookbook.css v2.0.0-beta.2 */
+/*! lookbook.css v2.0.0-beta.3 */
 
 @charset "utf-8";
 
@@ -700,8 +700,8 @@ video {
   --label-color: var(--text-color);
   --form-input-color: rgba(0,66,96, 0.9);
   --form-background-color: var(--off-white);
+  --form-background-color-active: #fff;
   --form-border-color: var(--default-border-color);
-  --form-background-color-hover: #fff;
   --form-focus-shadow: rgba(0,125,181, 0.1) 0 0 0 2px;
   /* <code> */
   --pre-background-color: #fff;
@@ -789,6 +789,30 @@ BUTTONS
       --disabled-bg: rgba(136, 192, 215, 0.6);
     }
 
+@media (prefers-color-scheme: dark) {
+
+.btn {
+    --text: var(--blue-90);
+
+    --text-hover: var(--blue-90);
+
+    --text-active: var(--blue-80);
+
+    --background: var(--blue-40);
+
+    --hover: rgb(144, 221, 255);
+
+    --focused: var(--blue-30);
+
+    --active: rgb(77, 165, 204)
+}
+
+    .btn[disabled] {
+      --disabled-color: rgba(16, 32, 40, 0.7);
+      --disabled-bg: rgba(92, 123, 138, 0.6);
+    }
+  }
+
 .btn[disabled] {
     box-shadow: none;
     cursor: default;
@@ -829,6 +853,30 @@ BUTTONS
       --disabled-bg: rgba(111, 118, 123, 0.8);
     }
 
+@media (prefers-color-scheme: dark) {
+
+.btn-secondary {
+    --background: var(--grey-70);
+
+    --hover: rgb(92, 107, 116);
+
+    --focused: var(--grey-60);
+
+    --active: rgb(59, 73, 81);
+
+    --text: var(--grey-30);
+
+    --text-hover: var(--grey-20);
+
+    --text-active: rgba(255,255,255, 0.5)
+}
+
+    .btn-secondary[disabled] {
+      --disabled-color: rgba(236, 241, 244, 0.3);
+      --disabled-bg: rgba(74, 91, 101, 0.5);
+    }
+  }
+
 .btn-primary {
   --background: #188359;
   --focused: #0f6543;
@@ -847,9 +895,33 @@ BUTTONS
   }
 
 .btn-primary.dark[disabled] {
-      --disabled-color: rgb(27, 54, 44);
-      --disabled-bg: rgba(134, 172, 157, 0.6);
+      --disabled-color: rgba(18, 33, 28, 0.7);
+      --disabled-bg: rgba(105, 105, 105, 0.6);
     }
+
+@media (prefers-color-scheme: dark) {
+
+.btn-primary {
+    --background: var(--green-40);
+
+    --hover: rgb(134, 233, 193);
+
+    --focused: var(--green-30);
+
+    --active: rgb(66, 178, 134);
+
+    --text: var(--green-90);
+
+    --text-hover: var(--green-90);
+
+    --text-active: var(--green-80)
+}
+
+    .btn-primary[disabled] {
+      --disabled-color: rgba(10, 40, 29, 0.9);
+      --disabled-bg: rgba(78, 131, 110, 0.6);
+    }
+  }
 
 .btn-danger {
   --background: #cf4356;
@@ -872,6 +944,30 @@ BUTTONS
       --disabled-color: rgb(74, 63, 65);
       --disabled-bg: rgba(224, 163, 171, 0.6);
     }
+
+@media (prefers-color-scheme: dark) {
+
+.btn-danger {
+    --background: var(--red-40);
+
+    --hover: rgb(255, 170, 182);
+
+    --focused: var(--red-30);
+
+    --active: rgb(204, 107, 121);
+
+    --text: var(--red-90);
+
+    --text-hover: var(--red-90);
+
+    --text-active: var(--red-80)
+}
+
+    .btn-danger[disabled] {
+      --disabled-color: rgba(34, 27, 28, 0.9);
+      --disabled-bg: rgba(114, 90, 93, 0.6);
+    }
+  }
 
 .btn-link {
   --background: transparent;
@@ -916,6 +1012,29 @@ BUTTONS
 .btn-link.dark[disabled] {
       --disabled-color: rgb(168, 179, 184);
     }
+
+@media (prefers-color-scheme: dark) {
+
+.btn-link {
+    --background: transparent;
+
+    --text: var(--blue-40);
+
+    --text-hover: var(--blue-30);
+
+    --text-active: var(--blue-50)
+}
+
+    .btn-link[disabled] {
+      --disabled-color: rgb(168, 179, 184);
+    }
+
+    .btn-link.btn-link--danger {
+      --text: var(--red-50);
+      --text-hover: var(--red-40);
+      --text-active: var(--red-60);
+    }
+  }
 
 /* =ICONS
 --------------------------------------------- */
@@ -3109,11 +3228,11 @@ input[type='text']:hover, input[type='url']:hover, input[type='email']:hover, in
   }
 
 input[type='text']:focus, input[type='url']:focus, input[type='email']:focus, input[type='password']:focus, input[type='search']:focus, input[type='number']:focus, textarea:focus {
-    color: #004260;
     border-color: #7994a5;
+    color: var(--text-color);
     outline: 0;
     box-shadow: var(--form-focus-shadow);
-    background-color: var(--form-background-color-hover);
+    background-color: var(--form-background-color-active);
   }
 
 select {
@@ -3139,33 +3258,6 @@ select:hover,
     border-color: #b4c4cf;
     outline: 0;
   }
-
-/* Read more in https://webkit.org/blog/8840/dark-mode-support-in-webkit/ */
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-color: var(--blue-100);
-    --heading-color: var(--blue-30);
-    --text-color: var(--blue-20);
-    --link-color: var(--blue-40);
-    --link-color-hover: var(--blue-30);
-    --form-background-color: var(--grey-90);
-    --form-background-color-hover: var(--grey-80);
-    --form-input-color: var(--text-color);
-    --form-border-color: var(--grey-60);
-    --pre-background-color: var(--grey-90);
-    --code-background-color: var(--blue-90);
-    --code-color: var(--blue-30);
-    --code-border-color: var(--blue-80);
-  }
-
-  /* Custom fixes */
-
-  pre {
-    box-shadow: none;
-    border: 0;
-  }
-}
 
 /*
 TEXT BREAKS
