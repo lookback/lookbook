@@ -9,9 +9,9 @@ tt {
 }
 
 pre {
-  @apply rounded text-f6 p-3 border shadow-small;
+  @apply rounded-lg text-f6 p-3 shadow-small;
   background-color: var(--pre-background-color);
-  color: var(--text-color);
+  color: var(--pre-color);
   border-color: var(--pre-border-color);
 }
 

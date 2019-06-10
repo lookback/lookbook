@@ -20,8 +20,8 @@
   --form-focus-shadow: rgba(theme('colors.blue-60'), 0.1) 0 0 0 2px;
 
   /* <code> */
-  --pre-background-color: #fff;
-  --pre-border-color: var(--default-border-color);
+  --pre-background-color: var(--grey-90);
+  --pre-color: var(--off-white);
   --code-background-color: #fdfdfd;
   --code-color: var(--purple-80);
   --code-border-color: var(--purple-30);
