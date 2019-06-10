@@ -8,6 +8,10 @@ ext_min=bare.css
 
 echo "🕐 Building $file..."
 
+# Build Dark Mode CSS
+NODE_ENV='production' npx postcss src/dark-mode.css --dir "$dir" --ext "$ext_min_maps" "$@"
+NODE_ENV='development' npx postcss src/dark-mode.css --dir "$dir" --no-map "$@"
+
 # Emit minified and sourcemapped dist/lookbook.dist.css
 NODE_ENV='production' npx postcss "$file" --dir "$dir" --ext "$ext_min_maps" "$@"
 
