@@ -4,6 +4,8 @@
 
 Lookback's central location for shared colors and styles ✨
 
+Read the complete overview at the [Lookbook website](https://lookback.github.io/lookbook-website/).
+
 ## What's included
 
 This repository is a build chain for building a distributable `.css` file for use in various web products of Lookback.
