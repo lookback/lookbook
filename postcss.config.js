@@ -1,6 +1,6 @@
 const { version } = require('./package.json');
 const { defaultPlugins } = require('./lib/postcss-plugins');
-const minify = require('./src/plugins/cssnano-default');
+const minify = require('./src/plugins/postcss-cssnano-default');
 
 // Internal config, used to build *this* .css.
 module.exports = (ctx) => ({
