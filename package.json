@@ -4,9 +4,12 @@
   "description": "The design system of Lookback",
   "main": "index.js",
   "scripts": {
-    "test": "stylelint src/**/*.css",
+    "lint": "stylelint src/**/*.css",
+    "pretest": "npm run lint",
+    "test": "[[ -z \"$CI\" ]] && pa11y ./test/test.html || mkdir -p test-output/junit && pa11y -S ./test-output/screenshot.png -r junit ./test/test.html > test-output/junit/results.xml",
     "build": "scripts/build",
-    "watch": "scripts/build --watch --verbose"
+    "watch": "scripts/build --watch --verbose",
+    "update-colors": "scripts/fetch-figma-colors && scripts/write-test-file"
   },
   "repository": {
     "type": "git",
@@ -32,6 +35,8 @@
     "eslint": "^5.8.0",
     "fast-glob": "^2.2.7",
     "node-fetch": "^2.3.0",
+    "pa11y": "^5.2.0",
+    "pa11y-reporter-junit": "^1.1.0",
     "postcss-calc": "^7.0.1",
     "postcss-cli": "^6.0.1",
     "postcss-colormin": "^4.0.3",

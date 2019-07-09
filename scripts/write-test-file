@@ -1,0 +1,61 @@
+#!/usr/bin/env node
+const fs = require('fs');
+const { promisify } = require('util');
+const path = require('path');
+
+const writeFile = promisify(fs.writeFile);
+
+const getColorScaleFromName = (name) => {
+  const match = /(\d{1,3})$/g.exec(name);
+  return match ? parseInt(match[0], 10) : null;
+};
+
+const htmlLayout = (contents) =>
+  `<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lookbook Colors Test Page</title>
+  </head>
+  <body>
+    ${contents}
+  </body>
+</html>
+`;
+
+/**
+ * Writes a HTML page from a color hash. Will place the values (the colors)
+ * as background colors, and white or black as foreground.
+ *
+ * @param colors A key value object of `{ colorSlug: '#colorCode' }`
+ * @param colorBreakAtScale Optional number in the scale (10-100) where we
+ * should break and generate white foreground colors instead of black
+ */
+const writeTestPage = async (colors, colorBreakAtScale = 50) => {
+  const colorBlocks = Object.entries(colors)
+    .map(([name, color]) => ({
+      color,
+      scale: getColorScaleFromName(name),
+      name,
+    }))
+    .map(
+      /* eslint-disable */
+      (s) => `
+      <p style="color: ${
+        s.scale > colorBreakAtScale ? '#fff' : '#000'
+      }; background-color: ${s.color}">${s.name}</p>
+  `
+      /* eslint-enable */
+    );
+
+  await writeFile(
+    path.resolve(__dirname + '/../test/test.html'),
+    htmlLayout(colorBlocks.join(''))
+  );
+
+  console.log(`✅ Wrote HTML test page with ${colorBlocks.length} colors`);
+};
+
+writeTestPage(require('../colors')).catch(console.error);
