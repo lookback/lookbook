@@ -1,5 +1,5 @@
 /* eslint-disable */
-/* Updated at Tue, 09 Jul 2019 09:54:09 GMT*/
+/* Updated at Tue, 09 Jul 2019 15:53:37 GMT*/
 module.exports = {
     'orange-10': '#fff9ef',
     'orange-20': '#f9f1dc',
@@ -19,7 +19,7 @@ module.exports = {
     'blue-40': '#60ceff',
     'blue-50': '#00a0e8',
     /** Suitable as default button and link color. */
-    'blue-60': '#007db5',
+    'blue-60': '#007ab1',
     /** Suitable as heading color. */
     'blue-70': '#05577b',
     /** Suitable as body text color. */
