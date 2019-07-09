@@ -1,15 +1,15 @@
 /* eslint-disable */
-/* Updated at Fri, 07 Jun 2019 14:04:15 GMT*/
+/* Updated at Tue, 09 Jul 2019 09:54:09 GMT*/
 module.exports = {
     'orange-10': '#fff9ef',
     'orange-20': '#f9f1dc',
     'orange-30': '#f6e1aa',
     'orange-40': '#fecf60',
     'orange-50': '#f1ae0e',
-    'orange-60': '#9a6e08',
-    'orange-70': '#785a14',
-    'orange-80': '#59420c',
-    'orange-90': '#28200b',
+    'orange-60': '#a96500',
+    'orange-70': '#804d00',
+    'orange-80': '#55371b',
+    'orange-90': '#241b04',
     'orange-100': '#1e1707',
     /** Suitable as background color. */
     'blue-10': '#f6fbfd',
@@ -21,10 +21,10 @@ module.exports = {
     /** Suitable as default button and link color. */
     'blue-60': '#007db5',
     /** Suitable as heading color. */
-    'blue-70': '#006693',
+    'blue-70': '#05577b',
     /** Suitable as body text color. */
-    'blue-80': '#004260',
-    'blue-90': '#082532',
+    'blue-80': '#0d4057',
+    'blue-90': '#092d3d',
     'blue-100': '#041820',
     'green-10': '#f2fffa',
     'green-20': '#d7f8eb',
@@ -42,11 +42,11 @@ module.exports = {
     'grey-30': '#d7e2e8',
     'grey-40': '#b4c4cf',
     'grey-50': '#7994a5',
-    'grey-60': '#647886',
-    'grey-70': '#4a5b65',
-    'grey-80': '#334149',
-    'grey-90': '#20292f',
-    'grey-100': '#151e24',
+    'grey-60': '#466a83',
+    'grey-70': '#365669',
+    'grey-80': '#253f50',
+    'grey-90': '#192d3a',
+    'grey-100': '#0e1f29',
     'red-10': '#fff2f3',
     'red-20': '#ffebed',
     'red-30': '#ffc7cb',
@@ -64,8 +64,8 @@ module.exports = {
     'purple-40': '#b4b9ff',
     'purple-50': '#8188f1',
     'purple-60': '#676dcd',
-    'purple-70': '#4348a0',
-    'purple-80': '#2e3388',
+    'purple-70': '#4b4f96',
+    'purple-80': '#36365b',
     'purple-90': '#1a1c36',
     'purple-100': '#111220',
     'teal-10': '#f3fdff',
@@ -75,7 +75,7 @@ module.exports = {
     'teal-50': '#34a4b9',
     'teal-60': '#208092',
     'teal-70': '#326f7a',
-    'teal-80': '#1e5f6c',
-    'teal-90': '#0d262b',
+    'teal-80': '#1a464e',
+    'teal-90': '#102c32',
     'teal-100': '#0b1e21',
 }
