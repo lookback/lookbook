@@ -30,55 +30,53 @@ dotenv.load();
 const personalToken = process.env.FIGMA_PERSONAL_TOKEN;
 
 if (!personalToken) {
-    console.error('Please pass FIGMA_PERSONAL_TOKEN to this script and re-run');
-    process.exit(1);
+  console.error('Please pass FIGMA_PERSONAL_TOKEN to this script and re-run');
+  process.exit(1);
 }
 
 const figmaBase = 'https://api.figma.com/';
 
 const rgbToHex = (r, g, b) =>
-    '#' +
-    ((1 << 24) + (Math.round(r) << 16) + (Math.round(g) << 8) + Math.round(b))
-        .toString(16)
-        .slice(1);
+  '#' +
+  ((1 << 24) + (Math.round(r) << 16) + (Math.round(g) << 8) + Math.round(b))
+    .toString(16)
+    .slice(1);
 
 const slugify = (str) => str.toLowerCase().replace(/\s+/, '-');
 
 const safeRequire = (file) => {
-    try {
-        return require(file);
-    } catch (ex) {
-        return null;
-    }
+  try {
+    return require(file);
+  } catch (ex) {
+    return null;
+  }
 };
 
 const doFetch = (url) =>
-    fetch(`${figmaBase}v1${url}`, {
-        headers: {
-            'X-Figma-Token': personalToken,
-        },
+  fetch(`${figmaBase}v1${url}`, {
+    headers: {
+      'X-Figma-Token': personalToken,
+    },
+  })
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error(`Status: ${res.status}`);
+      }
+
+      return res.json();
     })
-        .then((res) => {
-            if (!res.ok) {
-                throw new Error(`Status: ${res.status}`);
-            }
+    .then((json) => {
+      if (json.error || (json.status && json.status !== 200)) {
+        throw new Error(json.error || `Status ${json.status}: ${json.err}`);
+      }
 
-            return res.json();
-        })
-        .then((json) => {
-            if (json.error || (json.status && json.status !== 200)) {
-                throw new Error(
-                    json.error || `Status ${json.status}: ${json.err}`
-                );
-            }
-
-            return json;
-        });
+      return json;
+    });
 
 const fetchStyles = async (teamId) => {
-    const json = await doFetch(`/teams/${teamId}/styles?page_size=99`);
+  const json = await doFetch(`/teams/${teamId}/styles?page_size=99`);
 
-    return json.meta.styles;
+  return json.meta.styles;
 };
 
 const fetchFile = async (key) => await doFetch(`/files/${key}`);
@@ -112,98 +110,98 @@ const fetchStyle = async (key) => await doFetch(`/styles/${key}`);
  ```
  */
 const fetchAllColorStyles = async () => {
-    const styles = await fetchStyles(TEAM_ID);
-    const file = await fetchFile(FILE_KEY);
+  const styles = await fetchStyles(TEAM_ID);
+  const file = await fetchFile(FILE_KEY);
 
-    const canvas = file.document.children.find((page) => page.id === PAGE_ID);
+  const canvas = file.document.children.find((page) => page.id === PAGE_ID);
 
-    return (
-        canvas &&
-        canvas.children
-            .filter((c) => c.type === 'INSTANCE')
-            .map((c) => c.children.filter((c) => c.type === 'RECTANGLE')[0])
-            .filter((c) => !!c.styles && !!c.styles.fill)
-            .map((c) => {
-                const { r, g, b } = c.fills[0].color;
-                const nodeId = c.styles.fill;
+  return (
+    canvas &&
+    canvas.children
+      .filter((c) => c.type === 'INSTANCE')
+      .map((c) => c.children.filter((c) => c.type === 'RECTANGLE')[0])
+      .filter((c) => !!c.styles && !!c.styles.fill)
+      .map((c) => {
+        const { r, g, b } = c.fills[0].color;
+        const nodeId = c.styles.fill;
 
-                return {
-                    // Cross reference to the array of styles, since Figma doesn't
-                    // give us the HEX color codes in their /styles endpoint .. :(
-                    ...styles.find((s) => s.node_id === nodeId),
-                    color: rgbToHex(r * 255, g * 255, b * 255),
-                };
-            })
-            .filter((c) => !!c.name)
-    );
+        return {
+          // Cross reference to the array of styles, since Figma doesn't
+          // give us the HEX color codes in their /styles endpoint .. :(
+          ...styles.find((s) => s.node_id === nodeId),
+          color: rgbToHex(r * 255, g * 255, b * 255),
+        };
+      })
+      .filter((c) => !!c.name)
+  );
 };
 
 /**
  * Calls Figma's API and saves to a `colors.js` file in the project root.
  */
 const writeColorsFromFigma = async () => {
-    const styles = await fetchAllColorStyles();
+  const styles = await fetchAllColorStyles();
 
-    if (!styles) {
-        throw new Error('❌ No styles found');
-    }
+  if (!styles) {
+    throw new Error('❌ No styles found');
+  }
 
-    const colors = styles
-        .sort((a, b) => (a.sort_position < b.sort_position ? -1 : 1))
-        .map(
-            (s) =>
-                (s.description ? `    /** ${s.description} */\n` : '') +
-                `    '${slugify(s.name)}': '${s.color}',`
-        )
-        .join('\n');
+  const colors = styles
+    .sort((a, b) => (a.sort_position < b.sort_position ? -1 : 1))
+    .map(
+      (s) =>
+        (s.description ? `    /** ${s.description} */\n` : '') +
+        `    '${slugify(s.name)}': '${s.color}',`
+    )
+    .join('\n');
 
-    const fileContents = `/* eslint-disable */
+  const fileContents = `/* eslint-disable */
 /* Updated at ${new Date().toUTCString()}*/
 module.exports = {
 ${colors}
 }`;
 
-    const destPath = path.resolve(__dirname + '/../colors.js');
+  const destPath = path.resolve(__dirname + '/../colors.js');
 
-    const originalFile = safeRequire(destPath);
+  const originalFile = safeRequire(destPath);
 
-    await writeFile(destPath, fileContents);
+  await writeFile(destPath, fileContents);
 
-    const numChanged = colorsHaveChanged(safeRequire(destPath), originalFile);
+  const numChanged = colorsHaveChanged(safeRequire(destPath), originalFile);
 
+  console.log(
+    `✅ Wrote ${styles.length} colors to file${
+      numChanged ? ` (${Math.abs(numChanged)} changed)` : ''
+    }`
+  );
+
+  numChanged &&
     console.log(
-        `✅ Wrote ${styles.length} colors to file${
-            numChanged ? ` (${Math.abs(numChanged)} changed)` : ''
-        }`
+      dim('☝️ Please inspect the diff of colors.js before committing!')
     );
-
-    numChanged &&
-        console.log(
-            dim('☝️ Please inspect the diff of colors.js before committing!')
-        );
 };
 
 const colorsHaveChanged = (newColors, oldColors) => {
-    if (!oldColors || !newColors) {
-        return 0;
+  if (!oldColors || !newColors) {
+    return 0;
+  }
+
+  const numChanged =
+    Object.keys(newColors).length - Object.keys(oldColors).length;
+
+  if (numChanged > 0) {
+    return numChanged;
+  }
+
+  let colorsChanged = 0;
+
+  for (const colorName in oldColors) {
+    if (oldColors[colorName] !== newColors[colorName]) {
+      colorsChanged++;
     }
+  }
 
-    const numChanged =
-        Object.keys(newColors).length - Object.keys(oldColors).length;
-
-    if (numChanged > 0) {
-        return numChanged;
-    }
-
-    let colorsChanged = 0;
-
-    for (const colorName in oldColors) {
-        if (oldColors[colorName] !== newColors[colorName]) {
-            colorsChanged++;
-        }
-    }
-
-    return colorsChanged;
+  return colorsChanged;
 };
 
 writeColorsFromFigma().catch(console.error);
