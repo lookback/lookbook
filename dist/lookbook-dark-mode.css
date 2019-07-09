@@ -1,4 +1,4 @@
-/*! lookbook-dark-mode.css v2.0.0-beta.3 */
+/*! lookbook-dark-mode.css v2.0.0-beta.4 */
 
 @media screen and (prefers-color-scheme: dark) {
 
@@ -19,18 +19,18 @@
 }
 
     .btn[disabled] {
-      --disabled-color: rgba(16, 32, 40, 0.7);
+      --disabled-color: rgba(20, 42, 51, 0.7);
       --disabled-bg: rgba(92, 123, 138, 0.6);
     }
 
 .btn-secondary {
     --background: var(--grey-70);
 
-    --hover: rgb(92, 107, 116);
+    --hover: rgb(74, 103, 120);
 
     --focused: var(--grey-60);
 
-    --active: rgb(59, 73, 81);
+    --active: rgb(43, 69, 84);
 
     --text: var(--grey-30);
 
@@ -41,7 +41,7 @@
 
     .btn-secondary[disabled] {
       --disabled-color: rgba(236, 241, 244, 0.3);
-      --disabled-bg: rgba(74, 91, 101, 0.5);
+      --disabled-bg: rgba(54, 86, 105, 0.5);
     }
 
 .btn-primary {
