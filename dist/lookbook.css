@@ -628,7 +628,7 @@ video {
   --blue-30: #a4e3ff;
   --blue-40: #60ceff;
   --blue-50: #00a0e8;
-  --blue-60: #007db5;
+  --blue-60: #007ab1;
   --blue-70: #05577b;
   --blue-80: #0d4057;
   --blue-90: #092d3d;
@@ -702,7 +702,7 @@ video {
   --form-background-color: var(--off-white);
   --form-background-color-active: #fff;
   --form-border-color: var(--default-border-color);
-  --form-focus-shadow: rgba(0,125,181, 0.1) 0 0 0 2px;
+  --form-focus-shadow: rgba(0,122,177, 0.1) 0 0 0 2px;
   /* <code> */
   --pre-background-color: var(--grey-90);
   --pre-color: var(--off-white);
@@ -726,13 +726,13 @@ BUTTONS
 ----------------------------------------------------------------*/
 
 .btn {
-  --background: #007db5;
+  --background: #007ab1;
   --text: #fff;
   --text-hover: #fff;
   --text-active: #e4e4e4;
   --focused: rgb(5, 87, 123);
-  --focused-shadow: rgba(0, 125, 181, 0.3);
-  --hover: rgb(0, 113, 163);
+  --focused-shadow: rgba(0, 122, 177, 0.3);
+  --hover: rgb(0, 110, 159);
   --active: #05577b;
   --disabled-bg: rgb(222, 222, 222);
   --disabled-color: rgb(80, 93, 98);
@@ -875,7 +875,7 @@ BUTTONS
 
 .btn-link {
   --background: transparent;
-  --text: #007db5;
+  --text: #007ab1;
   --text-hover: #05577b;
   --text-active: #0d4057;
   --disabled-color: rgb(80, 93, 98);
@@ -2579,7 +2579,7 @@ Usage:
 }
 
 .text-blue-60{
-  color: #007db5;
+  color: #007ab1;
 }
 
 .text-grey-60{
@@ -2595,7 +2595,7 @@ Usage:
 }
 
 .hover\:text-blue-60:hover{
-  color: #007db5;
+  color: #007ab1;
 }
 
 .hover\:text-grey-60:hover{
