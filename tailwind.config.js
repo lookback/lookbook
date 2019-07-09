@@ -819,6 +819,8 @@ module.exports = {
     verticalAlign: false,
     whitespace: false,
     order: false,
+    objectPosition: false,
+    objectFit: false,
   },
 
   /*
