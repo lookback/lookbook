@@ -63,7 +63,7 @@ BUTTONS
     }
   }
 
-  @media (prefers-color-scheme: dark) {
+  @media screen and (prefers-color-scheme: dark) {
     --text: var(--blue-90);
     --text-hover: var(--blue-90);
     --text-active: var(--blue-80);
@@ -121,7 +121,7 @@ BUTTONS
     }
   }
 
-  @media (prefers-color-scheme: dark) {
+  @media screen and (prefers-color-scheme: dark) {
     --background: var(--grey-70);
     --hover: color(theme('colors.grey-70') tint(10%));
     --focused: var(--grey-60);
@@ -162,7 +162,7 @@ BUTTONS
     }
   }
 
-  @media (prefers-color-scheme: dark) {
+  @media screen and (prefers-color-scheme: dark) {
     --background: var(--green-40);
     --hover: color(theme('colors.green-40') tint(30%));
     --focused: var(--green-30);
@@ -201,7 +201,7 @@ BUTTONS
     }
   }
 
-  @media (prefers-color-scheme: dark) {
+  @media screen and (prefers-color-scheme: dark) {
     --background: var(--red-40);
     --hover: color(theme('colors.red-40') tint(30%));
     --focused: var(--red-30);
@@ -262,7 +262,7 @@ BUTTONS
     }
   }
 
-  @media (prefers-color-scheme: dark) {
+  @media screen and (prefers-color-scheme: dark) {
     --background: transparent;
     --text: var(--blue-40);
     --text-hover: var(--blue-30);

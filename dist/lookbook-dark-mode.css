@@ -1,0 +1,144 @@
+/*! lookbook-dark-mode.css v2.0.0-beta.3 */
+
+@media screen and (prefers-color-scheme: dark) {
+
+.btn {
+    --text: var(--blue-90);
+
+    --text-hover: var(--blue-90);
+
+    --text-active: var(--blue-80);
+
+    --background: var(--blue-40);
+
+    --hover: rgb(144, 221, 255);
+
+    --focused: var(--blue-30);
+
+    --active: rgb(77, 165, 204)
+}
+
+    .btn[disabled] {
+      --disabled-color: rgba(16, 32, 40, 0.7);
+      --disabled-bg: rgba(92, 123, 138, 0.6);
+    }
+
+.btn-secondary {
+    --background: var(--grey-70);
+
+    --hover: rgb(92, 107, 116);
+
+    --focused: var(--grey-60);
+
+    --active: rgb(59, 73, 81);
+
+    --text: var(--grey-30);
+
+    --text-hover: var(--grey-20);
+
+    --text-active: rgba(255,255,255, 0.5)
+}
+
+    .btn-secondary[disabled] {
+      --disabled-color: rgba(236, 241, 244, 0.3);
+      --disabled-bg: rgba(74, 91, 101, 0.5);
+    }
+
+.btn-primary {
+    --background: var(--green-40);
+
+    --hover: rgb(134, 233, 193);
+
+    --focused: var(--green-30);
+
+    --active: rgb(66, 178, 134);
+
+    --text: var(--green-90);
+
+    --text-hover: var(--green-90);
+
+    --text-active: var(--green-80)
+}
+
+    .btn-primary[disabled] {
+      --disabled-color: rgba(10, 40, 29, 0.9);
+      --disabled-bg: rgba(78, 131, 110, 0.6);
+    }
+
+.btn-danger {
+    --background: var(--red-40);
+
+    --hover: rgb(255, 170, 182);
+
+    --focused: var(--red-30);
+
+    --active: rgb(204, 107, 121);
+
+    --text: var(--red-90);
+
+    --text-hover: var(--red-90);
+
+    --text-active: var(--red-80)
+}
+
+    .btn-danger[disabled] {
+      --disabled-color: rgba(34, 27, 28, 0.9);
+      --disabled-bg: rgba(114, 90, 93, 0.6);
+    }
+
+.btn-link {
+    --background: transparent;
+
+    --text: var(--blue-40);
+
+    --text-hover: var(--blue-30);
+
+    --text-active: var(--blue-50)
+}
+
+    .btn-link[disabled] {
+      --disabled-color: rgb(168, 179, 184);
+    }
+
+    .btn-link.btn-link--danger {
+      --text: var(--red-50);
+      --text-hover: var(--red-40);
+      --text-active: var(--red-60);
+    }
+  .dark\:\.bg-default {
+    background-color: #f6fbfd
+  }
+
+  .dark\:\.bg-white {
+    background-color: #fff
+  }
+
+  :root {
+    /* Selection backgrounds don't seem to work as variables in Dark mode.. */
+    --selection-background: var(--grey-60);
+    --background-color: var(--grey-80);
+    --heading-color: var(--blue-30);
+    --text-color: var(--blue-20);
+    --link-color: var(--blue-40);
+    --link-color-hover: var(--blue-30);
+    --form-background-color: var(--grey-90);
+    --form-background-color-active: var(--grey-100);
+    --form-input-color: var(--text-color);
+    --form-border-color: var(--grey-60);
+    --form-focus-shadow: var(--blue-70) 0 0 0 2px;
+    --code-background-color: var(--grey-90);
+    --code-color: var(--blue-30);
+    --code-border-color: var(--grey-80);
+  }
+
+  pre {
+    box-shadow: none;
+    border: 0;
+  }
+
+  html,
+  body {
+    line-height: 1.7;
+    word-spacing: 0.05em;
+  }
+}

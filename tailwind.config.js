@@ -730,7 +730,7 @@ module.exports = {
   variants: {
     appearance: false,
     backgroundAttachment: false,
-    backgroundColor: [],
+    backgroundColor: ['dark'],
     backgroundPosition: false,
     backgroundRepeat: false,
     backgroundSize: false,

@@ -1,6 +1,6 @@
-/* Read more in https://webkit.org/blog/8840/dark-mode-support-in-webkit/ */
+@media screen and (prefers-color-scheme: dark) {
+  /* Read more in https://webkit.org/blog/8840/dark-mode-support-in-webkit/ */
 
-@media (prefers-color-scheme: dark) {
   :root {
     /* Selection backgrounds don't seem to work as variables in Dark mode.. */
     --selection-background: var(--grey-60);

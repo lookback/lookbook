@@ -8,10 +8,6 @@ ext_min=bare.css
 
 echo "🕐 Building $file..."
 
-# Build Dark Mode CSS
-NODE_ENV='production' npx postcss src/dark-mode.css --dir "$dir" --ext "$ext_min_maps" "$@"
-NODE_ENV='development' npx postcss src/dark-mode.css --dir "$dir" --no-map "$@"
-
 # Emit minified and sourcemapped dist/lookbook.dist.css
 NODE_ENV='production' npx postcss "$file" --dir "$dir" --ext "$ext_min_maps" "$@"
 
@@ -32,4 +28,6 @@ echo "✅ Built minified version into $dir/lookbook.$ext_min ($size_nonmap)"
 
 size="$(ls -lah dist/lookbook.$ext_min_maps | awk -F " " {'print $5'})"
 
-echo "✅ Built minified version (with sourcemaps) into $dir/lookbook.$ext_min_maps ($size)" && exit $status
+echo "✅ Built minified version (with sourcemaps) into $dir/lookbook.$ext_min_maps ($size)"
+
+exit $status

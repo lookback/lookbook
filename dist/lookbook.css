@@ -704,8 +704,8 @@ video {
   --form-border-color: var(--default-border-color);
   --form-focus-shadow: rgba(0,125,181, 0.1) 0 0 0 2px;
   /* <code> */
-  --pre-background-color: #fff;
-  --pre-border-color: var(--default-border-color);
+  --pre-background-color: var(--grey-90);
+  --pre-color: var(--off-white);
   --code-background-color: #fdfdfd;
   --code-color: var(--purple-80);
   --code-border-color: var(--purple-30);
@@ -789,30 +789,6 @@ BUTTONS
       --disabled-bg: rgba(136, 192, 215, 0.6);
     }
 
-@media (prefers-color-scheme: dark) {
-
-.btn {
-    --text: var(--blue-90);
-
-    --text-hover: var(--blue-90);
-
-    --text-active: var(--blue-80);
-
-    --background: var(--blue-40);
-
-    --hover: rgb(144, 221, 255);
-
-    --focused: var(--blue-30);
-
-    --active: rgb(77, 165, 204)
-}
-
-    .btn[disabled] {
-      --disabled-color: rgba(16, 32, 40, 0.7);
-      --disabled-bg: rgba(92, 123, 138, 0.6);
-    }
-  }
-
 .btn[disabled] {
     box-shadow: none;
     cursor: default;
@@ -853,30 +829,6 @@ BUTTONS
       --disabled-bg: rgba(111, 118, 123, 0.8);
     }
 
-@media (prefers-color-scheme: dark) {
-
-.btn-secondary {
-    --background: var(--grey-70);
-
-    --hover: rgb(92, 107, 116);
-
-    --focused: var(--grey-60);
-
-    --active: rgb(59, 73, 81);
-
-    --text: var(--grey-30);
-
-    --text-hover: var(--grey-20);
-
-    --text-active: rgba(255,255,255, 0.5)
-}
-
-    .btn-secondary[disabled] {
-      --disabled-color: rgba(236, 241, 244, 0.3);
-      --disabled-bg: rgba(74, 91, 101, 0.5);
-    }
-  }
-
 .btn-primary {
   --background: #188359;
   --focused: #0f6543;
@@ -899,30 +851,6 @@ BUTTONS
       --disabled-bg: rgba(105, 105, 105, 0.6);
     }
 
-@media (prefers-color-scheme: dark) {
-
-.btn-primary {
-    --background: var(--green-40);
-
-    --hover: rgb(134, 233, 193);
-
-    --focused: var(--green-30);
-
-    --active: rgb(66, 178, 134);
-
-    --text: var(--green-90);
-
-    --text-hover: var(--green-90);
-
-    --text-active: var(--green-80)
-}
-
-    .btn-primary[disabled] {
-      --disabled-color: rgba(10, 40, 29, 0.9);
-      --disabled-bg: rgba(78, 131, 110, 0.6);
-    }
-  }
-
 .btn-danger {
   --background: #cf4356;
   --focused: #9c3140;
@@ -944,30 +872,6 @@ BUTTONS
       --disabled-color: rgb(74, 63, 65);
       --disabled-bg: rgba(224, 163, 171, 0.6);
     }
-
-@media (prefers-color-scheme: dark) {
-
-.btn-danger {
-    --background: var(--red-40);
-
-    --hover: rgb(255, 170, 182);
-
-    --focused: var(--red-30);
-
-    --active: rgb(204, 107, 121);
-
-    --text: var(--red-90);
-
-    --text-hover: var(--red-90);
-
-    --text-active: var(--red-80)
-}
-
-    .btn-danger[disabled] {
-      --disabled-color: rgba(34, 27, 28, 0.9);
-      --disabled-bg: rgba(114, 90, 93, 0.6);
-    }
-  }
 
 .btn-link {
   --background: transparent;
@@ -1012,29 +916,6 @@ BUTTONS
 .btn-link.dark[disabled] {
       --disabled-color: rgb(168, 179, 184);
     }
-
-@media (prefers-color-scheme: dark) {
-
-.btn-link {
-    --background: transparent;
-
-    --text: var(--blue-40);
-
-    --text-hover: var(--blue-30);
-
-    --text-active: var(--blue-50)
-}
-
-    .btn-link[disabled] {
-      --disabled-color: rgb(168, 179, 184);
-    }
-
-    .btn-link.btn-link--danger {
-      --text: var(--red-50);
-      --text-hover: var(--red-40);
-      --text-active: var(--red-60);
-    }
-  }
 
 /* =ICONS
 --------------------------------------------- */
@@ -2104,76 +1985,6 @@ Usage:
   min-height: 100vh;
 }
 
-.object-contain{
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-.object-cover{
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.object-fill{
-  -o-object-fit: fill;
-     object-fit: fill;
-}
-
-.object-none{
-  -o-object-fit: none;
-     object-fit: none;
-}
-
-.object-scale-down{
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
-}
-
-.object-bottom{
-  -o-object-position: bottom;
-     object-position: bottom;
-}
-
-.object-center{
-  -o-object-position: center;
-     object-position: center;
-}
-
-.object-left{
-  -o-object-position: left;
-     object-position: left;
-}
-
-.object-left-bottom{
-  -o-object-position: left bottom;
-     object-position: left bottom;
-}
-
-.object-left-top{
-  -o-object-position: left top;
-     object-position: left top;
-}
-
-.object-right{
-  -o-object-position: right;
-     object-position: right;
-}
-
-.object-right-bottom{
-  -o-object-position: right bottom;
-     object-position: right bottom;
-}
-
-.object-right-top{
-  -o-object-position: right top;
-     object-position: right top;
-}
-
-.object-top{
-  -o-object-position: top;
-     object-position: top;
-}
-
 .opacity-0{
   opacity: 0;
 }
@@ -3149,13 +2960,12 @@ tt {
 }
 
 pre {
-  border-radius: .25rem;
+  border-radius: .5rem;
   font-size: 0.875rem;
   padding: 1.5rem;
-  border-width: 1px;
   box-shadow: rgba(215,226,232, .5) 0 2px 10px;
   background-color: var(--pre-background-color);
-  color: var(--text-color);
+  color: var(--pre-color);
   border-color: var(--pre-border-color);
 }
 
@@ -3737,76 +3547,6 @@ TEXT BREAKS
 
   .sm\:ml-px{
     margin-left: 1px;
-  }
-
-  .sm\:object-contain{
-    -o-object-fit: contain;
-       object-fit: contain;
-  }
-
-  .sm\:object-cover{
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-
-  .sm\:object-fill{
-    -o-object-fit: fill;
-       object-fit: fill;
-  }
-
-  .sm\:object-none{
-    -o-object-fit: none;
-       object-fit: none;
-  }
-
-  .sm\:object-scale-down{
-    -o-object-fit: scale-down;
-       object-fit: scale-down;
-  }
-
-  .sm\:object-bottom{
-    -o-object-position: bottom;
-       object-position: bottom;
-  }
-
-  .sm\:object-center{
-    -o-object-position: center;
-       object-position: center;
-  }
-
-  .sm\:object-left{
-    -o-object-position: left;
-       object-position: left;
-  }
-
-  .sm\:object-left-bottom{
-    -o-object-position: left bottom;
-       object-position: left bottom;
-  }
-
-  .sm\:object-left-top{
-    -o-object-position: left top;
-       object-position: left top;
-  }
-
-  .sm\:object-right{
-    -o-object-position: right;
-       object-position: right;
-  }
-
-  .sm\:object-right-bottom{
-    -o-object-position: right bottom;
-       object-position: right bottom;
-  }
-
-  .sm\:object-right-top{
-    -o-object-position: right top;
-       object-position: right top;
-  }
-
-  .sm\:object-top{
-    -o-object-position: top;
-       object-position: top;
   }
 
   .sm\:p-0{
