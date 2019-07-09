@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/lookbook
     docker:
-      - image: circleci/node:8.12.0
+      - image: circleci/node:latest-browsers
     steps:
       - checkout
       - restore_cache:
