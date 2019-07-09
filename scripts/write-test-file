@@ -18,6 +18,18 @@ const htmlLayout = (contents) =>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lookbook Colors Test Page</title>
+    <link rel="stylesheet" href="../dist/lookbook.css">
+    <style>
+      body {
+        padding: 1em;
+      }
+
+      .block {
+        padding: 1em;
+        border-radius: .25em;
+        margin-bottom: .5em;
+      }
+    </style>
   </head>
   <body>
     ${contents}
@@ -43,19 +55,35 @@ const writeTestPage = async (colors, colorBreakAtScale = 50) => {
     .map(
       /* eslint-disable */
       (s) => `
-      <p style="color: ${
+      <p class="block" style="color: ${
         s.scale > colorBreakAtScale ? '#fff' : '#000'
       }; background-color: ${s.color}">${s.name}</p>
   `
       /* eslint-enable */
-    );
+    )
+    .join('');
+
+  const typography = `<h1>A heading</h1>
+
+<p>A paragraph with a <a href="#">link</a>.</p>
+
+<button class="btn">A button</button>
+<button class="btn btn-primary">A primary button</button>
+<button class="btn btn-danger">A danger button</button>
+<button class="btn btn-secondary">A secondary button</button>
+`;
 
   await writeFile(
     path.resolve(__dirname + '/../test/test.html'),
-    htmlLayout(colorBlocks.join(''))
+    htmlLayout(`${typography}
+
+<h1>Colors</h1>
+${colorBlocks}`)
   );
 
-  console.log(`✅ Wrote HTML test page with ${colorBlocks.length} colors`);
+  console.log(
+    `✅ Wrote HTML test page with ${Object.keys(colors).length} colors`
+  );
 };
 
 writeTestPage(require('../colors')).catch(console.error);
