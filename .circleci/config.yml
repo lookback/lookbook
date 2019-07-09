@@ -22,9 +22,5 @@ jobs:
           path: test-output
       - store_artifacts:
           path: test-output
-      - run:
-          name: Build CSS distributables
-          command: npm run build
-          when: always
       - store_artifacts:
           path: dist
