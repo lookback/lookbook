@@ -7,8 +7,8 @@ exports.tailwindConfig = tailwindConfig;
 
 /** PostCSS config for external use. */
 exports.postCssConfig = ({ pathToTailwindConf } = {}) => () => ({
-    map: 'inline', // Sourcemaps
-    plugins: defaultPlugins({ pathToTailwindConf }),
+  map: 'inline', // Sourcemaps
+  plugins: defaultPlugins({ pathToTailwindConf }),
 });
 
 exports.defaultPostCssPlugins = defaultPlugins;
