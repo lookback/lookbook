@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-file=src/lookbook.css
+filename=lookbook.css
+file="src/$filename"
 dir=dist
 
 ext_min_maps=dist.css
@@ -20,8 +21,11 @@ NODE_ENV='development' npx postcss "$file" --no-map --dir "$dir" "$@"
 # Emit minified, non-sourcemap dist/lookbook.bare.css
 NODE_ENV='production' npx postcss "$file" --no-map --ext "$ext_min" --dir "$dir" "$@"
 
+echo "🕐 Formatting lookback.css file with Prettier..."
+prettier --write "$dir/$filename"
+
 size_nonminified="$(ls -lah dist/lookbook.css | awk -F " " {'print $5'})"
-echo "✅ Built non-minified version into $dir/lookbook.css ($size_nonminified)"
+echo "✅ Built non-minified version into $dir/$filename ($size_nonminified)"
 
 size_nonmap="$(ls -lah dist/lookbook.$ext_min | awk -F " " {'print $5'})"
 echo "✅ Built minified version into $dir/lookbook.$ext_min ($size_nonmap)"
