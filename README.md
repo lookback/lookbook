@@ -167,23 +167,22 @@ This builds the final distributable CSS files:
 
 Compile the distributable CSS files as you save.
 
-### `scripts/release`
+### `npm run release`
 
 This one is handy when you wanna release a new version of the Lookbook's CSS.
 
 **Pre-condition:** Bump the `version` field in `package.json`, please.
 
-> ☝️ If you don't have [jq](https://stedolan.github.io/jq/) installed, the script will accept a version number, like `2.0.1`. _Do not_ prefix with a `v` or similar. Just the number, please.
-
 The script will:
 
-1. Run `build` to build the CSS.
-2. Run `npm install` to get a new version in `package-lock.json`.
-3. Add and commit the files above.
-4. Tag the commit with the version number entered.
-5. Push the commit and tag to the GitHub repo.
-6. Distribute the built files in `dist` to the S3 bucket and CDN. See `scripts/distribute` below.
-7. 💥
+1. Run `npm install` to get a new version in `package-lock.json`.
+2. Run `build` to build the CSS.
+3. Run `npm test` to test the CSS.
+4. Add and commit the files above.
+5. Tag the commit with the version number entered.
+6. Push the commit and tag to the GitHub repo.
+7. Distribute the built files in `dist` to the S3 bucket and CDN. See `scripts/distribute` below.
+8. 💥
 
 ### `scripts/fetch-figma-colors`
 
