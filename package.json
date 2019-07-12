@@ -3,13 +3,14 @@
   "version": "2.0.0-beta.4",
   "description": "The design system of Lookback",
   "main": "index.js",
+  "types": "dist/types.d.ts",
   "scripts": {
     "lint": "stylelint src/**/*.css",
     "pretest": "npm run lint",
     "test": "[[ -z \"$CI\" ]] && pa11y ./test/test.html || mkdir -p test-output/junit && pa11y -S ./test-output/screenshot.png --config test/pa11y.config.json -r junit ./test/test.html > test-output/junit/results.xml",
     "build": "scripts/build",
     "watch": "scripts/build --watch --verbose",
-    "update-colors": "scripts/fetch-figma-colors && scripts/write-test-file"
+    "update-colors": "scripts/fetch-figma-colors && scripts/write-test-file && scripts/generate-types"
   },
   "repository": {
     "type": "git",
