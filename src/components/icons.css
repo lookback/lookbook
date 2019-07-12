@@ -2,6 +2,7 @@
 --------------------------------------------- */
 
 .icon {
+  display: inline-block;
   /* Will be inherited from parent's 'color' property. */
   fill: currentColor;
   width: 1em;
