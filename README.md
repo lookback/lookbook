@@ -89,7 +89,11 @@ Note that you might wanna minify the CSS yourself.
 
 These are the exported members of the `lookbook` module.
 
-### `colors`
+#### Types
+
+Typescript types are included in `dist/types.d.ts`.
+
+#### `colors`
 
 If you only want the raw colour codes, they're provided as a hash in the `colors` export:
 
@@ -107,11 +111,11 @@ console.log(colors);
 */
 ```
 
-### `postCssConfig`
+#### `postCssConfig`
 
 A PostCSS config ready for use in a `postcss.config.js`.
 
-### `defaultPostCssPlugins`
+#### `defaultPostCssPlugins`
 
 A function for getting all the PostCSS plugins we use internally in this Lookbook module as an array. This is handy to attach to PostCSS's `plugin` config flag.
 
@@ -142,7 +146,7 @@ gulp.task('css', () => compileCss());
 
 Optionally, call the function with a hash where you refer to a local `tailwind.config.js`. In there, you can extend the default one we keep in the Lookbook (this is of course not encouraged).
 
-### `tailwindConfig`
+#### `tailwindConfig`
 
 Lookback's [Tailwind config](https://tailwindcss.com/docs/configuration).
 
