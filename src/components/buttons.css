@@ -2,7 +2,7 @@
 BUTTONS
 ----------------------------------------------------------------*/
 
-.btn {
+.btn2 {
   --background: theme('colors.blue-60');
   --text: #fff;
   --text-hover: #fff;
@@ -95,7 +95,7 @@ BUTTONS
   }
 }
 
-.btn-secondary {
+.btn2-secondary {
   --text: theme('colors.blue-80');
   --text-hover: theme('colors.blue-80');
   --text-active: theme('colors.blue-90');
@@ -137,7 +137,7 @@ BUTTONS
   }
 }
 
-.btn-primary {
+.btn2-primary {
   --background: theme('colors.green-60');
   --focused: theme('colors.green-70');
   --focused-shadow: color(theme('colors.green-50') alpha(30%));
@@ -180,7 +180,7 @@ BUTTONS
   }
 }
 
-.btn-danger {
+.btn2-danger {
   --background: theme('colors.red-60');
   --focused: theme('colors.red-70');
   --focused-shadow: color(theme('colors.red-50') alpha(30%));
@@ -219,7 +219,7 @@ BUTTONS
   }
 }
 
-.btn-link {
+.btn2-link {
   --background: transparent;
   --text: theme('colors.blue-60');
   --text-hover: theme('colors.blue-70');
@@ -246,7 +246,7 @@ BUTTONS
     text-decoration: none;
   }
 
-  &.btn-link--danger {
+  &.btn2-link--danger {
     --text: theme('colors.red-60');
     --text-hover: theme('colors.red-70');
     --text-active: theme('colors.red-80');
@@ -272,7 +272,7 @@ BUTTONS
       --disabled-color: color(theme('colors.blue-40') saturation(- 90%));
     }
 
-    &.btn-link--danger {
+    &.btn2-link--danger {
       --text: var(--red-50);
       --text-hover: var(--red-40);
       --text-active: var(--red-60);
