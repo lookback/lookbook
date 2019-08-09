@@ -428,9 +428,10 @@ module.exports = {
     */
 
     borderColor: {
+      /** Default border, to be used on white. */
       default: colors['grey-30'],
-      hover: colors['grey-40'],
-      active: colors['grey-50'],
+      /** To be used on light blue backgrounds. */
+      light: '#D4E8F5',
     },
 
     /*

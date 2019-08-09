@@ -19,19 +19,23 @@ input[type='password'],
 input[type='search'],
 input[type='number'],
 textarea {
-  @apply font-sans inline-block border rounded p-1;
+  @apply font-sans inline-block rounded p-1;
+
+  --border-color: var(--form-border-color);
+
   color: var(--form-input-color);
   background-color: var(--form-background-color);
-  border-color: var(--form-border-color);
+  border: 1px solid var(--border-color);
   box-shadow: inset rgba(#000, 0.05) 0 1px 2px;
   transition: color 0.15s ease-out, border-color 0.2s ease;
 
   &:hover {
-    @apply border-hover;
+    --border-color: var(--grey-40);
   }
 
   &:focus {
-    @apply border-active;
+    --border-color: var(--grey-50);
+
     color: var(--text-color);
     outline: 0;
     box-shadow: var(--form-focus-shadow);
@@ -57,7 +61,7 @@ select {
 
   &:hover,
   &:focus {
-    @apply border-hover;
+    border-color: var(--grey-40);
     outline: 0;
   }
 }
