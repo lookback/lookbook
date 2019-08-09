@@ -81,6 +81,7 @@ const colors = {
   'off-white': '#fefefe',
   white: '#fff',
   transparent: 'transparent',
+  defaultBoxShadow: '#006693',
 };
 
 module.exports = {
@@ -619,10 +620,10 @@ module.exports = {
     */
 
     boxShadow: (theme) => ({
-      default: `rgba(${theme('colors.grey-30')}, .5) 0 4px 25px`,
-      large: `rgba(${theme('colors.grey-30')}, .6) 0 6px 45px`,
-      small: `rgba(${theme('colors.grey-30')}, .5) 0 2px 10px`,
-      tiny: `rgba(${theme('colors.grey-30')}, .4) 0 1px 3px`,
+      default: `0px 3px 20px rgba(${theme('colors.defaultBoxShadow')}, .15)`,
+      large: `0px 10px 40px rgba(${theme('colors.defaultBoxShadow')}, .2)`,
+      small: `0px 2px 10px rgba(${theme('colors.defaultBoxShadow')}, .1)`,
+      tiny: `0 1px 3px rgba(${theme('colors.defaultBoxShadow')}, .4)`,
       none: 'none',
     }),
 

@@ -1,5 +1,5 @@
 const onlyWhitelist = (colorName) =>
-  !['white', 'transparent'].includes(colorName);
+  !['white', 'transparent', 'defaultBoxShadow'].includes(colorName);
 
 /**
  * Tailwind plugin that adds Lookback's colour variables
