@@ -1,5 +1,5 @@
 /* eslint-disable */
-/* Updated at Tue, 09 Jul 2019 15:53:37 GMT*/
+/* Updated at Fri, 09 Aug 2019 09:49:00 GMT*/
 module.exports = {
     'orange-10': '#fff9ef',
     'orange-20': '#f9f1dc',
@@ -42,6 +42,7 @@ module.exports = {
     'grey-30': '#d7e2e8',
     'grey-40': '#b4c4cf',
     'grey-50': '#7994a5',
+    /** Suitable for Body Text */
     'grey-60': '#466a83',
     'grey-70': '#365669',
     'grey-80': '#253f50',
