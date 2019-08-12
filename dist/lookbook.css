@@ -3101,7 +3101,6 @@ input[type='number'],
 textarea {
   font-family: Lato, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui,
     arial, sans-serif;
-  display: inline-block;
   border-radius: 0.25rem;
   padding: 0.375rem;
   --border-color: var(--form-border-color);
