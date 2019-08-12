@@ -19,7 +19,7 @@ input[type='password'],
 input[type='search'],
 input[type='number'],
 textarea {
-  @apply font-sans inline-block rounded p-1;
+  @apply font-sans rounded p-1;
 
   --border-color: var(--form-border-color);
 
