@@ -351,6 +351,7 @@ module.exports = {
         'white',
         'blue-60', // Main brand
         'grey-60', // Muted
+        'red-60', // Error
       ]),
     },
 
@@ -369,7 +370,7 @@ module.exports = {
 
     backgroundColor: {
       default: colors['blue-10'],
-      ...pick(colors, ['grey-10', 'white', 'blue-80']),
+      ...pick(colors, ['grey-10', 'white', 'blue-80', 'red-60']),
     },
 
     /*
