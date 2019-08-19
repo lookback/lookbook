@@ -117,6 +117,10 @@
     background-color: #cf4356
   }
 
+  .dark\:\.bg-green-60 {
+    background-color: #188359
+  }
+
   :root {
     /* Selection backgrounds don't seem to work as variables in Dark mode.. */
     --selection-background: var(--grey-60);
