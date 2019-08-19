@@ -1073,6 +1073,10 @@ Usage:
   background-color: #0d4057;
 }
 
+.bg-red-60 {
+  background-color: #cf4356;
+}
+
 .border-light {
   border-color: #d4e8f5;
 }
@@ -2663,6 +2667,10 @@ Usage:
   color: #466a83;
 }
 
+.text-red-60 {
+  color: #cf4356;
+}
+
 .hover\:text-default:hover {
   color: #0d4057;
 }
@@ -2677,6 +2685,10 @@ Usage:
 
 .hover\:text-grey-60:hover {
   color: #466a83;
+}
+
+.hover\:text-red-60:hover {
+  color: #cf4356;
 }
 
 .text-f7 {
