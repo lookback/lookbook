@@ -1,37 +1,70 @@
 #!/usr/bin/env bash
 
-filename=lookbook.css
-file="src/$filename"
+src_path=src
+
+# Relative to $src_path
+all=lookbook.css
+base=base.css
+utils=utils.css
+
+# Dist dir
 dir=dist
 
+ext=css
 ext_min_maps=dist.css
 ext_min=bare.css
 
-echo "🕐 Building $file..."
+build_file () {
+  local file_path="$src_path/$1"
+  local rename_to=$2
 
-# Emit minified and sourcemapped dist/lookbook.dist.css
-NODE_ENV='production' npx postcss "$file" --dir "$dir" --ext "$ext_min_maps" "$@"
+  echo "🕐 Building $file_path..."
+
+  # Emit minified and sourcemapped into dist/<file>.dist.css
+  NODE_ENV='production' npx postcss "$file_path" --dir "$dir" --ext "$ext_min_maps"
+
+  # Emit non-minified into dist/<file>.css
+  # Meant for being included in other projects, before minification and source mapping
+  NODE_ENV='development' npx postcss "$file_path" --no-map --dir "$dir"
+
+  # Emit minified, non-sourcemap dist/<file>.bare.css
+  NODE_ENV='production' npx postcss "$file_path" --no-map --ext "$ext_min" --dir "$dir"
+}
+
+format_file () {
+  local file=$1
+  echo "🕐 Formatting $dir/$file with Prettier..."
+  prettier --write "$dir/$file"
+}
+
+check_size () {
+  local file=$1
+
+  local size_nonminified="$(ls -lah $dir/$file.$ext | awk -F " " {'print $5'})"
+  echo "✅ $file: Built non-minified version into $dir/$file.$ext ($size_nonminified)"
+
+  local size_nonmap="$(ls -lah $dir/$file.$ext_min | awk -F " " {'print $5'})"
+  echo "✅ $file: Built minified version into $dir/$file.$ext_min ($size_nonmap)"
+
+  local size="$(ls -lah $dir/$file.$ext_min_maps | awk -F " " {'print $5'})"
+
+  echo "✅ $file: Built minified version (with sourcemaps) into $dir/$file.$ext_min_maps ($size)"
+  echo ""
+}
+
+build_file $all
 
 status=$?
 
-# Emit non-minified dist/lookbook.css
-# Meant for being included in other projects, before minification and source mapping
-NODE_ENV='development' npx postcss "$file" --no-map --dir "$dir" "$@"
+build_file $base
+build_file $utils
 
-# Emit minified, non-sourcemap dist/lookbook.bare.css
-NODE_ENV='production' npx postcss "$file" --no-map --ext "$ext_min" --dir "$dir" "$@"
+format_file "lookbook.css"
+format_file "base.css"
+format_file "utils.css"
 
-echo "🕐 Formatting lookback.css file with Prettier..."
-prettier --write "$dir/$filename"
-
-size_nonminified="$(ls -lah dist/lookbook.css | awk -F " " {'print $5'})"
-echo "✅ Built non-minified version into $dir/$filename ($size_nonminified)"
-
-size_nonmap="$(ls -lah dist/lookbook.$ext_min | awk -F " " {'print $5'})"
-echo "✅ Built minified version into $dir/lookbook.$ext_min ($size_nonmap)"
-
-size="$(ls -lah dist/lookbook.$ext_min_maps | awk -F " " {'print $5'})"
-
-echo "✅ Built minified version (with sourcemaps) into $dir/lookbook.$ext_min_maps ($size)"
+check_size "lookbook"
+check_size "base"
+check_size "utils"
 
 exit $status
