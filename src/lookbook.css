@@ -1,23 +1,11 @@
 @charset "utf-8";
 
 /*
-* The Lookbook
+* The LOOKBOOK
 *
 * Copyright Lookback
 */
 
-@import 'tailwindcss/base';
-
-@import 'tailwindcss/components';
-
-@import 'variables';
-
-@import 'components';
-
-@import 'tailwindcss/utilities';
-
 @import 'base';
 
 @import 'utils';
-
-@import 'dark-mode.css';

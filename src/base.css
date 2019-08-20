@@ -1,0 +1,18 @@
+/*
+BASE LAYER
+
+Put things here to provide basic styling. Like CSS resets, components
+and more.
+----------------------------------------------------------------*/
+
+@import 'tailwindcss/base';
+
+@import 'tailwindcss/components';
+
+@import 'variables';
+
+@import 'setup';
+
+@import 'components';
+
+@import 'dark-mode.css';
