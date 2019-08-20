@@ -703,6 +703,9 @@ video {
   --background-color: var(--default-background-color);
   --text-color: var(--default-text-color);
   --heading-color: var(--blue-70);
+  --error-color: var(--red-60);
+  --warning-color: var(--orange-60);
+  --positive-color: var(--green-60);
   /* Elements */
   /* <a> */
   --link-color: var(--blue-60);
@@ -1190,6 +1193,11 @@ BUTTONS
 .icon--stroke {
   /* In case the icon is of paths only */
   stroke: currentColor;
+}
+
+.icon--center {
+  /* For when the icon should be placed alongside text. */
+  vertical-align: -0.15em;
 }
 
 a .icon {
