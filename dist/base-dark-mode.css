@@ -134,19 +134,4 @@
     line-height: 1.7;
     word-spacing: 0.05em;
   }
-  .dark\:\.bg-default {
-    background-color: #f6fbfd
-  }
-
-  .dark\:\.bg-white {
-    background-color: #fff
-  }
-
-  .dark\:\.bg-red-60 {
-    background-color: #cf4356
-  }
-
-  .dark\:\.bg-green-60 {
-    background-color: #188359
-  }
 }
