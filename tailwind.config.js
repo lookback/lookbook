@@ -351,10 +351,10 @@ module.exports = {
         'white',
         'blue-60', // Main brand
         'grey-60', // Muted
-        'red-60', // Error
-        'green-50', // Positive
-        'green-60', // Positive
       ]),
+      error: colors['red-60'],
+      warning: colors['orange-60'],
+      positive: colors['green-60'],
     },
 
     /*
@@ -442,6 +442,8 @@ module.exports = {
       default: colors['grey-30'],
       /** To be used on light blue backgrounds. */
       light: '#D4E8F5',
+      warning: colors['orange-50'],
+      error: colors['red-50'],
     },
 
     /*
