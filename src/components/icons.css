@@ -13,6 +13,11 @@
     /* In case the icon is of paths only */
     stroke: currentColor;
   }
+
+  &--center {
+    /* For when the icon should be placed alongside text. */
+    vertical-align: -0.15em;
+  }
 }
 
 a .icon {
