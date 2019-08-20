@@ -38,6 +38,14 @@ Put things here to override the base styling.
   border-color: #d4e8f5;
 }
 
+.border-warning {
+  border-color: #f1ae0e;
+}
+
+.border-error {
+  border-color: #e95267;
+}
+
 .rounded-none {
   border-radius: 0;
 }
@@ -1624,15 +1632,15 @@ Put things here to override the base styling.
   color: #466a83;
 }
 
-.text-red-60 {
+.text-error {
   color: #cf4356;
 }
 
-.text-green-50 {
-  color: #1ab577;
+.text-warning {
+  color: #a96500;
 }
 
-.text-green-60 {
+.text-positive {
   color: #188359;
 }
 
@@ -1652,15 +1660,15 @@ Put things here to override the base styling.
   color: #466a83;
 }
 
-.hover\:text-red-60:hover {
+.hover\:text-error:hover {
   color: #cf4356;
 }
 
-.hover\:text-green-50:hover {
-  color: #1ab577;
+.hover\:text-warning:hover {
+  color: #a96500;
 }
 
-.hover\:text-green-60:hover {
+.hover\:text-positive:hover {
   color: #188359;
 }
 
