@@ -475,7 +475,7 @@ html {
 *::after {
   border-width: 0;
   border-style: solid;
-  border-color: #d7e2e8;
+  border-color: #dce4e9;
 }
 
 /**
@@ -621,7 +621,7 @@ video {
 }
 
 :root {
-  --default-border-color: #d7e2e8;
+  --default-border-color: #dce4e9;
   --default-text-color: #0d4057;
   --default-background-color: #f6fbfd;
   --orange-10: #fff9ef;
@@ -655,12 +655,12 @@ video {
   --green-90: #0a281d;
   --green-100: #0b1a14;
   --grey-10: #f7fafd;
-  --grey-20: #ecf1f4;
-  --grey-30: #d7e2e8;
-  --grey-40: #b4c4cf;
+  --grey-20: #ecf2f6;
+  --grey-30: #dce4e9;
+  --grey-40: #bacad4;
   --grey-50: #7994a5;
   --grey-60: #466a83;
-  --grey-70: #365669;
+  --grey-70: #3b5366;
   --grey-80: #253f50;
   --grey-90: #192d3a;
   --grey-100: #0e1f29;
@@ -990,14 +990,14 @@ BUTTONS
 ----------------------------------------------------------------*/
 
 .btn2 {
-  --background: #007ab1;
+  --background: var(--blue-60);
   --text: #fff;
   --text-hover: #fff;
   --text-active: #e4e4e4;
-  --focused: rgb(5, 87, 123);
+  --focused: var(--blue-70);
   --focused-shadow: rgba(0, 122, 177, 0.3);
   --hover: rgb(0, 110, 159);
-  --active: #05577b;
+  --active: var(--blue-70);
   --disabled-bg: rgb(222, 222, 222);
   --disabled-color: rgb(80, 93, 98);
   border-radius: 0.25rem;
@@ -1041,10 +1041,10 @@ BUTTONS
 }
 
 .btn2.dark {
-  --text: #092d3d;
-  --background: #60ceff;
+  --text: var(--blue-90);
+  --background: var(--blue-40);
   --hover: rgb(144, 221, 255);
-  --focused: #a4e3ff;
+  --focused: var(--blue-30);
   --active: rgb(77, 165, 204);
 }
 
@@ -1068,23 +1068,23 @@ BUTTONS
 }
 
 .btn2-secondary {
-  --text: #0d4057;
-  --text-hover: #0d4057;
-  --text-active: #092d3d;
-  --background: #d7e2e8;
-  --focused: #b4c4cf;
+  --text: var(--blue-80);
+  --text-hover: var(--blue-80);
+  --text-active: var(--blue-90);
+  --background: var(--grey-20);
+  --focused: var(--grey-30);
   --focused-shadow: rgba(121, 148, 165, 0.1);
-  --hover: rgb(204, 215, 220);
-  --active: #b4c4cf;
-  --disabled-bg: rgb(218, 225, 230);
-  --disabled-color: rgb(80, 103, 119);
+  --hover: var(--grey-30);
+  --active: var(--grey-40);
+  --disabled-bg: rgb(234, 239, 242);
+  --disabled-color: rgba(80, 103, 119, 0.75);
 }
 
 .btn2-secondary.dark {
-  --background: #d7e2e8;
-  --hover: rgb(227, 235, 239);
-  --focused: #ecf1f4;
-  --active: rgb(172, 181, 186);
+  --background: var(--grey-40);
+  --hover: rgb(231, 236, 240);
+  --focused: var(--grey-30);
+  --active: rgb(176, 182, 186);
 }
 
 .btn2-secondary.dark[disabled] {
@@ -1093,19 +1093,19 @@ BUTTONS
 }
 
 .btn2-primary {
-  --background: #188359;
-  --focused: #0f6543;
+  --background: var(--green-60);
+  --focused: var(--green-70);
   --focused-shadow: rgba(26, 181, 119, 0.3);
   --hover: rgb(22, 118, 80);
-  --active: #0f6543;
+  --active: var(--green-70);
   --disabled-bg: rgb(219, 219, 219);
   --disabled-color: rgb(77, 77, 77);
 }
 
 .btn2-primary.dark {
-  --background: #52dfa7;
-  --hover: #97e8c8;
-  --focused: #97e8c8;
+  --background: var(--green-40);
+  --hover: var(--green-30);
+  --focused: var(--green-30);
   --active: rgb(66, 178, 134);
 }
 
@@ -1115,19 +1115,19 @@ BUTTONS
 }
 
 .btn2-danger {
-  --background: #cf4356;
-  --focused: #9c3140;
+  --background: var(--red-60);
+  --focused: var(--red-70);
   --focused-shadow: rgba(233, 82, 103, 0.3);
   --hover: rgb(186, 60, 77);
-  --active: #9c3140;
+  --active: var(--red-70);
   --disabled-bg: rgb(232, 232, 232);
   --disabled-color: rgb(138, 138, 138);
 }
 
 .btn2-danger.dark {
-  --background: #ff8697;
-  --hover: #ffc7cb;
-  --focused: #ffc7cb;
+  --background: var(--red-40);
+  --hover: var(--red-30);
+  --focused: var(--red-30);
   --active: rgb(204, 107, 121);
 }
 
@@ -1138,9 +1138,9 @@ BUTTONS
 
 .btn2-link {
   --background: transparent;
-  --text: #007ab1;
-  --text-hover: #05577b;
-  --text-active: #0d4057;
+  --text: var(--blue-60);
+  --text-hover: var(--blue-70);
+  --text-active: var(--blue-80);
   --disabled-color: rgb(80, 93, 98);
   transition: none;
   position: relative;
@@ -1165,15 +1165,15 @@ BUTTONS
 }
 
 .btn2-link.btn2-link--danger {
-  --text: #cf4356;
-  --text-hover: #9c3140;
-  --text-active: #602b32;
+  --text: var(--red-60);
+  --text-hover: var(--red-70);
+  --text-active: var(--red-80);
 }
 
 .btn2-link.dark {
-  --text: #60ceff;
+  --text: var(--blue-40);
   --background: transparent;
-  --text-hover: #a4e3ff;
+  --text-hover: var(--blue-30);
 }
 
 .btn2-link.dark[disabled] {
@@ -1297,7 +1297,7 @@ A regular spinner
 }
 
 .Spinner--light {
-  border-color: rgba(215, 226, 232, 0.2);
+  border-color: rgba(220, 228, 233, 0.2);
   border-left-color: rgba(229, 247, 255, 0.9);
 }
 

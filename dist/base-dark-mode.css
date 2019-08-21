@@ -26,11 +26,11 @@
 .btn2-secondary {
     --background: var(--grey-70);
 
-    --hover: rgb(74, 103, 120);
+    --hover: rgb(79, 100, 117);
 
     --focused: var(--grey-60);
 
-    --active: rgb(43, 69, 84);
+    --active: rgb(47, 66, 82);
 
     --text: var(--grey-30);
 
@@ -40,8 +40,8 @@
 }
 
     .btn2-secondary[disabled] {
-      --disabled-color: rgba(236, 241, 244, 0.3);
-      --disabled-bg: rgba(54, 86, 105, 0.5);
+      --disabled-color: rgba(236, 242, 246, 0.3);
+      --disabled-bg: rgba(59, 83, 102, 0.5);
     }
 
 .btn2-primary {
