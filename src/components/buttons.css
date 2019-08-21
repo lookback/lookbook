@@ -3,14 +3,14 @@ BUTTONS
 ----------------------------------------------------------------*/
 
 .btn2 {
-  --background: theme('colors.blue-60');
+  --background: var(--blue-60);
   --text: #fff;
   --text-hover: #fff;
   --text-active: #e4e4e4;
-  --focused: color(theme('colors.blue-70'));
+  --focused: var(--blue-70);
   --focused-shadow: color(theme('colors.blue-60') alpha(30%));
   --hover: color(theme('colors.blue-60') shade(10%));
-  --active: theme('colors.blue-70');
+  --active: var(--blue-70);
   --disabled-bg: color(theme('colors.blue-60') tint(80%) saturation(- 60%));
   --disabled-color: color(theme('colors.blue-60') saturation(- 90%));
 
@@ -49,10 +49,10 @@ BUTTONS
   }
 
   &.dark {
-    --text: theme('colors.blue-90');
-    --background: theme('colors.blue-40');
+    --text: var(--blue-90);
+    --background: var(--blue-40);
     --hover: color(theme('colors.blue-40') tint(30%));
-    --focused: theme('colors.blue-30');
+    --focused: var(--blue-30);
     --active: color(theme('colors.blue-40') shade(20%));
 
     &[disabled] {
@@ -138,18 +138,18 @@ BUTTONS
 }
 
 .btn2-primary {
-  --background: theme('colors.green-60');
-  --focused: theme('colors.green-70');
+  --background: var(--green-60);
+  --focused: var(--green-70);
   --focused-shadow: color(theme('colors.green-50') alpha(30%));
   --hover: color(theme('colors.green-60') shade(10%));
-  --active: theme('colors.green-70');
+  --active: var(--green-70);
   --disabled-bg: color(theme('colors.green-60') tint(80%) saturation(- 60%));
   --disabled-color: color(theme('colors.green-60') saturation(- 90%));
 
   &.dark {
-    --background: theme('colors.green-40');
-    --hover: theme('colors.green-30');
-    --focused: theme('colors.green-30');
+    --background: var(--green-40);
+    --hover: var(--green-30);
+    --focused: var(--green-30);
     --active: color(theme('colors.green-40') shade(20%));
 
     &[disabled] {
@@ -181,18 +181,18 @@ BUTTONS
 }
 
 .btn2-danger {
-  --background: theme('colors.red-60');
-  --focused: theme('colors.red-70');
+  --background: var(--red-60);
+  --focused: var(--red-70);
   --focused-shadow: color(theme('colors.red-50') alpha(30%));
   --hover: color(theme('colors.red-60') shade(10%));
-  --active: theme('colors.red-70');
+  --active: var(--red-70);
   --disabled-bg: color(theme('colors.red-60') tint(80%) saturation(- 60%));
   --disabled-color: color(theme('colors.red-60') saturation(- 90%));
 
   &.dark {
-    --background: theme('colors.red-40');
-    --hover: theme('colors.red-30');
-    --focused: theme('colors.red-30');
+    --background: var(--red-40);
+    --hover: var(--red-30);
+    --focused: var(--red-30);
     --active: color(theme('colors.red-40') shade(20%));
 
     &[disabled] {
@@ -221,9 +221,9 @@ BUTTONS
 
 .btn2-link {
   --background: transparent;
-  --text: theme('colors.blue-60');
-  --text-hover: theme('colors.blue-70');
-  --text-active: theme('colors.blue-80');
+  --text: var(--blue-60);
+  --text-hover: var(--blue-70);
+  --text-active: var(--blue-80);
   --disabled-color: color(theme('colors.blue-60') saturation(- 90%));
   transition: none;
   position: relative;
@@ -247,15 +247,15 @@ BUTTONS
   }
 
   &.btn2-link--danger {
-    --text: theme('colors.red-60');
-    --text-hover: theme('colors.red-70');
-    --text-active: theme('colors.red-80');
+    --text: var(--red-60);
+    --text-hover: var(--red-70);
+    --text-active: var(--red-80);
   }
 
   &.dark {
-    --text: theme('colors.blue-40');
+    --text: var(--blue-40);
     --background: transparent;
-    --text-hover: theme('colors.blue-30');
+    --text-hover: var(--blue-30);
 
     &[disabled] {
       --disabled-color: color(theme('colors.blue-40') saturation(- 90%));
