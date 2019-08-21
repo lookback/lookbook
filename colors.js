@@ -1,5 +1,5 @@
 /* eslint-disable */
-/* Updated at Wed, 21 Aug 2019 08:10:46 GMT*/
+/* Updated at Wed, 21 Aug 2019 08:24:02 GMT*/
 module.exports = {
     'orange-10': '#fff9ef',
     'orange-20': '#f9f1dc',
@@ -38,9 +38,9 @@ module.exports = {
     'green-100': '#0b1a14',
     'grey-10': '#f7fafd',
     /** Suitable as grayscale border color and secondary button color. */
-    'grey-20': '#ecf1f4',
-    'grey-30': '#d7e2e8',
-    'grey-40': '#b4c4cf',
+    'grey-20': '#ecf2f6',
+    'grey-30': '#dce4e9',
+    'grey-40': '#bacad4',
     'grey-50': '#7994a5',
     /** Suitable for Body Text */
     'grey-60': '#466a83',
