@@ -1004,6 +1004,7 @@ BUTTONS
   font-weight: 700;
   display: inline-block;
   position: relative;
+  text-align: center;
   background-color: var(--background);
   color: var(--text);
   -webkit-tap-highlight-color: transparent;
@@ -1366,6 +1367,14 @@ Put things here to override the base styling.
 
 .border-error {
   border-color: #e95267;
+}
+
+.border-positive {
+  border-color: #1ab577;
+}
+
+.border-selected {
+  border-color: #00a0e8;
 }
 
 .rounded-none {
@@ -2954,6 +2963,10 @@ Put things here to override the base styling.
   color: #466a83;
 }
 
+.text-green-50 {
+  color: #1ab577;
+}
+
 .text-error {
   color: #cf4356;
 }
@@ -2980,6 +2993,10 @@ Put things here to override the base styling.
 
 .hover\:text-grey-60:hover {
   color: #466a83;
+}
+
+.hover\:text-green-50:hover {
+  color: #1ab577;
 }
 
 .hover\:text-error:hover {
@@ -3094,6 +3111,10 @@ Put things here to override the base styling.
 
 .tracking-wide {
   letter-spacing: 0.05em;
+}
+
+.tracking-huge {
+  letter-spacing: 0.1em;
 }
 
 .select-none {
