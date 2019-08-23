@@ -14,7 +14,7 @@ BUTTONS
   --disabled-bg: color(theme('colors.blue-60') tint(80%) saturation(- 60%));
   --disabled-color: color(theme('colors.blue-60') saturation(- 90%));
 
-  @apply rounded font-bold inline-block relative;
+  @apply rounded font-bold inline-block relative text-center;
   background-color: var(--background);
   color: var(--text);
   -webkit-tap-highlight-color: transparent;
