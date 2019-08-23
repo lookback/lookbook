@@ -352,6 +352,7 @@ module.exports = {
         'white',
         'blue-60', // Main brand
         'grey-60', // Muted
+        'green-50',
       ]),
       error: colors['red-60'],
       warning: colors['orange-60'],
