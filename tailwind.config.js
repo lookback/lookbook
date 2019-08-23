@@ -446,6 +446,8 @@ module.exports = {
       light: '#D4E8F5',
       warning: colors['orange-50'],
       error: colors['red-50'],
+      positive: colors['green-50'],
+      selected: colors['blue-50'],
     },
 
     /*
