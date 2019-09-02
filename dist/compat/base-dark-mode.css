@@ -2,7 +2,7 @@
 
 @media screen and (prefers-color-scheme: dark) {
 
-.btn {
+.btn2 {
     --text: var(--blue-90);
 
     --text-hover: var(--blue-90);
@@ -18,12 +18,12 @@
     --active: rgb(77, 165, 204)
 }
 
-    .btn[disabled] {
+    .btn2[disabled] {
       --disabled-color: rgba(20, 42, 51, 0.7);
       --disabled-bg: rgba(92, 123, 138, 0.6);
     }
 
-.btn-secondary {
+.btn2-secondary {
     --background: var(--grey-70);
 
     --hover: rgb(79, 100, 117);
@@ -39,12 +39,12 @@
     --text-active: rgba(255,255,255, 0.5)
 }
 
-    .btn-secondary[disabled] {
+    .btn2-secondary[disabled] {
       --disabled-color: rgba(236, 242, 246, 0.3);
       --disabled-bg: rgba(59, 83, 102, 0.5);
     }
 
-.btn-primary {
+.btn2-primary {
     --background: var(--green-40);
 
     --hover: rgb(134, 233, 193);
@@ -60,12 +60,12 @@
     --text-active: var(--green-80)
 }
 
-    .btn-primary[disabled] {
+    .btn2-primary[disabled] {
       --disabled-color: rgba(10, 40, 29, 0.9);
       --disabled-bg: rgba(78, 131, 110, 0.6);
     }
 
-.btn-danger {
+.btn2-danger {
     --background: var(--red-40);
 
     --hover: rgb(255, 170, 182);
@@ -81,12 +81,12 @@
     --text-active: var(--red-80)
 }
 
-    .btn-danger[disabled] {
+    .btn2-danger[disabled] {
       --disabled-color: rgba(34, 27, 28, 0.9);
       --disabled-bg: rgba(114, 90, 93, 0.6);
     }
 
-.btn-link {
+.btn2-link {
     --background: transparent;
 
     --text: var(--blue-40);
@@ -96,11 +96,11 @@
     --text-active: var(--blue-50)
 }
 
-    .btn-link[disabled] {
+    .btn2-link[disabled] {
       --disabled-color: rgb(168, 179, 184);
     }
 
-    .btn-link.btn-link--danger {
+    .btn2-link.btn2-link--danger {
       --text: var(--red-50);
       --text-hover: var(--red-40);
       --text-active: var(--red-60);
