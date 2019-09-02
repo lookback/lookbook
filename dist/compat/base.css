@@ -981,7 +981,7 @@ COMPONENTS
 BUTTONS
 ----------------------------------------------------------------*/
 
-.btn {
+.btn2 {
   --background: var(--blue-60);
   --text: #fff;
   --text-hover: #fff;
@@ -1011,29 +1011,29 @@ BUTTONS
   transition: box-shadow 0.2s ease-out;
 }
 
-.btn:focus,
-.btn:hover,
-.btn:active {
+.btn2:focus,
+.btn2:hover,
+.btn2:active {
   text-decoration: none;
   color: var(--text-hover);
 }
 
-.btn:focus {
+.btn2:focus {
   outline: 0;
   background-color: var(--focused);
   box-shadow: var(--focused-shadow) 0 0 0 3px;
 }
 
-.btn:hover {
+.btn2:hover {
   background-color: var(--hover);
 }
 
-.btn:active {
+.btn2:active {
   background-color: var(--active);
   color: var(--text-active);
 }
 
-.btn.dark {
+.btn2.dark {
   --text: var(--blue-90);
   --background: var(--blue-40);
   --hover: rgb(144, 221, 255);
@@ -1041,12 +1041,12 @@ BUTTONS
   --active: rgb(77, 165, 204);
 }
 
-.btn.dark[disabled] {
+.btn2.dark[disabled] {
   --disabled-color: rgb(29, 59, 73);
   --disabled-bg: rgba(136, 192, 215, 0.6);
 }
 
-.btn[disabled] {
+.btn2[disabled] {
   box-shadow: none;
   cursor: default;
   background-color: var(--disabled-bg);
@@ -1055,12 +1055,12 @@ BUTTONS
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-  .btn {
+  .btn2 {
     transition: none;
   }
 }
 
-.btn-secondary {
+.btn2-secondary {
   --text: var(--blue-80);
   --text-hover: var(--blue-80);
   --text-active: var(--blue-90);
@@ -1073,19 +1073,19 @@ BUTTONS
   --disabled-color: rgba(80, 103, 119, 0.75);
 }
 
-.btn-secondary.dark {
+.btn2-secondary.dark {
   --background: var(--grey-40);
   --hover: rgb(231, 236, 240);
   --focused: var(--grey-30);
   --active: rgb(176, 182, 186);
 }
 
-.btn-secondary.dark[disabled] {
+.btn2-secondary.dark[disabled] {
   --disabled-color: rgb(29, 59, 73);
   --disabled-bg: rgba(80, 103, 119, 0.8);
 }
 
-.btn-primary {
+.btn2-primary {
   --background: var(--green-60);
   --focused: var(--green-70);
   --focused-shadow: rgba(26, 181, 119, 0.3);
@@ -1095,19 +1095,19 @@ BUTTONS
   --disabled-color: rgb(77, 77, 77);
 }
 
-.btn-primary.dark {
+.btn2-primary.dark {
   --background: var(--green-40);
   --hover: var(--green-30);
   --focused: var(--green-30);
   --active: rgb(66, 178, 134);
 }
 
-.btn-primary.dark[disabled] {
+.btn2-primary.dark[disabled] {
   --disabled-color: rgba(18, 33, 28, 0.7);
   --disabled-bg: rgba(105, 105, 105, 0.6);
 }
 
-.btn-danger {
+.btn2-danger {
   --background: var(--red-60);
   --focused: var(--red-70);
   --focused-shadow: rgba(233, 82, 103, 0.3);
@@ -1117,19 +1117,19 @@ BUTTONS
   --disabled-color: rgb(138, 138, 138);
 }
 
-.btn-danger.dark {
+.btn2-danger.dark {
   --background: var(--red-40);
   --hover: var(--red-30);
   --focused: var(--red-30);
   --active: rgb(204, 107, 121);
 }
 
-.btn-danger.dark[disabled] {
+.btn2-danger.dark[disabled] {
   --disabled-color: rgb(74, 63, 65);
   --disabled-bg: rgba(224, 163, 171, 0.6);
 }
 
-.btn-link {
+.btn2-link {
   --background: transparent;
   --text: var(--blue-60);
   --text-hover: var(--blue-70);
@@ -1139,37 +1139,37 @@ BUTTONS
   position: relative;
 }
 
-.btn-link:hover,
-.btn-link:active,
-.btn-link:focus {
+.btn2-link:hover,
+.btn2-link:active,
+.btn2-link:focus {
   background-color: transparent;
   box-shadow: none;
   text-decoration: underline;
 }
 
-.btn-link:active {
+.btn2-link:active {
   top: 1px;
 }
 
-.btn-link[disabled] {
+.btn2-link[disabled] {
   background-color: transparent;
   opacity: 0.8;
   text-decoration: none;
 }
 
-.btn-link.btn-link--danger {
+.btn2-link.btn2-link--danger {
   --text: var(--red-60);
   --text-hover: var(--red-70);
   --text-active: var(--red-80);
 }
 
-.btn-link.dark {
+.btn2-link.dark {
   --text: var(--blue-40);
   --background: transparent;
   --text-hover: var(--blue-30);
 }
 
-.btn-link.dark[disabled] {
+.btn2-link.dark[disabled] {
   --disabled-color: rgb(168, 179, 184);
 }
 
