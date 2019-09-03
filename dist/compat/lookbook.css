@@ -1,4 +1,4 @@
-/*! lookbook.css v2.0.0-beta.6 */
+/*! lookbook.css v2.0.0-beta.7 */
 
 @charset "utf-8";
 
@@ -831,7 +831,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.375rem;
 }
 
 h4 {
@@ -990,22 +990,23 @@ BUTTONS
 ----------------------------------------------------------------*/
 
 .btn2 {
-  --background: var(--blue-60);
+  --bg: var(--blue-60);
+  --bg-disabled: var(--bg);
+  --bg-focused: var(--blue-70);
+  --bg-hover: rgb(0, 110, 159);
+  --bg-active: var(--blue-70);
   --text: #fff;
   --text-hover: #fff;
   --text-active: #e4e4e4;
-  --focused: var(--blue-70);
+  --text-focused: var(--text-hover);
+  --text-disabled: var(--text);
   --focused-shadow: rgba(0, 122, 177, 0.3);
-  --hover: rgb(0, 110, 159);
-  --active: var(--blue-70);
-  --disabled-bg: rgb(222, 222, 222);
-  --disabled-color: rgb(80, 93, 98);
-  border-radius: 0.25rem;
   font-weight: 700;
   display: inline-block;
   position: relative;
   text-align: center;
-  background-color: var(--background);
+  border-radius: 0.35em;
+  background-color: var(--bg);
   color: var(--text);
   -webkit-tap-highlight-color: transparent;
   text-decoration: none;
@@ -1028,38 +1029,40 @@ BUTTONS
 
 .btn2:focus {
   outline: 0;
-  background-color: var(--focused);
+  background-color: var(--bg-focused);
   box-shadow: var(--focused-shadow) 0 0 0 3px;
+  color: var(--text-focused);
 }
 
 .btn2:hover {
-  background-color: var(--hover);
+  background-color: var(--bg-hover);
 }
 
 .btn2:active {
-  background-color: var(--active);
+  background-color: var(--bg-active);
   color: var(--text-active);
 }
 
 .btn2.dark {
   --text: var(--blue-90);
-  --background: var(--blue-40);
-  --hover: rgb(144, 221, 255);
-  --focused: var(--blue-30);
-  --active: rgb(77, 165, 204);
+  --bg: var(--blue-40);
+  --bg-hover: rgb(144, 221, 255);
+  --bg-focused: var(--blue-30);
+  --bg-active: rgb(77, 165, 204);
 }
 
 .btn2.dark[disabled] {
-  --disabled-color: rgb(29, 59, 73);
-  --disabled-bg: rgba(136, 192, 215, 0.6);
+  --text-disabled: rgb(29, 59, 73);
+  --bg-disabled: rgba(136, 192, 215, 0.6);
 }
 
 .btn2[disabled] {
   box-shadow: none;
   cursor: default;
-  background-color: var(--disabled-bg);
-  color: var(--disabled-color);
+  background-color: var(--bg-disabled);
+  color: var(--text-disabled);
   pointer-events: none;
+  opacity: 0.4;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -1069,80 +1072,76 @@ BUTTONS
 }
 
 .btn2-secondary {
-  --text: var(--blue-80);
-  --text-hover: var(--blue-80);
-  --text-active: var(--blue-90);
-  --background: var(--grey-20);
-  --focused: var(--grey-30);
+  --text: var(--grey-70);
+  --text-hover: var(--grey-80);
+  --text-active: var(--grey-90);
+  --bg: var(--grey-30);
+  --bg-focused: var(--grey-30);
   --focused-shadow: rgba(121, 148, 165, 0.1);
-  --hover: var(--grey-30);
-  --active: var(--grey-40);
-  --disabled-bg: rgb(234, 239, 242);
-  --disabled-color: rgba(80, 103, 119, 0.75);
+  --bg-hover: rgb(200, 213, 221);
+  --bg-active: var(--grey-40);
+  --bg-disabled: var(--grey-30);
+  --text-disabled: var(--grey-100);
 }
 
 .btn2-secondary.dark {
-  --background: var(--grey-40);
-  --hover: rgb(231, 236, 240);
-  --focused: var(--grey-30);
-  --active: rgb(176, 182, 186);
+  --bg: var(--grey-40);
+  --bg-hover: rgb(231, 236, 240);
+  --bg-focused: var(--grey-30);
+  --bg-active: rgb(176, 182, 186);
 }
 
 .btn2-secondary.dark[disabled] {
-  --disabled-color: rgb(29, 59, 73);
-  --disabled-bg: rgba(80, 103, 119, 0.8);
+  --text-disabled: rgb(29, 59, 73);
+  --bg-disabled: rgba(80, 103, 119, 0.8);
 }
 
 .btn2-primary {
-  --background: var(--green-60);
-  --focused: var(--green-70);
+  --bg: var(--green-60);
+  --bg-focused: var(--green-70);
   --focused-shadow: rgba(26, 181, 119, 0.3);
-  --hover: rgb(22, 118, 80);
-  --active: var(--green-70);
-  --disabled-bg: rgb(219, 219, 219);
-  --disabled-color: rgb(77, 77, 77);
+  --bg-hover: rgb(22, 118, 80);
+  --bg-active: var(--green-70);
 }
 
 .btn2-primary.dark {
-  --background: var(--green-40);
-  --hover: var(--green-30);
-  --focused: var(--green-30);
-  --active: rgb(66, 178, 134);
+  --bg: var(--green-40);
+  --bg-hover: var(--green-30);
+  --bg-focused: var(--green-30);
+  --bg-active: rgb(66, 178, 134);
 }
 
 .btn2-primary.dark[disabled] {
-  --disabled-color: rgba(18, 33, 28, 0.7);
-  --disabled-bg: rgba(105, 105, 105, 0.6);
+  --text-disabled: rgba(18, 33, 28, 0.7);
+  --bg-disabled: rgba(105, 105, 105, 0.6);
 }
 
 .btn2-danger {
-  --background: var(--red-60);
-  --focused: var(--red-70);
+  --bg: var(--red-60);
+  --bg-focused: var(--red-70);
   --focused-shadow: rgba(233, 82, 103, 0.3);
-  --hover: rgb(186, 60, 77);
-  --active: var(--red-70);
-  --disabled-bg: rgb(232, 232, 232);
-  --disabled-color: rgb(138, 138, 138);
+  --bg-hover: rgb(186, 60, 77);
+  --bg-active: var(--red-70);
 }
 
 .btn2-danger.dark {
-  --background: var(--red-40);
-  --hover: var(--red-30);
-  --focused: var(--red-30);
-  --active: rgb(204, 107, 121);
+  --bg: var(--red-40);
+  --bg-hover: var(--red-30);
+  --bg-focused: var(--red-30);
+  --bg-active: rgb(204, 107, 121);
 }
 
 .btn2-danger.dark[disabled] {
-  --disabled-color: rgb(74, 63, 65);
-  --disabled-bg: rgba(224, 163, 171, 0.6);
+  --text-disabled: rgb(74, 63, 65);
+  --bg-disabled: rgba(224, 163, 171, 0.6);
 }
 
 .btn2-link {
-  --background: transparent;
+  --bg: transparent;
   --text: var(--blue-60);
   --text-hover: var(--blue-70);
   --text-active: var(--blue-80);
-  --disabled-color: rgb(80, 93, 98);
+  --text-disabled: var(--grey-50);
   transition: none;
   position: relative;
 }
@@ -1173,12 +1172,12 @@ BUTTONS
 
 .btn2-link.dark {
   --text: var(--blue-40);
-  --background: transparent;
+  --bg: transparent;
   --text-hover: var(--blue-30);
 }
 
 .btn2-link.dark[disabled] {
-  --disabled-color: rgb(168, 179, 184);
+  --text-disabled: rgb(168, 179, 184);
 }
 
 /* =ICONS
@@ -3028,7 +3027,7 @@ Put things here to override the base styling.
 }
 
 .text-f3 {
-  font-size: 1.5rem;
+  font-size: 1.375rem;
 }
 
 .text-f2 {
@@ -4091,7 +4090,7 @@ TEXT BREAKS
   }
 
   .sm\:text-f3 {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
   }
 
   .sm\:text-f2 {

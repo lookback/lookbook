@@ -1,4 +1,4 @@
-/*! utils.css v2.0.0-beta.6 */
+/*! utils.css v2.0.0-beta.7 */
 
 /*
 UTILITY LAYER
@@ -1705,7 +1705,7 @@ Put things here to override the base styling.
 }
 
 .text-f3 {
-  font-size: 1.5rem;
+  font-size: 1.375rem;
 }
 
 .text-f2 {
@@ -2768,7 +2768,7 @@ TEXT BREAKS
   }
 
   .sm\:text-f3 {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
   }
 
   .sm\:text-f2 {
