@@ -9,7 +9,7 @@
     "pretest": "npm run lint",
     "test": "[[ -z \"$CI\" ]] && pa11y ./test/test.html || mkdir -p test-output/junit && pa11y -S ./test-output/screenshot.png --config test/pa11y.config.json -r junit ./test/test.html > test-output/junit/results.xml",
     "build": "scripts/build && npm run generate-types && scripts/make-compat",
-    "watch": "scripts/build --watch --verbose",
+    "watch": "scripts/watch",
     "update-colors": "scripts/fetch-figma-colors && scripts/write-test-file && npm run generate-types",
     "generate-types": "scripts/generate-types",
     "release": "npm install && npm run build && npm test && git add package.json package-lock.json dist && git commit -m $npm_package_version && git tag $npm_package_version && git push && git push --tags && scripts/distribute \"dist/*.css\""
