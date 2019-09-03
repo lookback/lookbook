@@ -11,8 +11,8 @@ BUTTONS
   --focused-shadow: color(theme('colors.blue-60') alpha(30%));
   --hover: color(theme('colors.blue-60') shade(10%));
   --active: var(--blue-70);
-  --disabled-bg: color(theme('colors.blue-60') tint(80%) saturation(- 60%));
-  --disabled-color: color(theme('colors.blue-60') saturation(- 90%));
+  --disabled-bg: var(--background);
+  --disabled-color: var(--text);
 
   @apply rounded font-bold inline-block relative text-center;
   background-color: var(--background);
@@ -73,12 +73,7 @@ BUTTONS
     --active: color(theme('colors.blue-40') shade(20%));
 
     &[disabled] {
-      --disabled-color: color(
-        theme('colors.blue-90') saturation(- 30%) alpha(70%)
-      );
-      --disabled-bg: color(
-        theme('colors.blue-50') saturation(- 80%) alpha(60%)
-      );
+      opacity: 0.25;
     }
   }
 
@@ -88,6 +83,7 @@ BUTTONS
     background-color: var(--disabled-bg);
     color: var(--disabled-color);
     pointer-events: none;
+    opacity: 0.4;
   }
 
   @media screen and (prefers-reduced-motion: reduce) {
@@ -96,16 +92,16 @@ BUTTONS
 }
 
 .btn-secondary {
-  --text: var(--blue-80);
-  --text-hover: var(--blue-80);
-  --text-active: var(--blue-90);
-  --background: var(--grey-20);
+  --text: var(--grey-70);
+  --text-hover: var(--grey-80);
+  --text-active: var(--grey-90);
+  --background: var(--grey-30);
   --focused: var(--grey-30);
   --focused-shadow: color(theme('colors.grey-50') alpha(10%));
-  --hover: var(--grey-30);
+  --hover: color(theme('colors.grey-40') tint(20%));
   --active: var(--grey-40);
-  --disabled-bg: color(theme('colors.grey-40') tint(70%));
-  --disabled-color: color(theme('colors.grey-60') saturation(- 10%) alpha(75%));
+  --disabled-bg: var(--grey-30);
+  --disabled-color: var(--grey-100);
 
   &.dark {
     --background: var(--grey-40);
@@ -129,10 +125,11 @@ BUTTONS
     --text: var(--grey-30);
     --text-hover: var(--grey-20);
     --text-active: rgba(#fff, 0.5);
+    --disabled-bg: var(--grey-90);
+    --disabled-color: var(--grey-60);
 
     &[disabled] {
-      --disabled-color: color(theme('colors.grey-20') alpha(30%));
-      --disabled-bg: color(theme('colors.grey-70') alpha(50%));
+      opacity: 1;
     }
   }
 }
@@ -143,8 +140,6 @@ BUTTONS
   --focused-shadow: color(theme('colors.green-50') alpha(30%));
   --hover: color(theme('colors.green-60') shade(10%));
   --active: var(--green-70);
-  --disabled-bg: color(theme('colors.green-60') tint(80%) saturation(- 60%));
-  --disabled-color: color(theme('colors.green-60') saturation(- 90%));
 
   &.dark {
     --background: var(--green-40);
@@ -170,13 +165,7 @@ BUTTONS
     --text: var(--green-90);
     --text-hover: var(--green-90);
     --text-active: var(--green-80);
-
-    &[disabled] {
-      --disabled-color: color(theme('colors.green-90') alpha(90%));
-      --disabled-bg: color(
-        theme('colors.green-50') saturation(- 50%) alpha(60%)
-      );
-    }
+    --disabled-bg: var(--green-30);
   }
 }
 
@@ -186,8 +175,6 @@ BUTTONS
   --focused-shadow: color(theme('colors.red-50') alpha(30%));
   --hover: color(theme('colors.red-60') shade(10%));
   --active: var(--red-70);
-  --disabled-bg: color(theme('colors.red-60') tint(80%) saturation(- 60%));
-  --disabled-color: color(theme('colors.red-60') saturation(- 90%));
 
   &.dark {
     --background: var(--red-40);
@@ -209,13 +196,7 @@ BUTTONS
     --text: var(--red-90);
     --text-hover: var(--red-90);
     --text-active: var(--red-80);
-
-    &[disabled] {
-      --disabled-color: color(
-        theme('colors.red-90') saturation(- 30%) alpha(90%)
-      );
-      --disabled-bg: color(theme('colors.red-70') saturation(- 40%) alpha(60%));
-    }
+    --disabled-bg: var(--red-30);
   }
 }
 
@@ -224,7 +205,7 @@ BUTTONS
   --text: var(--blue-60);
   --text-hover: var(--blue-70);
   --text-active: var(--blue-80);
-  --disabled-color: color(theme('colors.blue-60') saturation(- 90%));
+  --disabled-color: var(--grey-50);
   transition: none;
   position: relative;
 
@@ -269,7 +250,7 @@ BUTTONS
     --text-active: var(--blue-50);
 
     &[disabled] {
-      --disabled-color: color(theme('colors.blue-40') saturation(- 90%));
+      --disabled-color: color(theme('colors.blue-20') saturation(- 90%));
     }
 
     &.btn-link--danger {
