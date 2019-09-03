@@ -181,7 +181,7 @@ module.exports = {
       f6: toRem(14),
       f5: toRem(16),
       f4: toRem(18),
-      f3: toRem(24),
+      f3: toRem(22),
       f2: toRem(28),
       f1: toRem(42),
       f0: toRem(54),
