@@ -3,19 +3,20 @@ BUTTONS
 ----------------------------------------------------------------*/
 
 .btn {
-  --background: var(--blue-60);
+  --bg: var(--blue-60);
+  --bg-disabled: var(--bg);
+  --bg-focused: var(--blue-70);
+  --bg-hover: color(theme('colors.blue-60') shade(10%));
+  --bg-active: var(--blue-70);
   --text: #fff;
   --text-hover: #fff;
   --text-active: #e4e4e4;
-  --focused: var(--blue-70);
+  --text-focused: var(--text-hover);
+  --text-disabled: var(--text);
   --focused-shadow: color(theme('colors.blue-60') alpha(30%));
-  --hover: color(theme('colors.blue-60') shade(10%));
-  --active: var(--blue-70);
-  --disabled-bg: var(--background);
-  --disabled-color: var(--text);
 
   @apply rounded font-bold inline-block relative text-center;
-  background-color: var(--background);
+  background-color: var(--bg);
   color: var(--text);
   -webkit-tap-highlight-color: transparent;
   text-decoration: none;
@@ -35,29 +36,30 @@ BUTTONS
 
   &:focus {
     outline: 0;
-    background-color: var(--focused);
+    background-color: var(--bg-focused);
     box-shadow: var(--focused-shadow) 0 0 0 3px;
+    color: var(--text-focused);
   }
 
   &:hover {
-    background-color: var(--hover);
+    background-color: var(--bg-hover);
   }
 
   &:active {
-    background-color: var(--active);
+    background-color: var(--bg-active);
     color: var(--text-active);
   }
 
   &.dark {
     --text: var(--blue-90);
-    --background: var(--blue-40);
-    --hover: color(theme('colors.blue-40') tint(30%));
-    --focused: var(--blue-30);
-    --active: color(theme('colors.blue-40') shade(20%));
+    --bg: var(--blue-40);
+    --bg-hover: color(theme('colors.blue-40') tint(30%));
+    --bg-focused: var(--blue-30);
+    --bg-active: color(theme('colors.blue-40') shade(20%));
 
     &[disabled] {
-      --disabled-color: color(theme('colors.blue-80') saturation(- 30%));
-      --disabled-bg: color(
+      --text-disabled: color(theme('colors.blue-80') saturation(- 30%));
+      --bg-disabled: color(
         theme('colors.blue-40') saturation(- 50%) alpha(60%)
       );
     }
@@ -67,10 +69,10 @@ BUTTONS
     --text: var(--blue-90);
     --text-hover: var(--blue-90);
     --text-active: var(--blue-80);
-    --background: var(--blue-40);
-    --hover: color(theme('colors.blue-40') tint(30%));
-    --focused: var(--blue-30);
-    --active: color(theme('colors.blue-40') shade(20%));
+    --bg: var(--blue-40);
+    --bg-hover: color(theme('colors.blue-40') tint(30%));
+    --bg-focused: var(--blue-30);
+    --bg-active: color(theme('colors.blue-40') shade(20%));
 
     &[disabled] {
       opacity: 0.25;
@@ -80,8 +82,8 @@ BUTTONS
   &[disabled] {
     box-shadow: none;
     cursor: default;
-    background-color: var(--disabled-bg);
-    color: var(--disabled-color);
+    background-color: var(--bg-disabled);
+    color: var(--text-disabled);
     pointer-events: none;
     opacity: 0.4;
   }
@@ -95,38 +97,38 @@ BUTTONS
   --text: var(--grey-70);
   --text-hover: var(--grey-80);
   --text-active: var(--grey-90);
-  --background: var(--grey-30);
-  --focused: var(--grey-30);
+  --bg: var(--grey-30);
+  --bg-focused: var(--grey-30);
   --focused-shadow: color(theme('colors.grey-50') alpha(10%));
-  --hover: color(theme('colors.grey-40') tint(20%));
-  --active: var(--grey-40);
-  --disabled-bg: var(--grey-30);
-  --disabled-color: var(--grey-100);
+  --bg-hover: color(theme('colors.grey-40') tint(20%));
+  --bg-active: var(--grey-40);
+  --bg-disabled: var(--grey-30);
+  --text-disabled: var(--grey-100);
 
   &.dark {
-    --background: var(--grey-40);
-    --hover: color(theme('colors.grey-30') tint(30%));
-    --focused: var(--grey-30);
-    --active: color(theme('colors.grey-30') shade(20%));
+    --bg: var(--grey-40);
+    --bg-hover: color(theme('colors.grey-30') tint(30%));
+    --bg-focused: var(--grey-30);
+    --bg-active: color(theme('colors.grey-30') shade(20%));
 
     &[disabled] {
-      --disabled-color: color(theme('colors.blue-80') saturation(- 30%));
-      --disabled-bg: color(
+      --text-disabled: color(theme('colors.blue-80') saturation(- 30%));
+      --bg-disabled: color(
         theme('colors.grey-60') saturation(- 10%) alpha(80%)
       );
     }
   }
 
   @media screen and (prefers-color-scheme: dark) {
-    --background: var(--grey-70);
-    --hover: color(theme('colors.grey-70') tint(10%));
-    --focused: var(--grey-60);
-    --active: color(theme('colors.grey-70') shade(20%));
+    --bg: var(--grey-70);
+    --bg-hover: color(theme('colors.grey-70') tint(10%));
+    --bg-focused: var(--grey-60);
+    --bg-active: color(theme('colors.grey-70') shade(20%));
     --text: var(--grey-30);
     --text-hover: var(--grey-20);
     --text-active: rgba(#fff, 0.5);
-    --disabled-bg: var(--grey-90);
-    --disabled-color: var(--grey-60);
+    --bg-disabled: var(--grey-90);
+    --text-disabled: var(--grey-60);
 
     &[disabled] {
       opacity: 1;
@@ -135,77 +137,77 @@ BUTTONS
 }
 
 .btn-primary {
-  --background: var(--green-60);
-  --focused: var(--green-70);
+  --bg: var(--green-60);
+  --bg-focused: var(--green-70);
   --focused-shadow: color(theme('colors.green-50') alpha(30%));
-  --hover: color(theme('colors.green-60') shade(10%));
-  --active: var(--green-70);
+  --bg-hover: color(theme('colors.green-60') shade(10%));
+  --bg-active: var(--green-70);
 
   &.dark {
-    --background: var(--green-40);
-    --hover: var(--green-30);
-    --focused: var(--green-30);
-    --active: color(theme('colors.green-40') shade(20%));
+    --bg: var(--green-40);
+    --bg-hover: var(--green-30);
+    --bg-focused: var(--green-30);
+    --bg-active: color(theme('colors.green-40') shade(20%));
 
     &[disabled] {
-      --disabled-color: color(
+      --text-disabled: color(
         theme('colors.green-90') saturation(- 30%) alpha(70%)
       );
-      --disabled-bg: color(
+      --bg-disabled: color(
         theme('colors.green-50') saturation(- 80%) alpha(60%)
       );
     }
   }
 
   @media screen and (prefers-color-scheme: dark) {
-    --background: var(--green-40);
-    --hover: color(theme('colors.green-40') tint(30%));
-    --focused: var(--green-30);
-    --active: color(theme('colors.green-40') shade(20%));
+    --bg: var(--green-40);
+    --bg-hover: color(theme('colors.green-40') tint(30%));
+    --bg-focused: var(--green-30);
+    --bg-active: color(theme('colors.green-40') shade(20%));
     --text: var(--green-90);
     --text-hover: var(--green-90);
     --text-active: var(--green-80);
-    --disabled-bg: var(--green-30);
+    --bg-disabled: var(--green-30);
   }
 }
 
 .btn-danger {
-  --background: var(--red-60);
-  --focused: var(--red-70);
+  --bg: var(--red-60);
+  --bg-focused: var(--red-70);
   --focused-shadow: color(theme('colors.red-50') alpha(30%));
-  --hover: color(theme('colors.red-60') shade(10%));
-  --active: var(--red-70);
+  --bg-hover: color(theme('colors.red-60') shade(10%));
+  --bg-active: var(--red-70);
 
   &.dark {
-    --background: var(--red-40);
-    --hover: var(--red-30);
-    --focused: var(--red-30);
-    --active: color(theme('colors.red-40') shade(20%));
+    --bg: var(--red-40);
+    --bg-hover: var(--red-30);
+    --bg-focused: var(--red-30);
+    --bg-active: color(theme('colors.red-40') shade(20%));
 
     &[disabled] {
-      --disabled-color: color(theme('colors.red-80') saturation(- 30%));
-      --disabled-bg: color(theme('colors.red-40') saturation(- 50%) alpha(60%));
+      --text-disabled: color(theme('colors.red-80') saturation(- 30%));
+      --bg-disabled: color(theme('colors.red-40') saturation(- 50%) alpha(60%));
     }
   }
 
   @media screen and (prefers-color-scheme: dark) {
-    --background: var(--red-40);
-    --hover: color(theme('colors.red-40') tint(30%));
-    --focused: var(--red-30);
-    --active: color(theme('colors.red-40') shade(20%));
+    --bg: var(--red-40);
+    --bg-hover: color(theme('colors.red-40') tint(30%));
+    --bg-focused: var(--red-30);
+    --bg-active: color(theme('colors.red-40') shade(20%));
     --text: var(--red-90);
     --text-hover: var(--red-90);
     --text-active: var(--red-80);
-    --disabled-bg: var(--red-30);
+    --bg-disabled: var(--red-30);
   }
 }
 
 .btn-link {
-  --background: transparent;
+  --bg: transparent;
   --text: var(--blue-60);
   --text-hover: var(--blue-70);
   --text-active: var(--blue-80);
-  --disabled-color: var(--grey-50);
+  --text-disabled: var(--grey-50);
   transition: none;
   position: relative;
 
@@ -235,22 +237,22 @@ BUTTONS
 
   &.dark {
     --text: var(--blue-40);
-    --background: transparent;
+    --bg: transparent;
     --text-hover: var(--blue-30);
 
     &[disabled] {
-      --disabled-color: color(theme('colors.blue-40') saturation(- 90%));
+      --text-disabled: color(theme('colors.blue-40') saturation(- 90%));
     }
   }
 
   @media screen and (prefers-color-scheme: dark) {
-    --background: transparent;
+    --bg: transparent;
     --text: var(--blue-40);
     --text-hover: var(--blue-30);
     --text-active: var(--blue-50);
 
     &[disabled] {
-      --disabled-color: color(theme('colors.blue-20') saturation(- 90%));
+      --text-disabled: color(theme('colors.blue-20') saturation(- 90%));
     }
 
     &.btn-link--danger {
