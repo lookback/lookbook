@@ -59,6 +59,11 @@ A regular spinner
     width: 2em;
     height: 2em;
   }
+
+  @media screen and (prefers-color-scheme: dark) {
+    border-color: color(theme('colors.grey-40') alpha(20%));
+    border-left-color: color(theme('colors.grey-30') alpha(80%));
+  }
 }
 
 /*
