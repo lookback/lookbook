@@ -15,7 +15,8 @@ BUTTONS
   --text-disabled: var(--text);
   --focused-shadow: color(theme('colors.blue-60') alpha(30%));
 
-  @apply rounded font-bold inline-block relative text-center;
+  @apply font-bold inline-block relative text-center;
+  border-radius: 0.35em;
   background-color: var(--bg);
   color: var(--text);
   -webkit-tap-highlight-color: transparent;
