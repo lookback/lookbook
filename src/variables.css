@@ -3,6 +3,11 @@
   --default-text-color: theme('textColor.default');
   --default-background-color: theme('backgroundColor.default');
 
+  /** Base measurement. Is set as root font size on <body>. */
+  --base-size: theme('baseSize');
+  /** Main vertical rhythm unit. Set as line-height on <body>. */
+  --base-leading: theme('baseLeading');
+
   --selection-background: var(--blue-80);
   --selection-color: #fff;
   --background-color: var(--default-background-color);

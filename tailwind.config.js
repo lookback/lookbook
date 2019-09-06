@@ -1,7 +1,9 @@
 const pick = require('./lib/pick');
 const styleColors = require('./colors.js');
 
+/** Root font size without unit. */
 const baseSize = 16;
+/** Base leading (line height) without unit. */
 const leading = 1.5;
 
 const toRem = (size, base = baseSize) => `${size / base}rem`;
@@ -86,6 +88,10 @@ const colors = {
 
 module.exports = {
   theme: {
+    baseSize,
+
+    baseLeading: leading,
+
     /*
         |-----------------------------------------------------------------------------
         | Colors                                  https://tailwindcss.com/docs/colors

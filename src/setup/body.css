@@ -4,7 +4,9 @@ BODY AND HTML ELEMENTS
 
 html,
 body {
-  @apply font-sans text-f5 leading-normal antialiased;
+  @apply font-sans antialiased;
+  font-size: calc(var(--base-size) * 1px);
+  line-height: var(--base-leading);
   background-color: var(--background-color);
   color: var(--text-color);
 }
