@@ -1,4 +1,6 @@
-/*! base.css v2.0.0-beta.7 */
+/*! base.css v2.0.0-beta.8 */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i&display=swap');
 
 /*
 BASE LAYER
@@ -729,6 +731,12 @@ SETUP
 This is a base stylesheet which includes default styling for all
 basic HTML elements.
 ----------------------------------------------------------------*/
+
+/*
+FONTS
+----------------------------------------------------------------*/
+
+/* Lato */
 
 /*
 BODY AND HTML ELEMENTS
