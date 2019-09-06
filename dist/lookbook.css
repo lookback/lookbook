@@ -1,4 +1,4 @@
-/*! lookbook.css v2.0.0-beta.8 */
+/*! lookbook.css v2.0.0-beta.9 */
 
 @import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i&display=swap');
 
@@ -623,9 +623,6 @@ video {
 }
 
 :root {
-  --default-border-color: #dce4e9;
-  --default-text-color: #0d4057;
-  --default-background-color: #f6fbfd;
   --orange-10: #fff9ef;
   --orange-20: #f9f1dc;
   --orange-30: #f6e1aa;
@@ -700,6 +697,13 @@ video {
 }
 
 :root {
+  --default-border-color: #dce4e9;
+  --default-text-color: #0d4057;
+  --default-background-color: #f6fbfd;
+  /** Base measurement. Is set as root font size on <body>. */
+  --base-size: 16;
+  /** Main vertical rhythm unit. Set as line-height on <body>. */
+  --base-leading: 1.5;
   --selection-background: var(--blue-80);
   --selection-color: #fff;
   --background-color: var(--default-background-color);
@@ -754,10 +758,10 @@ html,
 body {
   font-family: Lato, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui,
     arial, sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: calc(var(--base-size) * 1px);
+  line-height: var(--base-leading);
   background-color: var(--background-color);
   color: var(--text-color);
 }
