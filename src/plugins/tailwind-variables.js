@@ -52,7 +52,7 @@ const toProfile = (colorProfileName, color) => {
  * }
  * ```
  */
-module.exports = function variables(element = ':root', useP3 = true) {
+module.exports = function variables(element = ':root', useP3 = false) {
   return function({ addBase, theme }) {
     const colors = theme('colors');
 
