@@ -754,6 +754,7 @@ module.exports = {
 
   variants: {
     appearance: false,
+    accessibility: [],
     backgroundAttachment: false,
     backgroundColor: ['dark'],
     backgroundPosition: false,
@@ -834,6 +835,7 @@ module.exports = {
     minWidth: false,
     negativeMargin: false,
     outline: false,
+    placeholderColor: false,
     pointerEvents: false,
     resize: false,
     stroke: false,
