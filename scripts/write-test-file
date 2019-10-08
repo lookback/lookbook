@@ -25,6 +25,7 @@ const htmlLayout = (contents) =>
       }
 
       .block {
+        font-weight: bold;
         padding: 1em;
         border-radius: .25em;
         margin-bottom: .5em;
@@ -57,7 +58,7 @@ const writeTestPage = async (colors, colorBreakAtScale = 50) => {
       (s) => `
       <p class="block" style="color: ${
         s.scale > colorBreakAtScale ? '#fff' : '#000'
-      }; background-color: ${s.color}">${s.name}</p>
+      }; background-color: var(--${s.name})">${s.name}</p>
   `
       /* eslint-enable */
     )
