@@ -27,6 +27,7 @@
   /* <input>, <textarea> */
   --label-color: var(--text-color);
   --form-input-color: rgba(theme('colors.blue-80'), 0.9);
+  --form-placeholder-color: var(--grey-50);
   --form-background-color: var(--off-white);
   --form-background-color-active: #fff;
   --form-border-color: var(--default-border-color);

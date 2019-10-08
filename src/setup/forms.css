@@ -12,6 +12,13 @@ label {
   color: var(--label-color);
 }
 
+input,
+textarea {
+  &::placeholder {
+    color: var(--form-placeholder-color);
+  }
+}
+
 input[type='text'],
 input[type='url'],
 input[type='email'],
