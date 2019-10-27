@@ -40,6 +40,7 @@ const toProfile = (colorProfileName, color) => {
   // color(p3 1.0 0 0 / 1);
   return `color(${colorProfileName} ${r} ${g} ${b} / 1)`;
 };
+
 /**
  * Tailwind plugin that adds Lookback's colour variables
  * as custom CSS properties on an element.
@@ -51,8 +52,15 @@ const toProfile = (colorProfileName, color) => {
  *    --someColorName: #fff;
  * }
  * ```
+ *
+ * Options:
+ *
+ * @param {object} options
+ * @param {string} options.element The property we should attach variables to. Defaults to `:root`
+ * @param {boolean} options.useP3 Generate Display P3 colours for browser that support it.
+ * Defaults to `false`
  */
-module.exports = function variables(element = ':root', useP3 = false) {
+module.exports = function variables({ element = ':root', useP3 = false } = {}) {
   return function({ addBase, theme }) {
     const colors = theme('colors');
 

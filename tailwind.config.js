@@ -863,7 +863,9 @@ module.exports = {
 
   plugins: [
     // Use all colors from Figma as CSS variable on the :root element
-    require('./src/plugins/tailwind-variables')(),
+    require('./src/plugins/tailwind-variables')({
+      useP3: true,
+    }),
     require('./src/plugins/tailwind-dark-mode')(),
   ],
 };
