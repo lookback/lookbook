@@ -43,6 +43,7 @@
   /* kbd */
   /* Background is same as <code> */
   --kbd-color: var(--blue-80);
+  --kbd-border-color: var(--blue-30);
 
   /* <mark> */
   --mark-background-color: var(--orange-30);

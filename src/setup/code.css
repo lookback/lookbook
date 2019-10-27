@@ -41,4 +41,5 @@ pre code {
 kbd {
   @apply border border shadow-tiny;
   color: var(--kbd-color);
+  border-color: var(--kbd-border-color);
 }
