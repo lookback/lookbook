@@ -1,4 +1,4 @@
-/*! base.css v2.0.0-beta.9 */
+/*! base.css v2.0.0-beta.10 */
 
 @import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i&display=swap');
 
@@ -398,6 +398,7 @@ h3,
 h4,
 h5,
 h6,
+hr,
 figure,
 p,
 pre {
@@ -472,6 +473,14 @@ html {
   border-color: #dce4e9;
 }
 
+/*
+ * Ensure horizontal rules are visible by default
+ */
+
+hr {
+  border-top-width: 1px;
+}
+
 /**
  * Undo the `border-style: none` reset that Normalize applies to images so that
  * our `border-{width}` utilities have the expected effect.
@@ -492,32 +501,27 @@ textarea {
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  color: inherit;
-  opacity: 0.5;
+  color: #a0aec0;
 }
 
 input::-moz-placeholder,
 textarea::-moz-placeholder {
-  color: inherit;
-  opacity: 0.5;
+  color: #a0aec0;
 }
 
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
-  color: inherit;
-  opacity: 0.5;
+  color: #a0aec0;
 }
 
 input::-ms-input-placeholder,
 textarea::-ms-input-placeholder {
-  color: inherit;
-  opacity: 0.5;
+  color: #a0aec0;
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: inherit;
-  opacity: 0.5;
+  color: #a0aec0;
 }
 
 button,
@@ -894,6 +898,7 @@ video {
   /* <input>, <textarea> */
   --label-color: var(--text-color);
   --form-input-color: rgba(13, 64, 87, 0.9);
+  --form-placeholder-color: var(--grey-50);
   --form-background-color: var(--off-white);
   --form-background-color-active: #fff;
   --form-border-color: var(--default-border-color);
@@ -907,6 +912,7 @@ video {
   /* kbd */
   /* Background is same as <code> */
   --kbd-color: var(--blue-80);
+  --kbd-border-color: var(--blue-30);
   /* <mark> */
   --mark-background-color: var(--orange-30);
   --mark-color: var(--orange-90);
@@ -1082,6 +1088,7 @@ kbd {
   border-width: 1px;
   box-shadow: 0 1px 3px rgba(0, 102, 147, 0.4);
   color: var(--kbd-color);
+  border-color: var(--kbd-border-color);
 }
 
 /*
@@ -1096,6 +1103,31 @@ textarea {
 label {
   font-weight: 700;
   color: var(--label-color);
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: var(--form-placeholder-color);
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: var(--form-placeholder-color);
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: var(--form-placeholder-color);
+}
+
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+  color: var(--form-placeholder-color);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--form-placeholder-color);
 }
 
 input[type='text'],

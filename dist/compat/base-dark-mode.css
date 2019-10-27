@@ -1,4 +1,4 @@
-/*! lookbook-dark-mode.css v2.0.0-beta.9 */
+/*! lookbook-dark-mode.css v2.0.0-beta.10 */
 
 @media screen and (prefers-color-scheme: dark) {
 
@@ -124,6 +124,8 @@
     --code-background-color: var(--grey-90);
     --code-color: var(--blue-30);
     --code-border-color: var(--grey-80);
+    --kbd-color: var(--blue-30);
+    --kbd-border-color: var(--grey-80);
   }
 
   pre {
