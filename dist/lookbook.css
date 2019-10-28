@@ -1,4 +1,4 @@
-/*! lookbook.css v2.0.0-beta.11 */
+/*! lookbook.css v2.0.0-beta.12 */
 
 @import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i&display=swap');
 
@@ -1271,16 +1271,20 @@ BUTTONS
 }
 
 .btn.dark {
-  --text: var(--blue-90);
-  --bg: var(--blue-40);
-  --bg-hover: rgb(144, 221, 255);
-  --bg-focused: var(--blue-30);
-  --bg-active: rgb(77, 165, 204);
+  --text: var(--blue-80);
+  --text-hover: var(--blue-80);
+  --text-active: var(--blue-80);
+  --bg: #fff;
+  --bg-hover: rgba(255, 255, 255, 0.9);
+  --bg-focused: #fff;
+  --bg-active: rgba(255, 255, 255, 0.8);
+  --focused-shadow: rgba(255, 255, 255, 0.3);
 }
 
 .btn.dark[disabled] {
-  --text-disabled: rgb(29, 59, 73);
-  --bg-disabled: rgba(136, 192, 215, 0.6);
+  --text-disabled: var(--grey-40);
+  --bg-disabled: rgba(255, 255, 255, 0.2);
+  opacity: 1;
 }
 
 .btn[disabled] {
@@ -1401,6 +1405,7 @@ BUTTONS
   --text: var(--blue-40);
   --bg: transparent;
   --text-hover: var(--blue-30);
+  --text-active: var(--blue-50);
 }
 
 .btn-link.dark[disabled] {
