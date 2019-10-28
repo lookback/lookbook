@@ -242,6 +242,7 @@ BUTTONS
     --text: var(--blue-40);
     --bg: transparent;
     --text-hover: var(--blue-30);
+    --text-active: var(--blue-50);
 
     &[disabled] {
       --text-disabled: color(theme('colors.blue-40') saturation(- 90%));
