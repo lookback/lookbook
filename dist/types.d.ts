@@ -1,4 +1,5 @@
 declare module 'lookbook' {
+  /** The type for a color included in the Lookbook color system. */
   export type Color =
     | 'orange-10'
     | 'orange-20'
@@ -70,4 +71,11 @@ declare module 'lookbook' {
     | 'teal-80'
     | 'teal-90'
     | 'teal-100';
+
+  /** A concrete dictionary of colors exported by the Lookbook module.
+   * Maps from a Color to a string (hex).
+   */
+  export const colors: {
+    [key in Color]: string;
+  };
 }

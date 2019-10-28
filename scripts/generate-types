@@ -25,8 +25,20 @@ const writeColorTypes = async (colors) => {
     )
   );
 
+  // An array like ['orange-10', 'orange-20', ...]
+  const colorNames = getColorNames(colors);
+
   const typescript = `declare module 'lookbook' {
-  export type Color = ${getColorNames(colors).join(' | ')};
+
+  /** The type for a color included in the Lookbook color system. */
+  export type Color = ${colorNames.join(' | ')};
+
+  /** A concrete dictionary of colors exported by the Lookbook module.
+   * Maps from a Color to a string (hex).
+  */
+  export const colors: {
+    [key in Color]: string;
+  };
 }
 `;
 
