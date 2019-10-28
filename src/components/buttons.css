@@ -52,17 +52,19 @@ BUTTONS
   }
 
   &.dark {
-    --text: var(--blue-90);
-    --bg: var(--blue-40);
-    --bg-hover: color(theme('colors.blue-40') tint(30%));
-    --bg-focused: var(--blue-30);
-    --bg-active: color(theme('colors.blue-40') shade(20%));
+    --text: var(--blue-80);
+    --text-hover: var(--blue-80);
+    --text-active: var(--blue-80);
+    --bg: #fff;
+    --bg-hover: color(#fff alpha(90%));
+    --bg-focused: #fff;
+    --bg-active: color(#fff alpha(80%));
+    --focused-shadow: color(#fff alpha(30%));
 
     &[disabled] {
-      --text-disabled: color(theme('colors.blue-80') saturation(- 30%));
-      --bg-disabled: color(
-        theme('colors.blue-40') saturation(- 50%) alpha(60%)
-      );
+      --text-disabled: var(--grey-40);
+      --bg-disabled: color(#fff alpha(20%));
+      opacity: 1;
     }
   }
 
