@@ -12,7 +12,7 @@
     "watch": "scripts/watch",
     "update-colors": "scripts/fetch-figma-colors && scripts/write-test-file && npm run generate-types",
     "generate-types": "scripts/generate-types",
-    "release": "npm install && npm run build && npm test && git add package.json package-lock.json dist && git commit -m $npm_package_version && git tag $npm_package_version && git push && git push --tags && scripts/distribute \"dist/*.css\""
+    "release": "npm install && npm run build && npm test && git add package.json package-lock.json dist && git commit -m $npm_package_version && git tag $npm_package_version && git push && git push --tags && scripts/distribute \"dist/*.{css,json}\""
   },
   "repository": {
     "type": "git",

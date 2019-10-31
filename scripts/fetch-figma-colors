@@ -21,9 +21,11 @@ const dotenv = require('dotenv');
 const fs = require('fs');
 const { promisify } = require('util');
 const path = require('path');
-const { dim } = require('../lib/colorize');
+const prettier = require('prettier');
+const { green } = require('../lib/colorize');
 
 const writeFile = promisify(fs.writeFile);
+const readFile = promisify(fs.readFile);
 
 dotenv.load();
 
@@ -43,14 +45,6 @@ const rgbToHex = (r, g, b) =>
     .slice(1);
 
 const slugify = (str) => str.toLowerCase().replace(/\s+/, '-');
-
-const safeRequire = (file) => {
-  try {
-    return require(file);
-  } catch (ex) {
-    return null;
-  }
-};
 
 const doFetch = (url) =>
   fetch(`${figmaBase}v1${url}`, {
@@ -110,6 +104,8 @@ const fetchStyle = async (key) => await doFetch(`/styles/${key}`);
  ```
  */
 const fetchAllColorStyles = async () => {
+  console.log('-> Fetching styles from Figma...');
+
   const styles = await fetchStyles(TEAM_ID);
   const file = await fetchFile(FILE_KEY);
 
@@ -136,6 +132,53 @@ const fetchAllColorStyles = async () => {
   );
 };
 
+const formatCode = async (content, parser = 'typescript') => {
+  const prettierConf = JSON.parse(
+    await readFile(
+      path.resolve(path.join(__dirname, '..', '.prettierrc')),
+      'utf-8'
+    )
+  );
+
+  return prettier.format(content, { ...prettierConf, parser });
+};
+
+const getColorsFromStyles = (styles) =>
+  Object.assign.call(
+    null,
+    ...styles
+      .sort((a, b) => (a.sort_position < b.sort_position ? -1 : 1))
+      .map((s) => ({
+        [slugify(s.name)]: s.color,
+      }))
+  );
+
+const writeJsFile = async (colors) => {
+  console.log('-> Writing .js file with colors...');
+
+  const fileContents = `/* eslint-disable */
+  /* Updated at ${new Date().toUTCString()}*/
+  module.exports = {
+  ${Object.keys(colors)
+    .map((colorName) => `'${colorName}': '${colors[colorName]}',`)
+    .join('\n')}
+  }`;
+
+  const destPath = path.resolve(__dirname + '/../colors.js');
+
+  await writeFile(destPath, await formatCode(fileContents));
+};
+
+const writeJsonFile = async (colors) => {
+  console.log('-> Writing .json file with colors...');
+
+  const fileContents = JSON.stringify(colors);
+
+  const destPath = path.resolve(__dirname + '/../dist/colors.json');
+
+  await writeFile(destPath, await formatCode(fileContents, 'json'));
+};
+
 /**
  * Calls Figma's API and saves to a `colors.js` file in the project root.
  */
@@ -146,62 +189,12 @@ const writeColorsFromFigma = async () => {
     throw new Error('❌ No styles found');
   }
 
-  const colors = styles
-    .sort((a, b) => (a.sort_position < b.sort_position ? -1 : 1))
-    .map(
-      (s) =>
-        (s.description ? `    /** ${s.description} */\n` : '') +
-        `    '${slugify(s.name)}': '${s.color}',`
-    )
-    .join('\n');
+  const colors = getColorsFromStyles(styles);
 
-  const fileContents = `/* eslint-disable */
-/* Updated at ${new Date().toUTCString()}*/
-module.exports = {
-${colors}
-}`;
+  await writeJsFile(colors);
+  await writeJsonFile(colors);
 
-  const destPath = path.resolve(__dirname + '/../colors.js');
-
-  const originalFile = safeRequire(destPath);
-
-  await writeFile(destPath, fileContents);
-
-  const numChanged = colorsHaveChanged(safeRequire(destPath), originalFile);
-
-  console.log(
-    `✅ Wrote ${styles.length} colors to file${
-      numChanged ? ` (${Math.abs(numChanged)} changed)` : ''
-    }`
-  );
-
-  numChanged &&
-    console.log(
-      dim('☝️ Please inspect the diff of colors.js before committing!')
-    );
-};
-
-const colorsHaveChanged = (newColors, oldColors) => {
-  if (!oldColors || !newColors) {
-    return 0;
-  }
-
-  const numChanged =
-    Object.keys(newColors).length - Object.keys(oldColors).length;
-
-  if (numChanged > 0) {
-    return numChanged;
-  }
-
-  let colorsChanged = 0;
-
-  for (const colorName in oldColors) {
-    if (oldColors[colorName] !== newColors[colorName]) {
-      colorsChanged++;
-    }
-  }
-
-  return colorsChanged;
+  console.log(green(`Wrote ${styles.length} colors`));
 };
 
 writeColorsFromFigma().catch(console.error);
