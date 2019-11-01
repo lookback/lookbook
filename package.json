@@ -1,6 +1,6 @@
 {
   "name": "lookbook",
-  "version": "2.0.0-beta.13",
+  "version": "2.0.0-beta.14",
   "description": "The design system of Lookback",
   "main": "index.js",
   "types": "dist/types.d.ts",
@@ -12,7 +12,7 @@
     "watch": "scripts/watch",
     "update-colors": "scripts/fetch-figma-colors && scripts/write-test-file && npm run generate-types",
     "generate-types": "scripts/generate-types",
-    "release": "npm install && npm run build && npm test && git add package.json package-lock.json dist && git commit -m $npm_package_version && git tag $npm_package_version && git push && git push --tags && scripts/distribute \"dist/*.{css,json}\""
+    "release": "npm install --no-audit && npm run build && npm test && git add package.json package-lock.json dist && git commit -m $npm_package_version && git tag $npm_package_version && git push && git push --tags && scripts/distribute \"dist/*.{css,json}\""
   },
   "repository": {
     "type": "git",
