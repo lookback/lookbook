@@ -37,6 +37,7 @@ const readline = require('readline');
     ```
     scripts/distribute dist/lookbook.css
     scripts/distribute dist/*.css
+    scripts/distribute dist/*.{css,json}
     ```
     
     CREDENTIALS
@@ -132,11 +133,24 @@ const stylesheetExistsInBucket = (filename, version) =>
       throw err;
     });
 
+const getContentTypeFromFile = (pathToFile) => {
+  switch (path.extname(pathToFile)) {
+    case '.css':
+      return 'text/css';
+    case '.json':
+      return 'application/json';
+    default:
+      return 'text/plain';
+  }
+};
+
 const uploadToBucket = async ({ contents, key, isImmutable = true }) => {
   const opts = {
     Bucket: bucket,
     Key: key,
-    ContentType: 'text/css',
+    // S3 doesn't "get it" when it comes to file types, so we need to
+    // explicitly set it here:
+    ContentType: getContentTypeFromFile(key),
     CacheControl: isImmutable
       ? 'public, max-age=31536000, immutable' // Cache for a year
       : 'public',
