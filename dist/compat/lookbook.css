@@ -1,4 +1,4 @@
-/*! lookbook.css v2.0.0-beta.14 */
+/*! lookbook.css v2.0.0-beta.15 */
 
 @import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i&display=swap');
 
@@ -3401,6 +3401,30 @@ Put things here to override the base styling.
   -moz-user-select: auto;
   -ms-user-select: auto;
   user-select: auto;
+}
+
+.align-baseline {
+  vertical-align: baseline;
+}
+
+.align-top {
+  vertical-align: top;
+}
+
+.align-middle {
+  vertical-align: middle;
+}
+
+.align-bottom {
+  vertical-align: bottom;
+}
+
+.align-text-top {
+  vertical-align: text-top;
+}
+
+.align-text-bottom {
+  vertical-align: text-bottom;
 }
 
 .visible {
