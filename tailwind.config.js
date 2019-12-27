@@ -9,6 +9,16 @@ const leading = 1.5;
 const toRem = (size, base = baseSize) => `${size / base}rem`;
 
 /*
+OUTER CONFIGURATION
+======================
+We configure some things with env variables for now, until/if
+https://github.com/tailwindcss/tailwindcss/issues/1259 resolves so we can pass
+a config object to the Tailwind PostCSS config instead.
+*/
+
+const USE_P3_COLORS = !!process.env.LOOKBOOK_USE_P3 || false;
+
+/*
 
 Lookbook – the design system of Lookback
 
@@ -863,7 +873,7 @@ module.exports = {
   plugins: [
     // Use all colors from Figma as CSS variable on the :root element
     require('./src/plugins/tailwind-variables')({
-      useP3: true,
+      useP3: USE_P3_COLORS,
     }),
     require('./src/plugins/tailwind-dark-mode')(),
   ],

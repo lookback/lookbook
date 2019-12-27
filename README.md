@@ -85,6 +85,13 @@ If you'd like to use the Tailwind config values in your custom CSS, you can inst
 
 Note that you might wanna minify the CSS yourself.
 
+### Configure
+
+- Use P3 colour space by passing a truthy `LOOKBOOK_USE_P3` environment variable where you build your CSS with PostCSS:
+  ```
+  LOOKBOOK_USE_P3=1 postcss ...
+  ```
+
 ### Programmatic API
 
 These are the exported members of the `lookbook` module.
