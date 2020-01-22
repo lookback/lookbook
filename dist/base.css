@@ -1,4 +1,4 @@
-/*! base.css v2.0.0-beta.16 */
+/*! base.css v2.0.0-beta.17 */
 
 @import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i&display=swap');
 
@@ -1027,7 +1027,7 @@ BUTTONS
 
 .btn {
   --bg: var(--blue-60);
-  --bg-disabled: var(--bg);
+  --bg-disabled: rgb(138, 182, 202);
   --bg-focused: var(--blue-70);
   --bg-hover: rgb(0, 110, 159);
   --bg-active: var(--blue-70);
@@ -1035,7 +1035,7 @@ BUTTONS
   --text-hover: #fff;
   --text-active: #e4e4e4;
   --text-focused: var(--text-hover);
-  --text-disabled: var(--text);
+  --text-disabled: rgba(255, 255, 255, 0.8);
   --focused-shadow: rgba(0, 122, 177, 0.3);
   font-weight: 700;
   display: inline-block;
@@ -1093,7 +1093,6 @@ BUTTONS
 .btn.dark[disabled] {
   --text-disabled: var(--grey-40);
   --bg-disabled: rgba(255, 255, 255, 0.2);
-  opacity: 1;
 }
 
 .btn[disabled] {
@@ -1102,7 +1101,6 @@ BUTTONS
   background-color: var(--bg-disabled);
   color: var(--text-disabled);
   pointer-events: none;
-  opacity: 0.4;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -1120,8 +1118,8 @@ BUTTONS
   --focused-shadow: rgba(121, 148, 165, 0.1);
   --bg-hover: rgb(200, 213, 221);
   --bg-active: var(--grey-40);
-  --bg-disabled: var(--grey-30);
-  --text-disabled: var(--grey-100);
+  --bg-disabled: var(--grey-20);
+  --text-disabled: var(--grey-50);
 }
 
 .btn-secondary.dark {
@@ -1138,6 +1136,7 @@ BUTTONS
 
 .btn-primary {
   --bg: var(--green-60);
+  --bg-disabled: rgb(147, 185, 170);
   --bg-focused: var(--green-70);
   --focused-shadow: rgba(26, 181, 119, 0.3);
   --bg-hover: rgb(22, 118, 80);
@@ -1158,6 +1157,7 @@ BUTTONS
 
 .btn-danger {
   --bg: var(--red-60);
+  --bg-disabled: rgb(212, 162, 168);
   --bg-focused: var(--red-70);
   --focused-shadow: rgba(233, 82, 103, 0.3);
   --bg-hover: rgb(186, 60, 77);
