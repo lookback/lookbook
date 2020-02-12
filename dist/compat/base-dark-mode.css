@@ -1,4 +1,4 @@
-/*! lookbook-dark-mode.css v2.0.0-beta.17 */
+/*! lookbook-dark-mode.css v2.0.0-beta.18 */
 
 @media screen and (prefers-color-scheme: dark) {
 
@@ -109,13 +109,12 @@
 }
 
   :root {
-    /* Selection backgrounds don't seem to work as variables in Dark mode.. */
-    --selection-background: var(--grey-60);
     --background-color: var(--grey-80);
     --heading-color: var(--blue-30);
     --text-color: var(--blue-20);
     --link-color: var(--blue-40);
     --link-color-hover: var(--blue-30);
+    --selection-background: var(--blue-40);
     --form-background-color: var(--grey-90);
     --form-background-color-active: var(--grey-100);
     --form-input-color: var(--text-color);
