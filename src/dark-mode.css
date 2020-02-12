@@ -2,13 +2,13 @@
   /* Read more in https://webkit.org/blog/8840/dark-mode-support-in-webkit/ */
 
   :root {
-    /* Selection backgrounds don't seem to work as variables in Dark mode.. */
-    --selection-background: var(--grey-60);
     --background-color: var(--grey-80);
     --heading-color: var(--blue-30);
     --text-color: var(--blue-20);
     --link-color: var(--blue-40);
     --link-color-hover: var(--blue-30);
+
+    --selection-background: var(--blue-40);
 
     --form-background-color: var(--grey-90);
     --form-background-color-active: var(--grey-100);
