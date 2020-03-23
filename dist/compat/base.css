@@ -1,4 +1,4 @@
-/*! base.css v2.0.0-beta.19 */
+/*! base.css v2.0.0-beta.20 */
 
 @import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i&display=swap');
 
@@ -1036,7 +1036,7 @@ BUTTONS
 .btn2 {
   --bg: var(--blue-60);
   --bg-disabled: rgb(138, 182, 202);
-  --bg-focused: var(--blue-70);
+  --bg-focused: var(--blue-80);
   --bg-hover: rgb(0, 110, 159);
   --bg-active: var(--blue-70);
   --text: #fff;
@@ -1121,10 +1121,10 @@ BUTTONS
   --text: var(--grey-70);
   --text-hover: var(--grey-80);
   --text-active: var(--grey-90);
-  --bg: var(--grey-30);
-  --bg-focused: var(--grey-30);
-  --focused-shadow: rgba(121, 148, 165, 0.1);
-  --bg-hover: rgb(200, 213, 221);
+  --bg: var(--grey-20);
+  --bg-focused: var(--grey-40);
+  --focused-shadow: rgba(121, 148, 165, 0.15);
+  --bg-hover: var(--grey-30);
   --bg-active: var(--grey-40);
   --bg-disabled: var(--grey-20);
   --text-disabled: var(--grey-50);
@@ -1145,8 +1145,8 @@ BUTTONS
 .btn2-primary {
   --bg: var(--green-60);
   --bg-disabled: rgb(147, 185, 170);
-  --bg-focused: var(--green-70);
-  --focused-shadow: rgba(26, 181, 119, 0.3);
+  --bg-focused: var(--green-80);
+  --focused-shadow: rgba(24, 131, 89, 0.25);
   --bg-hover: rgb(22, 118, 80);
   --bg-active: var(--green-70);
 }
@@ -1166,7 +1166,7 @@ BUTTONS
 .btn2-danger {
   --bg: var(--red-60);
   --bg-disabled: rgb(212, 162, 168);
-  --bg-focused: var(--red-70);
+  --bg-focused: var(--red-80);
   --focused-shadow: rgba(233, 82, 103, 0.3);
   --bg-hover: rgb(186, 60, 77);
   --bg-active: var(--red-70);
