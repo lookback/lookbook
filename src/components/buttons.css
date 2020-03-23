@@ -5,7 +5,7 @@ BUTTONS
 .btn {
   --bg: var(--blue-60);
   --bg-disabled: color(theme('colors.blue-60') blend(#fff 60%) shade(10%));
-  --bg-focused: var(--blue-70);
+  --bg-focused: var(--blue-80);
   --bg-hover: color(theme('colors.blue-60') shade(10%));
   --bg-active: var(--blue-70);
   --text: #fff;
@@ -98,10 +98,10 @@ BUTTONS
   --text: var(--grey-70);
   --text-hover: var(--grey-80);
   --text-active: var(--grey-90);
-  --bg: var(--grey-30);
-  --bg-focused: var(--grey-30);
-  --focused-shadow: color(theme('colors.grey-50') alpha(10%));
-  --bg-hover: color(theme('colors.grey-40') tint(20%));
+  --bg: var(--grey-20);
+  --bg-focused: var(--grey-40);
+  --focused-shadow: color(theme('colors.grey-50') alpha(15%));
+  --bg-hover: var(--grey-30);
   --bg-active: var(--grey-40);
   --bg-disabled: var(--grey-20);
   --text-disabled: var(--grey-50);
@@ -140,8 +140,8 @@ BUTTONS
 .btn-primary {
   --bg: var(--green-60);
   --bg-disabled: color(theme('colors.green-60') blend(#fff 60%) shade(10%));
-  --bg-focused: var(--green-70);
-  --focused-shadow: color(theme('colors.green-50') alpha(30%));
+  --bg-focused: var(--green-80);
+  --focused-shadow: color(theme('colors.green-60') alpha(25%));
   --bg-hover: color(theme('colors.green-60') shade(10%));
   --bg-active: var(--green-70);
 
@@ -176,7 +176,7 @@ BUTTONS
 .btn-danger {
   --bg: var(--red-60);
   --bg-disabled: color(theme('colors.red-60') blend(#fff 60%) shade(10%));
-  --bg-focused: var(--red-70);
+  --bg-focused: var(--red-80);
   --focused-shadow: color(theme('colors.red-50') alpha(30%));
   --bg-hover: color(theme('colors.red-60') shade(10%));
   --bg-active: var(--red-70);
