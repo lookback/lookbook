@@ -3,6 +3,10 @@
   --default-text-color: theme('textColor.default');
   --default-background-color: theme('backgroundColor.default');
 
+  /** The sans-serif used. */
+  --font-sans-serif: Lato, sans-serif;
+
+  --base-font: var(--font-sans-serif);
   /** Base measurement. Is set as root font size on <body>. */
   --base-size: theme('baseSize');
   /** Main vertical rhythm unit. Set as line-height on <body>. */

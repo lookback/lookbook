@@ -4,9 +4,10 @@ BODY AND HTML ELEMENTS
 
 html,
 body {
-  @apply font-sans antialiased;
+  @apply antialiased;
   font-size: calc(var(--base-size) * 1px);
   line-height: var(--base-leading);
+  font-family: var(--base-font);
   background-color: var(--background-color);
   color: var(--text-color);
 }
