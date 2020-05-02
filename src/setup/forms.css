@@ -25,6 +25,8 @@ input[type='email'],
 input[type='password'],
 input[type='search'],
 input[type='number'],
+input[type='date'],
+input[type='time'],
 textarea {
   @apply font-sans rounded p-1;
 
