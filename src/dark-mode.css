@@ -31,6 +31,10 @@
 
   /* Custom fixes */
 
+  a {
+    font-weight: bold;
+  }
+
   pre {
     box-shadow: none;
     border: 0;
