@@ -1,6 +1,26 @@
-/*! lookbook-dark-mode.css v2.0.0-beta.20 */
+/*! lookbook-dark-mode.css v2.0.0-beta.21 */
 
 @media screen and (prefers-color-scheme: dark) {
+
+input[type='text'],
+input[type='url'],
+input[type='email'],
+input[type='password'],
+input[type='search'],
+input[type='number'],
+input[type='date'],
+input[type='time'],
+textarea {
+    border: 0
+}
+
+select {
+    border: 0
+}
+
+    select:focus {
+      box-shadow: var(--form-focus-shadow);
+    }
 
 .btn {
     --text: var(--blue-90);
@@ -8,6 +28,8 @@
     --text-hover: var(--blue-90);
 
     --text-active: var(--blue-80);
+
+    --text-disabled: var(--text);
 
     --bg: var(--blue-40);
 
@@ -19,7 +41,7 @@
 }
 
     .btn[disabled] {
-      opacity: 0.25;
+      opacity: 0.4;
     }
 
 .btn-secondary {
@@ -37,13 +59,13 @@
 
     --text-active: rgba(255,255,255, 0.5);
 
-    --bg-disabled: var(--grey-90);
+    --bg-disabled: var(--grey-80);
 
-    --text-disabled: var(--grey-60)
+    --text-disabled: var(--grey-50)
 }
 
     .btn-secondary[disabled] {
-      opacity: 1;
+      opacity: 0.7;
     }
 
 .btn-primary {
@@ -60,6 +82,8 @@
     --text-hover: var(--green-90);
 
     --text-active: var(--green-80);
+
+    --text-disabled: var(--text);
 
     --bg-disabled: var(--green-30)
 }
@@ -109,27 +133,42 @@
 }
 
   :root {
-    --background-color: var(--grey-80);
-    --heading-color: var(--blue-30);
+    --background-color: var(--grey-90);
+    --heading-color: var(--grey-40);
     --text-color: var(--blue-20);
     --link-color: var(--blue-40);
     --link-color-hover: var(--blue-30);
-    --selection-background: var(--blue-40);
-    --form-background-color: var(--grey-90);
+    --selection-background: var(--grey-50);
+    --form-background-color: var(--grey-100);
     --form-background-color-active: var(--grey-100);
-    --form-input-color: var(--text-color);
+    --form-input-color: var(--grey-30);
+    --form-input-color-active: var(--grey-20);
     --form-border-color: var(--grey-60);
-    --form-focus-shadow: var(--blue-70) 0 0 0 2px;
-    --code-background-color: var(--grey-90);
+    --form-focus-shadow: rgba(0, 122, 177, 0.6) 0 0 0 2px;
+    --code-background-color: var(--grey-100);
+    --pre-background-color: var(--grey-100);
     --code-color: var(--blue-30);
     --code-border-color: var(--grey-80);
     --kbd-color: var(--blue-30);
     --kbd-border-color: var(--grey-80);
   }
 
+  a {
+    font-weight: bold;
+  }
+
   pre {
     box-shadow: none;
     border: 0;
+  }
+
+  code,
+  kbd {
+    border: 0;
+  }
+
+  kbd {
+    box-shadow: none;
   }
 
   html,
