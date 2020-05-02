@@ -40,6 +40,15 @@
     border: 0;
   }
 
+  code,
+  kbd {
+    border: 0;
+  }
+
+  kbd {
+    box-shadow: none;
+  }
+
   html,
   body {
     line-height: 1.7;
