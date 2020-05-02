@@ -33,6 +33,7 @@
   /* <input>, <textarea> */
   --label-color: var(--text-color);
   --form-input-color: rgba(theme('colors.blue-80'), 0.9);
+  --form-input-color-active: var(--text-color);
   --form-placeholder-color: var(--grey-50);
   --form-background-color: var(--off-white);
   --form-background-color-active: #fff;

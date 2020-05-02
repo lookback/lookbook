@@ -45,7 +45,7 @@ textarea {
   &:focus {
     --border-color: var(--grey-50);
 
-    color: var(--text-color);
+    color: var(--form-input-color-active);
     outline: 0;
     box-shadow: var(--form-focus-shadow);
     background-color: var(--form-background-color-active);
@@ -72,5 +72,9 @@ select {
   &:focus {
     border-color: var(--grey-40);
     outline: 0;
+  }
+
+  &:focus {
+    color: var(--form-input-color-active);
   }
 }
