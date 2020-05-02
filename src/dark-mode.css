@@ -6,21 +6,23 @@
   /* Read more in https://webkit.org/blog/8840/dark-mode-support-in-webkit/ */
 
   :root {
-    --background-color: var(--grey-80);
-    --heading-color: var(--blue-30);
+    --background-color: var(--grey-90);
+    --heading-color: var(--grey-40);
     --text-color: var(--blue-20);
     --link-color: var(--blue-40);
     --link-color-hover: var(--blue-30);
 
-    --selection-background: var(--blue-40);
+    --selection-background: var(--grey-50);
 
-    --form-background-color: var(--grey-90);
+    --form-background-color: var(--grey-100);
     --form-background-color-active: var(--grey-100);
-    --form-input-color: var(--text-color);
+    --form-input-color: var(--grey-30);
+    --form-input-color-active: var(--grey-20);
     --form-border-color: var(--grey-60);
-    --form-focus-shadow: var(--blue-70) 0 0 0 2px;
+    --form-focus-shadow: rgba(0, 122, 177, 0.6) 0 0 0 2px;
 
-    --code-background-color: var(--grey-90);
+    --code-background-color: var(--grey-100);
+    --pre-background-color: var(--grey-100);
     --code-color: var(--blue-30);
     --code-border-color: var(--grey-80);
     --kbd-color: var(--blue-30);
