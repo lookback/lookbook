@@ -68,8 +68,8 @@
     "postcss-reduce-transforms": "^4.0.2",
     "postcss-unique-selectors": "^4.0.1",
     "prettier": "^1.18.2",
-    "stylelint": "^10.1",
-    "stylelint-config-recommended": "^2.2"
+    "stylelint": "^13.3.3",
+    "stylelint-config-recommended": "3.0.0"
   },
   "dependencies": {
     "autoprefixer": "^9.7.3",
