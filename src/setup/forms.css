@@ -28,7 +28,7 @@ input[type='number'],
 input[type='date'],
 input[type='time'],
 textarea {
-  @apply font-sans rounded p-1;
+  @apply rounded p-1;
 
   --border-color: var(--form-border-color);
   --color: var(--form-input-color);
@@ -55,7 +55,7 @@ textarea {
 }
 
 select {
-  @apply font-sans rounded border;
+  @apply rounded border;
   color: var(--form-input-color);
   border-color: var(--form-border-color);
   background-color: var(--form-background-color);
