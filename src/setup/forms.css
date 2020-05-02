@@ -52,6 +52,10 @@ textarea {
     box-shadow: var(--form-focus-shadow);
     background-color: var(--form-background-color-active);
   }
+
+  @media screen and (prefers-color-scheme: dark) {
+    border: 0;
+  }
 }
 
 select {
@@ -78,5 +82,13 @@ select {
 
   &:focus {
     color: var(--form-input-color-active);
+  }
+
+  @media screen and (prefers-color-scheme: dark) {
+    border: 0;
+
+    &:focus {
+      box-shadow: var(--form-focus-shadow);
+    }
   }
 }
