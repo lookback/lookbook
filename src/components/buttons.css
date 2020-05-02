@@ -52,32 +52,28 @@ BUTTONS
   }
 
   &.dark {
-    --text: var(--blue-80);
-    --text-hover: var(--blue-80);
+    --text: var(--blue-90);
+    --text-hover: var(--blue-90);
     --text-active: var(--blue-80);
-    --bg: #fff;
-    --bg-hover: color(#fff alpha(90%));
-    --bg-focused: #fff;
-    --bg-active: color(#fff alpha(80%));
-    --focused-shadow: color(#fff alpha(30%));
-
-    &[disabled] {
-      --text-disabled: var(--grey-40);
-      --bg-disabled: color(#fff alpha(20%));
-    }
+    --text-disabled: var(--text);
+    --bg: var(--blue-40);
+    --bg-hover: color(theme('colors.blue-40') tint(30%));
+    --bg-focused: var(--blue-30);
+    --bg-active: color(theme('colors.blue-40') shade(20%));
   }
 
   @media screen and (prefers-color-scheme: dark) {
     --text: var(--blue-90);
     --text-hover: var(--blue-90);
     --text-active: var(--blue-80);
+    --text-disabled: var(--text);
     --bg: var(--blue-40);
     --bg-hover: color(theme('colors.blue-40') tint(30%));
     --bg-focused: var(--blue-30);
     --bg-active: color(theme('colors.blue-40') shade(20%));
 
     &[disabled] {
-      opacity: 0.25;
+      opacity: 0.4;
     }
   }
 
@@ -107,16 +103,18 @@ BUTTONS
   --text-disabled: var(--grey-50);
 
   &.dark {
-    --bg: var(--grey-40);
-    --bg-hover: color(theme('colors.grey-30') tint(30%));
-    --bg-focused: var(--grey-30);
-    --bg-active: color(theme('colors.grey-30') shade(20%));
+    --bg: var(--grey-70);
+    --bg-hover: color(theme('colors.grey-70') tint(10%));
+    --bg-focused: var(--grey-60);
+    --bg-active: color(theme('colors.grey-70') shade(20%));
+    --text: var(--grey-30);
+    --text-hover: var(--grey-20);
+    --text-active: rgba(#fff, 0.5);
+    --bg-disabled: var(--grey-80);
+    --text-disabled: var(--grey-50);
 
     &[disabled] {
-      --text-disabled: color(theme('colors.blue-80') saturation(- 30%));
-      --bg-disabled: color(
-        theme('colors.grey-60') saturation(- 10%) alpha(80%)
-      );
+      opacity: 0.7;
     }
   }
 
@@ -128,11 +126,11 @@ BUTTONS
     --text: var(--grey-30);
     --text-hover: var(--grey-20);
     --text-active: rgba(#fff, 0.5);
-    --bg-disabled: var(--grey-90);
-    --text-disabled: var(--grey-60);
+    --bg-disabled: var(--grey-80);
+    --text-disabled: var(--grey-50);
 
     &[disabled] {
-      opacity: 1;
+      opacity: 0.7;
     }
   }
 }
@@ -147,18 +145,14 @@ BUTTONS
 
   &.dark {
     --bg: var(--green-40);
-    --bg-hover: var(--green-30);
+    --bg-hover: color(theme('colors.green-40') tint(30%));
     --bg-focused: var(--green-30);
     --bg-active: color(theme('colors.green-40') shade(20%));
-
-    &[disabled] {
-      --text-disabled: color(
-        theme('colors.green-90') saturation(- 30%) alpha(70%)
-      );
-      --bg-disabled: color(
-        theme('colors.green-50') saturation(- 80%) alpha(60%)
-      );
-    }
+    --text: var(--green-90);
+    --text-hover: var(--green-90);
+    --text-active: var(--green-80);
+    --text-disabled: var(--text);
+    --bg-disabled: var(--green-30);
   }
 
   @media screen and (prefers-color-scheme: dark) {
@@ -169,6 +163,7 @@ BUTTONS
     --text: var(--green-90);
     --text-hover: var(--green-90);
     --text-active: var(--green-80);
+    --text-disabled: var(--text);
     --bg-disabled: var(--green-30);
   }
 }
@@ -183,14 +178,13 @@ BUTTONS
 
   &.dark {
     --bg: var(--red-40);
-    --bg-hover: var(--red-30);
+    --bg-hover: color(theme('colors.red-40') tint(30%));
     --bg-focused: var(--red-30);
     --bg-active: color(theme('colors.red-40') shade(20%));
-
-    &[disabled] {
-      --text-disabled: color(theme('colors.red-80') saturation(- 30%));
-      --bg-disabled: color(theme('colors.red-40') saturation(- 50%) alpha(60%));
-    }
+    --text: var(--red-90);
+    --text-hover: var(--red-90);
+    --text-active: var(--red-80);
+    --bg-disabled: var(--red-30);
   }
 
   @media screen and (prefers-color-scheme: dark) {
@@ -239,13 +233,19 @@ BUTTONS
   }
 
   &.dark {
-    --text: var(--blue-40);
     --bg: transparent;
+    --text: var(--blue-40);
     --text-hover: var(--blue-30);
     --text-active: var(--blue-50);
 
     &[disabled] {
-      --text-disabled: color(theme('colors.blue-40') saturation(- 90%));
+      --text-disabled: color(theme('colors.blue-20') saturation(- 90%));
+    }
+
+    &.btn-link--danger {
+      --text: var(--red-50);
+      --text-hover: var(--red-40);
+      --text-active: var(--red-60);
     }
   }
 
