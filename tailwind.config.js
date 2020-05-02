@@ -97,6 +97,10 @@ const colors = {
 };
 
 module.exports = {
+  purge: {
+    enabled: false,
+  },
+
   theme: {
     baseSize,
 
@@ -775,6 +779,7 @@ module.exports = {
     borderRadius: [],
     borderStyle: [],
     borderWidth: [],
+    boxSizing: false,
     cursor: ['hover'],
     display: ['responsive'],
     flexDirection: ['responsive'],
@@ -829,7 +834,13 @@ module.exports = {
   },
 
   corePlugins: {
+    backgroundOpacity: false,
+    borderOpacity: false,
     container: false,
+    clear: false,
+    divideWidth: false,
+    divideColor: false,
+    divideOpacity: false,
     appearance: false,
     backgroundAttachment: false,
     backgroundPosition: false,
@@ -838,6 +849,16 @@ module.exports = {
     borderCollapse: false,
     flexWrap: false,
     alignContent: false,
+    gridTemplateColumns: false,
+    gridColumn: false,
+    gridColumnStart: false,
+    gridColumnEnd: false,
+    gridTemplateRows: false,
+    gridRow: false,
+    gridRowStart: false,
+    gap: false,
+    gridAutoFlow: false,
+    gridRowEnd: false,
     float: false,
     height: false,
     listStylePosition: false,
@@ -849,11 +870,25 @@ module.exports = {
     pointerEvents: false,
     resize: false,
     stroke: false,
+    strokeWidth: false,
+    space: false,
+    scale: false,
+    rotate: false,
+    translate: false,
+    skew: false,
+    transformOrigin: false,
+    transform: false,
     tableLayout: false,
+    transitionProperty: false,
+    transitionDuration: false,
+    transitionTimingFunction: false,
+    transitionDelay: false,
     whitespace: false,
     order: false,
     objectPosition: false,
     objectFit: false,
+    placeholderOpacity: false,
+    textOpacity: false,
   },
 
   /*

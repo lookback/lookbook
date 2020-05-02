@@ -397,6 +397,14 @@ Put things here to override the base styling.
   border-left-width: 1px;
 }
 
+.box-border {
+  box-sizing: border-box;
+}
+
+.box-content {
+  box-sizing: content-box;
+}
+
 .cursor-auto {
   cursor: auto;
 }
@@ -477,12 +485,48 @@ Put things here to override the base styling.
   display: table;
 }
 
-.table-row {
-  display: table-row;
+.table-caption {
+  display: table-caption;
 }
 
 .table-cell {
   display: table-cell;
+}
+
+.table-column {
+  display: table-column;
+}
+
+.table-column-group {
+  display: table-column-group;
+}
+
+.table-footer-group {
+  display: table-footer-group;
+}
+
+.table-header-group {
+  display: table-header-group;
+}
+
+.table-row-group {
+  display: table-row-group;
+}
+
+.table-row {
+  display: table-row;
+}
+
+.flow-root {
+  display: flow-root;
+}
+
+.grid {
+  display: grid;
+}
+
+.inline-grid {
+  display: inline-grid;
 }
 
 .hidden {
@@ -565,6 +609,10 @@ Put things here to override the base styling.
   justify-content: space-around;
 }
 
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -616,6 +664,38 @@ Put things here to override the base styling.
 
 .font-bold {
   font-weight: 700;
+}
+
+.text-f7 {
+  font-size: 0.75rem;
+}
+
+.text-f6 {
+  font-size: 0.875rem;
+}
+
+.text-f5 {
+  font-size: 1rem;
+}
+
+.text-f4 {
+  font-size: 1.125rem;
+}
+
+.text-f3 {
+  font-size: 1.375rem;
+}
+
+.text-f2 {
+  font-size: 1.75rem;
+}
+
+.text-f1 {
+  font-size: 2.625rem;
+}
+
+.text-f0 {
+  font-size: 3.375rem;
 }
 
 .leading-none {
@@ -1715,38 +1795,6 @@ Put things here to override the base styling.
   color: #188359;
 }
 
-.text-f7 {
-  font-size: 0.75rem;
-}
-
-.text-f6 {
-  font-size: 0.875rem;
-}
-
-.text-f5 {
-  font-size: 1rem;
-}
-
-.text-f4 {
-  font-size: 1.125rem;
-}
-
-.text-f3 {
-  font-size: 1.375rem;
-}
-
-.text-f2 {
-  font-size: 1.75rem;
-}
-
-.text-f1 {
-  font-size: 2.625rem;
-}
-
-.text-f0 {
-  font-size: 3.375rem;
-}
-
 .italic {
   font-style: italic;
 }
@@ -2012,12 +2060,48 @@ TEXT BREAKS
     display: table;
   }
 
-  .sm\:table-row {
-    display: table-row;
+  .sm\:table-caption {
+    display: table-caption;
   }
 
   .sm\:table-cell {
     display: table-cell;
+  }
+
+  .sm\:table-column {
+    display: table-column;
+  }
+
+  .sm\:table-column-group {
+    display: table-column-group;
+  }
+
+  .sm\:table-footer-group {
+    display: table-footer-group;
+  }
+
+  .sm\:table-header-group {
+    display: table-header-group;
+  }
+
+  .sm\:table-row-group {
+    display: table-row-group;
+  }
+
+  .sm\:table-row {
+    display: table-row;
+  }
+
+  .sm\:flow-root {
+    display: flow-root;
+  }
+
+  .sm\:grid {
+    display: grid;
+  }
+
+  .sm\:inline-grid {
+    display: inline-grid;
   }
 
   .sm\:hidden {
@@ -2080,6 +2164,10 @@ TEXT BREAKS
     justify-content: space-around;
   }
 
+  .sm\:justify-evenly {
+    justify-content: space-evenly;
+  }
+
   .sm\:flex-1 {
     flex: 1 1 0%;
   }
@@ -2094,6 +2182,38 @@ TEXT BREAKS
 
   .sm\:flex-none {
     flex: none;
+  }
+
+  .sm\:text-f7 {
+    font-size: 0.75rem;
+  }
+
+  .sm\:text-f6 {
+    font-size: 0.875rem;
+  }
+
+  .sm\:text-f5 {
+    font-size: 1rem;
+  }
+
+  .sm\:text-f4 {
+    font-size: 1.125rem;
+  }
+
+  .sm\:text-f3 {
+    font-size: 1.375rem;
+  }
+
+  .sm\:text-f2 {
+    font-size: 1.75rem;
+  }
+
+  .sm\:text-f1 {
+    font-size: 2.625rem;
+  }
+
+  .sm\:text-f0 {
+    font-size: 3.375rem;
   }
 
   .sm\:m-0 {
@@ -2800,38 +2920,6 @@ TEXT BREAKS
 
   .sm\:text-justify {
     text-align: justify;
-  }
-
-  .sm\:text-f7 {
-    font-size: 0.75rem;
-  }
-
-  .sm\:text-f6 {
-    font-size: 0.875rem;
-  }
-
-  .sm\:text-f5 {
-    font-size: 1rem;
-  }
-
-  .sm\:text-f4 {
-    font-size: 1.125rem;
-  }
-
-  .sm\:text-f3 {
-    font-size: 1.375rem;
-  }
-
-  .sm\:text-f2 {
-    font-size: 1.75rem;
-  }
-
-  .sm\:text-f1 {
-    font-size: 2.625rem;
-  }
-
-  .sm\:text-f0 {
-    font-size: 3.375rem;
   }
 
   .sm\:visible {
