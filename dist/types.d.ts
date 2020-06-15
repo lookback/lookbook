@@ -1,4 +1,4 @@
-declare module 'lookbook' {
+declare module '@lookback/lookbook' {
   /** The type for a color included in the Lookbook color system. */
   export type Color =
     | 'orange-10'

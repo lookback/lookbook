@@ -28,7 +28,7 @@ const writeColorTypes = async (colors) => {
   // An array like ['orange-10', 'orange-20', ...]
   const colorNames = getColorNames(colors);
 
-  const typescript = `declare module 'lookbook' {
+  const typescript = `declare module '@lookback/lookbook' {
 
   /** The type for a color included in the Lookbook color system. */
   export type Color = ${colorNames.join(' | ')};
