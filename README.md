@@ -94,7 +94,7 @@ Note that you might wanna minify the CSS yourself.
 
 ### Programmatic API
 
-These are the exported members of the `lookbook` module.
+These are the exported members of the `@lookback/lookbook` module.
 
 #### Types
 
@@ -105,7 +105,7 @@ Typescript types are included in `dist/types.d.ts`.
 If you only want the raw colour codes, they're provided as a hash in the `colors` export:
 
 ```js
-import { colors } from 'lookbook';
+import { colors } from '@lookback/lookbook';
 
 console.log(colors);
 /*
@@ -130,21 +130,21 @@ A Gulp example:
 
 ```js
 // gulpfile.js
-const { defaultPostCssPlugins } = require('lookbook');
+const { defaultPostCssPlugins } = require('@lookback/lookbook');
 const postcss = require('gulp-postcss');
 
 const compileCss = () =>
     gulp
         .src('src/stylesheets/*.css')
         .pipe(
-            postcss(
+            postcss([
                 // `defaultPostCssPlugins` returns an array of plugins.
-                ...require('lookbook').defaultPostCssPlugins({
+                ...defaultPostCssPlugins({
                     // Optionally refer to your own tailwind config:
                     pathToTailwindConf: './tailwind.config.js',
                 })
                 someOtherPlugin(),
-            )
+            ])
         )
         .pipe(gulp.dest('./dist'));
 
