@@ -178,22 +178,15 @@ This builds the final distributable CSS files:
 
 Compile the distributable CSS files as you save.
 
-### `npm run release`
+### `npm run dist`
 
-This one is handy when you wanna release a new version of the Lookbook's CSS.
+This one is handy when you wanna distribute built files in a new version of the Lookbook's CSS. This script will take files from the `dist` directory and put them in a storage bucket. Requires these environment variables setup:
 
-**Pre-condition:** Bump the `version` field in `package.json`, please.
-
-The script will:
-
-1. Run `npm install` to get a new version in `package-lock.json`.
-2. Run `build` to build the CSS.
-3. Run `npm test` to test the CSS.
-4. Add and commit the files above.
-5. Tag the commit with the version number entered.
-6. Push the commit and tag to the GitHub repo.
-7. Distribute the built files in `dist` to the S3 bucket and CDN. See `scripts/distribute` below.
-8. 💥
+```
+AWS_ACCESS_KEY_ID
+AWS_SECRET_ACCESS_KEY
+CLOUDFRONT_DISTRO_ID
+```
 
 ### `scripts/fetch-figma-colors`
 
@@ -203,12 +196,20 @@ When editing the colour scheme, currently kept as a shared library in Figma, you
 
 Currently lints the CSS source.
 
-### `scripts/distribute`
+## Releasing a new version
 
-Uploads the CSS files from `dist` to an S3 bucket.
+Three steps:
 
-⚠️ You need to bump the `version` field in `package.json` to distribute a new version to S3!
+```bash
+npm version
+npm publish
+git push
+npm run dist
+```
 
-The script will exit if an existing version exists on S3. These releases are immutable, since we cache them really hard.
+1. **npm version** will set a new version of this package, git tag, and git commit it.
+2. **npm publish** will put the package code in our private package repo. This will also build stuff into `dist.
+3. **git push** will push the version change with tags to GitHub.
+4. **npm run dist** will upload the dist files to storage.
 
-See `scripts/release` above for a full release process.
+Remember to write release notes in GitHub!

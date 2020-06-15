@@ -1,5 +1,5 @@
 {
-  "name": "lookbook",
+  "name": "@lookback/lookbook",
   "version": "2.0.0-beta.23",
   "description": "The design system of Lookback",
   "main": "index.js",
@@ -12,12 +12,19 @@
     "watch": "scripts/watch",
     "update-colors": "scripts/fetch-figma-colors && scripts/write-test-file && npm run generate-types",
     "generate-types": "scripts/generate-types",
-    "release": "npm install --no-audit && npm run build && npm test && git add package.json package-lock.json dist && git commit -m $npm_package_version && git tag $npm_package_version && git push && git push --tags && scripts/distribute \"dist/*.{css,json}\""
+    "release": "scripts/distribute \"dist/*.{css,json}\"",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/lookback/lookbook.git"
   },
+  "license": "UNLICENSED",
+  "files": [
+    "lib",
+    "tailwind.config.js",
+    "dist"
+  ],
   "keywords": [
     "css",
     "design",
@@ -25,7 +32,6 @@
     "components"
   ],
   "author": "Johan Brook <johan@lookback.io>",
-  "license": "SEE LICENSE IN LICENSE",
   "bugs": {
     "url": "https://github.com/lookback/lookbook/issues"
   },
