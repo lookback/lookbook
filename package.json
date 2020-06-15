@@ -12,7 +12,7 @@
     "watch": "scripts/watch",
     "update-colors": "scripts/fetch-figma-colors && scripts/write-test-file && npm run generate-types",
     "generate-types": "scripts/generate-types",
-    "release": "scripts/distribute \"dist/*.{css,json}\"",
+    "dist": "scripts/distribute \"dist/*.{css,json}\"",
     "prepublishOnly": "npm run build"
   },
   "repository": {
