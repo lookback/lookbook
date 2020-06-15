@@ -52,4 +52,4 @@ const writeColorTypes = async (colors) => {
   );
 };
 
-writeColorTypes(require('../colors')).catch(console.error);
+writeColorTypes(require('../dist/colors.json')).catch(console.error);

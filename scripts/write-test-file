@@ -87,4 +87,4 @@ ${colorBlocks}`)
   );
 };
 
-writeTestPage(require('../colors')).catch(console.error);
+writeTestPage(require('../dist/colors.json')).catch(console.error);

@@ -1,5 +1,5 @@
 const pick = require('./lib/pick');
-const styleColors = require('./colors.js');
+const styleColors = require('./dist/colors.json');
 
 /** Root font size without unit. */
 const baseSize = 16;
