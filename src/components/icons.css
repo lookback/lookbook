@@ -1,6 +1,7 @@
 /* =ICONS
 --------------------------------------------- */
 
+/** @deprecated Will be removed. See @lookback/component instead. */
 .icon {
   display: inline-block;
   /* Will be inherited from parent's 'color' property. */
