@@ -23,7 +23,8 @@
   "files": [
     "lib",
     "tailwind.config.js",
-    "dist"
+    "dist",
+    "colors.json"
   ],
   "keywords": [
     "css",
