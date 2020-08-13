@@ -201,15 +201,14 @@ Currently lints the CSS source.
 Three steps:
 
 ```bash
+# Bump version
 npm version
+# Publish on npm
 npm publish
-git push
+# Push version to repo
+git push && git push --tags
+# Distribute files to CDN
 npm run dist
 ```
-
-1. **npm version** will set a new version of this package, git tag, and git commit it.
-2. **npm publish** will put the package code in our private package repo. This will also build stuff into `dist.
-3. **git push** will push the version change with tags to GitHub.
-4. **npm run dist** will upload the dist files to storage.
 
 Remember to write release notes in GitHub!
