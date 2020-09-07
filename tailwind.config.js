@@ -372,7 +372,9 @@ module.exports = {
       ...pick(colors, [
         'white',
         'blue-60', // Main brand
+        'blue-70', // Saturated
         'grey-60', // Muted
+        'green-60',
         'green-50',
       ]),
       error: colors['red-60'],
@@ -400,6 +402,7 @@ module.exports = {
         'white',
         'blue-80',
         'red-60',
+        'green-10',
         'green-50',
         'green-60',
       ]),
