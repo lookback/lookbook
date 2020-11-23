@@ -5,11 +5,11 @@
   "main": "index.js",
   "types": "dist/types.d.ts",
   "scripts": {
+    "start": "scripts/watch",
     "lint": "stylelint src/**/*.css",
     "pretest": "npm run lint",
     "test": "[[ -z \"$CI\" ]] && pa11y ./test/test.html || mkdir -p test-output/junit && mkdir -p test-output/junit && pa11y -S ./test-output/screenshot.png --config test/pa11y.config.json -r junit ./test/test.html > test-output/junit/results.xml",
     "build": " cp colors.json dist/colors.json && scripts/build && npm run generate-types && scripts/make-compat",
-    "watch": "scripts/watch",
     "update-colors": "scripts/fetch-figma-colors && scripts/write-test-file && npm run generate-types",
     "generate-types": "scripts/generate-types",
     "dist": "scripts/distribute \"dist/*.{css,json}\"",
