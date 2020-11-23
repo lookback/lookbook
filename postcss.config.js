@@ -1,9 +1,9 @@
 const { version } = require('./package.json');
 const { defaultPlugins } = require('./lib/postcss-plugins');
-const minify = require('./lib/plugins/postcss-cssnano-default');
 const path = require('path');
 const extractMediaQuery = require('./lib/plugins/postcss-extract-media-query');
 const header = require('./lib/plugins/postcss-header');
+const cleancss = require('./lib/plugins/postcss-clean-css');
 
 const extractDarkModeQueries = (dest, minify = false) =>
   extractMediaQuery({
@@ -31,6 +31,6 @@ module.exports = (ctx) => ({
     header({
       header: `/*! ${ctx.file.basename} v${version} */`,
     }),
-    ...(ctx.env === 'production' ? minify() : []),
+    ...(ctx.env === 'production' ? cleancss() : []),
   ],
 });
