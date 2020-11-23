@@ -174,7 +174,7 @@ This builds the final distributable CSS files:
 - `dist/lookbook.css` – Unminified file, meant for development or inclusion in other CSS codebases.
 - `dist/lookbook.bare.css` – Minified CSS.
 
-### `npm run watch`
+### `npm start`
 
 Compile the distributable CSS files as you save.
 
