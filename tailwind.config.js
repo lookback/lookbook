@@ -368,7 +368,7 @@ module.exports = {
     */
 
     textColor: {
-      default: colors['blue-80'], // Body
+      DEFAULT: colors['blue-80'], // Body
       ...pick(colors, [
         'white',
         'blue-60', // Main brand
@@ -396,7 +396,7 @@ module.exports = {
     */
 
     backgroundColor: {
-      default: colors['blue-10'],
+      DEFAULT: colors['blue-10'],
       ...pick(colors, [
         'grey-10',
         'white',
@@ -441,7 +441,7 @@ module.exports = {
     */
 
     borderWidth: {
-      default: '1px',
+      DEFAULT: '1px',
       '0': '0',
       '2': '2px',
     },
@@ -465,7 +465,7 @@ module.exports = {
 
     borderColor: {
       /** Default border, to be used on white. */
-      default: colors['grey-30'],
+      DEFAULT: colors['grey-30'],
       /** To be used on light blue backgrounds. */
       light: '#D4E8F5',
       warning: colors['orange-50'],
@@ -492,7 +492,7 @@ module.exports = {
 
     borderRadius: {
       none: '0',
-      default: '.25rem',
+      DEFAULT: '.25rem',
       sm: '.125rem',
       lg: '.5rem',
       huge: '20px',
@@ -662,7 +662,7 @@ module.exports = {
     */
 
     boxShadow: (theme) => ({
-      default: `0px 3px 20px rgba(${theme('colors.defaultBoxShadow')}, .15)`,
+      DEFAULT: `0px 3px 20px rgba(${theme('colors.defaultBoxShadow')}, .15)`,
       large: `0px 10px 40px rgba(${theme('colors.defaultBoxShadow')}, .2)`,
       small: `0px 2px 10px rgba(${theme('colors.defaultBoxShadow')}, .1)`,
       tiny: `0 1px 3px rgba(${theme('colors.defaultBoxShadow')}, .4)`,
