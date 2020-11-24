@@ -825,6 +825,7 @@ module.exports = {
     fontSize: ['responsive'],
     fontStyle: [],
     textTransform: [],
+    textOverflow: [],
     textDecoration: ['hover'],
     fontSmoothing: [],
     letterSpacing: [],
