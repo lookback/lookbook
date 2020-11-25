@@ -81,9 +81,13 @@ This should work for most sites. You can of course also link to the `bare` and n
 
 For more advanced usage, you can use the Lookbook as a regular PostCSS plugin.
 
+```bash
+npm install --save-dev postcss @lookback/lookbook
+```
+
 If you'd like to use the Tailwind config values in your custom CSS, you can install this Lookbook as an npm module and use its exported `defaultPlugins` function in a PostCSS setup (see "API" below).
 
-Note that you might wanna minify the CSS yourself.
+Note that you might want to minify the CSS yourself.
 
 ### Configure
 
