@@ -58,7 +58,6 @@
   "dependencies": {
     "autoprefixer": "^10.0.2",
     "postcss-color-function": "^4.0.1",
-    "postcss-color-hex-alpha": "^5.0.2",
     "postcss-hexrgba": "^1.0.1",
     "postcss-import": "^13.0.0",
     "postcss-nested": "^5.0.1",
