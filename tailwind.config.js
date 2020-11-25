@@ -915,6 +915,5 @@ module.exports = {
     require('./lib/plugins/tailwind-variables')({
       useP3: USE_P3_COLORS,
     }),
-    require('./lib/plugins/tailwind-dark-mode')(),
   ],
 };
