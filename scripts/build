@@ -2,6 +2,8 @@
 
 src_path=src
 
+env=${NODE_ENV:-production}
+
 # Relative to $src_path
 all=lookbook.css
 base=base.css
@@ -21,14 +23,14 @@ build_file () {
   echo "🕐 Building $file_path..."
 
   # Emit minified and sourcemapped into dist/<file>.dist.css
-  NODE_ENV='production' npx postcss "$file_path" --dir "$dir" --ext "$ext_min_maps"
+  NODE_ENV=$env npx postcss "$file_path" --dir "$dir" --ext "$ext_min_maps"
 
   # Emit non-minified into dist/<file>.css
   # Meant for being included in other projects, before minification and source mapping
   NODE_ENV='development' npx postcss "$file_path" --no-map --dir "$dir"
 
   # Emit minified, non-sourcemap dist/<file>.bare.css
-  NODE_ENV='production' npx postcss "$file_path" --no-map --ext "$ext_min" --dir "$dir"
+  NODE_ENV=$env npx postcss "$file_path" --no-map --ext "$ext_min" --dir "$dir"
 }
 
 format_file () {

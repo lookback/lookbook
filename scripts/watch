@@ -3,10 +3,11 @@
 src_path=src
 file_path="$src_path/lookbook.css"
 dir=dist
+env=${NODE_ENV:-development}
 
 # Emit non-minified into dist/<file>.css
 # Meant for being included in other projects, before minification and source mapping
-NODE_ENV='development' npx postcss "$file_path" \
+NODE_ENV=$env npx postcss "$file_path" \
   --watch \
   --verbose \
   --no-map \
