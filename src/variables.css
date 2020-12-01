@@ -48,9 +48,8 @@
   --code-border-color: var(--purple-30);
 
   /* kbd */
-  /* Background is same as <code> */
-  --kbd-color: var(--blue-80);
-  --kbd-border-color: var(--blue-30);
+  --kbd-color: var(--grey-70);
+  --kbd-background: var(--grey-20);
 
   /* <mark> */
   --mark-background-color: var(--orange-30);
