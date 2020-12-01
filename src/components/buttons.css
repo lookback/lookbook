@@ -12,7 +12,7 @@ BUTTONS
   --text-hover: #fff;
   --text-active: #e4e4e4;
   --text-focused: var(--text-hover);
-  --text-disabled: rgba(255, 255, 255, 0.8);
+  --text-disabled: rgb(73 64 64 / 80%);
   --focused-shadow: color(theme('colors.blue-60') alpha(30%));
 
   @apply font-bold inline-block relative text-center rounded-lg;
@@ -107,7 +107,7 @@ BUTTONS
     --bg-active: color(theme('colors.grey-70') shade(20%));
     --text: var(--grey-30);
     --text-hover: var(--grey-20);
-    --text-active: rgba(#fff, 0.5);
+    --text-active: rgb(255 255 255 / 50%);
     --bg-disabled: var(--grey-80);
     --text-disabled: var(--grey-50);
 
@@ -123,7 +123,7 @@ BUTTONS
     --bg-active: color(theme('colors.grey-70') shade(20%));
     --text: var(--grey-30);
     --text-hover: var(--grey-20);
-    --text-active: rgba(#fff, 0.5);
+    --text-active: rgb(255 255 255 / 50%);
     --bg-disabled: var(--grey-80);
     --text-disabled: var(--grey-50);
 
