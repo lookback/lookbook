@@ -16,6 +16,12 @@ a {
   }
 }
 
+b,
+strong {
+  /* The CSS reset used is making this "bolder". Don't do that. */
+  font-weight: bold;
+}
+
 mark {
   @apply rounded-sm;
   padding: 0.1em 0.3em;
