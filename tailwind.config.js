@@ -587,6 +587,11 @@ module.exports = {
       screen: '100vh',
     },
 
+    inset: {
+      '0': 0,
+      auto: 'auto',
+    },
+
     /*
         |-----------------------------------------------------------------------------
         | Minimum width                        https://tailwindcss.com/docs/min-width
