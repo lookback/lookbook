@@ -39,7 +39,11 @@ pre code {
 }
 
 kbd {
-  @apply border border shadow-tiny;
+  @apply rounded font-sans;
+  border: 0;
+  font-size: 1em;
   color: var(--kbd-color);
-  border-color: var(--kbd-border-color);
+  background-color: var(--kbd-background);
+  font-weight: bold;
+  padding: 0.1em 0.4em;
 }

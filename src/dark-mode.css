@@ -25,8 +25,8 @@
     --pre-background-color: var(--grey-100);
     --code-color: var(--blue-30);
     --code-border-color: var(--grey-80);
-    --kbd-color: var(--blue-30);
-    --kbd-border-color: var(--grey-80);
+    --kbd-color: var(--grey-20);
+    --kbd-background: var(--grey-80);
   }
 
   /* Custom fixes */
@@ -40,8 +40,7 @@
     border: 0;
   }
 
-  code,
-  kbd {
+  code {
     border: 0;
   }
 
