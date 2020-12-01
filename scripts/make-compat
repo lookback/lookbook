@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-echo "🕐 Making compat build..."
-# Find all .css files in `dist` and replace .btn with .btn2 and put in `dist/compat`.
-for f in `find dist -maxdepth 1 -name "*.css"`; do
-  cat "$f" | sed 's/\.btn/\.btn2/g' > "dist/compat/$(basename $f)"
-done;
