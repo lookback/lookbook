@@ -28,7 +28,7 @@ input[type='number'],
 input[type='date'],
 input[type='time'],
 textarea {
-  @apply rounded p-1;
+  @apply rounded-lg;
 
   --border-color: var(--form-border-color);
   --color: var(--form-input-color);
@@ -38,6 +38,7 @@ textarea {
   background-color: var(--background-color);
   border: 1px solid var(--border-color);
   box-shadow: inset rgba(#000, 0.05) 0 1px 2px;
+  padding: 0.4em 0.6em;
   transition: color 0.15s ease-out, border-color 0.2s ease;
 
   &:hover {
@@ -59,7 +60,7 @@ textarea {
 }
 
 select {
-  @apply rounded border;
+  @apply rounded-lg border;
   color: var(--form-input-color);
   border-color: var(--form-border-color);
   background-color: var(--form-background-color);
@@ -71,7 +72,7 @@ select {
 
   background-repeat: no-repeat;
   background-size: 1.5em;
-  background-position: right center;
+  background-position: right 0.5em center;
   background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve"><path fill="%23668EA7" d="M13.418,7.859c0.271-0.268,0.709-0.268,0.978,0c0.27,0.268,0.272,0.701,0,0.969l-3.908,3.83c-0.27,0.268-0.707,0.268-0.979,0l-3.908-3.83c-0.27-0.267-0.27-0.701,0-0.969c0.271-0.268,0.709-0.268,0.978,0L10,11L13.418,7.859z"/></svg>');
 
   &:hover,

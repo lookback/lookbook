@@ -15,8 +15,7 @@ BUTTONS
   --text-disabled: rgba(255, 255, 255, 0.8);
   --focused-shadow: color(theme('colors.blue-60') alpha(30%));
 
-  @apply font-bold inline-block relative text-center;
-  border-radius: 0.35em;
+  @apply font-bold inline-block relative text-center rounded-lg;
   background-color: var(--bg);
   color: var(--text);
   -webkit-tap-highlight-color: transparent;
@@ -24,8 +23,7 @@ BUTTONS
   user-select: none;
   white-space: nowrap;
   border: 0;
-
-  padding: 0.5em 1em;
+  padding: 0.6em 1em;
   transition: box-shadow 0.2s ease-out;
 
   &:focus,
