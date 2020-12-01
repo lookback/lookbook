@@ -822,7 +822,7 @@ module.exports = {
     stroke: false,
     tableLayout: false,
     textAlign: [],
-    textColor: ['hover'],
+    textColor: [],
     fontSize: ['responsive'],
     fontStyle: [],
     textTransform: [],
