@@ -6,6 +6,6 @@
 * Copyright Lookback
 */
 
-@import 'base';
+@import 'base.css';
 
-@import 'utils';
+@import 'utils.css';
