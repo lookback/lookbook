@@ -32,6 +32,6 @@ module.exports = (ctx) => ({
     header({
       header: `/*! ${ctx.file.basename} v${version} */`,
     }),
-    ...(ctx.env === 'production' ? [cleancss()] : []),
+    ...(ctx.env === 'production' ? [cleancss] : []),
   ],
 });
