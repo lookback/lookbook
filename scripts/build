@@ -10,7 +10,7 @@ utils=utils.css
 
 ext=css
 ext_min_maps=dist.css
-ext_min=bare.css
+ext_min=min.css
 
 build_file () {
   local file_path="$LOOKBOOK_SRC/$1"
@@ -25,7 +25,7 @@ build_file () {
   echo "🕐 Start $LOOKBOOK_DIR/$out.css"
   NODE_ENV=development npx postcss "$file_path" --no-map --dir "$LOOKBOOK_DIR" --verbose
 
-  # Emit minified, non-sourcemap dist/<file>.bare.css
+  # Emit minified, non-sourcemap dist/<file>.min.css
   echo "🕐 Start $LOOKBOOK_DIR/$out.$ext_min"
   NODE_ENV=production npx postcss "$file_path" --no-map --ext "$ext_min" --dir "$LOOKBOOK_DIR" --verbose
 }
