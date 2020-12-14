@@ -22,7 +22,7 @@ This repository is a build chain for building a distributable `.css` file for us
 
 - **`lookbook.css`** – Non-minified. Good for dev or inclusion in other projects through importing the npm module.
 - **`lookback.dist.css`** – Minified with sourcemaps. This is probably what you'd like in production.
-- **`lookback.bare.css`** – Minified without sourcemaps. When you don't need sourcemaps (gives a smaller build).
+- **`lookback.min.css`** – Minified without sourcemaps. When you don't need sourcemaps (gives a smaller build).
 
 All of these files are available in the `dist` directory. This means, you can add this module as a dependency in your project, and then `@import` the CSS file you need:
 
@@ -176,7 +176,7 @@ This builds the final distributable CSS files:
 
 - `dist/lookbook.dist.css` – Minified CSS, including source maps.
 - `dist/lookbook.css` – Unminified file, meant for development or inclusion in other CSS codebases.
-- `dist/lookbook.bare.css` – Minified CSS.
+- `dist/lookbook.min.css` – Minified CSS.
 
 ### `npm start`
 
