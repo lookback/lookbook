@@ -32,27 +32,31 @@ build_file () {
 
 format_file () {
   local file=$1
-  echo "🕐 Formatting $LOOKBOOK_DIR/$file with Prettier..."
+  echo "🕐 Formatting $LOOKBOOK_DIR/$file..."
   prettier --write "$LOOKBOOK_DIR/$file"
 }
 
-check_size () {
+print_size () {
   local file=`basename $1 .css`
 
   local size_nonminified="$(ls -lah $LOOKBOOK_DIR/$file.$ext | awk -F " " {'print $5'})"
-  echo "✅ $LOOKBOOK_SRC/$file.css -> $LOOKBOOK_DIR/$file.$ext ($size_nonminified)"
+  echo "✅ $LOOKBOOK_DIR/$file.$ext ($size_nonminified)"
 
   local size_nonmap="$(ls -lah $LOOKBOOK_DIR/$file.$ext_min | awk -F " " {'print $5'})"
-  echo "✅ $LOOKBOOK_SRC/$file.css -> $LOOKBOOK_DIR/$file.$ext_min ($size_nonmap)"
+  echo "✅ $LOOKBOOK_DIR/$file.$ext_min ($size_nonmap)"
 
   local size="$(ls -lah $LOOKBOOK_DIR/$file.$ext_min_maps | awk -F " " {'print $5'})"
-  echo "✅ $LOOKBOOK_SRC/$file.css -> $LOOKBOOK_DIR/$file.$ext_min_maps ($size)"
+  echo "✅ $LOOKBOOK_DIR/$file.$ext_min_maps ($size)"
 }
 
 run_pipeline () {
+  echo "🚀 Building $1..."
+  echo "----------------------------------"
   build_file $1
   format_file $1
-  check_size $1
+  print_size $1
+  echo "✨ Done with $1"
+  echo "----------------------------------"
 }
 
 run_pipeline $all

@@ -14,7 +14,7 @@ const extractDarkModeQueries = (dest, prod = false) =>
     },
     whitelist: true,
     minimize: prod,
-    stats: !prod,
+    stats: false,
     queries: {
       'screen and (prefers-color-scheme: dark)': 'dark-mode',
     },
