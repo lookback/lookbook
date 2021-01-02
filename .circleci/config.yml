@@ -27,8 +27,6 @@ jobs:
           name: Write file sizes report
           command: npm run sizes
       - store_artifacts:
-          path: test-output
-      - store_artifacts:
           path: sizes
       - store_artifacts:
           path: dist
