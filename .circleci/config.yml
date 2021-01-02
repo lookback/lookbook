@@ -20,7 +20,12 @@ jobs:
           command: npm test
       - store_test_results:
           path: test-output
+      - run:
+          name: Save file sizes
+          command: npm run build && npm run sizes
       - store_artifacts:
           path: test-output
+      - store_artifacts:
+          path: sizes
       - store_artifacts:
           path: dist

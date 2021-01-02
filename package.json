@@ -14,7 +14,8 @@
     "update-colors": "scripts/fetch-figma-colors && scripts/write-test-file && npm run generate-types",
     "generate-types": "scripts/generate-types",
     "dist": "scripts/distribute \"dist/*.{css,json}\"",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "sizes": "mkdir -p sizes && ./scripts/sizes.sh --json > ./sizes/sizes.json && ./scripts/sizes.sh --html > ./sizes/sizes.html"
   },
   "repository": {
     "type": "git",
