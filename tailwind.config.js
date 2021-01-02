@@ -370,7 +370,7 @@ module.exports = {
     */
 
     textColor: {
-      DEFAULT: colors['blue-80'], // Body
+      body: colors['blue-80'], // Body
       ...colors,
       current: 'currentColor',
       error: colors['red-60'],
@@ -392,7 +392,7 @@ module.exports = {
     */
 
     backgroundColor: {
-      DEFAULT: colors['blue-10'],
+      body: colors['blue-10'],
       ...pick(colors, [
         'grey-10',
         'white',
