@@ -93,7 +93,6 @@ const colors = {
   'off-white': '#fefefe',
   white: '#fff',
   transparent: 'transparent',
-  defaultBoxShadow: '#006693',
 };
 
 module.exports = {
@@ -119,7 +118,10 @@ module.exports = {
         |
     */
 
-    colors,
+    colors: {
+      ...colors,
+      defaultBoxShadow: '#006693',
+    },
 
     /*
         |-----------------------------------------------------------------------------
