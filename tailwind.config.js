@@ -369,14 +369,7 @@ module.exports = {
 
     textColor: {
       DEFAULT: colors['blue-80'], // Body
-      ...pick(colors, [
-        'white',
-        'blue-60', // Main brand
-        'blue-70', // Saturated
-        'grey-60', // Muted
-        'green-60',
-        'green-50',
-      ]),
+      ...colors,
       error: colors['red-60'],
       warning: colors['orange-60'],
       positive: colors['green-60'],
