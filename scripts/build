@@ -17,17 +17,21 @@ build_file () {
   local out=`basename $1 .css`
 
   # Emit minified and sourcemapped into dist/<file>.dist.css
-  echo "🕐 Start $LOOKBOOK_DIR/$out.$ext_min_maps"
+  echo "🕐 postcss $LOOKBOOK_DIR/$out.$ext_min_maps"
   NODE_ENV=production npx postcss "$file_path" --dir "$LOOKBOOK_DIR" --ext "$ext_min_maps" --verbose
 
   # Emit non-minified into dist/<file>.css
   # Meant for being included in other projects, before minification and source mapping
-  echo "🕐 Start $LOOKBOOK_DIR/$out.css"
+  echo "🕐 postcss $LOOKBOOK_DIR/$out.css"
   NODE_ENV=development npx postcss "$file_path" --no-map --dir "$LOOKBOOK_DIR" --verbose
 
   # Emit minified, non-sourcemap dist/<file>.min.css
-  echo "🕐 Start $LOOKBOOK_DIR/$out.$ext_min"
+  echo "🕐 postcss $LOOKBOOK_DIR/$out.$ext_min"
   NODE_ENV=production npx postcss "$file_path" --no-map --ext "$ext_min" --dir "$LOOKBOOK_DIR" --verbose
+}
+
+separator() {
+  echo "----------------------------------"
 }
 
 format_file () {
@@ -36,27 +40,22 @@ format_file () {
   prettier --write "$LOOKBOOK_DIR/$file"
 }
 
-print_size () {
-  local file=`basename $1 .css`
+print_sizes () {
+  echo "⚒️ Sizes"
+  separator
 
-  local size_nonminified="$(ls -lah $LOOKBOOK_DIR/$file.$ext | awk -F " " {'print $5'})"
-  echo "✅ $LOOKBOOK_DIR/$file.$ext ($size_nonminified)"
+  source "$(dirname "$0")/sizes.sh"
 
-  local size_nonmap="$(ls -lah $LOOKBOOK_DIR/$file.$ext_min | awk -F " " {'print $5'})"
-  echo "✅ $LOOKBOOK_DIR/$file.$ext_min ($size_nonmap)"
-
-  local size="$(ls -lah $LOOKBOOK_DIR/$file.$ext_min_maps | awk -F " " {'print $5'})"
-  echo "✅ $LOOKBOOK_DIR/$file.$ext_min_maps ($size)"
+  separator
 }
 
 run_pipeline () {
   echo "🚀 Building $1..."
-  echo "----------------------------------"
+  separator
   build_file $1
   format_file $1
-  print_size $1
   echo "✨ Done with $1"
-  echo "----------------------------------"
+  separator
 }
 
 run_pipeline $all
@@ -64,3 +63,5 @@ run_pipeline $all
 run_pipeline $base
 
 run_pipeline $utils
+
+print_sizes $all $base $utils
