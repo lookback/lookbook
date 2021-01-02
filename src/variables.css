@@ -1,7 +1,7 @@
 :root {
   --default-border-color: theme('borderColor.DEFAULT');
-  --default-text-color: theme('textColor.DEFAULT');
-  --default-background-color: theme('backgroundColor.DEFAULT');
+  --default-text-color: theme('textColor.body');
+  --default-background-color: theme('backgroundColor.body');
 
   /** The sans-serif used. */
   --font-sans-serif: Lato, sans-serif;
