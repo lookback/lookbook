@@ -216,3 +216,16 @@ npm run dist
 ```
 
 Remember to write release notes in GitHub!
+
+### `npm run sizes`
+
+Will write to two files:
+
+- `sizes/sizes.json`
+- `sizes/sizes.html`
+
+Both are git ignored.
+
+These contain the current file sizes for the `.css` files in `dist`.
+
+This script is run by CircleCI on every build. Can be run locally in order to sanity check file sizes.
