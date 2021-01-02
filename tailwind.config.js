@@ -370,6 +370,7 @@ module.exports = {
     textColor: {
       DEFAULT: colors['blue-80'], // Body
       ...colors,
+      current: 'currentColor',
       error: colors['red-60'],
       warning: colors['orange-60'],
       positive: colors['green-60'],
