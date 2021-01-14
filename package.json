@@ -41,7 +41,6 @@
   "homepage": "https://github.com/lookback/lookbook#readme",
   "devDependencies": {
     "aws-sdk": "^2.408.0",
-    "clean-css": "^4.2.3",
     "dotenv": "^6.2.0",
     "eslint": "^5.8.0",
     "fast-glob": "^2.2.7",
@@ -50,6 +49,7 @@
     "pa11y-reporter-junit": "^1.1.0",
     "postcss": "^8.2.1",
     "postcss-cli": "^8.3.0",
+    "postcss-csso": "^5.0.0",
     "prettier": "^1.18.2",
     "stylelint": "^13.8.0",
     "stylelint-config-recommended": "3.0.0"
@@ -62,7 +62,7 @@
     "postcss-color-function": "^4.0.1",
     "postcss-hexrgba": "^1.0.1",
     "postcss-import": "^13.0.0",
-    "postcss-nested": "^5.0.1",
+    "postcss-nested": "=4.1.1",
     "tailwindcss": "=2.0.2"
   }
 }
