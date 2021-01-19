@@ -26,6 +26,9 @@
 
   /* Elements */
 
+  /** Sets the default padding for controls like buttons and form inputs. */
+  --control-padding: 0.6em 1em;
+
   /* <a> */
   --link-color: var(--blue-60);
   --link-color-hover: var(--blue-70);
