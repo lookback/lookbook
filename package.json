@@ -41,18 +41,18 @@
   "homepage": "https://github.com/lookback/lookbook#readme",
   "devDependencies": {
     "aws-sdk": "^2.408.0",
-    "dotenv": "^6.2.0",
-    "eslint": "^5.8.0",
+    "dotenv": "^6",
+    "eslint": "^5",
     "fast-glob": "^2.2.7",
     "node-fetch": "^2.3.0",
-    "pa11y": "^5.2.0",
-    "pa11y-reporter-junit": "^1.1.0",
-    "postcss": "^8.2.1",
-    "postcss-cli": "^8.3.0",
-    "postcss-csso": "^5.0.0",
+    "pa11y": "^5",
+    "pa11y-reporter-junit": "^1",
+    "postcss": "^8",
+    "postcss-cli": "^8",
+    "postcss-csso": "^5",
     "prettier": "^1.18.2",
-    "stylelint": "^13.8.0",
-    "stylelint-config-recommended": "3.0.0"
+    "stylelint": "^13",
+    "stylelint-config-recommended": "^3"
   },
   "peerDependencies": {
     "postcss": "^8"
