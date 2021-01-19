@@ -44,7 +44,7 @@
     "dotenv": "^6",
     "eslint": "^5",
     "fast-glob": "^2.2.7",
-    "node-fetch": "^2.3.0",
+    "node-fetch": "^2.6.1",
     "pa11y": "^5",
     "pa11y-reporter-junit": "^1",
     "postcss": "^8",
