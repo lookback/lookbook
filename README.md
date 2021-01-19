@@ -39,11 +39,14 @@ All of these files are available in the `dist` directory. This means, you can ad
 
 ### The PostCSS plugin
 
-- Access to all features of Tailwind (including `theme()`, `@apply`, and other functions and directives) in your CSS.
-- Nesting
-- Color functions (`color(#fff alpha(80%))`).
-- `@import`
-- Autoprefixer
+The Lookbook PostCSS plugin is essentially a wrapper around these plugins:
+
+- `postcss-import`
+- `tailwindcss`
+- `postcss-nested`
+- `postcss-color-function`
+- `postcss-hexrgba`
+- `autoprefixer`
 
 ## Usage
 
@@ -82,12 +85,32 @@ This should work for most sites. You can of course also link to the `bare` and n
 For more advanced usage, you can use the Lookbook as a regular PostCSS plugin.
 
 ```bash
-npm install --save-dev postcss @lookback/lookbook
+npm install --save-dev postcss postss-cli @lookback/lookbook
 ```
 
-If you'd like to use the Tailwind config values in your custom CSS, you can install this Lookbook as an npm module and use its exported `defaultPlugins` function in a PostCSS setup (see "API" below).
+Sample `postcss.config.js`:
 
-Note that you might want to minify the CSS yourself.
+```js
+const { defaultPostCssPlugins } = require('@lookback/lookbook');
+
+module.exports = {
+  plugins: [
+    ...defaultPostCssPlugins(), // includes Tailwind and other handy plugins
+    // other plugins
+  ],
+};
+```
+
+**View a complete, drop-in [`postcss.config.sample.js`](./postcss.config.sample.js) in this repo!**
+
+⚠️ Note that you should _really_ **minify** and **purge** your app's CSS when building for production!
+
+Recommendations:
+
+- Purge with `@fullhuman/postcss-purgecss`.
+- Minify with `postcss-csso`
+
+If you'd like to use the Tailwind config values in your custom CSS, you can install this Lookbook as an npm module and use its exported `defaultPostCssPlugins` function in a PostCSS setup (see "API" below).
 
 ### Configure
 
