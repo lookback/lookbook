@@ -241,8 +241,8 @@ BUTTONS
     }
 
     &.btn-link--danger {
-      --text: var(--red-50);
-      --text-hover: var(--red-40);
+      --text: var(--red-40);
+      --text-hover: var(--red-50);
       --text-active: var(--red-60);
     }
   }
