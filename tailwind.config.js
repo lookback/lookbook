@@ -486,8 +486,8 @@ module.exports = {
       none: '0',
       DEFAULT: '.25rem',
       sm: '.125rem',
-      lg: '.5rem',
-      huge: '20px',
+      lg: '.625rem',
+      huge: '1.25rem',
       full: '9999px',
     },
 
