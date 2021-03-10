@@ -812,6 +812,7 @@ module.exports = {
     whitespace: [],
     wordBreak: [],
     width: ['responsive'],
+    height: [],
     zIndex: [],
   },
 
@@ -850,7 +851,6 @@ module.exports = {
     gridRowEnd: false,
     float: false,
     fontVariantNumeric: false,
-    height: false,
     listStylePosition: false,
     maxHeight: false,
     minWidth: false,
