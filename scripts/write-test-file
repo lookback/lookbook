@@ -18,7 +18,7 @@ const htmlLayout = (contents) =>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lookbook Colors Test Page</title>
-    <link rel="stylesheet" href="./lookbook.css">
+    <link rel="stylesheet" href="../dist/lookbook.css">
     <style>
       body {
         padding: 1em;
@@ -29,6 +29,15 @@ const htmlLayout = (contents) =>
         padding: 1em;
         border-radius: .25em;
         margin-bottom: .5em;
+      }
+
+      .shadow-block {
+        font-weight: bold;
+        width: 200px;
+        height: 150px;
+        border-radius: .25em;
+        margin-right: 2em;
+        padding: 1em;
       }
     </style>
   </head>
@@ -46,39 +55,42 @@ const htmlLayout = (contents) =>
  * @param colorBreakAtScale Optional number in the scale (10-100) where we
  * should break and generate white foreground colors instead of black
  */
-const writeTestPage = async (colors, colorBreakAtScale = 50) => {
+const writeTestPage = async (colors) => {
   const colorBlocks = Object.entries(colors)
     .map(([name, color]) => ({
       color,
       scale: getColorScaleFromName(name),
       name,
     }))
-    .map(
-      /* eslint-disable */
-      (s) => `
-      <p class="block" style="color: ${
-        s.scale > colorBreakAtScale ? '#fff' : '#000'
-      }; background-color: var(--${s.name})">${s.name}</p>
-  `
-      /* eslint-enable */
+    .map((s) =>`
+      <p class="block" style="color: #000; background-color: var(--${s.name})">${s.name}</p>
+    `
     )
     .join('');
 
-  const typography = `<h1>A heading</h1>
+  const misc = `<h1>A heading</h1>
 
-<p>A paragraph with a <a href="#">link</a>.</p>
+<p class="mb-3">A paragraph with a <a href="#">link</a>.</p>
 
-<button class="btn">A button</button>
-<button class="btn btn-primary">A primary button</button>
-<button class="btn btn-danger">A danger button</button>
-<button class="btn btn-secondary">A secondary button</button>
+<div class="mb-3">
+  <button class="btn">A button</button>
+  <button class="btn btn-primary">A primary button</button>
+  <button class="btn btn-danger">A danger button</button>
+  <button class="btn btn-secondary">A secondary button</button>
+</div>
+
+<div class="flex mb-3">
+  <div class="shadow-block shadow">Default</div>
+  <div class="shadow-block shadow-large">Large</div>
+  <div class="shadow-block shadow-small">Small</div>
+  <div class="shadow-block shadow-tiny">Tiny</div>
+</div>
 `;
 
   await writeFile(
     path.resolve(__dirname + '/../test/test.html'),
-    htmlLayout(`${typography}
+    htmlLayout(`${misc}
 
-<h1>Colors</h1>
 ${colorBlocks}`)
   );
 

@@ -56,7 +56,7 @@ Built with Tailwind - The Utility-First CSS Framework. View the full documentati
 * SVG stroke
 * Variants
 * Plugins
-
+The first version of the marketing pages
 |-------------------------------------------------------------------------------
 | The default config
 |-------------------------------------------------------------------------------
@@ -120,7 +120,7 @@ module.exports = {
 
     colors: {
       ...colors,
-      defaultBoxShadow: '#006693',
+      defaultBoxShadow: '#000',
     },
 
     /*
@@ -166,7 +166,7 @@ module.exports = {
 
     fontFamily: {
       sans: [
-        'Lato',
+        'Inter',
         'helvetica neue',
         'helvetica',
         'ubuntu',
@@ -373,9 +373,9 @@ module.exports = {
       body: colors['blue-80'], // Body
       ...colors,
       current: 'currentColor',
-      error: colors['red-60'],
-      warning: colors['orange-60'],
-      positive: colors['green-60'],
+      error: colors['red-70'],
+      warning: colors['orange-70'],
+      positive: colors['green-70'],
     },
 
     /*
@@ -392,7 +392,7 @@ module.exports = {
     */
 
     backgroundColor: {
-      body: colors['blue-10'],
+      body: colors['grey-20'],
       ...pick(colors, [
         'grey-10',
         'white',
@@ -461,9 +461,9 @@ module.exports = {
 
     borderColor: {
       /** Default border, to be used on white. */
-      DEFAULT: colors['grey-30'],
+      DEFAULT: colors['grey-40'],
       /** To be used on light blue backgrounds. */
-      light: '#D4E8F5',
+      light: colors['grey-40'], // TODO Consider removing this and use DEFAULT
     },
 
     /*
@@ -659,9 +659,9 @@ module.exports = {
     */
 
     boxShadow: (theme) => ({
-      DEFAULT: `0px 3px 20px rgba(${theme('colors.defaultBoxShadow')}, .15)`,
-      large: `0px 10px 40px rgba(${theme('colors.defaultBoxShadow')}, .2)`,
-      small: `0px 2px 10px rgba(${theme('colors.defaultBoxShadow')}, .1)`,
+      DEFAULT: `0px 5px 5px rgba(${theme('colors.defaultBoxShadow')}, .04)`,
+      large: `0px 6px 10px rgba(${theme('colors.defaultBoxShadow')}, .1)`,
+      small: `0px 3px 3px rgba(${theme('colors.defaultBoxShadow')}, .04)`,
       tiny: `0 1px 3px rgba(${theme('colors.defaultBoxShadow')}, .4)`,
       none: 'none',
     }),

@@ -8,7 +8,7 @@
   :root {
     --background-color: var(--grey-90);
     --heading-color: var(--grey-40);
-    --text-color: var(--blue-20);
+    --text-color: var(--grey-30);
     --link-color: var(--blue-40);
     --link-color-hover: var(--blue-30);
 
@@ -18,7 +18,7 @@
     --form-background-color-active: var(--grey-100);
     --form-input-color: var(--grey-30);
     --form-input-color-active: var(--grey-20);
-    --form-border-color: var(--grey-60);
+    --form-border-color: var(--grey-90);
     --form-focus-shadow: rgb(0 122 177 / 60%) 0 0 0 2px;
 
     --code-background-color: var(--grey-100);
