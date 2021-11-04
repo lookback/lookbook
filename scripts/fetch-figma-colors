@@ -12,9 +12,9 @@
  * string in the full URL of a Figma file. The page ID is visible in the JSON
  * payload when you call /files 🤷‍♂️
  */
-const PAGE_ID = '182:0';
+const PAGE_ID = '0:1';
 const TEAM_ID = '536579955360410320';
-const FILE_KEY = 'bMb57SxaX0ugGmWMmi7KVzIP';
+const FILE_KEY = 'OVyadU3k5tlLkXZD6chfhg';
 
 const fetch = require('node-fetch');
 const dotenv = require('dotenv');
@@ -69,67 +69,47 @@ const doFetch = (url) =>
 
 const fetchStyles = async (teamId) => {
   const json = await doFetch(`/teams/${teamId}/styles?page_size=99`);
-
   return json.meta.styles;
 };
 
 const fetchFile = async (key) => await doFetch(`/files/${key}`);
 
-// eslint-disable-next-line
-const fetchStyle = async (key) => await doFetch(`/styles/${key}`);
+const findColorBlocks = children => children
+  .map(child => {
+    if (child.name === 'Color Block' && child.visible !== false) {
+      return child
+    } else if (!!child.children) {
+      return findColorBlocks(child.children)
+    }
+  })
+  .flat()
+  .filter(c => c !== undefined)
 
-/**
- * Fetches all color styles from the Figma doc and returns an object
- * array with this shape:
- * 
- * ```json
- * {
- *   "key": "206f4e4753e2e8f2e7ac24744bd1843ac206ead1",
- *   "file_key": "bMb57SxaX0ugGmWMmi7KVzIP",
- *   "node_id": "189:85",
- *   "style_type": "FILL",
- *   "thumbnail_url": "<url>",
- *   "name": "Green 10",
- *   "description": "Desc",
- *   "created_at": "2019-02-16T16:00:39.126Z",
- *   "updated_at": "2019-02-16T16:00:39.126Z",
- *   "user": {
- *     "id": "575212366706412863",
- *     "handle": "Johan Brook",
- *     "img_url": "<url>"
- *   },
- *   "sort_position": "=O",
- *   "color": "#ebfff7"
- * }
- ```
- */
-const fetchAllColorStyles = async () => {
+const fetchAllColors = async () => {
   console.log('-> Fetching styles from Figma...');
 
   const styles = await fetchStyles(TEAM_ID);
   const file = await fetchFile(FILE_KEY);
-
   const canvas = file.document.children.find((page) => page.id === PAGE_ID);
-
-  return (
-    canvas &&
-    canvas.children
-      .filter((c) => c.type === 'INSTANCE')
-      .map((c) => c.children.filter((c) => c.type === 'RECTANGLE')[0])
-      .filter((c) => !!c.styles && !!c.styles.fill)
+  const colorBlocks = findColorBlocks(canvas.children)
+  return [...colorBlocks]
       .map((c) => {
-        const { r, g, b } = c.fills[0].color;
-        const nodeId = c.styles.fill;
+        const rect = c.children.find(x => x.type === 'RECTANGLE')
+        const color = rect.fills[0]
+
+        const { name } = c.children.find(x => x.type === 'TEXT')
+        const { r, g, b } = rect.fills[0].color;
 
         return {
-          // Cross reference to the array of styles, since Figma doesn't
-          // give us the HEX color codes in their /styles endpoint .. :(
-          ...styles.find((s) => s.node_id === nodeId),
-          color: rgbToHex(r * 255, g * 255, b * 255),
+          name: name.toLowerCase(),
+          hex: rgbToHex(r * 255, g * 255, b * 255),
         };
       })
-      .filter((c) => !!c.name)
-  );
+      .sort((a, b) => a.name.localeCompare(b.name))
+      .reduce((acc, c) => {
+        acc[c.name] = c.hex
+        return acc
+      }, {})
 };
 
 const formatCode = async (content, parser = 'typescript') => {
@@ -142,16 +122,6 @@ const formatCode = async (content, parser = 'typescript') => {
 
   return prettier.format(content, { ...prettierConf, parser });
 };
-
-const getColorsFromStyles = (styles) =>
-  Object.assign.call(
-    null,
-    ...styles
-      .sort((a, b) => (a.sort_position < b.sort_position ? -1 : 1))
-      .map((s) => ({
-        [slugify(s.name)]: s.color,
-      }))
-  );
 
 const writeJsFile = async (colors) => {
   console.log('-> Writing .js file with colors...');
@@ -183,18 +153,16 @@ const writeJsonFile = async (colors) => {
  * Calls Figma's API and saves to a `colors.js` file in the project root.
  */
 const writeColorsFromFigma = async () => {
-  const styles = await fetchAllColorStyles();
+  const colors = await fetchAllColors();
 
-  if (!styles) {
-    throw new Error('❌ No styles found');
+  if (!colors || colors.length === 0) {
+    throw new Error("❌ Couldn't fetch colors");
   }
-
-  const colors = getColorsFromStyles(styles);
 
   await writeJsFile(colors);
   await writeJsonFile(colors);
 
-  console.log(green(`Wrote ${styles.length} colors`));
+  console.log(green(`Wrote ${colors.length} colors`));
 };
 
 writeColorsFromFigma().catch(console.error);

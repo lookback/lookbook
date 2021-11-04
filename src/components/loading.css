@@ -43,14 +43,14 @@ A regular spinner
   position: relative;
   text-indent: -9999em;
   overflow: hidden;
-  border: 2px solid color(theme('colors.grey-60') alpha(20%));
+  border: 2px solid color(theme('colors.grey-90') alpha(20%));
   border-left-color: color(theme('colors.blue-80') alpha(80%));
   transform: translateZ(0);
   animation: spinner 0.8s infinite linear;
 
   &--light {
     border-color: color(theme('colors.grey-30') alpha(20%));
-    border-left-color: color(theme('colors.blue-20') alpha(90%));
+    border-left-color: color(theme('colors.grey-30') alpha(90%));
   }
 
   &,

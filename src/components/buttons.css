@@ -3,17 +3,17 @@ BUTTONS
 ----------------------------------------------------------------*/
 
 .btn {
-  --bg: var(--blue-60);
-  --bg-disabled: color(theme('colors.blue-60') blend(#fff 60%) shade(10%));
+  --bg: var(--blue-80);
+  --bg-disabled: color(theme('colors.blue-80') blend(#fff 60%) shade(10%));
   --bg-focused: var(--blue-80);
-  --bg-hover: color(theme('colors.blue-60') shade(10%));
-  --bg-active: var(--blue-70);
+  --bg-hover: color(theme('colors.blue-80') shade(10%));
+  --bg-active: var(--blue-80);
   --text: #fff;
   --text-hover: #fff;
   --text-active: #e4e4e4;
   --text-focused: var(--text-hover);
   --text-disabled: rgb(255 255 255 / 80%);
-  --focused-shadow: color(theme('colors.blue-60') alpha(30%));
+  --focused-shadow: color(theme('colors.blue-80') alpha(30%));
 
   @apply font-bold inline-block relative text-center rounded-lg;
   background-color: var(--bg);
@@ -25,6 +25,7 @@ BUTTONS
   border: 0;
   padding: var(--control-padding);
   transition: box-shadow 0.2s ease-out;
+  cursor: pointer;
 
   &:focus,
   &:hover,
@@ -92,9 +93,9 @@ BUTTONS
 }
 
 .btn-secondary {
-  --text: var(--grey-70);
-  --text-hover: var(--grey-80);
-  --text-active: var(--grey-90);
+  --text: var(--blue-80);
+  --text-hover: var(--blue-90);
+  --text-active: var(--blue-100);
   --bg: var(--grey-20);
   --bg-focused: var(--grey-40);
   --focused-shadow: color(theme('colors.grey-50') alpha(15%));
@@ -104,15 +105,15 @@ BUTTONS
   --text-disabled: var(--grey-50);
 
   &.dark {
-    --bg: var(--grey-70);
-    --bg-hover: color(theme('colors.grey-70') tint(10%));
-    --bg-focused: var(--grey-60);
-    --bg-active: color(theme('colors.grey-70') shade(20%));
+    --bg: var(--grey-90);
+    --bg-hover: color(theme('colors.grey-90') tint(10%));
+    --bg-focused: var(--grey-90);
+    --bg-active: color(theme('colors.grey-90') shade(20%));
     --text: var(--grey-30);
     --text-hover: var(--grey-20);
     --text-active: rgb(255 255 255 / 50%);
 
-    --text-disabled: var(--grey-70);
+    --text-disabled: var(--grey-90);
     --bg-disabled: var(--grey-40);
 
     &[disabled] {
@@ -121,10 +122,10 @@ BUTTONS
   }
 
   @media screen and (prefers-color-scheme: dark) {
-    --bg: var(--grey-70);
-    --bg-hover: color(theme('colors.grey-70') tint(10%));
-    --bg-focused: var(--grey-60);
-    --bg-active: color(theme('colors.grey-70') shade(20%));
+    --bg: var(--grey-90);
+    --bg-hover: color(theme('colors.grey-90') tint(10%));
+    --bg-focused: var(--grey-90);
+    --bg-active: color(theme('colors.grey-90') shade(20%));
     --text: var(--grey-30);
     --text-hover: var(--grey-20);
     --text-active: rgb(255 255 255 / 50%);
@@ -138,7 +139,7 @@ BUTTONS
 }
 
 .btn-primary {
-  --bg: var(--green-60);
+  --bg: var(--green-70);
   --bg-disabled: color(theme('colors.green-60') blend(#fff 60%) shade(10%));
   --bg-focused: var(--green-80);
   --focused-shadow: color(theme('colors.green-60') alpha(25%));
@@ -184,7 +185,7 @@ BUTTONS
     --bg-hover: color(theme('colors.red-40') tint(30%));
     --bg-focused: var(--red-30);
     --bg-active: color(theme('colors.red-40') shade(20%));
-    --text: var(--red-90);
+    --text: var(--red-100);
     --text-hover: var(--red-90);
     --text-disabled: var(--grey-80);
     --bg-disabled: var(--grey-50);
@@ -205,8 +206,8 @@ BUTTONS
 
 .btn-link {
   --bg: transparent;
-  --text: var(--blue-60);
-  --text-hover: var(--blue-70);
+  --text: var(--blue-80);
+  --text-hover: var(--blue-80);
   --text-active: var(--blue-80);
   --text-disabled: var(--grey-50);
   transition: none;
@@ -243,7 +244,7 @@ BUTTONS
     --text-active: var(--blue-50);
 
     &[disabled] {
-      --text-disabled: color(theme('colors.blue-20') saturation(- 90%));
+      --text-disabled: color(theme('colors.grey-30') saturation(- 90%));
     }
 
     &.btn-link--danger {
@@ -260,7 +261,7 @@ BUTTONS
     --text-active: var(--blue-50);
 
     &[disabled] {
-      --text-disabled: color(theme('colors.blue-20') saturation(- 90%));
+      --text-disabled: color(theme('colors.grey-30') saturation(- 90%));
     }
 
     &.btn-link--danger {

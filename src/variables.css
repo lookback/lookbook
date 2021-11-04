@@ -4,7 +4,7 @@
   --default-background-color: theme('backgroundColor.body');
 
   /** The sans-serif used. */
-  --font-sans-serif: Lato, sans-serif;
+  --font-sans-serif: Inter, sans-serif;
 
   --base-font: var(--font-sans-serif);
   /** Base measurement. Is set as root font size on <body>. */
@@ -15,14 +15,14 @@
   --background-color: var(--default-background-color);
   --text-color: var(--default-text-color);
 
-  --heading-color: var(--blue-70);
+  --heading-color: var(--blue-80);
 
-  --selection-background: var(--blue-30);
+  --selection-background: var(--green-20);
   --selection-color: var(--text-color);
 
-  --error-color: var(--red-60);
-  --warning-color: var(--orange-60);
-  --positive-color: var(--green-60);
+  --error-color: var(--red-80);
+  --warning-color: var(--orange-70);
+  --positive-color: var(--green-70);
 
   /* Elements */
 
@@ -30,28 +30,28 @@
   --control-padding: 0.6em 1em;
 
   /* <a> */
-  --link-color: var(--blue-60);
-  --link-color-hover: var(--blue-70);
+  --link-color: var(--blue-80);
+  --link-color-hover: var(--blue-80);
 
   /* <input>, <textarea> */
   --label-color: var(--text-color);
   --form-input-color: rgba(theme('colors.blue-80'), 0.9);
   --form-input-color-active: var(--text-color);
-  --form-placeholder-color: var(--grey-50);
+  --form-placeholder-color: var(--grey-90);
   --form-background-color: var(--off-white);
   --form-background-color-active: #fff;
   --form-border-color: var(--default-border-color);
-  --form-focus-shadow: rgba(theme('colors.blue-60'), 0.1) 0 0 0 2px;
+  --form-focus-shadow: rgba(theme('colors.blue-80'), 0.1) 0 0 0 2px;
 
   /* <code> */
-  --pre-background-color: var(--grey-90);
+  --pre-background-color: var(--grey-100);
   --pre-color: var(--off-white);
   --code-background-color: #fdfdfd;
   --code-color: var(--purple-80);
   --code-border-color: var(--purple-30);
 
   /* kbd */
-  --kbd-color: var(--grey-70);
+  --kbd-color: var(--blue-80);
   --kbd-background: var(--grey-20);
 
   /* <mark> */
