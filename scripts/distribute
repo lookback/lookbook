@@ -54,15 +54,16 @@ const printError = (...args) => console.error(colorize(Color.Red, ...args));
 
 const accessKeyId = process.env.AWS_ACCESS_KEY_ID;
 const secretAccessKey = process.env.AWS_SECRET_ACCESS_KEY;
+const sessionToken = process.env.AWS_SESSION_TOKEN;
 const distroId = process.env.CLOUDFRONT_DISTRO_ID;
 const bucket = process.env.AWS_BUCKET || 'lookbook.lookback.io';
 const region = 'eu-west-1';
 
 const LATEST_PREFIX_NAME = 'latest';
 
-if (!accessKeyId || !secretAccessKey) {
+if (!accessKeyId || !secretAccessKey || !sessionToken) {
   printError(
-    '❌ Missing AWS_ACCESS_KEY_ID or AWS_SECRET_ACCESS_KEY as env variables'
+    '❌ Missing AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY or AWS_SESSION_TOKEN as env variables'
   );
   process.exit(1);
 }
@@ -84,6 +85,7 @@ const s3 = new AWS.S3({
   region,
   accessKeyId,
   secretAccessKey,
+  sessionToken,
 });
 
 const cloudfront = new AWS.CloudFront({});
