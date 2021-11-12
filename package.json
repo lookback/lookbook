@@ -9,7 +9,7 @@
     "start": "scripts/watch",
     "test": "[ -z \"$CI\" ] && pa11y ./test/test.html || mkdir -p test-output/junit && mkdir -p test-output/junit && cp dist/lookbook.css test/lookbook.css && pa11y -S ./test-output/screenshot.png --config test/pa11y.config.json -r junit ./test/test.html > test-output/junit/results.xml",
     "build": "npm run clean && mkdir dist && cp colors.json dist/colors.json && scripts/build && npm run generate-types",
-    "update-colors": "scripts/fetch-figma-colors && scripts/write-test-file && npm run generate-types",
+    "update-colors": "scripts/fetch-figma-colors && npm run generate-types",
     "generate-types": "scripts/generate-types",
     "dist": "scripts/distribute \"dist/*.{css,json}\"",
     "prepublishOnly": "npm run build",
