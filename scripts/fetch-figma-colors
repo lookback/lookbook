@@ -197,15 +197,43 @@ const writeTestFile = async (colors) => {
 
   const misc = `<h1>A heading</h1>
 
-<p class="mb-3">A paragraph with a <a href="#">link</a>.</p>
+<p class="mb-2">A paragraph with a <a href="#">link</a>.</p>
 
-<div class="mb-3">
-  <button class="btn">A button</button>
-  <button class="btn btn-primary">A primary button</button>
-  <button class="btn btn-danger">A danger button</button>
-  <button class="btn btn-secondary">A secondary button</button>
+<div class="px-2 py-2">
+  <button class="btn mr-1">A button</button>
+  <button class="btn btn-primary mr-1">A primary button</button>
+  <button class="btn btn-secondary mr-1">A secondary button</button>
+  <button class="btn btn-danger mr-1">A danger button</button>
+  <button class="btn btn-link">A link button</button>
+  <button class="btn btn-link btn-link--danger">A link danger button</button>
 </div>
-`;
+
+<div class="px-2 pb-2">
+  <button disabled class="btn mr-1">A button</button>
+  <button disabled class="btn btn-primary mr-1">A primary button</button>
+  <button disabled class="btn btn-secondary mr-1">A secondary button</button>
+  <button disabled class="btn btn-danger mr-1">A danger button</button>
+  <button disabled class="btn btn-link">A link button</button>
+  <button disabled class="btn btn-link btn-link--danger">A link danger button</button>
+</div>
+
+<div style="background-color: var(--blue-90)" class="px-2 py-2">
+  <button class="btn dark mr-1">A button</button>
+  <button class="btn btn-primary dark mr-1">A primary button</button>
+  <button class="btn btn-secondary dark mr-1">A secondary button</button>
+  <button class="btn btn-danger dark mr-1">A danger button</button>
+  <button class="btn btn-link dark">A link button</button>
+  <button class="btn btn-link btn-link--danger dark">A link danger button</button>
+</div>
+
+<div style="background-color: var(--blue-90)" class="px-2 pb-2">
+  <button disabled class="btn dark mr-1">A button</button>
+  <button disabled class="btn btn-primary dark mr-1">A primary button</button>
+  <button disabled class="btn btn-secondary dark mr-1">A secondary button</button>
+  <button disabled class="btn btn-danger dark mr-1">A danger button</button>
+  <button disabled class="btn btn-link dark">A link button</button>
+  <button disabled class="btn btn-link btn-link--danger dark">A link danger button</button>
+</div>`;
 
   await writeFile(
     path.resolve(__dirname + '/../test/test.html'),
