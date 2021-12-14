@@ -4,7 +4,7 @@
   --default-background-color: theme('backgroundColor.body');
 
   /** The sans-serif used. */
-  --font-sans-serif: Lato, sans-serif;
+  --font-sans-serif: Inter, sans-serif;
 
   --base-font: var(--font-sans-serif);
   /** Base measurement. Is set as root font size on <body>. */
