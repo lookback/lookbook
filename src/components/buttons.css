@@ -4,15 +4,15 @@ BUTTONS
 
 .btn {
   --bg: var(--blue-80);
+  --bg-active: var(--blue-80);
   --bg-disabled: color(theme('colors.blue-80') blend(#fff 60%) shade(10%));
   --bg-focused: var(--blue-80);
   --bg-hover: color(theme('colors.blue-80') shade(10%));
-  --bg-active: var(--blue-80);
   --text: #fff;
-  --text-hover: #fff;
   --text-active: #e4e4e4;
-  --text-focused: var(--text-hover);
   --text-disabled: rgb(255 255 255 / 80%);
+  --text-focused: var(--text-hover);
+  --text-hover: #fff;
   --focused-shadow: color(theme('colors.blue-80') alpha(30%));
 
   @apply font-bold inline-block relative text-center rounded-lg;
@@ -51,28 +51,16 @@ BUTTONS
   }
 
   &.dark {
-    --text: var(--blue-90);
-    --text-hover: var(--blue-90);
+    --text: var(--blue-80);
     --text-active: var(--blue-80);
-    --text-disabled: var(--grey-80);
-    --bg: var(--blue-40);
-    --bg-hover: color(theme('colors.blue-40') tint(30%));
-    --bg-focused: var(--blue-30);
-    --bg-active: color(theme('colors.blue-40') shade(20%));
-    --bg-disabled: var(--grey-50);
-  }
-
-  @media screen and (prefers-color-scheme: dark) {
-    --text: var(--blue-90);
-    --text-hover: var(--blue-90);
-    --text-active: var(--blue-80);
-    --bg: var(--blue-40);
-    --bg-hover: color(theme('colors.blue-40') tint(30%));
-    --bg-focused: var(--blue-30);
-    --bg-active: color(theme('colors.blue-40') shade(20%));
-
-    --text-disabled: var(--grey-80);
-    --bg-disabled: var(--grey-50);
+    --text-disabled: var(--grey-70);
+    --text-hover: var(--blue-80);
+    --bg: var(--grey-10);
+    --bg-active: var(--grey-40);
+    --bg-disabled: var(--grey-10);
+    --bg-focused: var(--grey-40);
+    --bg-hover: var(--grey-20);
+    --focused-shadow: color(theme('colors.grey-40') alpha(45%));
 
     &[disabled] {
       opacity: 0.9;
@@ -92,83 +80,55 @@ BUTTONS
   }
 }
 
-.btn-secondary {
-  --text: var(--blue-80);
-  --text-hover: var(--blue-90);
-  --text-active: var(--blue-100);
-  --bg: var(--grey-20);
-  --bg-focused: var(--grey-40);
-  --focused-shadow: color(theme('colors.grey-50') alpha(15%));
-  --bg-hover: var(--grey-30);
-  --bg-active: var(--grey-40);
-  --bg-disabled: var(--grey-20);
-  --text-disabled: var(--grey-50);
+.btn-primary {
+  --bg: var(--green-70);
+  --bg-active: var(--green-70);
+  --bg-disabled: color(theme('colors.green-60') blend(#fff 60%) shade(10%));
+  --bg-focused: var(--green-80);
+  --bg-hover: color(theme('colors.green-60') shade(10%));
+  --focused-shadow: color(theme('colors.green-60') alpha(25%));
 
   &.dark {
-    --bg: var(--grey-90);
-    --bg-hover: color(theme('colors.grey-90') tint(10%));
-    --bg-focused: var(--grey-90);
-    --bg-active: color(theme('colors.grey-90') shade(20%));
-    --text: var(--grey-30);
-    --text-hover: var(--grey-20);
-    --text-active: rgb(255 255 255 / 50%);
-
-    --text-disabled: var(--grey-90);
-    --bg-disabled: var(--grey-40);
-
-    &[disabled] {
-      opacity: 0.5;
-    }
-  }
-
-  @media screen and (prefers-color-scheme: dark) {
-    --bg: var(--grey-90);
-    --bg-hover: color(theme('colors.grey-90') tint(10%));
-    --bg-focused: var(--grey-90);
-    --bg-active: color(theme('colors.grey-90') shade(20%));
-    --text: var(--grey-30);
-    --text-hover: var(--grey-20);
-    --text-active: rgb(255 255 255 / 50%);
+    --bg: var(--green-40);
+    --bg-active: color(theme('colors.green-40') tint(5%));
+    --bg-disabled: color(theme('colors.green-40') blend(#fff 60%) shade(10%));
+    --bg-focused: color(theme('colors.green-40') tint(30%));
+    --bg-hover: color(theme('colors.green-40') tint(30%));
+    --focused-shadow: color(theme('colors.green-60') alpha(80%));
+    --text-active: var(--green-80);
     --text-disabled: var(--grey-80);
-    --bg-disabled: var(--grey-50);
+    --text-hover: var(--green-90);
+    --text: var(--green-90);
+  }
+}
+
+.btn-secondary {
+  --bg: var(--grey-20);
+  --bg-active: var(--grey-40);
+  --bg-disabled: var(--grey-20);
+  --bg-focused: var(--grey-40);
+  --bg-hover: var(--grey-30);
+  --text-active: var(--blue-100);
+  --text-disabled: var(--grey-50);
+  --text-hover: var(--blue-90);
+  --text: var(--blue-80);
+  --focused-shadow: color(theme('colors.grey-50') alpha(15%));
+
+  &.dark {
+    --bg: var(--blue-80);
+    --bg-active: color(theme('colors.blue-80') tint(5%));
+    --bg-disabled: color(theme('colors.blue-80') blend(#fff 60%) shade(10%));
+    --bg-focused: color(theme('colors.blue-80') tint(15%));
+    --bg-hover: color(theme('colors.blue-80') tint(10%));
+    --focused-shadow: color(theme('colors.grey-10') alpha(10%));
+    --text-active: var(--grey-50);
+    --text-disabled: var(--grey-90);
+    --text-hover: var(--grey-30);
+    --text: var(--grey-30);
 
     &[disabled] {
       opacity: 0.7;
     }
-  }
-}
-
-.btn-primary {
-  --bg: var(--green-70);
-  --bg-disabled: color(theme('colors.green-60') blend(#fff 60%) shade(10%));
-  --bg-focused: var(--green-80);
-  --focused-shadow: color(theme('colors.green-60') alpha(25%));
-  --bg-hover: color(theme('colors.green-60') shade(10%));
-  --bg-active: var(--green-70);
-
-  &.dark {
-    --bg: var(--green-40);
-    --bg-hover: color(theme('colors.green-40') tint(30%));
-    --bg-focused: var(--green-30);
-    --bg-active: color(theme('colors.green-40') shade(20%));
-    --text: var(--green-90);
-    --text-hover: var(--green-90);
-    --text-active: var(--green-80);
-
-    --text-disabled: var(--grey-80);
-    --bg-disabled: var(--grey-50);
-  }
-
-  @media screen and (prefers-color-scheme: dark) {
-    --bg: var(--green-40);
-    --bg-hover: color(theme('colors.green-40') tint(30%));
-    --bg-focused: var(--green-30);
-    --bg-active: color(theme('colors.green-40') shade(20%));
-    --text: var(--green-90);
-    --text-hover: var(--green-90);
-    --text-active: var(--green-80);
-    --text-disabled: var(--grey-80);
-    --bg-disabled: var(--grey-50);
   }
 }
 
@@ -182,25 +142,15 @@ BUTTONS
 
   &.dark {
     --bg: var(--red-40);
+    --bg-active: color(theme('colors.red-40') tint(5%));
+    --bg-disabled: color(theme('colors.red-40') blend(#fff 60%) shade(10%));
+    --bg-focused: color(theme('colors.red-40') tint(30%));
     --bg-hover: color(theme('colors.red-40') tint(30%));
-    --bg-focused: var(--red-30);
-    --bg-active: color(theme('colors.red-40') shade(20%));
     --text: var(--red-100);
-    --text-hover: var(--red-90);
+    --text-active: var(--red-90);
     --text-disabled: var(--grey-80);
-    --bg-disabled: var(--grey-50);
-  }
-
-  @media screen and (prefers-color-scheme: dark) {
-    --bg: var(--red-40);
-    --bg-hover: color(theme('colors.red-40') tint(30%));
-    --bg-focused: var(--red-30);
-    --bg-active: color(theme('colors.red-40') shade(20%));
-    --text: var(--red-90);
     --text-hover: var(--red-90);
-    --text-active: var(--red-80);
-    --text-disabled: var(--grey-80);
-    --bg-disabled: var(--grey-50);
+    --focused-shadow: color(theme('colors.red-50') alpha(40%));
   }
 }
 
@@ -210,6 +160,7 @@ BUTTONS
   --text-hover: var(--blue-80);
   --text-active: var(--blue-80);
   --text-disabled: var(--grey-50);
+
   transition: none;
   position: relative;
 
@@ -233,41 +184,20 @@ BUTTONS
 
   &.btn-link--danger {
     --text: var(--red-60);
-    --text-hover: var(--red-70);
     --text-active: var(--red-80);
+    --text-hover: var(--red-70);
   }
 
   &.dark {
     --bg: transparent;
     --text: var(--blue-40);
-    --text-hover: var(--blue-30);
-    --text-active: var(--blue-50);
-
-    &[disabled] {
-      --text-disabled: color(theme('colors.grey-30') saturation(- 90%));
-    }
+    --text-active: color(theme('colors.blue-50') shade(10%));
+    --text-hover: var(--blue-50);
 
     &.btn-link--danger {
       --text: var(--red-40);
+      --text-active: var(--red-60);
       --text-hover: var(--red-50);
-      --text-active: var(--red-60);
-    }
-  }
-
-  @media screen and (prefers-color-scheme: dark) {
-    --bg: transparent;
-    --text: var(--blue-40);
-    --text-hover: var(--blue-30);
-    --text-active: var(--blue-50);
-
-    &[disabled] {
-      --text-disabled: color(theme('colors.grey-30') saturation(- 90%));
-    }
-
-    &.btn-link--danger {
-      --text: var(--red-50);
-      --text-hover: var(--red-40);
-      --text-active: var(--red-60);
     }
   }
 }
