@@ -18,7 +18,7 @@ const htmlLayout = (contents) =>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lookbook Colors Test Page</title>
-    <link rel="stylesheet" href="./lookbook.css">
+    <link rel="stylesheet" href="../dist/lookbook.css">
     <style>
       body {
         padding: 1em;
