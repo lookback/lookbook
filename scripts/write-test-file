@@ -68,10 +68,21 @@ const writeTestPage = async (colors, colorBreakAtScale = 50) => {
 
 <p>A paragraph with a <a href="#">link</a>.</p>
 
-<button class="btn">A button</button>
-<button class="btn btn-primary">A primary button</button>
-<button class="btn btn-danger">A danger button</button>
-<button class="btn btn-secondary">A secondary button</button>
+<div style="padding: 1rem">
+  <button class="btn mr-1">A button</button>
+  <button class="btn btn-primary mr-1">A primary button</button>
+  <button class="btn btn-secondary mr-1">A secondary button</button>
+  <button class="btn btn-danger mr-1">A danger button</button>
+  <button class="btn btn-link">A link button</button>
+</div>
+
+<div style="background-color: var(--blue-80); padding: 1rem">
+  <button class="btn dark mr-1">A button</button>
+  <button class="btn btn-primary dark mr-1">A primary button</button>
+  <button class="btn btn-secondary dark mr-1">A secondary button</button>
+  <button class="btn btn-danger dark mr-1">A danger button</button>
+  <button class="btn btn-link dark">A link button</button>
+</div>
 `;
 
   await writeFile(
