@@ -166,6 +166,7 @@ const writeTestFile = async (colors) => {
     <style>
       body {
         padding: 1em;
+        background-color: var(--grey-10);
       }
 
       .block {
