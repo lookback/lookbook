@@ -1,0 +1,8 @@
+/**
+ * Good for counters.
+ * 
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-numeric
+ */
+.tabular-nums {
+    font-variant-numeric: tabular-nums;
+}
