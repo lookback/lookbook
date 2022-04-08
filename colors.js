@@ -1,8 +1,8 @@
 /* eslint-disable */
-/* Updated at Fri, 12 Nov 2021 09:21:30 GMT*/
+/* Updated at Fri, 08 Apr 2022 11:55:56 GMT*/
 module.exports = {
   'blue-10': '#6fb7ff',
-  'blue-100': '#0b1e31',
+  'blue-100': '#061829',
   'blue-20': '#4aa4fe',
   'blue-30': '#3393f2',
   'blue-40': '#1c83ea',
