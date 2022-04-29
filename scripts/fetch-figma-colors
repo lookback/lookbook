@@ -99,7 +99,21 @@ const fetchAllColors = async () => {
         bg: rgbToHex(bg.r * 255, bg.g * 255, bg.b * 255),
       };
     })
-    .sort((a, b) => a.name.localeCompare(b.name))
+    .sort((a, b) => {
+      // sort by name and scale, so that blue-100 comes after blue-90
+      const [colorA, scaleA] = a.name.split('-');
+      const numScaleA = parseInt(scaleA, 10);
+      const [colorB, scaleB] = b.name.split('-');
+      const numScaleB = parseInt(scaleB, 10);
+
+      const nameComp = colorA.localeCompare(colorB);
+
+      if (nameComp == 0) {
+        return numScaleA - numScaleB;
+      }
+
+      return nameComp;
+    })
     .reduce((acc, { name, fg, bg }) => {
       acc[name] = { fg, bg };
       return acc;
