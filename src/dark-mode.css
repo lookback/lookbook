@@ -1,7 +1,3 @@
-:root {
-  color-scheme: light dark;
-}
-
 @media screen and (prefers-color-scheme: dark) {
   /* Read more in https://webkit.org/blog/8840/dark-mode-support-in-webkit/ */
 
