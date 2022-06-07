@@ -7,7 +7,7 @@
   "scripts": {
     "clean": "rm -rf dist",
     "start": "scripts/watch",
-    "test": "[ -z \"$CI\" ] && pa11y ./test/test.html || mkdir -p test-output/junit && mkdir -p test-output/junit && cp dist/lookbook.css test/lookbook.css && pa11y -S ./test-output/screenshot.png --config test/pa11y.config.json -r junit ./test/test.html > test-output/junit/results.xml",
+    "test": "[ -z \"$CI\" ] && pa11y ./test/test.html || mkdir -p test-output && cp dist/lookbook.css test/lookbook.css && pa11y -S ./test-output/screenshot.png --config test/pa11y.config.json -r html ./test/test.html > test-output/results.html",
     "build": "npm run clean && mkdir dist && cp colors.json dist/colors.json && scripts/build && npm run generate-types",
     "update-colors": "scripts/fetch-figma-colors && npm run generate-types",
     "generate-types": "scripts/generate-types",
@@ -43,8 +43,7 @@
     "eslint": "^5",
     "fast-glob": "^2.2.7",
     "node-fetch": "^2.6.1",
-    "pa11y": "^5",
-    "pa11y-reporter-junit": "^1",
+    "pa11y": "^6",
     "postcss": "^8.2.15",
     "postcss-cli": "^8",
     "postcss-csso": "^5",
