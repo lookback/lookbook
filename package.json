@@ -6,9 +6,10 @@
   "types": "dist/types.d.ts",
   "scripts": {
     "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
     "start": "scripts/watch",
     "test": "[ -z \"$CI\" ] && pa11y ./test/test.html || mkdir -p test-output && cp dist/lookbook.css test/lookbook.css && pa11y -S ./test-output/screenshot.png --config test/pa11y.config.json -r html ./test/test.html > test-output/results.html",
-    "build": "npm run clean && mkdir dist && cp colors.json dist/colors.json && scripts/build && npm run generate-types",
+    "build": "mkdir dist && cp colors.json dist/colors.json && scripts/build && npm run generate-types",
     "update-colors": "scripts/fetch-figma-colors && npm run generate-types",
     "generate-types": "scripts/generate-types",
     "dist": "scripts/distribute \"dist/*.{css,json}\"",
