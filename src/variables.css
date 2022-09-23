@@ -3,12 +3,10 @@
   --default-text-color: theme('textColor.body');
   --default-background-color: theme('backgroundColor.body');
 
-  /** The sans-serif used.
-   * @deprecated Use --base-font instead.
-   */
-  --font-sans-serif: Inter, sans-serif;
+  --font-sans-serif: theme('fontFamily.sans');
+  --font-mono: theme('fontFamily.mono');
 
-  --base-font: theme('fontFamily.sans');
+  --base-font: var(--font-sans-serif);
   /** Base measurement. Is set as root font size on <body>. */
   --base-size: theme('baseSize');
   /** Main vertical rhythm unit. Set as line-height on <body>. */
