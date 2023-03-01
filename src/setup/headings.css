@@ -8,7 +8,7 @@ h3,
 h4,
 h5,
 h6 {
-  @apply leading-tight mb-2;
+  @apply leading-tight tracking-heading mb-2;
   font-weight: bold;
   color: var(--heading-color);
 }

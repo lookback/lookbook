@@ -16,5 +16,6 @@ body {
   line-height: var(--base-leading);
   font-family: var(--base-font);
   background-color: var(--background-color);
+  letter-spacing: theme('letterSpacing.normal');
   color: var(--text-color);
 }

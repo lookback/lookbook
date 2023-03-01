@@ -350,8 +350,8 @@ module.exports = {
 
     letterSpacing: {
       tight: '-0.05em',
-      normal: '0',
-      wide: '0.05em',
+      heading: '-0.011em',
+      normal: '-0.009em',
       huge: '0.1em',
     },
 
