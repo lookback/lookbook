@@ -642,7 +642,6 @@ module.exports = {
 
   corePlugins: {
     animation: false,
-    backgroundOpacity: false,
     backgroundImage: false,
     backgroundClip: false,
     backgroundAttachment: false,
@@ -703,7 +702,6 @@ module.exports = {
     overscrollBehavior: false,
     placeSelf: false,
     placeholderOpacity: false,
-    textOpacity: false,
   },
 
   /*
