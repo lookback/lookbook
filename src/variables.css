@@ -30,8 +30,8 @@
   --control-padding: 0.6em 1em;
 
   /* <a> */
-  --link-color: var(--blue-80);
-  --link-color-hover: var(--blue-80);
+  --link-color: var(--blue-60);
+  --link-color-hover: var(--blue-70);
 
   /* <input>, <textarea> */
   --label-color: var(--text-color);
