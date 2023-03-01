@@ -780,6 +780,7 @@ module.exports = {
     width: ['responsive'],
     height: [],
     zIndex: [],
+    fontVariantNumeric: [],
   },
 
   corePlugins: {
@@ -816,7 +817,6 @@ module.exports = {
     gridAutoFlow: false,
     gridRowEnd: false,
     float: false,
-    fontVariantNumeric: false,
     listStylePosition: false,
     maxHeight: false,
     minWidth: false,
