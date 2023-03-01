@@ -351,6 +351,7 @@ module.exports = {
     textColor: {
       body: colors['blue-80'], // Body
       ...colors,
+      muted: colors['grey-80'],
       error: colors['red-70'],
       warning: colors['orange-70'],
       positive: colors['green-70'],
