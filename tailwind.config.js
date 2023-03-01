@@ -102,7 +102,6 @@ module.exports = {
     colors: {
       ...colors,
       current: 'currentColor',
-      defaultBoxShadow: '#000',
     },
 
     /*
@@ -629,13 +628,13 @@ module.exports = {
         |
     */
 
-    boxShadow: (theme) => ({
-      DEFAULT: `0px 5px 5px rgba(${theme('colors.defaultBoxShadow')}, .04)`,
-      large: `0px 6px 10px rgba(${theme('colors.defaultBoxShadow')}, .1)`,
-      small: `0px 3px 3px rgba(${theme('colors.defaultBoxShadow')}, .04)`,
-      tiny: `0 1px 3px rgba(${theme('colors.defaultBoxShadow')}, .4)`,
+    boxShadow: {
+      DEFAULT: `0px 5px 5px rgb(0 0 0 / 4%)`,
+      large: `0px 6px 10px rgb(0 0 0 / 10%)`,
+      small: `0px 3px 3px rgb(0 0 0 / 4%)`,
+      tiny: `0 1px 3px rgb(0 0 0 / 40%)`,
       none: 'none',
-    }),
+    },
 
     /*
         |-----------------------------------------------------------------------------
