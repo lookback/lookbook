@@ -16,10 +16,6 @@
   --selection-background: var(--blue-80);
   --selection-color: #fff;
 
-  --error-color: var(--red-80);
-  --warning-color: var(--orange-70);
-  --positive-color: var(--green-70);
-
   --ring-color: var(--blue-50);
 
   /* Elements */
