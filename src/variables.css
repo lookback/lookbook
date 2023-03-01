@@ -17,8 +17,8 @@
 
   --heading-color: var(--blue-80);
 
-  --selection-background: var(--green-20);
-  --selection-color: var(--text-color);
+  --selection-background: var(--blue-80);
+  --selection-color: #fff;
 
   --error-color: var(--red-80);
   --warning-color: var(--orange-70);
