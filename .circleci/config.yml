@@ -1,9 +1,9 @@
-version: 2
+version: 2.1
 jobs:
   build:
     working_directory: ~/lookbook
     docker:
-      - image: circleci/node:latest-browsers
+      - image: cimg/node:18.14.0-browsers
     steps:
       - checkout
       - restore_cache:
