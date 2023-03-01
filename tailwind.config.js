@@ -4,7 +4,7 @@ const styleColors = require('./colors.json');
 /** Root font size without unit. */
 const baseSize = 16;
 /** Base leading (line height) without unit. */
-const leading = 1.5;
+const leading = 1.6;
 
 const toRem = (size, base = baseSize) => `${size / base}rem`;
 
