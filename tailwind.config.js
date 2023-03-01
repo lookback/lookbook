@@ -537,6 +537,11 @@ module.exports = {
 
     fill: colorAliases,
 
+    outline: {
+      DEFAULT: '2px solid var(--ring-color)',
+      none: '2px solid transparent',
+    },
+
     /*
         |-----------------------------------------------------------------------------
         | SVG stroke                                 https://tailwindcss.com/docs/svg
@@ -670,7 +675,6 @@ module.exports = {
     float: false,
     listStylePosition: false,
     negativeMargin: false,
-    outline: false,
     placeholderColor: false,
     pointerEvents: false,
     ringWidth: false,

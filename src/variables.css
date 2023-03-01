@@ -24,6 +24,8 @@
   --warning-color: var(--orange-70);
   --positive-color: var(--green-70);
 
+  --ring-color: var(--blue-50);
+
   /* Elements */
 
   /** Sets the default padding for controls like buttons and form inputs. */
