@@ -190,7 +190,7 @@ BUTTONS
 
   &.dark {
     --bg: transparent;
-    --text: var(--blue-40);
+    --text: var(--blue-30);
     --text-active: color(theme('colors.blue-50') shade(10%));
     --text-hover: var(--blue-50);
 
