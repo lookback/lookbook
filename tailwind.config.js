@@ -560,6 +560,22 @@ module.exports = {
       current: 'currentColor',
     },
 
+    ringWidth: {
+      DEFAULT: '2px',
+      2: '3px',
+    },
+
+    ringOffsetWidth: {
+      0: 0,
+      1: '1px',
+      2: '2px',
+    },
+
+    ringOffsetColor: {
+      bg: 'var(--background-color)',
+      white: 'white',
+    },
+
     extend: {
       width: {
         'max-content': 'max-content',
@@ -639,6 +655,11 @@ module.exports = {
     zIndex: [],
     fontVariantNumeric: [],
     pointerEvents: [],
+    ringWidth: ['focus', 'focus-visible'],
+    ringColor: ['focus', 'focus-visible'],
+    ringOffsetWidth: ['focus', 'focus-visible'],
+    ringOffsetColor: ['focus', 'focus-visible'],
+    ringOpacity: ['focus', 'focus-visible'],
   },
 
   corePlugins: {
@@ -676,11 +697,6 @@ module.exports = {
     listStylePosition: false,
     negativeMargin: false,
     placeholderColor: false,
-    ringWidth: false,
-    ringColor: false,
-    ringOpacity: false,
-    ringOffsetWidth: false,
-    ringOffsetColor: false,
     resize: false,
     stroke: false,
     strokeWidth: false,
