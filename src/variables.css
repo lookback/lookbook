@@ -34,19 +34,4 @@
   /* <a> */
   --link-color: var(--blue-60);
   --link-color-hover: var(--blue-70);
-
-  /* <code> */
-  --pre-background-color: var(--grey-100);
-  --pre-color: var(--off-white);
-  --code-background-color: #fdfdfd;
-  --code-color: var(--purple-80);
-  --code-border-color: var(--purple-30);
-
-  /* kbd */
-  --kbd-color: var(--blue-80);
-  --kbd-background: var(--grey-20);
-
-  /* <mark> */
-  --mark-background-color: var(--orange-30);
-  --mark-color: var(--orange-90);
 }

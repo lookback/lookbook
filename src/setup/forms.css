@@ -24,7 +24,7 @@ textarea {
   @apply rounded-lg border-2 p-1;
 
   color: var(--text-color);
-  background-color: var(--off-white);
+  background-color: #fefefe;
   transition: color 150ms ease-out, border-color 150ms ease;
 
   &:hover {
@@ -55,7 +55,7 @@ select {
   @apply rounded-lg border-2;
   appearance: none;
   color: var(--text-color);
-  background-color: var(--off-white);
+  background-color: #fefefe;
   padding: var(--control-padding);
   padding-right: 2em; /* give room for the chevron bg */
   cursor: pointer;
