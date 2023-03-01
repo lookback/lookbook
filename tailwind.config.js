@@ -1,4 +1,3 @@
-const pick = require('./lib/pick');
 const styleColors = require('./colors.json');
 
 /** Root font size without unit. */
@@ -69,11 +68,16 @@ The first version of the marketing pages
 */
 
 // Only provide "real" colours here, no aliases.
+// These are exposed as CSS variables on :root. See tailwind-variables.js.
 const colors = {
   ...styleColors,
-  'off-white': '#fefefe',
+};
+
+// These are made to utils, such as .text-{color}, .bg-{color}, .fill-{color}.
+const colorAliases = {
+  ...styleColors,
+  current: 'currentColor',
   white: '#fff',
-  transparent: 'transparent',
 };
 
 module.exports = {
@@ -98,11 +102,7 @@ module.exports = {
         | .error { color: theme('colors.red') }
         |
     */
-    // Here you can provide aliases
-    colors: {
-      ...colors,
-      current: 'currentColor',
-    },
+    colors,
 
     /*
         |-----------------------------------------------------------------------------
@@ -349,8 +349,8 @@ module.exports = {
     */
 
     textColor: {
+      ...colorAliases,
       body: colors['blue-80'], // Body
-      ...colors,
       muted: colors['grey-80'],
       error: colors['red-70'],
       warning: colors['orange-70'],
@@ -371,8 +371,8 @@ module.exports = {
     */
 
     backgroundColor: {
+      ...colorAliases,
       body: colors['grey-20'],
-      ...colors,
     },
 
     /*
@@ -693,7 +693,7 @@ module.exports = {
         |
     */
 
-    fill: (theme) => theme('colors'),
+    fill: colorAliases,
 
     /*
         |-----------------------------------------------------------------------------
