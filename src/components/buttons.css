@@ -4,18 +4,23 @@ BUTTONS
 
 .btn {
   --bg: var(--blue-80);
-  --bg-active: var(--blue-80);
-  --bg-disabled: color(theme('colors.blue-80') blend(#fff 60%) shade(10%));
-  --bg-focused: var(--blue-80);
-  --bg-hover: color(theme('colors.blue-80') shade(10%));
+  --bg-active: var(--blue-90);
+  --bg-disabled: var(--grey-70);
+  --bg-focused: var(--blue-90);
+  --bg-hover: var(--blue-80);
   --text: #fff;
   --text-active: #e4e4e4;
-  --text-disabled: rgb(255 255 255 / 80%);
+  --text-disabled: #fff;
   --text-focused: var(--text-hover);
   --text-hover: #fff;
-  --focused-shadow: color(theme('colors.blue-80') alpha(30%));
+  /* Internal override */
+  --tw-ring-color: var(--bg-focused);
 
-  @apply font-bold inline-block relative text-center rounded-lg;
+  @apply rounded-lg focus-visible:ring-2 focus-visible:ring-offset-2;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  font-weight: bold;
   background-color: var(--bg);
   color: var(--text);
   -webkit-tap-highlight-color: transparent;
@@ -24,25 +29,25 @@ BUTTONS
   white-space: nowrap;
   border: 0;
   padding: var(--control-padding);
-  transition: box-shadow 0.2s ease-out;
+  transition: box-shadow 150ms ease-out;
   cursor: pointer;
 
   &:focus,
   &:hover,
   &:active {
+    outline: 0;
     text-decoration: none;
-    color: var(--text-hover);
   }
 
-  &:focus {
+  &:focus-visible {
     outline: 0;
     background-color: var(--bg-focused);
-    box-shadow: var(--focused-shadow) 0 0 0 3px;
     color: var(--text-focused);
   }
 
   &:hover {
     background-color: var(--bg-hover);
+    color: var(--text-hover);
   }
 
   &:active {
@@ -55,19 +60,20 @@ BUTTONS
     --text-active: var(--blue-80);
     --text-disabled: var(--grey-70);
     --text-hover: var(--blue-80);
-    --bg: var(--grey-10);
-    --bg-active: var(--grey-40);
-    --bg-disabled: var(--grey-10);
-    --bg-focused: var(--grey-40);
-    --bg-hover: var(--grey-20);
-    --focused-shadow: color(theme('colors.grey-40') alpha(45%));
+    --bg: var(--blue-10);
+    --bg-active: var(--blue-20);
+    --bg-disabled: var(--grey-40);
+    --bg-focused: var(--blue-20);
+    --bg-hover: var(--blue-20);
 
-    &[disabled] {
+    @apply focus-visible:ring-offset-0;
+
+    &:disabled {
       opacity: 0.9;
     }
   }
 
-  &[disabled] {
+  &:disabled {
     box-shadow: none;
     cursor: default;
     background-color: var(--bg-disabled);
@@ -82,11 +88,9 @@ BUTTONS
 
 .btn-primary {
   --bg: var(--green-70);
-  --bg-active: var(--green-70);
-  --bg-disabled: color(theme('colors.green-60') blend(#fff 60%) shade(10%));
-  --bg-focused: var(--green-80);
-  --bg-hover: color(theme('colors.green-60') shade(10%));
-  --focused-shadow: color(theme('colors.green-60') alpha(25%));
+  --bg-active: var(--green-90);
+  --bg-focused: var(--green-90);
+  --bg-hover: var(--green-80);
 
   &.dark {
     --bg: var(--green-40);
@@ -94,7 +98,6 @@ BUTTONS
     --bg-disabled: color(theme('colors.green-40') blend(#fff 60%) shade(10%));
     --bg-focused: color(theme('colors.green-40') tint(30%));
     --bg-hover: color(theme('colors.green-40') tint(30%));
-    --focused-shadow: color(theme('colors.green-60') alpha(80%));
     --text-active: var(--green-80);
     --text-disabled: var(--grey-80);
     --text-hover: var(--green-90);
@@ -103,16 +106,16 @@ BUTTONS
 }
 
 .btn-secondary {
-  --bg: var(--grey-20);
-  --bg-active: var(--grey-40);
+  --bg: var(--grey-30);
+  --bg-active: var(--grey-50);
   --bg-disabled: var(--grey-20);
-  --bg-focused: var(--grey-40);
-  --bg-hover: var(--grey-30);
+  --bg-focused: var(--grey-50);
+  --bg-hover: var(--grey-40);
   --text-active: var(--blue-100);
-  --text-disabled: var(--grey-50);
+  --text-disabled: var(--grey-80);
   --text-hover: var(--blue-90);
+  --text-focused: var(--blue-100);
   --text: var(--blue-80);
-  --focused-shadow: color(theme('colors.grey-50') alpha(15%));
 
   &.dark {
     --bg: var(--blue-80);
@@ -120,13 +123,12 @@ BUTTONS
     --bg-disabled: color(theme('colors.blue-80') blend(#fff 60%) shade(10%));
     --bg-focused: color(theme('colors.blue-80') tint(15%));
     --bg-hover: color(theme('colors.blue-80') tint(10%));
-    --focused-shadow: color(theme('colors.grey-10') alpha(10%));
     --text-active: var(--grey-50);
     --text-disabled: var(--grey-90);
     --text-hover: var(--grey-30);
     --text: var(--grey-30);
 
-    &[disabled] {
+    &:disabled {
       opacity: 0.7;
     }
   }
@@ -134,11 +136,9 @@ BUTTONS
 
 .btn-danger {
   --bg: var(--red-60);
-  --bg-disabled: color(theme('colors.red-60') blend(#fff 60%) shade(10%));
   --bg-focused: var(--red-80);
-  --focused-shadow: color(theme('colors.red-50') alpha(30%));
-  --bg-hover: color(theme('colors.red-60') shade(10%));
-  --bg-active: var(--red-70);
+  --bg-hover: var(--red-70);
+  --bg-active: var(--red-80);
 
   &.dark {
     --bg: var(--red-40);
@@ -150,23 +150,22 @@ BUTTONS
     --text-active: var(--red-90);
     --text-disabled: var(--grey-80);
     --text-hover: var(--red-90);
-    --focused-shadow: color(theme('colors.red-50') alpha(40%));
   }
 }
 
 .btn-link {
   --bg: transparent;
-  --text: var(--blue-80);
-  --text-hover: var(--blue-80);
+  --text: var(--link-color);
+  --text-hover: var(--link-color-hover);
   --text-active: var(--blue-80);
-  --text-disabled: var(--grey-50);
+  --text-disabled: var(--grey-90);
 
   transition: none;
   position: relative;
 
   &:hover,
   &:active,
-  &:focus {
+  &:focus-visible {
     background-color: transparent;
     box-shadow: none;
     text-decoration: underline;
@@ -176,7 +175,7 @@ BUTTONS
     top: 1px;
   }
 
-  &[disabled] {
+  &:disabled {
     background-color: transparent;
     opacity: 0.8;
     text-decoration: none;
