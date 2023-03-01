@@ -35,16 +35,6 @@
   --link-color: var(--blue-60);
   --link-color-hover: var(--blue-70);
 
-  /* <input>, <textarea> */
-  --label-color: var(--text-color);
-  --form-input-color: rgba(theme('colors.blue-80'), 0.9);
-  --form-input-color-active: var(--text-color);
-  --form-placeholder-color: var(--grey-90);
-  --form-background-color: #fefefe;
-  --form-background-color-active: #fff;
-  --form-border-color: var(--default-border-color);
-  --form-focus-shadow: rgba(theme('colors.blue-80'), 0.1) 0 0 0 2px;
-
   /* <code> */
   --pre-background-color: var(--grey-100);
   --pre-color: var(--off-white);

@@ -10,13 +10,6 @@
 
     --selection-background: var(--grey-50);
 
-    --form-background-color: var(--grey-100);
-    --form-background-color-active: var(--grey-100);
-    --form-input-color: var(--grey-30);
-    --form-input-color-active: var(--grey-20);
-    --form-border-color: var(--grey-90);
-    --form-focus-shadow: rgb(0 122 177 / 60%) 0 0 0 2px;
-
     --code-background-color: var(--grey-100);
     --pre-background-color: var(--grey-100);
     --code-color: var(--blue-30);
