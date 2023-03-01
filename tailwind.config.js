@@ -424,10 +424,10 @@ module.exports = {
     */
 
     borderColor: {
+      ...colorAliases,
       /** Default border, to be used on white. */
       DEFAULT: colors['grey-40'],
-      /** To be used on light blue backgrounds. */
-      light: colors['grey-40'], // TODO Consider removing this and use DEFAULT
+      active: colors['blue-50'],
     },
 
     /*
