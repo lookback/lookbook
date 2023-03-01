@@ -10,15 +10,12 @@
 
   --background-color: theme('backgroundColor.body');
   --text-color: theme('textColor.body');
-
   --heading-color: var(--blue-80);
 
   --selection-background: var(--blue-80);
   --selection-color: #fff;
-
+  
   --ring-color: var(--blue-50);
-
-  /* Elements */
 
   /** Sets the default padding for controls like buttons and form inputs. */
   --control-padding: 0.6em 1em;

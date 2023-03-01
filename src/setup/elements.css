@@ -10,9 +10,13 @@ abbr[data-tooltip] {
 a {
   color: var(--link-color);
 
-  &:hover {
+  &:hover, &:focus-visible {
     color: var(--link-color-hover);
     text-decoration: underline;
+  }
+
+  &:focus {
+    outline: 0;
   }
 }
 
