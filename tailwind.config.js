@@ -473,6 +473,7 @@ module.exports = {
 
     boxShadow: {
       DEFAULT: `0px 5px 5px rgb(0 0 0 / 4%)`,
+      huge: `0px 8px 20px rgb(0 0 0 / 5%)`,
       large: `0px 6px 10px rgb(0 0 0 / 10%)`,
       small: `0px 3px 3px rgb(0 0 0 / 4%)`,
       tiny: `0 1px 3px rgb(0 0 0 / 40%)`,
