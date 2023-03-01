@@ -638,6 +638,7 @@ module.exports = {
     height: [],
     zIndex: [],
     fontVariantNumeric: [],
+    pointerEvents: [],
   },
 
   corePlugins: {
@@ -675,7 +676,6 @@ module.exports = {
     listStylePosition: false,
     negativeMargin: false,
     placeholderColor: false,
-    pointerEvents: false,
     ringWidth: false,
     ringColor: false,
     ringOpacity: false,
