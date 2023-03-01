@@ -40,15 +40,12 @@
   "homepage": "https://github.com/lookback/lookbook#readme",
   "devDependencies": {
     "aws-sdk": "^2",
-    "dotenv": "^6",
-    "eslint": "^5",
-    "fast-glob": "^2",
-    "node-fetch": "^2",
+    "fast-glob": "^3",
     "pa11y": "^6",
     "postcss": "^8",
-    "postcss-cli": "^8",
-    "postcss-csso": "^5",
-    "prettier": "^1"
+    "postcss-cli": "^10",
+    "postcss-csso": "^6",
+    "prettier": "=2.0.5"
   },
   "peerDependencies": {
     "postcss": "^8"
@@ -56,9 +53,9 @@
   "dependencies": {
     "autoprefixer": "^10",
     "postcss-color-function": "^4",
-    "postcss-hexrgba": "^1",
-    "postcss-import": "^13",
-    "postcss-nested": "=4.1.1",
+    "postcss-hexrgba": "^2",
+    "postcss-import": "^15",
+    "postcss-nested": "^6",
     "tailwindcss": "=2.0.2"
   }
 }

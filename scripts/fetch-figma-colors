@@ -16,8 +16,6 @@ const PAGE_ID = '0:1';
 const TEAM_ID = '536579955360410320';
 const FILE_KEY = 'OVyadU3k5tlLkXZD6chfhg';
 
-const fetch = require('node-fetch');
-const dotenv = require('dotenv');
 const fs = require('fs');
 const { promisify } = require('util');
 const path = require('path');
@@ -26,8 +24,6 @@ const { green } = require('../lib/colorize');
 
 const writeFile = promisify(fs.writeFile);
 const readFile = promisify(fs.readFile);
-
-dotenv.load();
 
 const personalToken = process.env.FIGMA_PERSONAL_TOKEN;
 

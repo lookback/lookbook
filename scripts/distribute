@@ -5,7 +5,6 @@ const crypto = require('crypto');
 const path = require('path');
 const fs = require('fs');
 const { promisify } = require('util');
-const dotenv = require('dotenv');
 const { version: pkgVersion } = require('../package.json');
 const { colorize, Color, link } = require('../lib/colorize');
 const glob = require('fast-glob');
@@ -47,8 +46,6 @@ const readline = require('readline');
     * `AWS_ACCESS_KEY_ID`
     * `AWS_SECRET_ACCESS_KEY`
 */
-
-dotenv.load();
 
 const printError = (...args) => console.error(colorize(Color.Red, ...args));
 
@@ -176,7 +173,6 @@ const hashFile = (filename) =>
     }
   });
 
-/* eslint "no-unused-vars": 0 */
 const invalidate = async (pathToFile, pathPrefix) => {
   const hash = await hashFile(pathToFile);
 
