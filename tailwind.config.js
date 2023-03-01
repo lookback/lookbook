@@ -68,26 +68,7 @@ The first version of the marketing pages
 |
 */
 
-// let defaultConfig = require('tailwindcss/defaultConfig')
-
-/*
-|-------------------------------------------------------------------------------
-| Colors                                    https://tailwindcss.com/docs/colors
-|-------------------------------------------------------------------------------
-|
-| Here you can specify the colors used in your project. To get you started,
-| we've provided a generous palette of great looking colors that are perfect
-| for prototyping, but don't hesitate to change them for your project. You
-| own these colors, nothing will break if you change everything about them.
-|
-| We've used literal color names ("red", "blue", etc.) for the default
-| palette, but if you'd rather use functional names like "primary" and
-| "secondary", or even a numeric scale like "100" and "200", go for it.
-|
-| This is a pretty nice resource for naming a colour from a hex code:
-|
-| http://chir.ag/projects/name-that-color
-*/
+// Only provide "real" colours here, no aliases.
 const colors = {
   ...styleColors,
   'off-white': '#fefefe',
@@ -117,9 +98,10 @@ module.exports = {
         | .error { color: theme('colors.red') }
         |
     */
-
+    // Here you can provide aliases
     colors: {
       ...colors,
+      current: 'currentColor',
       defaultBoxShadow: '#000',
     },
 
@@ -370,7 +352,6 @@ module.exports = {
     textColor: {
       body: colors['blue-80'], // Body
       ...colors,
-      current: 'currentColor',
       error: colors['red-70'],
       warning: colors['orange-70'],
       positive: colors['green-70'],
@@ -391,15 +372,7 @@ module.exports = {
 
     backgroundColor: {
       body: colors['grey-20'],
-      ...pick(colors, [
-        'grey-10',
-        'white',
-        'blue-80',
-        'red-60',
-        'green-10',
-        'green-50',
-        'green-60',
-      ]),
+      ...colors,
     },
 
     /*
@@ -720,12 +693,7 @@ module.exports = {
         |
     */
 
-    fill: (theme) => ({
-      current: 'currentColor',
-      danger: theme('colors.red-50'),
-      warning: theme('colors.orange-50'),
-      positive: theme('colors.green-50'),
-    }),
+    fill: (theme) => theme('colors'),
 
     /*
         |-----------------------------------------------------------------------------
