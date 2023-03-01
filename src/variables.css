@@ -1,8 +1,4 @@
 :root {
-  --default-border-color: theme('borderColor.DEFAULT');
-  --default-text-color: theme('textColor.body');
-  --default-background-color: theme('backgroundColor.body');
-
   --font-sans-serif: theme('fontFamily.sans');
   --font-mono: theme('fontFamily.mono');
 
@@ -12,8 +8,8 @@
   /** Main vertical rhythm unit. Set as line-height on <body>. */
   --base-leading: theme('baseLeading');
 
-  --background-color: var(--default-background-color);
-  --text-color: var(--default-text-color);
+  --background-color: theme('backgroundColor.body');
+  --text-color: theme('textColor.body');
 
   --heading-color: var(--blue-80);
 
