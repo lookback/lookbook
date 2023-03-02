@@ -78,3 +78,43 @@ select {
     border: 0;
   }
 }
+
+progress {
+  --bg-color: #e0e0df;
+  --filler-color: #27496a;
+  --radius: 3em;
+  appearance: none;
+  height: 4px;
+  width: 100%;
+  border: 0; /* Firefox */
+  background-color: var(--bg-color);
+  border-radius: var(--radius);
+
+  &.done {
+    --filler-color: var(--green-50);
+  }
+
+  &::-webkit-progress-bar {
+    background-color: var(--bg-color);
+    border-radius: var(--radius);
+  }
+
+  &::-moz-progress-bar {
+    border-radius: var(--radius);
+    background-color: var(--filler-color);
+    transition: width 100ms ease;
+  }
+
+  &::-webkit-progress-value {
+    border-radius: var(--radius);
+    background-color: var(--filler-color);
+    transition: width 100ms ease;
+  }
+}
+
+fieldset {
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
