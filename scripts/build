@@ -12,18 +12,49 @@ ext=css
 ext_min_maps=dist.css
 ext_min=min.css
 
+help() {
+  echo "$(cat << 'EOM'
+scripts/build [--full]
+
+Builds the CSS into distributable and importable files with PostCSS.
+
+Example:
+  
+  # Only builds src/lookbook.css and doesnt minify or add sourcemaps. Meant for quick
+  # sanity checks during dev.
+  scripts/build
+
+  # Builds the whole pipeline of lookbook.css, base.css, and utils.css. Does produce
+  # minified and sourcemapped versions. Also prettify and print sizes of the bundles.
+  # Meant for be used when releasing and in CI.
+  scripts/build --full
+EOM
+)"
+}
+
+if [ "$1" == "--help" ]; then
+  help
+  exit 0
+fi;
+
+full=$([ "$1" == "--full" ] && echo 1 || echo 0)
+
 build_file () {
   local file_path="$LOOKBOOK_SRC/$1"
   local out=`basename $1 .css`
-
-  # Emit minified and sourcemapped into dist/<file>.dist.css
-  echo "🕐 postcss $LOOKBOOK_DIR/$out.$ext_min_maps"
-  NODE_ENV=production npx postcss "$file_path" --dir "$LOOKBOOK_DIR" --ext "$ext_min_maps" --verbose
 
   # Emit non-minified into dist/<file>.css
   # Meant for being included in other projects, before minification and source mapping
   echo "🕐 postcss $LOOKBOOK_DIR/$out.css"
   NODE_ENV=development npx postcss "$file_path" --no-map --dir "$LOOKBOOK_DIR" --verbose
+
+  if [ "$full" == "0" ]; then
+    return 0;
+  fi;
+
+  # Emit minified and sourcemapped into dist/<file>.dist.css
+  echo "🕐 postcss $LOOKBOOK_DIR/$out.$ext_min_maps"
+  NODE_ENV=production npx postcss "$file_path" --dir "$LOOKBOOK_DIR" --ext "$ext_min_maps" --verbose
 
   # Emit minified, non-sourcemap dist/<file>.min.css
   echo "🕐 postcss $LOOKBOOK_DIR/$out.$ext_min"
@@ -58,10 +89,11 @@ run_pipeline () {
   separator
 }
 
-run_pipeline $all
-
-run_pipeline $base
-
-run_pipeline $utils
-
-print_sizes $all $base $utils
+if [ "$full" == "1" ]; then
+  run_pipeline $all
+  run_pipeline $base
+  run_pipeline $utils
+  print_sizes $all $base $utils
+else
+  build_file $all
+fi;
