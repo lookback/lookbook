@@ -5,12 +5,12 @@ BUTTONS
 .btn {
   --bg: var(--blue-80);
   --bg-active: var(--blue-90);
-  --bg-disabled: var(--grey-70);
+  --bg-disabled: var(--grey-30);
   --bg-focused: var(--blue-90);
   --bg-hover: var(--blue-80);
   --text: #fff;
   --text-active: #e4e4e4;
-  --text-disabled: #fff;
+  --text-disabled: var(--grey-80);
   --text-focused: var(--text-hover);
   --text-hover: #fff;
   /* Internal override */
@@ -108,11 +108,10 @@ BUTTONS
 .btn-secondary {
   --bg: var(--grey-30);
   --bg-active: var(--grey-50);
-  --bg-disabled: var(--grey-20);
   --bg-focused: var(--grey-50);
   --bg-hover: var(--grey-40);
   --text-active: var(--blue-100);
-  --text-disabled: var(--grey-80);
+  --text-disabled: var(--grey-70);
   --text-hover: var(--blue-90);
   --text-focused: var(--blue-100);
   --text: var(--blue-80);
