@@ -256,7 +256,7 @@ module.exports = {
     },
 
     ringOffsetWidth: {
-      0: 0,
+      0: '0px',
       1: '1px',
       2: '2px',
     },
