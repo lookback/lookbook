@@ -30,7 +30,7 @@ module.exports = (ctx) => ({
       ctx.env === 'production'
     ),
     header({
-      header: `/*! ${ctx.file.basename} v${version} */`,
+      header: `/*! ${ctx.file.basename} v${version} ${new Date().toISOString()} */`,
     }),
     ...(ctx.env === 'production' ? [csso] : []),
   ],
