@@ -10,7 +10,8 @@ abbr[data-tooltip] {
 a {
   color: var(--link-color);
 
-  &:hover, &:focus-visible {
+  &:hover,
+  &:focus-visible {
     color: var(--link-color-hover);
     text-decoration: underline;
   }
@@ -48,13 +49,15 @@ tt {
 
 pre {
   @apply rounded-lg text-f6 p-3;
-  background-color: var(--grey-20);
+  background-color: var(--blue-90);
+  color: white;
 }
 
 code,
 kbd,
 mark {
   @apply rounded;
+  color: var(--grey-100);
   padding: 0.2em 0.4em;
   background-color: var(--grey-40);
 }
@@ -75,7 +78,6 @@ pre code {
 kbd {
   @apply font-sans;
   font-weight: bold;
-  color: var(--grey-90);
 }
 
 mark {
