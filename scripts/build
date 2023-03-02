@@ -37,7 +37,7 @@ separator() {
 format_file () {
   local file=$1
   echo "🕐 Formatting $LOOKBOOK_DIR/$file..."
-  prettier --write "$LOOKBOOK_DIR/$file"
+  npx prettier --write "$LOOKBOOK_DIR/$file"
 }
 
 print_sizes () {
