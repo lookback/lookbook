@@ -6,9 +6,9 @@ exports.colors = colors;
 exports.tailwindConfig = tailwindConfig;
 
 /** PostCSS config for external use. */
-exports.postCssConfig = ({ pathToTailwindConf } = {}) => () => ({
+exports.postCssConfig = ({ pathToTailwindConf, bundle } = {}) => () => ({
   map: 'inline', // Sourcemaps
-  plugins: defaultPlugins({ pathToTailwindConf }),
+  plugins: defaultPlugins({ pathToTailwindConf, bundle }),
 });
 
 exports.defaultPostCssPlugins = defaultPlugins;

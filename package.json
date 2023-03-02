@@ -44,15 +44,16 @@
     "pa11y": "^6",
     "postcss": "^8",
     "postcss-cli": "^10",
-    "postcss-csso": "^6",
     "prettier": "=2.0.5"
   },
   "peerDependencies": {
     "postcss": "^8"
   },
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^5",
     "autoprefixer": "^10",
     "postcss-color-function": "^4",
+    "postcss-csso": "^6",
     "postcss-hexrgba": "^2",
     "postcss-import": "^15",
     "postcss-nested": "^6",
