@@ -214,13 +214,28 @@ module.exports = {
       full: '9999px',
     },
 
+    // Generated using https://shadows.brumm.af/
     boxShadow: {
-      DEFAULT: `0px 5px 5px rgb(0 0 0 / 4%)`,
-      huge: `0px 8px 20px rgb(0 0 0 / 5%)`,
-      large: `0px 6px 10px rgb(0 0 0 / 10%)`,
-      small: `0px 3px 3px rgb(0 0 0 / 4%)`,
-      tiny: `0 1px 3px rgb(0 0 0 / 40%)`,
       none: 'none',
+
+      tiny: `0px 0.6px 0.7px rgba(0, 0, 0, 0.023),
+  0px 1.6px 1.9px rgba(0, 0, 0, 0.029),
+  0px 4px 7px rgba(0, 0, 0, 0.03)`,
+
+      small: `0px 0.6px 0.8px rgba(0, 0, 0, 0.012),
+  0px 1.6px 2.2px rgba(0, 0, 0, 0.022),
+  0px 4px 8px rgba(0, 0, 0, 0.04)`,
+
+      DEFAULT: `0px 0.4px 0.9px rgba(0, 0, 0, 0.014),
+  0px 1px 2.4px rgba(0, 0, 0, 0.02),
+  0px 2.4px 5.7px rgba(0, 0, 0, 0.026),
+  0px 8px 19px rgba(0, 0, 0, 0.04)`,
+
+      large: `0px 0.3px 1.2px rgba(0, 0, 0, 0.012),
+  0px 0.9px 3px rgba(0, 0, 0, 0.018),
+  0px 1.8px 6.2px rgba(0, 0, 0, 0.022),
+  0px 3.7px 12.8px rgba(0, 0, 0, 0.028),
+  0px 10px 35px rgba(0, 0, 0, 0.04)`,
     },
 
     zIndex: {
