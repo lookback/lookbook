@@ -18,4 +18,5 @@ body {
   background-color: var(--background-color);
   letter-spacing: theme('letterSpacing.normal');
   color: var(--text-color);
+  accent-color: var(--accent-color);
 }
