@@ -292,10 +292,8 @@ module.exports = {
   variants: {
     accessibility: [],
     backgroundColor: ['dark'],
-    borderColor: [],
     borderRadius: [],
     borderStyle: [],
-    borderWidth: [],
     cursor: [],
     display: ['responsive'],
     flexDirection: ['responsive'],
