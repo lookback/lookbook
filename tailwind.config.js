@@ -160,7 +160,7 @@ module.exports = {
 
     lineHeight: {
       none: 1,
-      tight: 1.25,
+      tight: 1.45,
       normal: leading,
       loose: 2,
     },
