@@ -11,6 +11,8 @@
   --background-color: theme('backgroundColor.body');
   --text-color: theme('textColor.body');
   --heading-color: var(--blue-80);
+  /** Default box shadow. This is grey-100 */
+  --shadow-color: 63 58 51;
 
   --selection-background: var(--blue-80);
   --selection-color: #fff;

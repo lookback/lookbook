@@ -218,24 +218,32 @@ module.exports = {
     boxShadow: {
       none: 'none',
 
-      tiny: `0px 0.6px 0.7px rgba(0, 0, 0, 0.023),
-  0px 1.6px 1.9px rgba(0, 0, 0, 0.029),
-  0px 4px 7px rgba(0, 0, 0, 0.03)`,
+      tiny: `0px 0.6px 0.7px rgb(var(--shadow-color) / 2.3%),
+  0px 1.6px 1.9px rgb(var(--shadow-color) / 2.9%),
+  0px 4px 7px rgb(var(--shadow-color) / 3%)`,
 
-      small: `0px 0.6px 0.8px rgba(0, 0, 0, 0.012),
-  0px 1.6px 2.2px rgba(0, 0, 0, 0.022),
-  0px 4px 8px rgba(0, 0, 0, 0.04)`,
+      small: `0px 0.6px 0.8px rgb(var(--shadow-color) / 1.2%),
+  0px 1.6px 2.2px rgb(var(--shadow-color) / 2.2%),
+  0px 4px 8px rgb(var(--shadow-color) / 4%)`,
 
-      DEFAULT: `0px 0.4px 0.9px rgba(0, 0, 0, 0.014),
-  0px 1px 2.4px rgba(0, 0, 0, 0.02),
-  0px 2.4px 5.7px rgba(0, 0, 0, 0.026),
-  0px 8px 19px rgba(0, 0, 0, 0.04)`,
+      DEFAULT: `0px 0.4px 0.9px rgb(var(--shadow-color) / 1.4%),
+  0px 1px 2.4px rgb(var(--shadow-color) / 2%),
+  0px 2.4px 5.7px rgb(var(--shadow-color) / 2.6%),
+  0px 8px 19px rgb(var(--shadow-color) / 4%)`,
 
-      large: `0px 0.3px 1.2px rgba(0, 0, 0, 0.012),
-  0px 0.9px 3px rgba(0, 0, 0, 0.018),
-  0px 1.8px 6.2px rgba(0, 0, 0, 0.022),
-  0px 3.7px 12.8px rgba(0, 0, 0, 0.028),
-  0px 10px 35px rgba(0, 0, 0, 0.04)`,
+      large: `0px 0.5px 1.7px rgb(var(--shadow-color) / 2.2%),
+  0px 1.2px 4.3px rgb(var(--shadow-color) / 3.1%),
+  0px 2.5px 8.9px rgb(var(--shadow-color) / 3.9%),
+  0px 5.1px 18.3px rgb(var(--shadow-color) / 4.8%),
+  0px 14px 50px rgb(var(--shadow-color) / 7%)`,
+
+      /** For "floating" UI elements, such as popovers. */
+      huge: `0px 0.2px 2px rgb(var(--shadow-color) / 2%),
+  0px 0.3px 5.3px rgb(var(--shadow-color) / 2.8%),
+  0px 1px 10.8px rgb(var(--shadow-color) / 3.5%),
+  0px 3.7px 21.5px rgb(var(--shadow-color) / 4.2%),
+  0px 12.5px 43.8px rgb(var(--shadow-color) / 5%),
+  0px 50px 80px rgb(var(--shadow-color) / 7%)`,
     },
 
     zIndex: {
