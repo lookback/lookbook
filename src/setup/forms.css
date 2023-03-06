@@ -73,7 +73,7 @@ select {
   @apply rounded-lg border-2;
   appearance: none;
   color: var(--text-color);
-  background-color: #fefefe;
+  background-color: var(--grey-20);
   padding: var(--control-padding);
   padding-right: 2em; /* give room for the chevron bg */
   cursor: pointer;
