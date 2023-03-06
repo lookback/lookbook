@@ -399,7 +399,6 @@ module.exports = {
     order: false,
     objectPosition: false,
     objectFit: false,
-    overscrollBehavior: false,
     placeSelf: false,
     placeholderOpacity: false,
   },
