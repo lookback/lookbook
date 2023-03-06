@@ -130,7 +130,7 @@ module.exports = {
       const mk = (fac) => `calc((var(--base-leading) * 1rem) ${fac})`;
 
       return {
-        auto: 'auto',
+        none: 'none',
         px: '1px',
         full: '100%',
         screen: '100vw',
