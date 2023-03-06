@@ -14,6 +14,7 @@
 
   --selection-background: var(--blue-80);
   --selection-color: #fff;
+  --placeholder-color: theme('textColor.muted');
   --accent-color: var(--blue-80);
   --ring-color: var(--blue-50);
 

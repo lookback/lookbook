@@ -15,7 +15,25 @@ label {
 input,
 textarea {
   &::placeholder {
-    @apply text-muted;
+    color: var(--placeholder-color);
+  }
+}
+
+[contenteditable='true'] {
+  &[aria-placeholder]:empty::before {
+    content: attr(aria-placeholder);
+    color: var(--placeholder-color);
+    display: inline-block;
+    pointer-events: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &[aria-disabled='true'] {
+    --placeholder-color: var(--grey-90);
+    cursor: default;
   }
 }
 
