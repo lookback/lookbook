@@ -40,20 +40,22 @@ A regular spinner
 .Spinner {
   /* Base size. */
   --size: 2rem;
+  --bg: color(theme('colors.grey-90') alpha(20%));
+  --fg: color(theme('colors.blue-80') alpha(80%));
 
   display: inline-block;
   font-size: var(--size);
   position: relative;
   text-indent: -9999em;
   overflow: hidden;
-  border: 2px solid color(theme('colors.grey-90') alpha(20%));
-  border-left-color: color(theme('colors.blue-80') alpha(80%));
+  border: 2px solid var(--bg);
+  border-left-color: var(--fg);
   transform: translateZ(0);
   animation: spinner 0.8s infinite linear;
 
   &--light {
-    border-color: color(theme('colors.grey-30') alpha(20%));
-    border-left-color: color(theme('colors.grey-30') alpha(90%));
+    --bg: color(theme('colors.grey-30') alpha(20%));
+    --fg: color(theme('colors.grey-30') alpha(90%));
   }
 
   &,
@@ -64,8 +66,8 @@ A regular spinner
   }
 
   @media screen and (prefers-color-scheme: dark) {
-    border-color: color(theme('colors.grey-40') alpha(20%));
-    border-left-color: color(theme('colors.grey-30') alpha(80%));
+    --bg: color(theme('colors.grey-40') alpha(20%));
+    --fg: color(theme('colors.grey-30') alpha(80%));
   }
 }
 
