@@ -15,6 +15,7 @@ body {
   font-size: calc(var(--base-size) * 1px);
   line-height: var(--base-leading);
   font-family: var(--base-font);
+  font-feature-settings: 'calt' 1; /* Contextual alternates in Inter. */
   background-color: var(--background-color);
   letter-spacing: theme('letterSpacing.normal');
   color: var(--text-color);
