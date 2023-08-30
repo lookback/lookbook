@@ -1,0 +1,13 @@
+/* From https://www.sarasoueidan.com/blog/focus-indicators/ */
+
+:is(:focus, button:focus) {
+  outline: none;
+}
+
+/* Text inputs take care of their own focus: it usually looks messed up when applying
+outline instead of border for focus anyway. */
+:is(:focus-visible, button:focus-visible):not(input, select, textarea, [contenteditable]) {
+  outline: 3px solid var(--outline-color, black);
+  outline-offset: 0.1em;
+  box-shadow: 0 0 0 6px white;
+}

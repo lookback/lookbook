@@ -13,10 +13,9 @@ BUTTONS
   --text-disabled: var(--grey-80);
   --text-focused: var(--text-hover);
   --text-hover: #fff;
-  /* Internal override */
-  --tw-ring-color: var(--bg-focused);
+  --outline-color: var(--bg-focused);
 
-  @apply rounded-lg focus-visible:ring-2 focus-visible:ring-offset-2;
+  @apply rounded-lg;
   position: relative;
   text-align: center;
   display: inline-block;
@@ -35,12 +34,10 @@ BUTTONS
   &:focus,
   &:hover,
   &:active {
-    outline: 0;
     text-decoration: none;
   }
 
   &:focus-visible {
-    outline: 0;
     background-color: var(--bg-focused);
     color: var(--text-focused);
   }
@@ -65,8 +62,7 @@ BUTTONS
     --bg-disabled: var(--grey-40);
     --bg-focused: var(--blue-20);
     --bg-hover: var(--blue-20);
-
-    @apply focus-visible:ring-offset-0;
+    --outline-color: var(--text);
 
     &:disabled {
       opacity: 0.9;
@@ -115,6 +111,7 @@ BUTTONS
   --text-hover: var(--blue-90);
   --text-focused: var(--blue-100);
   --text: var(--blue-80);
+  --outline-color: var(--text-focused);
 
   &.dark {
     --bg: var(--blue-80);
@@ -125,6 +122,7 @@ BUTTONS
     --text-active: var(--grey-50);
     --text-disabled: var(--grey-90);
     --text-hover: var(--grey-30);
+    --text-focused: var(--grey-40);
     --text: var(--grey-30);
 
     &:disabled {
@@ -158,6 +156,7 @@ BUTTONS
   --text-hover: var(--link-color-hover);
   --text-active: var(--blue-80);
   --text-disabled: var(--grey-90);
+  --outline-color: var(--text);
 
   transition: none;
   position: relative;
@@ -191,11 +190,13 @@ BUTTONS
     --text: var(--blue-30);
     --text-active: color(theme('colors.blue-50') shade(10%));
     --text-hover: var(--blue-50);
+    --outline-color: var(--blue-80);
 
     &.btn-link--danger {
       --text: var(--red-40);
       --text-active: var(--red-60);
       --text-hover: var(--red-50);
+      --outline-color: var(--red-80);
     }
   }
 }

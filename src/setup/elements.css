@@ -10,14 +10,9 @@ abbr[data-tooltip] {
 a {
   color: var(--link-color);
 
-  &:hover,
-  &:focus-visible {
+  &:hover {
     color: var(--link-color-hover);
     text-decoration: underline;
-  }
-
-  &:focus {
-    outline: 0;
   }
 }
 
@@ -34,11 +29,6 @@ dt {
 details summary {
   cursor: pointer;
   font-weight: 600;
-
-  &,
-  &:focus {
-    outline: 0;
-  }
 }
 
 code,

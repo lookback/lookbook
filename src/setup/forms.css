@@ -27,10 +27,6 @@ textarea {
     pointer-events: none;
   }
 
-  &:focus {
-    outline: none;
-  }
-
   &[aria-disabled='true'] {
     --placeholder-color: var(--grey-90);
     cursor: default;
@@ -51,7 +47,6 @@ textarea {
 
   &:focus {
     @apply border-active;
-    outline: 0;
     background-color: #fff;
   }
 
@@ -89,7 +84,6 @@ select {
 
   &:focus {
     @apply border-active;
-    outline: 0;
   }
 
   @media screen and (prefers-color-scheme: dark) {
