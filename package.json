@@ -1,6 +1,6 @@
 {
   "name": "@lookback/lookbook",
-  "version": "5.6.1",
+  "version": "5.6.2",
   "description": "The design system of Lookback",
   "main": "index.js",
   "types": "dist/types.d.ts",
