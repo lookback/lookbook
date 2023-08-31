@@ -1,5 +1,7 @@
 /* From https://www.sarasoueidan.com/blog/focus-indicators/ */
 
+/* purgecss start ignore */
+
 :is(:focus, button:focus) {
   outline: none;
 }
@@ -11,3 +13,5 @@ outline instead of border for focus anyway. */
   outline-offset: 0.1em;
   box-shadow: 0 0 0 6px white;
 }
+
+/* purgecss end ignore */
