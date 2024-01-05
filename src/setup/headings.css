@@ -2,15 +2,14 @@
 HEADINGS
 ----------------------------------------------------------------*/
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+:where(h1, h2, h3, h4, h5, h6) {
   @apply leading-tight tracking-heading mb-2;
   font-weight: bold;
   color: var(--heading-color);
+}
+
+:where(h1, h2, h3, h4) {
+  text-wrap: balance;
 }
 
 h1 {
