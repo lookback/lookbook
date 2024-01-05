@@ -2,13 +2,13 @@
 HTML ELEMENTS
 ----------------------------------------------------------------*/
 
-abbr[title],
-abbr[data-tooltip] {
+:where(abbr[title], abbr[data-tooltip]) {
   cursor: help;
 }
 
 a {
   color: var(--link-color);
+  text-decoration: none;
 
   &:hover {
     color: var(--link-color-hover);
@@ -16,18 +16,7 @@ a {
   }
 }
 
-b,
-strong {
-  /* The CSS reset used is making this "bolder". Don't do that. */
-  font-weight: bold;
-}
-
-dt {
-  font-weight: 600;
-}
-
-details summary {
-  cursor: pointer;
+:where(dt, summary) {
   font-weight: 600;
 }
 
@@ -41,9 +30,7 @@ pre {
   color: white;
 }
 
-code,
-kbd,
-mark {
+:where(code, kbd, mark) {
   @apply rounded;
   color: var(--grey-100);
   padding: 0.2em 0.4em;
@@ -71,4 +58,8 @@ kbd {
 mark {
   background-color: var(--orange-30);
   color: var(--orange-80);
+}
+
+figcaption {
+  color: var(--grey-80);
 }

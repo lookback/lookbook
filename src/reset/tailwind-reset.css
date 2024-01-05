@@ -1,7 +1,7 @@
 /*
     From https://unpkg.com/tailwindcss@2.2.19/dist/base.css
 
-    Customised to accommodate for modern reset in reset.css.
+    Customised to accommodate for reset.css.
 */
 
 /**
@@ -32,56 +32,6 @@
   border-color: theme('borderColor.DEFAULT', currentColor); /* 1 */
 }
 
-/*
- * Ensure horizontal rules are visible by default
- */
-
-hr {
-  border-top-width: 1px;
-}
-
-/**
- * Undo the `border-style: none` reset that Normalize applies to images so that
- * our `border-{width}` utilities have the expected effect.
- *
- * The Normalize reset is unnecessary for us since we default the border-width
- * to 0 on all elements.
- *
- * https://github.com/tailwindcss/tailwindcss/issues/362
- */
-
-img {
-  border-style: solid;
-}
-
-input::placeholder,
-textarea::placeholder {
-  opacity: 1;
-  color: #9ca3af;
-}
-
-/**
- * Override legacy focus reset from Normalize with modern Firefox focus styles.
- *
- * This is actually an improvement over the new defaults in Firefox in our testing,
- * as it triggers the better focus styles even for links, which still use a dotted
- * outline in Firefox by default.
- */
-
-:-moz-focusring {
-  outline: auto;
-}
-
-table {
-  border-collapse: collapse;
-}
-
-/**
- * Reset links to optimize for opt-in styling instead of
- * opt-out.
- */
-
-a {
-  color: inherit;
-  text-decoration: inherit;
+:where(hr) {
+  border-block-start-width: 1px;
 }

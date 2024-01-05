@@ -9,11 +9,8 @@ BODY AND HTML ELEMENTS
   color-scheme: light;
 }
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  @apply antialiased;
+:where(html, body) {
+  -webkit-font-smoothing: antialiased;
   font-size: calc(var(--base-size) * 1px);
   line-height: var(--base-leading);
   font-family: var(--base-font);
@@ -22,4 +19,10 @@ body {
   letter-spacing: theme('letterSpacing.normal');
   color: var(--text-color);
   accent-color: var(--accent-color);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :where(html:focus-within) {
+    scroll-behavior: smooth;
+  }
 }

@@ -1,14 +1,8 @@
 @import 'reset.css';
 @import 'tailwind-reset.css';
 
-/**
- * Removes the default spacing and border for appropriate elements.
- */
+/* Fixes for greedy resets */
 
-:where(html, body, blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre, ol, ul, fieldset) {
-  margin: 0;
-}
-
-:where(html, body, ol, ul, fieldset) {
-  padding: 0;
+:where(dialog) {
+  margin: auto; /* Fixes centered positioning */
 }

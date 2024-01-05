@@ -2,18 +2,11 @@
 FORMS
 ----------------------------------------------------------------*/
 
-textarea {
-  resize: vertical;
-  display: block;
-}
-
 label {
   font-weight: bold;
-  color: var(--text-color);
 }
 
-input,
-textarea {
+:where(input, textarea) {
   &::placeholder {
     color: var(--placeholder-color);
   }
@@ -37,7 +30,6 @@ input:where([type='text'], [type='url'], [type='email'], [type='password'], [typ
 textarea {
   @apply rounded-lg border-2 p-1;
 
-  color: var(--text-color);
   background-color: #fefefe;
   transition: color 150ms ease-out, border-color 150ms ease;
 
@@ -66,12 +58,9 @@ input:where([type='search']) {
 
 select {
   @apply rounded-lg border-2;
-  appearance: none;
-  color: var(--text-color);
   background-color: var(--grey-20);
   padding: var(--control-padding);
   padding-right: 2em; /* give room for the chevron bg */
-  cursor: pointer;
   transition: border-color 150ms ease;
   background-repeat: no-repeat;
   background-size: 0.8em;
@@ -95,15 +84,13 @@ progress {
   --bg-color: #e0e0df;
   --filler-color: #27496a;
   --radius: 3em;
-  appearance: none;
   height: 4px;
   width: 100%;
-  border: 0; /* Firefox */
   background-color: var(--bg-color);
   border-radius: var(--radius);
 
-  &.done {
-    --filler-color: var(--green-50);
+  :is(&.done, &[value='1'], &[value='100']) {
+    --filler-color: var(--green-60);
   }
 
   &::-webkit-progress-bar {
