@@ -11,6 +11,8 @@ BODY AND HTML ELEMENTS
 
 html,
 body {
+  margin: 0;
+  padding: 0;
   @apply antialiased;
   font-size: calc(var(--base-size) * 1px);
   line-height: var(--base-leading);
