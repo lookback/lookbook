@@ -1,8 +1,13 @@
 /* v0.8.0. From https://github.com/mayank99/reset.css */
+
+/*
+1) MODIFIED 2024-01: This is problematic, since it blows away browser default styles on elements such as
+<dialog>, where it's really required.
+*/
 *,
 *::before,
 *::after {
-  margin: 0;
+  /* margin: 0; (1) */
   padding: 0;
   box-sizing: border-box;
 }
