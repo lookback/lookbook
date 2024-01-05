@@ -355,6 +355,7 @@ module.exports = {
   },
 
   corePlugins: {
+    preflight: false,
     animation: false,
     backgroundImage: false,
     backgroundClip: false,

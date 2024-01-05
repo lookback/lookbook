@@ -8,10 +8,6 @@ HEADINGS
   color: var(--heading-color);
 }
 
-:where(h1, h2, h3, h4) {
-  text-wrap: balance;
-}
-
 h1 {
   @apply text-f1;
 }

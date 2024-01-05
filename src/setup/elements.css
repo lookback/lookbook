@@ -31,9 +31,7 @@ details summary {
   font-weight: 600;
 }
 
-code,
-pre,
-tt {
+:where(code, pre, tt, kbd, samp) {
   @apply font-mono;
 }
 

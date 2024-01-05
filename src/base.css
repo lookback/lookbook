@@ -5,6 +5,8 @@ Put things here to provide basic styling. Like CSS resets, components
 and more.
 ----------------------------------------------------------------*/
 
+@import 'reset';
+
 @import 'tailwindcss/base.css';
 
 @import 'tailwindcss/components.css';
