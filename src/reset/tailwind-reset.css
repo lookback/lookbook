@@ -92,3 +92,15 @@ a {
   --tw-border-opacity: 1;
   border-color: rgba(229, 231, 235, var(--tw-border-opacity));
 }
+
+/**
+ * Removes the default spacing and border for appropriate elements.
+ */
+
+:where(blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre, ol, ul, fieldset) {
+  margin: 0;
+}
+
+:where(ol, ul, fieldset) {
+  padding: 0;
+}
