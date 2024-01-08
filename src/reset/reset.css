@@ -123,7 +123,6 @@ Forms
   margin: 0; /* 2 */
   color: inherit;
   letter-spacing: inherit;
-  background: inherit;
 }
 
 :where(select) {
@@ -144,6 +143,7 @@ Correct the inability to style clickable types in iOS and Safari.
 
 :where(button, [type='button'], [type='reset'], [type='submit']) {
   -webkit-appearance: button;
+  background: none;
 }
 
 /**
