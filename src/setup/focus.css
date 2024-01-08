@@ -1,7 +1,5 @@
 /* From https://www.sarasoueidan.com/blog/focus-indicators/ */
 
-/* purgecss start ignore */
-
 :is(:focus, button:focus) {
   outline: none;
 }
@@ -14,4 +12,7 @@ outline instead of border for focus anyway. */
   box-shadow: 0 0 0 6px white;
 }
 
-/* purgecss end ignore */
+/* Add spacing when focusing on elements which makes the page scroll: */
+:where(:focus-visible, :target) {
+  scroll-margin-block: calc((var(--base-leading) * 1rem));
+}

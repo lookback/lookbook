@@ -292,7 +292,3 @@ Add the correct display in Chrome and Safari.
   block-size: 0;
   overflow: visible;
 }
-
-:where(:focus-visible, :target) {
-  scroll-margin-block: 8vh;
-}
