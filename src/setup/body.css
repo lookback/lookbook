@@ -14,7 +14,12 @@ BODY AND HTML ELEMENTS
   font-size: calc(var(--base-size) * 1px);
   line-height: var(--base-leading);
   font-family: var(--base-font);
-  font-feature-settings: 'calt' 1; /* Contextual alternates in Inter. */
+  /* OpenType features: https://rsms.me/inter/#features */
+  /* prettier-ignore */
+  font-feature-settings:
+    'calt' 1, /* Contextual alternates */
+    'ss03' 1, /* Round quotes & comma */
+    'case' 1 /* Case alternates */;
   background-color: var(--background-color);
   letter-spacing: theme('letterSpacing.normal');
   color: var(--text-color);
