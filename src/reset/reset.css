@@ -274,10 +274,10 @@ Add the correct display in Chrome and Safari.
 :where(img, svg, video, canvas, audio, iframe, embed, object) {
   display: block;
   vertical-align: middle;
-  max-inline-size: 100%;
 }
 
-:where(img, picture, svg, video, canvas) {
+:where(img, picture, video) {
+  max-inline-size: 100%;
   block-size: auto;
 }
 
