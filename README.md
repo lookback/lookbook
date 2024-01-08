@@ -45,7 +45,6 @@ The Lookbook PostCSS plugin is essentially a wrapper around these plugins:
 - `tailwindcss`
 - `postcss-nested`
 - `postcss-color-function`
-- `postcss-hexrgba`
 - `autoprefixer`
 
 ## Usage
