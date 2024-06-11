@@ -153,6 +153,33 @@ module.exports = {
       };
     },
 
+    minWidth: () => {
+      const mk = (fac) => `calc((var(--base-leading) * 1rem) ${fac})`;
+
+      return {
+        none: 'none',
+        px: '1px',
+        full: '100%',
+        screen: '100vw',
+        '0': 0,
+        '1': mk('/ 4'),
+        '2': mk('/ 2'),
+        '3': mk('* 1'),
+        '4': mk('* 2'),
+        '5': mk('* 3'),
+        '6': mk('* 4'),
+        '7': mk('* 5'),
+        '8': mk('* 6'),
+        '9': mk('* 8'),
+        '10': mk('* 11'),
+        '11': mk('* 15'),
+        '12': mk('* 20'),
+        '13': mk('* 28'),
+        '14': mk('* 40'),
+        '15': mk('* 55'),
+      };
+    },
+
     fontWeight: {
       normal: 400,
       bold: 700,
