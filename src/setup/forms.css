@@ -81,10 +81,10 @@ select {
 }
 
 progress {
-  --bg-color: #e0e0df;
-  --filler-color: #27496a;
+  --bg-color: var(--gray-40);
+  --filler-color: var(--gray-70);
   --radius: 3em;
-  height: 4px;
+  height: 8px;
   width: 100%;
   background-color: var(--bg-color);
   border-radius: var(--radius);
