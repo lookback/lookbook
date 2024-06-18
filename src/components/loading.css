@@ -43,26 +43,36 @@ A regular spinner
   --bg: color(theme('colors.grey-90') alpha(20%));
   --fg: color(theme('colors.blue-80') alpha(80%));
 
+  &::after {
+    content: ' ';
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    width: 1em;
+    height: 1em;
+    left: calc(50% - 0.5em);
+    top: calc(50% - 0.5em);
+
+    text-indent: -9999em;
+    overflow: hidden;
+    border: 2px solid var(--bg);
+    border-left-color: var(--fg);
+    transform: translateZ(0);
+    animation: spinner 0.8s infinite linear;
+  }
+
   display: inline-block;
   font-size: var(--size);
   position: relative;
-  text-indent: -9999em;
-  overflow: hidden;
-  border: 2px solid var(--bg);
-  border-left-color: var(--fg);
-  transform: translateZ(0);
-  animation: spinner 0.8s infinite linear;
+  aspect-ratio: 1;
+  /* 
+   * Pythagoras to determine the tallest bounding box we need to ensure the height remains fixed when the `::after` element rotates, that is the extreme at 45deg.
+   */
+  height: calc(sqrt(2) * 1em);
 
   &--light {
     --bg: color(theme('colors.grey-30') alpha(20%));
     --fg: color(theme('colors.grey-30') alpha(90%));
-  }
-
-  &,
-  &::after {
-    border-radius: 50%;
-    width: 1em;
-    height: 1em;
   }
 
   @media screen and (prefers-color-scheme: dark) {
