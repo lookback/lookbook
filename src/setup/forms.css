@@ -28,7 +28,7 @@ label {
 
 input:where([type='text'], [type='url'], [type='email'], [type='password'], [type='search'], [type='number'], [type='date'], [type='time']),
 textarea {
-  @apply rounded-lg border-2 p-1;
+  @apply rounded-lg border-1 p-1;
 
   background-color: #fefefe;
   transition: color 150ms ease-out, border-color 150ms ease;
@@ -57,7 +57,7 @@ input:where([type='search']) {
 }
 
 select {
-  @apply rounded-lg border-2;
+  @apply rounded-lg border-1;
   background-color: var(--grey-20);
   padding: var(--control-padding);
   padding-right: 2em; /* give room for the chevron bg */

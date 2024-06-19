@@ -223,14 +223,15 @@ module.exports = {
     borderWidth: {
       DEFAULT: '1px',
       '0': '0',
+      '1': '1px',
       '2': '2px',
     },
 
     borderColor: {
       ...colorAliases,
       /** Default border, to be used on white. */
-      DEFAULT: colors['grey-40'],
-      active: colors['blue-50'],
+      DEFAULT: colors['grey-60'],
+      active: colors['blue-70'],
     },
 
     borderRadius: {
