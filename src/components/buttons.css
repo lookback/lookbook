@@ -106,11 +106,11 @@ BUTTONS
   --bg-active: var(--grey-50);
   --bg-focused: var(--grey-50);
   --bg-hover: var(--grey-40);
-  --text-active: var(--blue-100);
+  --text-active: color(theme('colors.blue-70') shade(20%));
   --text-disabled: var(--grey-70);
-  --text-hover: var(--blue-90);
-  --text-focused: var(--blue-100);
-  --text: var(--blue-80);
+  --text-hover: var(--blue-70);
+  --text-focused: var(--blue-70);
+  --text: var(--blue-60);
   --outline-color: var(--text-focused);
 
   &.dark {
@@ -119,11 +119,11 @@ BUTTONS
     --bg-disabled: color(theme('colors.blue-80') blend(#fff 60%) shade(10%));
     --bg-focused: color(theme('colors.blue-80') tint(15%));
     --bg-hover: color(theme('colors.blue-80') tint(10%));
-    --text-active: var(--grey-50);
+    --text-active: var(--blue-30);
     --text-disabled: var(--grey-90);
-    --text-hover: var(--grey-30);
-    --text-focused: var(--grey-40);
-    --text: var(--grey-30);
+    --text-hover: var(--blue-10);
+    --text-focused: var(--blue-30);
+    --text: var(--blue-20);
 
     &:disabled {
       opacity: 0.7;
