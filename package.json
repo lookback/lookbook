@@ -53,7 +53,7 @@
     "@fullhuman/postcss-purgecss": "^5",
     "autoprefixer": "^10",
     "postcss-color-function": "^4",
-    "postcss-csso": "^6",
+    "postcss-csso": "lookback/postcss-csso#fix/csso-container-queries",
     "postcss-import": "^15",
     "postcss-nested": "^6",
     "tailwindcss": "=2.0.2"
