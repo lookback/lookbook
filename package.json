@@ -50,11 +50,11 @@
     "postcss": "^8"
   },
   "dependencies": {
-    "@fullhuman/postcss-purgecss": "^5",
+    "@fullhuman/postcss-purgecss": "^6",
     "autoprefixer": "^10",
     "postcss-color-function": "^4",
     "postcss-csso": "lookback/postcss-csso#fix/csso-container-queries",
-    "postcss-import": "^15",
+    "postcss-import": "^16",
     "postcss-nested": "^6",
     "tailwindcss": "=2.0.2"
   }
