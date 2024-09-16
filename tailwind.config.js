@@ -425,6 +425,7 @@ module.exports = {
     space: false,
     scale: false,
     rotate: false,
+    textOpacity: false,
     translate: false,
     skew: false,
     transformOrigin: false,
