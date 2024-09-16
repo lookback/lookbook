@@ -28,17 +28,18 @@ label {
 
 input:where([type='text'], [type='url'], [type='email'], [type='password'], [type='search'], [type='number'], [type='date'], [type='time']),
 textarea {
-  @apply rounded-lg border-1 p-1;
-
+  border-radius: theme('borderRadius.lg');
+  border-width: 1px;
+  padding: theme('spacing.1');
   background-color: #fefefe;
   transition: color 150ms ease-out, border-color 150ms ease;
 
   &:hover {
-    @apply border-grey-50;
+    border-color: var(--grey-50);
   }
 
   &:focus {
-    @apply border-active;
+    border-color: var(--blue-70);
     background-color: #fff;
   }
 
@@ -57,7 +58,8 @@ input:where([type='search']) {
 }
 
 select {
-  @apply rounded-lg border-1;
+  border-radius: theme('borderRadius.lg');
+  border-width: 1px;
   background-color: var(--grey-20);
   padding: var(--control-padding);
   padding-right: 2em; /* give room for the chevron bg */
@@ -68,11 +70,11 @@ select {
   background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0.679556 5.56825C1.54021 4.76907 2.88576 4.81891 3.68493 5.67956L12 14.6342L20.3151 5.67956C21.1142 4.81891 22.4598 4.76907 23.3204 5.56825C24.1811 6.36742 24.2309 7.71297 23.4318 8.57362L13.5583 19.2065C13.156 19.6399 12.5913 19.8861 12 19.8861C11.4087 19.8861 10.844 19.6399 10.4417 19.2065L0.568245 8.57362C-0.23093 7.71297 -0.181094 6.36742 0.679556 5.56825Z" fill="currentColor"/></svg>');
 
   &:hover {
-    @apply border-grey-50;
+    border-color: var(--grey-50);
   }
 
   &:focus {
-    @apply border-active;
+    border-color: var(--blue-70);
   }
 
   @media screen and (prefers-color-scheme: dark) {
