@@ -3,7 +3,9 @@ HEADINGS
 ----------------------------------------------------------------*/
 
 :where(h1, h2, h3, h4, h5, h6) {
-  @apply leading-tight tracking-heading mb-2;
+  line-height: theme('lineHeight.tight');
+  letter-spacing: theme('letterSpacing.heading');
+  margin-bottom: theme('spacing.2');
   font-weight: bold;
   color: var(--heading-color);
 }
@@ -13,25 +15,25 @@ HEADINGS
 }
 
 h1 {
-  @apply text-f1;
+  font-size: theme('fontSize.f1');
 }
 
 h2 {
-  @apply text-f2;
+  font-size: theme('fontSize.f2');
 }
 
 h3 {
-  @apply text-f3;
+  font-size: theme('fontSize.f3');
 }
 
 h4 {
-  @apply text-f4;
+  font-size: theme('fontSize.f4');
 }
 
 h5 {
-  @apply text-f5;
+  font-size: theme('fontSize.f5');
 }
 
 h6 {
-  @apply text-f6;
+  font-size: theme('fontSize.f6');
 }

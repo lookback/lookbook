@@ -15,7 +15,7 @@ BUTTONS
   --text-hover: #fff;
   --outline-color: var(--bg-focused);
 
-  @apply rounded-lg;
+  border-radius: theme('borderRadius.lg');
   position: relative;
   text-align: center;
   display: inline-block;

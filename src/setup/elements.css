@@ -21,24 +21,25 @@ a {
 }
 
 :where(code, pre, tt, kbd, samp) {
-  @apply font-mono;
+  font-family: theme('fontFamily.mono');
 }
 
 pre {
-  @apply rounded-lg text-f6 p-3;
+  border-radius: theme('borderRadius.lg');
+  font-size: theme('fontSize.f6');
+  padding: theme('spacing.3');
   background-color: var(--blue-90);
   color: white;
 }
 
 :where(code, kbd, mark) {
-  @apply rounded;
+  border-radius: theme('borderRadius.DEFAULT');
   color: var(--grey-100);
   padding: 0.2em 0.4em;
   background-color: var(--grey-40);
 }
 
 code {
-  @apply font-mono;
   font-size: 0.875em;
 }
 
@@ -51,7 +52,7 @@ pre code {
 }
 
 kbd {
-  @apply font-sans;
+  font-family: theme('fontFamily.sans');
   font-weight: bold;
 }
 
