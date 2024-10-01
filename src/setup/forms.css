@@ -34,6 +34,12 @@ label {
   &:focus {
     border-color: var(--grey-80);
   }
+
+  &:disabled {
+    background-color: var(--grey-20);
+    opacity: 0.8;
+    color: var(--grey-90);
+  }
 }
 
 :where(input, textarea) {
