@@ -7,6 +7,8 @@ BODY AND HTML ELEMENTS
   such as form controls dark when the system is in dark mode. This is
   unwanted by us, since we for now doesn't support dark mode in our designs. */
   color-scheme: light;
+  /* Lets us transition to "height: auto" and the likes. */
+  interpolate-size: allow-keywords;
 }
 
 :where(html, body) {
