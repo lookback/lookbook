@@ -73,8 +73,8 @@ select {
 }
 
 progress {
-  --bg-color: var(--grey-40);
-  --filler-color: var(--grey-70);
+  --bg-color: var(--grey-30);
+  --filler-color: var(--grey-90);
   --radius: 3em;
   height: 8px;
   width: 100%;
