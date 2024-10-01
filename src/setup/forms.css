@@ -36,8 +36,7 @@ label {
   }
 }
 
-input:where([type='text'], [type='url'], [type='email'], [type='password'], [type='search'], [type='number'], [type='date'], [type='time']),
-textarea {
+:where(input, textarea) {
   padding: theme('spacing.1');
   background-color: #fefefe;
 
