@@ -37,7 +37,7 @@ label {
 }
 
 :where(input, textarea) {
-  padding: theme('spacing.1');
+  padding: theme('spacing.1') theme('spacing.2');
   background-color: #fefefe;
 
   &:focus {
