@@ -104,11 +104,6 @@ module.exports = {
 
 ⚠️ Note that you should _really_ **minify** and **purge** your app's CSS when building for production!
 
-Recommendations:
-
-- Purge with `@fullhuman/postcss-purgecss`.
-- Minify with `postcss-csso`
-
 If you'd like to use the Tailwind config values in your custom CSS, you can install this Lookbook as an npm module and use its exported `defaultPostCssPlugins` function in a PostCSS setup (see "API" below).
 
 ### Configure
