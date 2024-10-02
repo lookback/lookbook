@@ -3,7 +3,7 @@ const { defaultPlugins } = require('./lib/postcss-plugins');
 const path = require('path');
 const extractMediaQuery = require('./lib/plugins/postcss-extract-media-query');
 const header = require('./lib/plugins/postcss-header');
-const csso = require('postcss-csso');
+const minify = require('@csstools/postcss-minify');
 
 const extractDarkModeQueries = (dest, prod = false) =>
   extractMediaQuery({
@@ -32,6 +32,6 @@ module.exports = (ctx) => ({
     header({
       header: `/*! ${ctx.file.basename} v${version} ${new Date().toISOString()} */`,
     }),
-    ...(ctx.env === 'production' ? [csso] : []),
+    ...(ctx.env === 'production' ? [minify] : []),
   ],
 });
