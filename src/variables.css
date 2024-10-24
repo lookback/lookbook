@@ -10,6 +10,7 @@
 
   --background-color: theme('backgroundColor.body');
   --text-color: theme('textColor.body');
+  --text-muted: theme('textColor.muted');
   --heading-color: var(--blue-80);
   /** Default box shadow. This is grey-100 */
   --shadow-color: 63 58 51;
