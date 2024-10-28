@@ -353,7 +353,13 @@ module.exports = {
     padding: [],
     position: [],
     inset: [],
-    boxShadow: ['hover', 'focus', 'group-hover', 'group-focus'],
+    boxShadow: [
+      'hover',
+      'focus',
+      'focus-visible',
+      'group-hover',
+      'group-focus',
+    ],
     fill: [],
     textAlign: [],
     textColor: ['hover', 'focus', 'group-hover', 'group-focus'],
@@ -361,7 +367,13 @@ module.exports = {
     fontStyle: [],
     textTransform: [],
     textOverflow: [],
-    textDecoration: ['hover', 'group-hover', 'group-focus'],
+    textDecoration: [
+      'hover',
+      'focus-visible',
+      'focus',
+      'group-hover',
+      'group-focus',
+    ],
     fontSmoothing: [],
     letterSpacing: [],
     userSelect: [],
@@ -381,6 +393,7 @@ module.exports = {
     ringOffsetWidth: ['focus', 'focus-visible'],
     ringOffsetColor: ['focus', 'focus-visible'],
     ringOpacity: ['focus', 'focus-visible'],
+    outline: ['focus', 'focus-visible', 'hover'],
   },
 
   corePlugins: {
