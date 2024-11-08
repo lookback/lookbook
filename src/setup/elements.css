@@ -35,7 +35,7 @@ pre {
 :where(code, kbd, mark) {
   border-radius: theme('borderRadius.DEFAULT');
   color: var(--grey-100);
-  padding: 0.2em 0.4em;
+  padding: 0.1em 0.4em;
   background-color: var(--grey-40);
 }
 
@@ -54,6 +54,10 @@ pre code {
 kbd {
   font-family: theme('fontFamily.sans');
   font-weight: bold;
+  background-color: #fefefe;
+  border: 1px solid var(--grey-60);
+  box-shadow: 0 2px 0 var(--grey-60);
+  padding-block: 0;
 }
 
 mark {
