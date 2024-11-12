@@ -52,12 +52,13 @@ pre code {
 }
 
 kbd {
+  --border: var(--grey-60);
   font-family: theme('fontFamily.sans');
   font-weight: bold;
   background-color: #fefefe;
-  border: 1px solid var(--grey-60);
-  box-shadow: 0 2px 0 var(--grey-60);
-  padding-block: 0;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 0 var(--border);
+  padding-block: 1px;
 }
 
 mark {
