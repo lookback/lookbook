@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/lookbook
     docker:
-      - image: cimg/node:18.14.0-browsers
+      - image: cimg/node:20.17.0-browsers
     steps:
       - checkout
       - restore_cache:
