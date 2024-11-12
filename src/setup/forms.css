@@ -65,7 +65,7 @@ input:where([type='search']) {
 }
 
 select {
-  background-color: var(--grey-20);
+  background-color: white;
   padding: var(--control-padding);
   padding-right: 2em; /* give room for the chevron bg */
   background-repeat: no-repeat;
