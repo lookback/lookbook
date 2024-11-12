@@ -4,6 +4,8 @@ jobs:
     working_directory: ~/lookbook
     docker:
       - image: cimg/node:20.17.0-browsers
+        environment:
+            NODE_ENV: development
     steps:
       - checkout
       - restore_cache:
