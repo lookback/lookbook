@@ -67,6 +67,11 @@ input:where([type='search']) {
 select {
   background-color: white;
   padding: var(--control-padding);
+  transition: box-shadow 300ms ease;
+
+  &:where(:focus-visible, :hover):enabled {
+    box-shadow: theme('boxShadow.tiny');
+  }
 
   &:not([multiple]) {
     padding-right: 2em; /* give room for the chevron bg */
