@@ -30,10 +30,17 @@ const colorAliases = {
   white: '#fff',
 };
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: {
-    enabled: false,
-  },
+  /*
+    Paths are relative to your project root, not your tailwind.config.js file, so if your tailwind.config.js file is in a custom location, you should still write your paths relative to the root of your project.
+  */
+  content: [
+    // Source tree, with the app view code
+    './src/**/*.{tsx,ts}',
+    // Often imported components from our (built) lib in node_modules
+    './node_modules/@lookback/component/build/**/*.js',
+  ],
 
   theme: {
     baseSize,
@@ -71,33 +78,6 @@ module.exports = {
       f2: toRem(28),
       f1: toRem(34),
       f0: toRem(42),
-    },
-
-    negativeMargin: () => {
-      const mk = (fac) => `calc((var(--base-leading) * 1rem) ${fac})`;
-
-      return {
-        auto: 'auto',
-        px: '1px',
-        full: '100%',
-        screen: '100vw',
-        '0': 0,
-        '1': mk('/ 4'),
-        '2': mk('/ 2'),
-        '3': mk('* 1'),
-        '4': mk('* 2'),
-        '5': mk('* 3'),
-        '6': mk('* 4'),
-        '7': mk('* 5'),
-        '8': mk('* 6'),
-        '9': mk('* 8'),
-        '10': mk('* 11'),
-        '11': mk('* 15'),
-        '12': mk('* 20'),
-        '13': mk('* 28'),
-        '14': mk('* 40'),
-        '15': mk('* 55'),
-      };
     },
 
     spacing: () => {
@@ -324,76 +304,6 @@ module.exports = {
         'min-content': 'min-content',
       },
     },
-  },
-
-  variants: {
-    accessibility: [],
-    backgroundColor: ['dark', 'hover', 'focus', 'group-hover', 'group-focus'],
-    borderRadius: [],
-    borderStyle: [],
-    cursor: ['hover', 'focus'],
-    display: ['responsive', 'group-hover', 'group-focus'],
-    flexDirection: ['responsive'],
-    alignItems: [],
-    alignSelf: [],
-    gap: [],
-    justifyContent: [],
-    flex: [],
-    flexGrow: [],
-    flexShrink: [],
-    flexWrap: [],
-    fontFamily: [],
-    fontWeight: ['hover', 'focus', 'group-hover', 'group-focus'],
-    lineHeight: [],
-    listStyleType: [],
-    margin: [],
-    maxWidth: [],
-    opacity: ['hover', 'focus', 'group-hover', 'group-focus'],
-    overflow: [],
-    padding: [],
-    position: [],
-    inset: [],
-    boxShadow: [
-      'hover',
-      'focus',
-      'focus-visible',
-      'group-hover',
-      'group-focus',
-    ],
-    fill: [],
-    textAlign: [],
-    textColor: ['hover', 'focus', 'group-hover', 'group-focus'],
-    fontSize: ['responsive'],
-    fontStyle: [],
-    textTransform: [],
-    textOverflow: [],
-    textDecoration: [
-      'hover',
-      'focus-visible',
-      'focus',
-      'group-hover',
-      'group-focus',
-    ],
-    fontSmoothing: [],
-    letterSpacing: [],
-    userSelect: [],
-    verticalAlign: [],
-    visibility: ['responsive', 'group-hover', 'group-focus'],
-    whitespace: [],
-    wordBreak: [],
-    width: ['responsive'],
-    maxHeight: [],
-    minHeight: [],
-    height: [],
-    zIndex: ['hover', 'focus'],
-    fontVariantNumeric: [],
-    pointerEvents: [],
-    ringWidth: ['focus', 'focus-visible'],
-    ringColor: ['focus', 'focus-visible'],
-    ringOffsetWidth: ['focus', 'focus-visible'],
-    ringOffsetColor: ['focus', 'focus-visible'],
-    ringOpacity: ['focus', 'focus-visible'],
-    outline: ['focus', 'focus-visible', 'hover'],
   },
 
   corePlugins: {
