@@ -45,18 +45,8 @@
     "pa11y": "^8",
     "postcss": "^8",
     "postcss-cli": "^11",
-    "prettier": "=2.0.5"
-  },
-  "peerDependencies": {
-    "postcss": "^8"
-  },
-  "dependencies": {
-    "@csstools/postcss-minify": "^2",
-    "@fullhuman/postcss-purgecss": "^6",
-    "autoprefixer": "^10",
-    "postcss-color-function": "^4",
-    "postcss-import": "^16",
-    "postcss-nested": "^7",
-    "tailwindcss": "^3.4.17"
+    "postcss-import": "^16.1.1",
+    "prettier": "=2.0.5",
+    "tailwindcss": "^4.1.10"
   }
 }

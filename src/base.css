@@ -7,14 +7,6 @@ and more.
 
 @import 'reset';
 
-@import 'tailwindcss/base.css';
-
-@import 'tailwindcss/components.css';
-
-@import 'variables.css';
-
 @import 'setup';
 
 @import 'components';
-
-@import 'dark-mode.css';
