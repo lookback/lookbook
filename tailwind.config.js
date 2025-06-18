@@ -15,8 +15,6 @@ https://github.com/tailwindcss/tailwindcss/issues/1259 resolves so we can pass
 a config object to the Tailwind PostCSS config instead.
 */
 
-const USE_P3_COLORS = !!process.env.LOOKBOOK_USE_P3 || false;
-
 // Only provide "real" colours here, no aliases.
 // These are exposed as CSS variables on :root. See tailwind-variables.js.
 const colors = {
@@ -305,11 +303,4 @@ module.exports = {
       },
     },
   },
-
-  plugins: [
-    // Use all colors from Figma as CSS variable on the :root element
-    require('./lib/plugins/tailwind-variables')({
-      useP3: USE_P3_COLORS,
-    }),
-  ],
 };

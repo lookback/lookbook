@@ -6,10 +6,10 @@ module.exports = (ctx) => ({
   plugins: {
     'postcss-import': {},
     './postcss/postcss-header': {
-      header: `/*! ${ctx.file.basename} v${
+      header: `/*! ${ctx.file?.basename || 'stdin'} v${
         pkg.version
       } ${new Date().toISOString()} */`,
     },
-    './postcss/postcss-tokens': {},
+    './postcss/postcss-figma-variables': {},
   },
 });
