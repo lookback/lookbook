@@ -46,7 +46,6 @@
     "postcss": "^8",
     "postcss-cli": "^11",
     "postcss-import": "^16.1.1",
-    "prettier": "=2.0.5",
-    "tailwindcss": "^4.1.10"
+    "prettier": "=2.0.5"
   }
 }
