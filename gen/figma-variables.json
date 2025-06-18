@@ -719,6 +719,36 @@
       "value": 2,
       "target": null,
       "description": null
+    },
+    {
+      "name": "tracking-tighter",
+      "value": "-0.05em",
+      "target": null,
+      "description": null
+    },
+    {
+      "name": "tracking-tight",
+      "value": "-0.11em",
+      "target": null,
+      "description": null
+    },
+    {
+      "name": "tracking-normal",
+      "value": "-0.009em",
+      "target": null,
+      "description": null
+    },
+    {
+      "name": "tracking-wider",
+      "value": "0.1em",
+      "target": null,
+      "description": null
+    },
+    {
+      "name": "tracking-widest",
+      "value": "0.15em",
+      "target": null,
+      "description": null
     }
   ],
   "tokens": [
@@ -985,6 +1015,36 @@
       "value": "Underline",
       "target": null,
       "description": null
+    },
+    {
+      "name": "font-body",
+      "value": "Inter",
+      "target": "font-sans",
+      "description": null
+    },
+    {
+      "name": "bg-body",
+      "value": "oklch(0.9778701989649833 0.0041275481400082185 56.43821251220534)",
+      "target": "color-grey-50",
+      "description": null
+    },
+    {
+      "name": "text-body",
+      "value": "oklch(0.22064504359018808 0.036754177825071996 248.35112561722332)",
+      "target": "color-blue-950",
+      "description": null
+    },
+    {
+      "name": "leading-body",
+      "value": 1.6,
+      "target": "leading-normal",
+      "description": null
+    },
+    {
+      "name": "tracking-body",
+      "value": "-0.009em",
+      "target": "tracking-normal",
+      "description": null
     }
   ],
   "semantic": [
@@ -1142,6 +1202,12 @@
       "name": "error-bg 2",
       "value": "oklch(0.9540103836401782 0.054879271876297535 96.82068890424667)",
       "target": "color-orange-100",
+      "description": null
+    },
+    {
+      "name": "color-accent",
+      "value": "oklch(0.5926918663435724 0.1492319661621314 254.13696672631704)",
+      "target": "color-blue-600",
       "description": null
     }
   ]

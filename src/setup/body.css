@@ -9,19 +9,19 @@
 
 :where(html, body) {
   -webkit-font-smoothing: antialiased;
-  font-size: calc(var(--base-size) * 1px);
-  line-height: var(--base-leading);
-  font-family: var(--base-font);
+  font-size: 100%;
+  line-height: var(--leading-body);
+  font-family: var(--font-body);
   /* OpenType features: https://rsms.me/inter/#features */
   /* prettier-ignore */
   font-feature-settings:
     'calt' 1, /* Contextual alternates */
     'ss03' 1, /* Round quotes & comma */
     'case' 1 /* Case alternates */;
-  background-color: var(--background-color);
-  letter-spacing: theme('letterSpacing.normal');
-  color: var(--text-color);
-  accent-color: var(--accent-color);
+  background-color: var(--bg-body);
+  letter-spacing: var(--tracking-body);
+  color: var(--text-body);
+  accent-color: var(--color-accent);
 }
 
 @media (prefers-reduced-motion: no-preference) {
