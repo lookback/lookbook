@@ -70,6 +70,11 @@ These are "global" `variables.css` from the Lookbook.
 }
 ```
 
+### Custom Lookbook utils removals
+
+* `.square` -> `.aspect-square`
+* `.break-text` -> `.wrap-anywhere`
+
 ## v3/v4 problem
 
 v3 introduced "JIT mode", which builds the CSS on demand, rather than at build time. It's fundamentally incompatible with our current architecture of prebuilding a CSS bundle in the Lookbook and distributing it to the apps.
