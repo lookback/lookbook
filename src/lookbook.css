@@ -1,11 +1,7 @@
-@charset "utf-8";
+@import 'reset' layer(lookbook.base);
 
-/*
-* The LOOKBOOK
-*
-* Copyright Lookback
-*/
+@import 'setup' layer(lookbook.base);
 
-@import 'base.css';
+@import 'components' layer(lookbook.components);
 
-@import 'utils.css';
+@import 'utils' layer(lookbook.utils);

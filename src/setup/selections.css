@@ -1,7 +1,3 @@
-/*
-TEXT SELECTIONS
-----------------------------------------------------------------*/
-
 ::selection {
   background-color: var(--selection-background);
   color: var(--selection-color);

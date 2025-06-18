@@ -1,7 +1,3 @@
-/*
-HTML ELEMENTS
-----------------------------------------------------------------*/
-
 :where(abbr[title], abbr[data-tooltip]) {
   cursor: help;
 }
