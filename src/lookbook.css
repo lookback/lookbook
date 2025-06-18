@@ -1,4 +1,4 @@
-@import 'figma-variables.css' layer(base);
+@import 'figma-variables.css' layer(theme);
 
 @import 'reset' layer(lookbook.base);
 

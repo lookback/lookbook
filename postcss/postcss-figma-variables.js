@@ -33,15 +33,13 @@ const plugin = () => {
               }
               return true;
             })
-            .map((t) => {
-              // If the variable is an alias, use the target name instead of the raw value.
-              const value = t.target ? `var(--${t.target})` : unitOf(t);
-
-              return new Declaration({
-                prop: `--${t.name}`,
-                value,
-              });
-            });
+            .map(
+              (t) =>
+                new Declaration({
+                  prop: `--${t.name}`,
+                  value: mapVariable(t, result),
+                })
+            );
         };
 
         atRule.replaceWith([
@@ -54,19 +52,53 @@ const plugin = () => {
   };
 };
 
+const FONT_WEIGHT_MAP = {
+  thin: 100,
+  extralight: 200,
+  light: 300,
+  normal: 400,
+  regular: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+  extrabold: 800,
+  black: 900,
+};
+
+/**
+ * @param {FigmaVariable} t
+ * @param {import('postcss').Result} result
+ */
+const mapVariable = (t, result) => {
+  // If the variable is an alias, use the target name instead of the raw value.
+  if (t.target) return `var(--${t.target})`;
+
+  if (t.name.startsWith('font-weight')) {
+    const weight = FONT_WEIGHT_MAP[t.value.toLowerCase()];
+    if (!weight) {
+      result.warn(`Unknown font weight "${t.value}" for variable "${t.name}".`);
+      return t.value;
+    }
+
+    return weight;
+  }
+
+  return t.value + unitOf(t);
+};
+
 const UNIT_LESS = ['leading'];
 
 /** @param {FigmaVariable} t */
 const unitOf = (t) => {
   if (UNIT_LESS.some((needle) => t.name.includes(needle))) {
-    return t.value;
+    return '';
   }
 
   if (typeof t.value === 'number') {
-    return `${t.value}px`;
+    return 'px';
   }
 
-  return t.value;
+  return '';
 };
 
 plugin.postcss = true;

@@ -649,7 +649,7 @@
       "description": null
     },
     {
-      "name": "font-sans",
+      "name": "font-inter",
       "value": "Inter",
       "target": null,
       "description": null
@@ -721,14 +721,8 @@
       "description": null
     },
     {
-      "name": "tracking-tighter",
-      "value": "-0.05em",
-      "target": null,
-      "description": null
-    },
-    {
       "name": "tracking-tight",
-      "value": "-0.11em",
+      "value": "-0.011em",
       "target": null,
       "description": null
     },
@@ -779,7 +773,7 @@
     {
       "name": "button-font-family",
       "value": "Inter",
-      "target": "font-sans",
+      "target": "font-inter",
       "description": null
     },
     {
@@ -965,7 +959,7 @@
     {
       "name": "modal-header-font-weight",
       "value": "Semibold",
-      "target": null,
+      "target": "font-weight-bold",
       "description": null
     },
     {
@@ -1019,7 +1013,7 @@
     {
       "name": "font-body",
       "value": "Inter",
-      "target": "font-sans",
+      "target": "font-inter",
       "description": null
     },
     {
@@ -1044,6 +1038,66 @@
       "name": "tracking-body",
       "value": "-0.009em",
       "target": "tracking-normal",
+      "description": null
+    },
+    {
+      "name": "leading-heading",
+      "value": 1.45,
+      "target": "leading-snug",
+      "description": null
+    },
+    {
+      "name": "tracking-heading",
+      "value": "-0.011em",
+      "target": "tracking-tight",
+      "description": null
+    },
+    {
+      "name": "font-weight-heading",
+      "value": "Semibold",
+      "target": "font-weight-bold",
+      "description": null
+    },
+    {
+      "name": "selection-bg",
+      "value": "oklch(0.9318985841255369 0.03240637128799265 270.3926431217407)",
+      "target": "color-purple-100",
+      "description": null
+    },
+    {
+      "name": "color-link",
+      "value": "oklch(0.49520078456250793 0.14479214891924955 256.96105608148923)",
+      "target": "color-blue-700",
+      "description": null
+    },
+    {
+      "name": "color-link-hover",
+      "value": "oklch(0.3992558242730704 0.10787932215196669 255.99294911345658)",
+      "target": "color-blue-800",
+      "description": null
+    },
+    {
+      "name": "spinner-fg",
+      "value": "oklch(0.3992558242730704 0.10787932215196669 255.99294911345658)",
+      "target": "color-blue-800",
+      "description": "Foreground of spinner."
+    },
+    {
+      "name": "spinner-bg",
+      "value": "oklch(0.8941095231263522 0.01543178963329343 61.34702443294979)",
+      "target": "color-grey-300",
+      "description": null
+    },
+    {
+      "name": "input-radius",
+      "value": 6,
+      "target": "radius-sm",
+      "description": null
+    },
+    {
+      "name": "selection-text-color",
+      "value": "oklch(0.2564237319699434 0.08626987616179185 280.2665803339628)",
+      "target": "color-purple-950",
       "description": null
     }
   ],
@@ -1208,6 +1262,18 @@
       "name": "color-accent",
       "value": "oklch(0.5926918663435724 0.1492319661621314 254.13696672631704)",
       "target": "color-blue-600",
+      "description": null
+    },
+    {
+      "name": "callout-bg",
+      "value": "oklch(0.5533924663310683 0.18965288422289175 279.6002068504981)",
+      "target": "color-purple-600",
+      "description": null
+    },
+    {
+      "name": "callout-text-color",
+      "value": "oklch(0.9618954411988504 0.017969588086076016 272.2006356545273)",
+      "target": "color-purple-50",
       "description": null
     }
   ]
