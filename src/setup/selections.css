@@ -1,4 +1,9 @@
 ::selection {
-  background-color: var(--selection-background);
-  color: var(--selection-color);
+  background-color: var(--selection-bg);
+  color: var(--selection-text-color);
+}
+
+::target-text {
+  background-color: var(--callout-bg);
+  color: var(--callout-text-color);
 }

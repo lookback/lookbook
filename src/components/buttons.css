@@ -1,4 +1,4 @@
-.btn {
+/* .btn {
   --bg: var(--blue-80);
   --bg-active: var(--blue-90);
   --bg-disabled: var(--grey-30);
@@ -11,7 +11,7 @@
   --text-hover: #fff;
   --outline-color: var(--bg-focused);
 
-  border-radius: theme('borderRadius.lg');
+  border-radius: var(--button-radius);
   position: relative;
   text-align: center;
   display: inline-block;
@@ -195,4 +195,4 @@
       --outline-color: var(--red-80);
     }
   }
-}
+} */

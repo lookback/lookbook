@@ -36,8 +36,17 @@ A regular spinner
 .Spinner {
   /* Base size. */
   --size: 2rem;
-  --bg: color(theme('colors.grey-90') alpha(20%));
-  --fg: color(theme('colors.blue-80') alpha(80%));
+  --bg: var(--spinner-bg);
+  --fg: var(--spinner-fg);
+  text-indent: -9999em;
+  display: inline-block;
+  font-size: var(--size);
+  position: relative;
+  aspect-ratio: 1;
+  /* 
+   * Pythagoras to determine the tallest bounding box we need to ensure the height remains fixed when the `::after` element rotates, that is the extreme at 45deg.
+   */
+  height: calc(sqrt(2) * 1em);
 
   &::after {
     content: ' ';
@@ -57,22 +66,8 @@ A regular spinner
     animation: spinner 0.8s infinite linear;
   }
 
-  display: inline-block;
-  font-size: var(--size);
-  position: relative;
-  aspect-ratio: 1;
-  /* 
-   * Pythagoras to determine the tallest bounding box we need to ensure the height remains fixed when the `::after` element rotates, that is the extreme at 45deg.
-   */
-  height: calc(sqrt(2) * 1em);
-
   &--light {
-    --bg: color(theme('colors.grey-30') alpha(20%));
-    --fg: color(theme('colors.grey-30') alpha(90%));
-  }
-
-  @media screen and (prefers-color-scheme: dark) {
-    --bg: color(theme('colors.grey-40') alpha(20%));
-    --fg: color(theme('colors.grey-30') alpha(80%));
+    --bg: var(--spinner-fg);
+    --fg: var(--spinner-bg);
   }
 }

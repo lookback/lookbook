@@ -3,36 +3,32 @@
 }
 
 a {
-  color: var(--link-color);
+  color: var(--color-link);
   text-decoration: none;
 
   &:hover {
-    color: var(--link-color-hover);
+    color: var(--color-link-hover);
     text-decoration: underline;
   }
 }
 
 :where(dt, summary) {
-  font-weight: 600;
-}
-
-:where(code, pre, tt, kbd, samp) {
-  font-family: theme('fontFamily.mono');
+  font-weight: bold;
 }
 
 pre {
-  border-radius: theme('borderRadius.lg');
-  font-size: theme('fontSize.f6');
-  padding: theme('spacing.3');
-  background-color: var(--blue-90);
-  color: white;
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  padding: var(--spacing-5);
+  background-color: var(--info-bg);
+  color: var(--info-text-color);
 }
 
 :where(code, kbd, mark) {
-  border-radius: theme('borderRadius.DEFAULT');
-  color: var(--grey-100);
+  border-radius: var(--radius-xs);
+  color: var(--color-grey-900);
   padding: 0.1em 0.4em;
-  background-color: var(--grey-40);
+  background-color: var(--color-grey-200);
 }
 
 code {
@@ -48,8 +44,8 @@ pre code {
 }
 
 kbd {
-  --border: var(--grey-60);
-  font-family: theme('fontFamily.sans');
+  --border: var(--color-grey-600);
+  font-family: var(--font-sans);
   font-weight: bold;
   background-color: #fefefe;
   border: 1px solid var(--border);
@@ -58,10 +54,6 @@ kbd {
 }
 
 mark {
-  background-color: var(--orange-30);
-  color: var(--orange-80);
-}
-
-figcaption {
-  color: var(--grey-80);
+  background-color: var(--callout-bg);
+  color: var(--callout-text-color);
 }

@@ -1,9 +1,8 @@
 :where(h1, h2, h3, h4, h5, h6) {
-  line-height: theme('lineHeight.tight');
-  letter-spacing: theme('letterSpacing.heading');
-  margin-bottom: theme('spacing.2');
-  font-weight: bold;
-  color: var(--heading-color);
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
+  margin-bottom: var(--spacing-2);
+  font-weight: var(--font-weight-heading);
 }
 
 :where(h1, h2, h3) {
@@ -11,25 +10,25 @@
 }
 
 h1 {
-  font-size: theme('fontSize.f1');
+  font-size: var(--text-3xl);
 }
 
 h2 {
-  font-size: theme('fontSize.f2');
+  font-size: var(--text-2xl);
 }
 
 h3 {
-  font-size: theme('fontSize.f3');
+  font-size: var(--text-xl);
 }
 
 h4 {
-  font-size: theme('fontSize.f4');
+  font-size: var(--text-lg);
 }
 
 h5 {
-  font-size: theme('fontSize.f5');
+  font-size: var(--text-base);
 }
 
 h6 {
-  font-size: theme('fontSize.f6');
+  font-size: var(--text-sm);
 }
