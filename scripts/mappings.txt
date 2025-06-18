@@ -1,0 +1,2 @@
+text-f1=text-xm
+theme(spacing.2)=var(--spacing-2)
