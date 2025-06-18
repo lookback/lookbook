@@ -11,7 +11,8 @@
     "build": "mkdir dist && cp colors.json dist/colors.json && npm run build:css && npm run generate-types",
     "build:css": "postcss src/lookbook.css --no-map --dir dist --verbose",
     "generate-types": "scripts/generate-types",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "vars": "echo '@figma-variables' | postcss --no-map"
   },
   "repository": {
     "type": "git",
