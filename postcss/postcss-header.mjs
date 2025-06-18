@@ -1,5 +1,5 @@
 // Inlined from https://github.com/fengyuanchen/postcss-header (MIT)
-const header = (options = {}) => {
+export default (options = {}) => {
   options = Object.assign(
     {
       header: '',
@@ -26,5 +26,4 @@ const header = (options = {}) => {
   };
 };
 
-module.exports = header;
-module.exports.postcss = true;
+export const postcss = true;
