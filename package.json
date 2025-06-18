@@ -9,12 +9,12 @@
     "prebuild": "npm run clean",
     "start": "scripts/watch",
     "test": "[ -z \"$CI\" ] && pa11y ./test/test.html || mkdir -p test-output && cp dist/lookbook.css test/lookbook.css && pa11y -S ./test-output/screenshot.png --config test/pa11y.config.json -r html ./test/test.html > test-output/results.html",
-    "build": "mkdir dist && cp colors.json dist/colors.json && scripts/build --full && npm run generate-types",
+    "build": "mkdir dist && cp colors.json dist/colors.json && npm run build:css && npm run generate-types",
+    "build:css": "postcss src/lookbook.css --no-map --dir dist --verbose",
     "update-colors": "scripts/fetch-figma-colors && npm run generate-types",
     "generate-types": "scripts/generate-types",
     "dist": "scripts/distribute \"dist/*.{css,json}\"",
-    "prepublishOnly": "npm run build",
-    "sizes": "mkdir -p sizes && ./scripts/sizes.sh --json > ./sizes/sizes.json && ./scripts/sizes.sh --html > ./sizes/sizes.html"
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
