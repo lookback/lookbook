@@ -7,14 +7,13 @@
   "scripts": {
     "clean": "rm -rf dist",
     "prebuild": "npm run clean",
-    "start": "scripts/watch",
     "test": "[ -z \"$CI\" ] && pa11y ./test/test.html || mkdir -p test-output && cp dist/lookbook.css test/lookbook.css && pa11y -S ./test-output/screenshot.png --config test/pa11y.config.json -r html ./test/test.html > test-output/results.html",
-    "build": "mkdir dist && cp colors.json dist/colors.json && scripts/build --full && npm run generate-types",
-    "update-colors": "scripts/fetch-figma-colors && npm run generate-types",
+    "start": "npm run build:css -- --watch",
+    "build": "mkdir dist && cp colors.json dist/colors.json && npm run build:css && npm run generate-types",
+    "build:css": "postcss src/lookbook.css --no-map --dir dist --verbose",
     "generate-types": "scripts/generate-types",
-    "dist": "scripts/distribute \"dist/*.{css,json}\"",
     "prepublishOnly": "npm run build",
-    "sizes": "mkdir -p sizes && ./scripts/sizes.sh --json > ./sizes/sizes.json && ./scripts/sizes.sh --html > ./sizes/sizes.html"
+    "vars": "echo '@figma-variables' | postcss --no-map"
   },
   "repository": {
     "type": "git",
@@ -39,24 +38,20 @@
   },
   "homepage": "https://github.com/lookback/lookbook#readme",
   "devDependencies": {
+    "@figma/plugin-typings": "*",
     "aws-sdk": "^2",
     "fast-glob": "^3",
     "pa11y": "^8",
     "postcss": "^8",
     "postcss-cli": "^11",
-    "prettier": "=2.0.5",
-    "@figma/plugin-typings": "*"
+    "postcss-import": "^16.1.1",
+    "prettier": "=2.0.5"
   },
   "peerDependencies": {
-    "postcss": "^8"
-  },
-  "dependencies": {
-    "@csstools/postcss-minify": "^2",
-    "@fullhuman/postcss-purgecss": "^6",
-    "autoprefixer": "^10",
-    "postcss-color-function": "^4",
+    "tailwindcss": "^4",
+    "@tailwindcss/postcss": "^4",
+    "postcss": "^8",
     "postcss-import": "^16",
-    "postcss-nested": "^7",
-    "tailwindcss": "=2.0.2"
+    "postcss-nested": "^7"
   }
 }

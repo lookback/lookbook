@@ -1,0 +1,14 @@
+/*
+Gradually appearing dots after text.
+
+Usage:
+
+<h1 class="LoadingDots>Loading</h1>
+----------------------------------------------------------------*/
+
+.LoadingDots {
+  &::after {
+    content: '.';
+    animation: dots 1.5s steps(5, end) infinite;
+  }
+}
