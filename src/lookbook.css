@@ -1,20 +1,20 @@
 @layer theme, /* Tailwind */
   base, /* Tailwind */
-  lookbook.base,
+  lookbook-base,
   components, /* Tailwind */
-  lookbook.components,
+  lookbook-components,
   app,
   utilities, /* Tailwind */
-  lookbook.utils;
+  lookbook-utils;
 
 /* =inject-tailwind */
 
 @import 'figma-variables.css' layer(theme);
 
-@import 'reset' layer(lookbook.base);
+@import 'reset' layer(lookbook-base);
 
-@import 'setup' layer(lookbook.base);
+@import 'setup' layer(lookbook-base);
 
-@import 'components' layer(lookbook.components);
+@import 'components' layer(lookbook-components);
 
-@import 'utils' layer(lookbook.utils);
+@import 'utils' layer(lookbook-utils);
