@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 set -eo pipefail
 
-source "$(dirname "$0")/config.sh"
-
 # Script to perform multiple find and replace operations on files or all files in a directory
 # Usage: ./scripts/find-replace [options] <file_or_directory>
 # Options:
