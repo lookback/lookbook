@@ -1,3 +1,3 @@
-const colors = require('./colors.json');
+exports.colors = require('./colors.json');
 
-exports.colors = colors;
+exports.foundation = require('./lib/foundation');
