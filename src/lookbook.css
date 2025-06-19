@@ -1,3 +1,12 @@
+@layer theme, /* Tailwind */
+  base, /* Tailwind */
+  lookbook.base,
+  components, /* Tailwind */
+  lookbook.components,
+  app,
+  utilities, /* Tailwind */
+  lookbook.utils;
+
 @import 'figma-variables.css' layer(theme);
 
 @import 'reset' layer(lookbook.base);
