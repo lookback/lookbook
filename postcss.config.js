@@ -11,5 +11,6 @@ module.exports = (ctx) => ({
       } ${new Date().toISOString()} */`,
     },
     './postcss/postcss-figma-variables': {},
+    './postcss/postcss-inject-tailwind': {},
   },
 });

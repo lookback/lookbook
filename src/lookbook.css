@@ -7,6 +7,8 @@
   utilities, /* Tailwind */
   lookbook.utils;
 
+/* =inject-tailwind */
+
 @import 'figma-variables.css' layer(theme);
 
 @import 'reset' layer(lookbook.base);
