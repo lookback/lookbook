@@ -185,7 +185,7 @@
   --font-weight-heading: var(--font-weight-bold);
   --tracking-heading: var(--tracking-tight);
   --leading-heading: var(--leading-snug);
-  --color-outline: var(--color-blue-800);
+  --color-outline: var(--color-focus-border);
   --color-button-primary-default-bg: var(--color-blue-900);
   --button-radius: var(--radius-2xl);
   --color-button-primary-default-text: var(--color-white);

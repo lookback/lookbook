@@ -2143,9 +2143,9 @@
         "b": 0.501960813999176,
         "a": 1
       },
-      "target": "blue-800",
+      "target": "focus-border",
       "type": "COLOR",
-      "description": null
+      "description": "This controls the top level `outline` property for the `:focus-visible`."
     }
   ]
 }
