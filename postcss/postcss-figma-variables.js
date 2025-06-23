@@ -9,13 +9,18 @@
 
 /** Add Figma variables as Tailwind @theme variables.
  *
+ * This plugin will find a `@figma-variables` mark in the input and replace it with `--var: name` declarations.
+ * Thus, the `@figma-variables` mark MUST be inside of a valid selector, such as `:root`.
+ *
+ * @param {object} options
+ * @param {object} options.variables The imported Figma variables, such as `require('./gen/figma-variables.json')`.
  * @return {import('postcss').Plugin}
  */
 const plugin = ({ variables }) => {
   const { theme, semantic, primitives } = variables;
 
   return {
-    postcssPlugin: 'postcss-tokens',
+    postcssPlugin: 'postcss-figma-variables',
 
     AtRule: {
       'figma-variables': (atRule, { Declaration, result }) => {
@@ -36,7 +41,7 @@ const plugin = ({ variables }) => {
               (v) =>
                 new Declaration({
                   prop: `--${nameOf(v.name, v.type)}`,
-                  value: mapVariable(v, result),
+                  value: transformValue(v, result),
                 })
             );
         };
@@ -82,7 +87,7 @@ const FONT_WEIGHT_MAP = {
  * @param {FigmaVariable} v
  * @param {import('postcss').Result} result
  */
-const mapVariable = (v, result) => {
+const transformValue = (v, result) => {
   // If the variable is an alias, use the target name instead of the raw value.
   if (v.target) return `var(--${nameOf(v.target, v.type)})`;
 
@@ -96,14 +101,37 @@ const mapVariable = (v, result) => {
     return weight;
   }
 
+  if (REM_UNIT.some((prefix) => v.name.startsWith(prefix))) {
+    if (typeof v.value === 'number') {
+      const rem = v.value / 16;
+      return `${rem}rem`;
+    } else {
+      result.warn(
+        `"${v.name}" is marked as using the rem unit, but value is not a number: ${v.value}`
+      );
+    }
+  }
+
   return valueOf(v) + unitOf(v);
 };
 
-const UNIT_LESS = ['leading'];
+const UNIT_LESS = ['leading-'];
+
+const REM_UNIT = [
+  'spacing-',
+  'text-xs',
+  'text-sm',
+  'text-base',
+  'text-lg',
+  'text-xl',
+  'text-2xl',
+  'text-3xl',
+  'text-4xl',
+];
 
 /** @param {FigmaVariable} v */
 const unitOf = (v) => {
-  if (UNIT_LESS.some((needle) => v.name.includes(needle))) {
+  if (UNIT_LESS.some((needle) => v.name.startsWith(needle))) {
     return '';
   }
 
