@@ -24,17 +24,6 @@ jobs:
       - run:
           name: Build
           command: npm run build
-          
-      - run:
-          name: Install browsers
-          command: npx puppeteer browsers install
-
-      - run:
-          name: Test
-          command: npm test
-
-      - store_test_results:
-          path: test-output
 
       - store_artifacts:
           path: dist

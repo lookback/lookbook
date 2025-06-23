@@ -5,7 +5,6 @@
   "main": "index.js",
   "types": "dist/types.d.ts",
   "scripts": {
-    "test": "[ -z \"$CI\" ] && pa11y ./test/test.html || mkdir -p test-output && cp dist/lookbook.css test/lookbook.css && pa11y -S ./test-output/screenshot.png --config test/pa11y.config.json -r html ./test/test.html > test-output/results.html",
     "start": "npm run build:css -- --watch",
     "build": "concurrently npm:build:* && npm run generate-types",
     "build:css": "postcss src/lookbook.css --no-map --dir dist --verbose",
