@@ -4,12 +4,13 @@
 
 Lookback's central location for shared colors and styles ✨ This repository is a build chain for building a distributable `.css` file for use in various web products of Lookback.
 
-* [Test bed site](https://lookback.github.io/lookbook-website/).
-* [Figma design system](https://www.figma.com/design/1MVapBNE9WPwEqYvahvYCJ/Design-System?node-id=405-151&p=f&t=syfRRAjNOEOEl23I-11).
+- [Test bed site](https://lookback.github.io/lookbook-website/).
+- [Figma design system](https://www.figma.com/design/1MVapBNE9WPwEqYvahvYCJ/Design-System?node-id=405-151&p=f&t=syfRRAjNOEOEl23I-11).
 
 ## Usage
 
 1. Install dependencies:
+
 ```bash
 npm install --save @lookback/lookbook tailwindcss @tailwindcss/postcss postcss postcss-cli
 ```
@@ -65,6 +66,6 @@ This repo includes a Figma plugin to generate the design tokens from our design 
 
 ### Generating the tokens
 
-1. `Plugins -> Developmenet -> Lookback Export Variables`.
+1. `Plugins -> Development -> Lookback Export Variables`.
 2. Save into this repo as `gen/figma-variables.json`. Replace existing.
 3. Done. Inspect the diff.
