@@ -1,6 +1,6 @@
 # The Lookbook 💅
 
-[![](https://img.shields.io/circleci/token/72b49f88c10f93d0d86ff25d730453d300d10671/project/github/lookback/lookbook/master.svg?style=flat-square)](https://circleci.com/gh/lookback/lookbook)
+[![CircleCI](https://app.circleci.com/pipelines/github/lookback/lookbook?branch=main)](https://app.circleci.com/pipelines/github/lookback/lookbook?branch=main)
 
 Lookback's central location for shared colors and styles ✨ This repository is a build chain for building a distributable `.css` file for use in various web products of Lookback.
 
