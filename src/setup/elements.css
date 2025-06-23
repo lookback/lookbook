@@ -20,8 +20,8 @@ pre {
   border-radius: var(--radius-md);
   font-size: var(--text-sm);
   padding: var(--spacing-5);
-  background-color: var(--info-bg);
-  color: var(--info-text-color);
+  background-color: var(--color-info-bg);
+  color: var(--color-info-text);
 }
 
 :where(code, kbd, mark) {
@@ -54,6 +54,6 @@ kbd {
 }
 
 mark {
-  background-color: var(--callout-bg);
-  color: var(--callout-text-color);
+  background-color: var(--color-callout-bg);
+  color: var(--color-callout-text);
 }

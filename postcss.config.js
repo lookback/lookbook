@@ -1,4 +1,5 @@
 const pkg = require('./package.json');
+const variables = require('./gen/figma-variables.json');
 
 // Internal config, used to build *this* .css.
 module.exports = (ctx) => ({
@@ -10,7 +11,9 @@ module.exports = (ctx) => ({
         pkg.version
       } ${new Date().toISOString()} */`,
     },
-    './postcss/postcss-figma-variables': {},
+    './postcss/postcss-figma-variables': {
+      variables,
+    },
     './postcss/postcss-inject-tailwind': {},
   },
 });

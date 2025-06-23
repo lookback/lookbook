@@ -1,3 +1,3 @@
-exports.colors = require('./colors.json');
+exports.colors = require('./dist/colors.json');
 
 exports.foundation = require('./lib/foundation');

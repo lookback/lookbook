@@ -18,9 +18,9 @@
     'calt' 1, /* Contextual alternates */
     'ss03' 1, /* Round quotes & comma */
     'case' 1 /* Case alternates */;
-  background-color: var(--bg-body);
+  background-color: var(--color-bg-body);
   letter-spacing: var(--tracking-body);
-  color: var(--text-body);
+  color: var(--color-text-body);
   accent-color: var(--color-accent);
 }
 

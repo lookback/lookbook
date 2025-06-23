@@ -64,16 +64,13 @@ async function tokenOf(v) {
  */
 function nameOf(v) {
   const groups = v.name.split('/');
-  const parentGroup = groups[groups.length - 2];
   const name = groups[groups.length - 1];
 
   if (name == null) {
     throw new Error(`Couldn't make good name for: ${v.name}`);
   }
 
-  // Colors are special. We want them to be `--color-{name}` to suit Tailwind's config, but it's just
-  // clutter in Figma.
-  return parentGroup == 'color' ? `color-${name}` : name;
+  return name;
 }
 
 /**

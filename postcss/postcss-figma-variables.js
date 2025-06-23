@@ -1,5 +1,3 @@
-const json = require('../gen/figma-variables.json');
-
 /**
  * @typedef {object} FigmaVariable
  * @property {string} name The name of the variable.
@@ -13,21 +11,21 @@ const json = require('../gen/figma-variables.json');
  *
  * @return {import('postcss').Plugin}
  */
-const plugin = () => {
-  const { theme, semantic, primitives } = json;
+const plugin = ({ variables }) => {
+  const { theme, semantic, primitives } = variables;
 
   return {
     postcssPlugin: 'postcss-tokens',
 
     AtRule: {
       'figma-variables': (atRule, { Declaration, result }) => {
-        /** @param {FigmaVariable[]} tokens */
-        const declOf = (tokens) => {
-          return tokens
-            .filter((t) => {
-              if (/\s+/.test(t.name)) {
+        /** @param {FigmaVariable[]} variables */
+        const declOf = (variables) => {
+          return variables
+            .filter((v) => {
+              if (/\s+/.test(v.name)) {
                 result.warn(
-                  `Skipping variable "${t.name}" as it contains whitespace.`,
+                  `Skipping variable "${v.name}" as it contains whitespace.`,
                   { node: atRule }
                 );
                 return false;
@@ -35,10 +33,10 @@ const plugin = () => {
               return true;
             })
             .map(
-              (t) =>
+              (v) =>
                 new Declaration({
-                  prop: `--${t.name}`,
-                  value: mapVariable(t, result),
+                  prop: `--${nameOf(v.name, v.type)}`,
+                  value: mapVariable(v, result),
                 })
             );
         };
@@ -51,6 +49,20 @@ const plugin = () => {
       },
     },
   };
+};
+
+/**
+ * @param {string} name
+ * @param {VariableResolvedDataType} type
+ * @param {import('postcss').Result} result
+ */
+const nameOf = (name, type) => {
+  // We prepend color- to make sure Tailwind can use it as a color.
+  if (type == 'COLOR') {
+    return `color-${name}`;
+  }
+
+  return name;
 };
 
 const FONT_WEIGHT_MAP = {
@@ -72,7 +84,7 @@ const FONT_WEIGHT_MAP = {
  */
 const mapVariable = (v, result) => {
   // If the variable is an alias, use the target name instead of the raw value.
-  if (v.target) return `var(--${v.target})`;
+  if (v.target) return `var(--${nameOf(v.target, v.type)})`;
 
   if (v.name.startsWith('font-weight')) {
     const weight = FONT_WEIGHT_MAP[v.value.toLowerCase()];
@@ -89,13 +101,13 @@ const mapVariable = (v, result) => {
 
 const UNIT_LESS = ['leading'];
 
-/** @param {FigmaVariable} t */
-const unitOf = (t) => {
-  if (UNIT_LESS.some((needle) => t.name.includes(needle))) {
+/** @param {FigmaVariable} v */
+const unitOf = (v) => {
+  if (UNIT_LESS.some((needle) => v.name.includes(needle))) {
     return '';
   }
 
-  if (typeof t.value === 'number') {
+  if (typeof v.value === 'number') {
     return 'px';
   }
 
