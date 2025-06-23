@@ -1275,7 +1275,7 @@
     {
       "name": "button-radius",
       "value": 9999,
-      "target": "radius-2xl",
+      "target": null,
       "type": "FLOAT",
       "description": null
     },
@@ -1313,7 +1313,7 @@
       "description": null
     },
     {
-      "name": "button-secondary-text-color",
+      "name": "button-secondary-text",
       "value": {
         "r": 0.10196078568696976,
         "g": 0.27843138575553894,
@@ -1417,8 +1417,8 @@
     },
     {
       "name": "button-padding-inline",
-      "value": 32,
-      "target": "spacing-8",
+      "value": 20,
+      "target": "spacing-6",
       "type": "FLOAT",
       "description": null
     },
@@ -1447,7 +1447,7 @@
       "description": null
     },
     {
-      "name": "button-border-color",
+      "name": "button-border",
       "value": {
         "r": 0.843137264251709,
         "g": 0.7960784435272217,
@@ -1473,7 +1473,7 @@
       "description": null
     },
     {
-      "name": "button-hover-border-color",
+      "name": "button-hover-border",
       "value": {
         "r": 0.7215686440467834,
         "g": 0.6470588445663452,
@@ -1620,14 +1620,7 @@
       "description": null
     },
     {
-      "name": "button-height 2",
-      "value": 40,
-      "target": "spacing-9",
-      "type": "FLOAT",
-      "description": null
-    },
-    {
-      "name": "button-secondary-hover-text-color",
+      "name": "button-secondary-hover-text",
       "value": {
         "r": 0.0470588244497776,
         "g": 0.10980392247438431,

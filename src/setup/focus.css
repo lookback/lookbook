@@ -8,7 +8,7 @@
 outline instead of border for focus anyway. */
 :is(:focus-visible, button:focus-visible):not(input, select, textarea, [contenteditable]) {
   outline: 3px solid var(--color-outline, black);
-  outline-offset: 0.1em;
+  outline-offset: 0.15em;
   box-shadow: 0 0 0 6px white;
 }
 

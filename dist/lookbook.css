@@ -187,12 +187,12 @@
   --leading-heading: var(--leading-snug);
   --color-outline: var(--color-focus-border);
   --color-button-primary-default-bg: var(--color-blue-900);
-  --button-radius: var(--radius-2xl);
+  --button-radius: 9999px;
   --color-button-primary-default-text: var(--color-white);
   --button-font-size: var(--text-base);
   --button-font-family: var(--font-inter);
   --button-font-weight: var(--font-weight-bold);
-  --color-button-secondary-text-color: var(--color-blue-800);
+  --color-button-secondary-text: var(--color-blue-800);
   --color-button-tertiary-text: var(--color-grey-800);
   --color-button-success-bg: var(--color-success-bg-strong);
   --color-button-success-text: var(--color-white);
@@ -201,13 +201,13 @@
   --color-button-primary-cta-text-color: var(--color-blue-900);
   --color-button-primary-cta-bg: var(--color-white);
   --button-height: var(--spacing-9);
-  --button-padding-inline: var(--spacing-8);
+  --button-padding-inline: var(--spacing-6);
   --color-button-primary-default-hover-bg: var(--color-blue-800);
   --color-button-primary-cta-hover-text-color: var(--color-blue-950);
-  --color-button-border-color: var(--color-grey-400);
+  --color-button-border: var(--color-grey-400);
   --button-border-width: var(--border-width-2);
   --button-secondary-hover-decoration: Underline;
-  --color-button-hover-border-color: var(--color-grey-600);
+  --color-button-hover-border: var(--color-grey-600);
   --color-button-tertiary-hover-text: var(--color-grey-950);
   --button-tertiary-hover-decoration: Underline;
   --color-button-success-hover-bg: var(--color-success-hover-bg-strong);
@@ -223,7 +223,7 @@
   --modal-header-font-size: var(--text-lg);
   --modal-header-font-weight: var(--font-weight-bold);
   --color-modal-bg: var(--color-white);
-  --color-button-secondary-hover-text-color: var(--color-blue-950);
+  --color-button-secondary-hover-text: var(--color-blue-950);
   --color-input-placeholder-text-color: var(--color-grey-800);
   --color-input-bg-color: var(--color-grey-50);
   --color-input-text-color: var(--color-blue-900);
@@ -236,6 +236,7 @@
 }
 
 @theme {
+  /** This was missing from the builtin Tailwind utils. */
   --spacing-0: 0;
 }
 
@@ -243,6 +244,13 @@
 @theme inline {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@media (resolution: 1x) {
+  :root {
+    /* This is 1.5px in Figma. */
+    --border-width-2: 2px;
+  }
 }
 }
 
@@ -336,7 +344,7 @@ legend {
 outline instead of border for focus anyway. */
 :is(:focus-visible, button:focus-visible):not(input, select, textarea, [contenteditable]) {
   outline: 3px solid var(--color-outline, black);
-  outline-offset: 0.1em;
+  outline-offset: 0.15em;
   box-shadow: 0 0 0 6px white;
 }
 
@@ -644,6 +652,48 @@ fieldset {
 }
 
 @layer lookbook-components{
+
+.btn {
+  --bg: var(--color-button-primary-default-bg);
+  --text: var(--color-button-primary-default-text);
+  --text-active: var(--text);
+
+  display: inline-flex;
+  gap: var(--spacing-3);
+  align-items: center;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  user-select: none;
+  white-space: nowrap;
+  transition: box-shadow 150ms ease-out;
+
+  font-weight: var(--button-font-weight);
+  border-radius: var(--button-radius);
+  height: var(--button-height);
+  padding-inline: var(--button-padding-inline);
+  font-family: var(--button-font-family);
+  background-color: var(--bg);
+  color: var(--text);
+  border: 0 solid var(--color-button-border);
+
+  &:where(:focus, :hover, :active) {
+    text-decoration: none;
+  }
+
+  &:active {
+    border-color: var(--color-button-hover-border);
+    color: var(--text-active);
+    background-color: var(--color-button-hover-bg);
+  }
+
+  &-secondary {
+    --bg: none;
+    --text: var(--color-button-secondary-text);
+    --text-active: var(--color-button-secondary-hover-text);
+    border-width: var(--button-border-width);
+  }
+}
+
 /* .btn {
   --bg: var(--blue-80);
   --bg-active: var(--blue-90);

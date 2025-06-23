@@ -10,6 +10,7 @@
 }
 
 @theme {
+  /** This was missing from the builtin Tailwind utils. */
   --spacing-0: 0;
 }
 
@@ -17,4 +18,11 @@
 @theme inline {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@media (resolution: 1x) {
+  :root {
+    /* This is 1.5px in Figma. */
+    --border-width-2: 2px;
+  }
 }

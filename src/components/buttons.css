@@ -1,3 +1,44 @@
+.btn {
+  --bg: var(--color-button-primary-default-bg);
+  --text: var(--color-button-primary-default-text);
+  --text-active: var(--text);
+
+  display: inline-flex;
+  gap: var(--spacing-3);
+  align-items: center;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  user-select: none;
+  white-space: nowrap;
+  transition: box-shadow 150ms ease-out;
+
+  font-weight: var(--button-font-weight);
+  border-radius: var(--button-radius);
+  height: var(--button-height);
+  padding-inline: var(--button-padding-inline);
+  font-family: var(--button-font-family);
+  background-color: var(--bg);
+  color: var(--text);
+  border: 0 solid var(--color-button-border);
+
+  &:where(:focus, :hover, :active) {
+    text-decoration: none;
+  }
+
+  &:active {
+    border-color: var(--color-button-hover-border);
+    color: var(--text-active);
+    background-color: var(--color-button-hover-bg);
+  }
+
+  &-secondary {
+    --bg: none;
+    --text: var(--color-button-secondary-text);
+    --text-active: var(--color-button-secondary-hover-text);
+    border-width: var(--button-border-width);
+  }
+}
+
 /* .btn {
   --bg: var(--blue-80);
   --bg-active: var(--blue-90);
