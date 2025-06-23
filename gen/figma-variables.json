@@ -2,1278 +2,2137 @@
   "primitives": [
     {
       "name": "color-grey-950",
-      "value": "oklch(0.29585763349948846 0.015857620516237233 58.97110783172263)",
+      "value": {
+        "r": 0.20000000298023224,
+        "g": 0.16862745583057404,
+        "b": 0.14509804546833038,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-grey-900",
-      "value": "oklch(0.42055464277250465 0.017629829299455838 57.20727998394062)",
+      "value": {
+        "r": 0.3333333432674408,
+        "g": 0.29411765933036804,
+        "b": 0.2666666805744171,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-grey-800",
-      "value": "oklch(0.5128226971186197 0.021715263646084042 56.8926971260039)",
+      "value": {
+        "r": 0.4431372582912445,
+        "g": 0.3921568691730499,
+        "b": 0.35686275362968445,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-grey-700",
-      "value": "oklch(0.6445190811447986 0.025161898688078468 56.7458039076113)",
+      "value": {
+        "r": 0.6039215922355652,
+        "g": 0.5411764979362488,
+        "b": 0.49803921580314636,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-grey-600",
-      "value": "oklch(0.7339257262016716 0.03164836056507093 62.42273383732768)",
+      "value": {
+        "r": 0.7215686440467834,
+        "g": 0.6470588445663452,
+        "b": 0.5843137502670288,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-grey-500",
-      "value": "oklch(0.7946637550471222 0.02485142476598824 63.4185412605821)",
+      "value": {
+        "r": 0.7843137383460999,
+        "g": 0.7254902124404907,
+        "b": 0.6745098233222961,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-grey-400",
-      "value": "oklch(0.8490788852547091 0.01915796940267155 62.42891343630353)",
+      "value": {
+        "r": 0.843137264251709,
+        "g": 0.7960784435272217,
+        "b": 0.7568627595901489,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-grey-300",
-      "value": "oklch(0.8941095231263522 0.01543178963329343 61.34702443294979)",
+      "value": {
+        "r": 0.8941176533699036,
+        "g": 0.8549019694328308,
+        "b": 0.8235294222831726,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-grey-200",
-      "value": "oklch(0.9386432041365775 0.008573222910703851 44.8437201563877)",
+      "value": {
+        "r": 0.9411764740943909,
+        "g": 0.9137254953384399,
+        "b": 0.9019607901573181,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-grey-100",
-      "value": "oklch(0.961165959308709 0.006676323025820137 53.457304471822646)",
+      "value": {
+        "r": 0.9647058844566345,
+        "g": 0.9450980424880981,
+        "b": 0.9333333373069763,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-grey-50",
-      "value": "oklch(0.9778701989649833 0.0041275481400082185 56.43821251220534)",
+      "value": {
+        "r": 0.9803921580314636,
+        "g": 0.9686274528503418,
+        "b": 0.9607843160629272,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-teal-950",
-      "value": "oklch(0.30904401112845353 0.04611443930356493 217.13469730762753)",
+      "value": {
+        "r": 0.05636037886142731,
+        "g": 0.21049156785011292,
+        "b": 0.2480844408273697,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-teal-900",
-      "value": "oklch(0.42068971807599437 0.055456208383668715 214.62762246672884)",
+      "value": {
+        "r": 0.1411764770746231,
+        "g": 0.3333333432674408,
+        "b": 0.3764705955982208,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-teal-800",
-      "value": "oklch(0.46502358645037417 0.06422626632856213 211.38717730244014)",
+      "value": {
+        "r": 0.14901961386203766,
+        "g": 0.38823530077934265,
+        "b": 0.4313725531101227,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-teal-700",
-      "value": "oklch(0.5346611627047136 0.0824431959948179 209.35304085151583)",
+      "value": {
+        "r": 0.12941177189350128,
+        "g": 0.47843137383461,
+        "b": 0.529411792755127,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-teal-600",
-      "value": "oklch(0.6128192200249443 0.09928432583450994 209.08218104498968)",
+      "value": {
+        "r": 0.11764705926179886,
+        "g": 0.5803921818733215,
+        "b": 0.6431372761726379,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-teal-500",
-      "value": "oklch(0.7180669740845559 0.11690981406376233 202.76323834864414)",
+      "value": {
+        "r": 0.12941177189350128,
+        "g": 0.7254902124404907,
+        "b": 0.7686274647712708,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-teal-400",
-      "value": "oklch(0.7990032980573224 0.10194788562542044 199.96527377194795)",
+      "value": {
+        "r": 0.3823767304420471,
+        "g": 0.8207561373710632,
+        "b": 0.8436561226844788,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-teal-300",
-      "value": "oklch(0.8673680690122777 0.07979213711922434 199.0333701110544)",
+      "value": {
+        "r": 0.5735999941825867,
+        "g": 0.8936001658439636,
+        "b": 0.9063999652862549,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-teal-200",
-      "value": "oklch(0.9206295184510438 0.05677254421872339 198.96914473383498)",
+      "value": {
+        "r": 0.7254902124404907,
+        "g": 0.9450980424880981,
+        "b": 0.9529411792755127,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-teal-100",
-      "value": "oklch(0.9612475512618345 0.030183687189212275 196.70999470182883)",
+      "value": {
+        "r": 0.8627451062202454,
+        "g": 0.9764705896377563,
+        "b": 0.9764705896377563,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-teal-50",
-      "value": "oklch(0.9910410067376785 0.008481743939493346 197.21293336376164)",
+      "value": {
+        "r": 0.9647058844566345,
+        "g": 0.9960784316062927,
+        "b": 0.9960784316062927,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-purple-950",
-      "value": "oklch(0.2564237319699434 0.08626987616179185 280.2665803339628)",
+      "value": {
+        "r": 0.11372549086809158,
+        "g": 0.10588235408067703,
+        "b": 0.29411765933036804,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-purple-900",
-      "value": "oklch(0.3572060014368055 0.13586419539025818 277.538450154875)",
+      "value": {
+        "r": 0.18431372940540314,
+        "g": 0.18039216101169586,
+        "b": 0.5058823823928833,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-purple-800",
-      "value": "oklch(0.43915253399937454 0.16165930722332253 278.969711944654)",
+      "value": {
+        "r": 0.2656099498271942,
+        "g": 0.2511897683143616,
+        "b": 0.6585599184036255,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-purple-700",
-      "value": "oklch(0.48865938650271257 0.18250656884257263 279.8057137474452)",
+      "value": {
+        "r": 0.3176470696926117,
+        "g": 0.29019609093666077,
+        "b": 0.7647058963775635,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-purple-600",
-      "value": "oklch(0.5533924663310683 0.18965288422289175 279.6002068504981)",
+      "value": {
+        "r": 0.3803921639919281,
+        "g": 0.364705890417099,
+        "b": 0.8666666746139526,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-purple-500",
-      "value": "oklch(0.6105548860574084 0.16770094727946508 278.2788848456523)",
+      "value": {
+        "r": 0.43529412150382996,
+        "g": 0.45490196347236633,
+        "b": 0.8980392217636108,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-purple-400",
-      "value": "oklch(0.6879194460991167 0.15150319537396867 275.8167344951936)",
+      "value": {
+        "r": 0.5098039507865906,
+        "g": 0.5647059082984924,
+        "b": 0.9686274528503418,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-purple-300",
-      "value": "oklch(0.7892709769766898 0.10169816826720438 273.3535327839794)",
+      "value": {
+        "r": 0.6470588445663452,
+        "g": 0.7137255072593689,
+        "b": 0.9882352948188782,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-purple-200",
-      "value": "oklch(0.8718338416062436 0.06110057550205596 272.814822488101)",
+      "value": {
+        "r": 0.7803921699523926,
+        "g": 0.8274509906768799,
+        "b": 0.9960784316062927,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-purple-100",
-      "value": "oklch(0.9318985841255369 0.03240637128799265 270.3926431217407)",
+      "value": {
+        "r": 0.8784313797950745,
+        "g": 0.9098039269447327,
+        "b": 1,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-purple-50",
-      "value": "oklch(0.9618954411988504 0.017969588086076016 272.2006356545273)",
+      "value": {
+        "r": 0.9333333373069763,
+        "g": 0.9490196108818054,
+        "b": 1,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-red-950",
-      "value": "oklch(0.26088822062980116 0.0676225546777513 31.525380708136588)",
+      "value": {
+        "r": 0.24705882370471954,
+        "g": 0.08235294371843338,
+        "b": 0.054901961237192154,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-red-900",
-      "value": "oklch(0.411595646904038 0.10100581191274324 31.587825913561772)",
+      "value": {
+        "r": 0.47058823704719543,
+        "g": 0.19607843458652496,
+        "b": 0.14901961386203766,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-red-800",
-      "value": "oklch(0.508470887732483 0.13600532178957647 31.770496342824508)",
+      "value": {
+        "r": 0.6470588445663452,
+        "g": 0.2549019753932953,
+        "b": 0.1882352977991104,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-red-700",
-      "value": "oklch(0.5619617119569467 0.15248124042580202 31.794983258430744)",
+      "value": {
+        "r": 0.7439999580383301,
+        "g": 0.2925800681114197,
+        "b": 0.21599999070167542,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-red-600",
-      "value": "oklch(0.6181168018952973 0.14523615345200547 31.892480349989572)",
+      "value": {
+        "r": 0.8078431487083435,
+        "g": 0.37254902720451355,
+        "b": 0.29411765933036804,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-red-500",
-      "value": "oklch(0.6942787873498408 0.12880404612225008 31.205496276000503)",
+      "value": {
+        "r": 0.8823529481887817,
+        "g": 0.48627451062202454,
+        "b": 0.4156862795352936,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-red-400",
-      "value": "oklch(0.7423332351826624 0.12536533237247036 31.104041084307255)",
+      "value": {
+        "r": 0.9411764740943909,
+        "g": 0.5490196347236633,
+        "b": 0.47843137383461,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-red-300",
-      "value": "oklch(0.8334611458981404 0.07772808362341005 29.62514121909735)",
+      "value": {
+        "r": 0.9686274528503418,
+        "g": 0.7137255072593689,
+        "b": 0.6705882549285889,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-red-200",
-      "value": "oklch(0.8986575187155675 0.04645671155757069 31.20362395612004)",
+      "value": {
+        "r": 0.9843137264251709,
+        "g": 0.8274509906768799,
+        "b": 0.7960784435272217,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-red-100",
-      "value": "oklch(0.9445501228384328 0.024726189127451847 29.87795001221005)",
+      "value": {
+        "r": 0.9921568632125854,
+        "g": 0.9058823585510254,
+        "b": 0.8901960849761963,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-red-50",
-      "value": "oklch(0.9713705334370397 0.011078966861368472 30.96651319905543)",
+      "value": {
+        "r": 0.9921568632125854,
+        "g": 0.9529411792755127,
+        "b": 0.9450980424880981,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-green-950",
-      "value": "oklch(0.26267812849242383 0.040491645093017836 181.78607749414385)",
+      "value": {
+        "r": 0.0313725508749485,
+        "g": 0.16862745583057404,
+        "b": 0.14901961386203766,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-green-900",
-      "value": "oklch(0.36908122122554965 0.0553377236988369 177.24971933151028)",
+      "value": {
+        "r": 0.0941176488995552,
+        "g": 0.2862745225429535,
+        "b": 0.24705882370471954,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-green-800",
-      "value": "oklch(0.41660941048909605 0.0673302584587661 176.45061585268638)",
+      "value": {
+        "r": 0.0941176488995552,
+        "g": 0.3450980484485626,
+        "b": 0.29411765933036804,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-green-700",
-      "value": "oklch(0.4899654442782103 0.09354903978640819 167.9255434611221)",
+      "value": {
+        "r": 0.07450980693101883,
+        "g": 0.4431372582912445,
+        "b": 0.33725491166114807,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-green-600",
-      "value": "oklch(0.5547074400335019 0.10396520668635736 167.91311539190616)",
+      "value": {
+        "r": 0.11372549086809158,
+        "g": 0.5254902243614197,
+        "b": 0.40392157435417175,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-green-500",
-      "value": "oklch(0.6480341867211402 0.12591789060909053 165.17234148482976)",
+      "value": {
+        "r": 0.14800000190734863,
+        "g": 0.6520000100135803,
+        "b": 0.484000027179718,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-green-400",
-      "value": "oklch(0.7379828205067956 0.11780731685495621 160.4365651986363)",
+      "value": {
+        "r": 0.3686274588108063,
+        "g": 0.7568627595901489,
+        "b": 0.5686274766921997,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-green-300",
-      "value": "oklch(0.8409574944344255 0.08516958759236462 156.25370593101198)",
+      "value": {
+        "r": 0.615686297416687,
+        "g": 0.8627451062202454,
+        "b": 0.7058823704719543,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-green-200",
-      "value": "oklch(0.8980102956353234 0.06895117111055506 159.0290841832634)",
+      "value": {
+        "r": 0.7176470756530762,
+        "g": 0.9254902005195618,
+        "b": 0.8039215803146362,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-green-100",
-      "value": "oklch(0.9437958020790783 0.03869522508401024 160.8551683396551)",
+      "value": {
+        "r": 0.843137264251709,
+        "g": 0.9607843160629272,
+        "b": 0.8941176533699036,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-green-50",
-      "value": "oklch(0.982212296452249 0.012421764569750544 165.03350070529)",
+      "value": {
+        "r": 0.9490196108818054,
+        "g": 0.9882352948188782,
+        "b": 0.9686274528503418,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-orange-950",
-      "value": "oklch(0.26934990357033844 0.05563104646700414 50.32988383581561)",
+      "value": {
+        "r": 0.2328725904226303,
+        "g": 0.11441244930028915,
+        "b": 0.04037484526634216,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-orange-900",
-      "value": "oklch(0.36607123832536415 0.07094400998341119 53.20425866407521)",
+      "value": {
+        "r": 0.3582294285297394,
+        "g": 0.2002948820590973,
+        "b": 0.09070777148008347,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-orange-800",
-      "value": "oklch(0.4520689571827139 0.0961148162691226 57.06845838474611)",
+      "value": {
+        "r": 0.4901960790157318,
+        "g": 0.27450981736183167,
+        "b": 0.08627451211214066,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-orange-700",
-      "value": "oklch(0.52012568323021 0.11394420628544678 61.00578502954736)",
+      "value": {
+        "r": 0.5921568870544434,
+        "g": 0.34117648005485535,
+        "b": 0.06666667014360428,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-orange-600",
-      "value": "oklch(0.6349954409384587 0.13315201749163144 70.09989356465512)",
+      "value": {
+        "r": 0.7411764860153198,
+        "g": 0.47843137383461,
+        "b": 0.06666667014360428,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-orange-500",
-      "value": "oklch(0.7387755482930182 0.14843630448966055 79.85931519016107)",
+      "value": {
+        "r": 0.8588235378265381,
+        "g": 0.6196078658103943,
+        "b": 0.09019608050584793,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-orange-400",
-      "value": "oklch(0.7953178590987169 0.15750398167438495 85.40924459625613)",
+      "value": {
+        "r": 0.9166666865348816,
+        "g": 0.7017592787742615,
+        "b": 0.11076390743255615,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-orange-300",
-      "value": "oklch(0.8876532813889848 0.12570284436392826 92.7816999846398)",
+      "value": {
+        "r": 0.9677358865737915,
+        "g": 0.8468523025512695,
+        "b": 0.44966423511505127,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-orange-200",
-      "value": "oklch(0.913449603919725 0.10295453408771876 96.56810147114703)",
+      "value": {
+        "r": 0.9647058844566345,
+        "g": 0.8901960849761963,
+        "b": 0.572549045085907,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-orange-100",
-      "value": "oklch(0.9540103836401782 0.054879271876297535 96.82068890424667)",
+      "value": {
+        "r": 0.9803921580314636,
+        "g": 0.9437254667282104,
+        "b": 0.7803921699523926,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-orange-50",
-      "value": "oklch(0.9828517557512411 0.022477655177798726 98.72739760160039)",
+      "value": {
+        "r": 0.9921568632125854,
+        "g": 0.9803921580314636,
+        "b": 0.9137254953384399,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-blue-950",
-      "value": "oklch(0.22064504359018808 0.036754177825071996 248.35112561722332)",
+      "value": {
+        "r": 0.0470588244497776,
+        "g": 0.10980392247438431,
+        "b": 0.16862745583057404,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-blue-900",
-      "value": "oklch(0.2903638304034356 0.04510521893393582 249.60793765273496)",
+      "value": {
+        "r": 0.09803921729326248,
+        "g": 0.1764705926179886,
+        "b": 0.2549019753932953,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-blue-800",
-      "value": "oklch(0.3992558242730704 0.10787932215196669 255.99294911345658)",
+      "value": {
+        "r": 0.10196078568696976,
+        "g": 0.27843138575553894,
+        "b": 0.501960813999176,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-blue-700",
-      "value": "oklch(0.49520078456250793 0.14479214891924955 256.96105608148923)",
+      "value": {
+        "r": 0.13333334028720856,
+        "g": 0.3764705955982208,
+        "b": 0.6980392336845398,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-blue-600",
-      "value": "oklch(0.5926918663435724 0.1492319661621314 254.13696672631704)",
+      "value": {
+        "r": 0.2078431397676468,
+        "g": 0.49803921580314636,
+        "b": 0.8313725590705872,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-blue-500",
-      "value": "oklch(0.7003968119252479 0.1328912205201729 244.59299560602972)",
+      "value": {
+        "r": 0.2980392277240753,
+        "g": 0.6509804129600525,
+        "b": 0.9215686321258545,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-blue-400",
-      "value": "oklch(0.7683571558107466 0.10438118022521688 238.9406001858913)",
+      "value": {
+        "r": 0.4431372582912445,
+        "g": 0.7411764860153198,
+        "b": 0.9372549057006836,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-blue-300",
-      "value": "oklch(0.8558891249594676 0.0806185862707359 234.43060212433733)",
+      "value": {
+        "r": 0.6078431606292725,
+        "g": 0.8509804010391235,
+        "b": 0.9921568632125854,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-blue-200",
-      "value": "oklch(0.9129519296630462 0.04981184355809058 231.52465671539247)",
+      "value": {
+        "r": 0.7607843279838562,
+        "g": 0.9137254953384399,
+        "b": 0.9960784316062927,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-blue-100",
-      "value": "oklch(0.9601117048993839 0.024628203458719827 222.58657189296304)",
+      "value": {
+        "r": 0.8823529481887817,
+        "g": 0.9647058844566345,
+        "b": 0.9960784316062927,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-blue-50",
-      "value": "oklch(0.9866648848490601 0.008488938798845772 225.10188185515074)",
+      "value": {
+        "r": 0.9607843160629272,
+        "g": 0.9882352948188782,
+        "b": 1,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "text-xs",
       "value": 12,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "text-sm",
       "value": 14,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "text-base",
       "value": 16,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "text-lg",
       "value": 20,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "text-xl",
       "value": 24,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "text-2xl",
       "value": 28,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "text-3xl",
       "value": 36,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "text-4xl",
       "value": 42,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "leading-snug",
-      "value": 1.45,
+      "value": 1.4500000476837158,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "leading-normal",
-      "value": 1.6,
+      "value": 1.600000023841858,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "leading-loose",
       "value": 2,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "spacing-1",
       "value": 2,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "spacing-2",
       "value": 4,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "spacing-3",
       "value": 8,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "spacing-4",
       "value": 12,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "spacing-5",
       "value": 16,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "spacing-6",
       "value": 20,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "spacing-7",
       "value": 24,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "spacing-8",
       "value": 32,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "spacing-9",
       "value": 40,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "spacing-10",
       "value": 52,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "spacing-11",
       "value": 64,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "spacing-12",
       "value": 88,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "spacing-13",
       "value": 148,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "spacing-14",
       "value": 220,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "spacing-15",
       "value": 300,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "spacing-16",
       "value": 408,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "spacing-17",
       "value": 556,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "spacing-18",
       "value": 760,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "spacing-19",
       "value": 1024,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "spacing-20",
       "value": 1408,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "font-inter",
       "value": "Inter",
       "target": null,
+      "type": "STRING",
       "description": null
     },
     {
       "name": "font-weight-normal",
       "value": "Regular",
       "target": null,
+      "type": "STRING",
       "description": null
     },
     {
       "name": "font-weight-bold",
       "value": "Semibold",
       "target": null,
+      "type": "STRING",
       "description": null
     },
     {
       "name": "color-white",
-      "value": "oklch(0.9999886181908528 0.00005373434945601296 0)",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
       "target": null,
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "radius-xs",
       "value": 4,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "radius-sm",
       "value": 6,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "radius-md",
       "value": 12,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "radius-lg",
       "value": 16,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "radius-xl",
       "value": 20,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "border-width-1",
       "value": 1,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "border-width-2",
       "value": 1.5,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "border-width-3",
       "value": 2,
       "target": null,
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "tracking-tight",
       "value": "-0.011em",
       "target": null,
+      "type": "STRING",
       "description": null
     },
     {
       "name": "tracking-normal",
       "value": "-0.009em",
       "target": null,
+      "type": "STRING",
       "description": null
     },
     {
       "name": "tracking-wider",
       "value": "0.1em",
       "target": null,
+      "type": "STRING",
       "description": null
     },
     {
       "name": "tracking-widest",
       "value": "0.15em",
       "target": null,
+      "type": "STRING",
       "description": null
     }
   ],
-  "tokens": [
+  "theme": [
     {
       "name": "button-primary-default-bg",
-      "value": "oklch(0.2903638304034356 0.04510521893393582 249.60793765273496)",
+      "value": {
+        "r": 0.09803921729326248,
+        "g": 0.1764705926179886,
+        "b": 0.2549019753932953,
+        "a": 1
+      },
       "target": "color-blue-900",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "button-radius",
       "value": 9999,
       "target": "radius-2xl",
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "button-primary-default-text",
-      "value": "oklch(0.9999886181908528 0.00005373434945601296 0)",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
       "target": "color-white",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "button-font-size",
       "value": 16,
       "target": "text-base",
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "button-font-family",
       "value": "Inter",
       "target": "font-inter",
+      "type": "STRING",
       "description": null
     },
     {
       "name": "button-font-weight",
       "value": "Semibold",
       "target": "font-weight-bold",
+      "type": "STRING",
       "description": null
     },
     {
       "name": "button-secondary-text-color",
-      "value": "oklch(0.3992558242730704 0.10787932215196669 255.99294911345658)",
+      "value": {
+        "r": 0.10196078568696976,
+        "g": 0.27843138575553894,
+        "b": 0.501960813999176,
+        "a": 1
+      },
       "target": "color-blue-800",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "button-tertiary-text",
-      "value": "oklch(0.5128226971186197 0.021715263646084042 56.8926971260039)",
+      "value": {
+        "r": 0.4431372582912445,
+        "g": 0.3921568691730499,
+        "b": 0.35686275362968445,
+        "a": 1
+      },
       "target": "color-grey-800",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "button-success-bg",
-      "value": "oklch(0.4899654442782103 0.09354903978640819 167.9255434611221)",
+      "value": {
+        "r": 0.07450980693101883,
+        "g": 0.4431372582912445,
+        "b": 0.33725491166114807,
+        "a": 1
+      },
       "target": "success-bg-strong",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "button-success-text",
-      "value": "oklch(0.9999886181908528 0.00005373434945601296 0)",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
       "target": "color-white",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "button-destructive-bg",
-      "value": "oklch(0.5619617119569467 0.15248124042580202 31.794983258430744)",
+      "value": {
+        "r": 0.7439999580383301,
+        "g": 0.2925800681114197,
+        "b": 0.21599999070167542,
+        "a": 1
+      },
       "target": "destructive-bg-strong",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "button-destructive-text",
-      "value": "oklch(0.9999886181908528 0.00005373434945601296 0)",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
       "target": "color-white",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "button-primary-cta-text-color",
-      "value": "oklch(0.2903638304034356 0.04510521893393582 249.60793765273496)",
+      "value": {
+        "r": 0.09803921729326248,
+        "g": 0.1764705926179886,
+        "b": 0.2549019753932953,
+        "a": 1
+      },
       "target": "color-blue-900",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "button-primary-cta-bg",
-      "value": "oklch(0.9999886181908528 0.00005373434945601296 0)",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
       "target": "color-white",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "button-height",
       "value": 40,
       "target": "spacing-9",
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "button-padding-inline",
       "value": 32,
       "target": "spacing-8",
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "button-primary-default-hover-bg",
-      "value": "oklch(0.3992558242730704 0.10787932215196669 255.99294911345658)",
+      "value": {
+        "r": 0.10196078568696976,
+        "g": 0.27843138575553894,
+        "b": 0.501960813999176,
+        "a": 1
+      },
       "target": "color-blue-800",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "button-primary-cta-hover-text-color",
-      "value": "oklch(0.22064504359018808 0.036754177825071996 248.35112561722332)",
+      "value": {
+        "r": 0.0470588244497776,
+        "g": 0.10980392247438431,
+        "b": 0.16862745583057404,
+        "a": 1
+      },
       "target": "color-blue-950",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "button-border-color",
-      "value": "oklch(0.8490788852547091 0.01915796940267155 62.42891343630353)",
+      "value": {
+        "r": 0.843137264251709,
+        "g": 0.7960784435272217,
+        "b": 0.7568627595901489,
+        "a": 1
+      },
       "target": "color-grey-400",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "button-border-width",
       "value": 1.5,
       "target": "border-width-2",
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "button-secondary-hover-decoration",
       "value": "Underline",
       "target": null,
+      "type": "STRING",
       "description": null
     },
     {
       "name": "button-hover-border-color",
-      "value": "oklch(0.7339257262016716 0.03164836056507093 62.42273383732768)",
+      "value": {
+        "r": 0.7215686440467834,
+        "g": 0.6470588445663452,
+        "b": 0.5843137502670288,
+        "a": 1
+      },
       "target": "color-grey-600",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "button-tertiary-hover-text",
-      "value": "oklch(0.29585763349948846 0.015857620516237233 58.97110783172263)",
+      "value": {
+        "r": 0.20000000298023224,
+        "g": 0.16862745583057404,
+        "b": 0.14509804546833038,
+        "a": 1
+      },
       "target": "color-grey-950",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "button-tertiary-hover-decoration",
       "value": "Underline",
       "target": null,
+      "type": "STRING",
       "description": null
     },
     {
       "name": "button-success-hover-bg",
-      "value": "oklch(0.41660941048909605 0.0673302584587661 176.45061585268638)",
+      "value": {
+        "r": 0.0941176488995552,
+        "g": 0.3450980484485626,
+        "b": 0.29411765933036804,
+        "a": 1
+      },
       "target": "success-hover-bg-strong",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "button-destructive-hover-bg",
-      "value": "oklch(0.508470887732483 0.13600532178957647 31.770496342824508)",
+      "value": {
+        "r": 0.6470588445663452,
+        "g": 0.2549019753932953,
+        "b": 0.1882352977991104,
+        "a": 1
+      },
       "target": "destructive-hover-bg-strong",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "modal-size-sm",
       "value": 556,
       "target": "spacing-17",
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "modal-padding-block",
       "value": 32,
       "target": "spacing-8",
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "modal-padding-inline",
       "value": 40,
       "target": "spacing-9",
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "modal-spacing-between-elements",
       "value": 32,
       "target": "spacing-8",
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "modal-footer-padding",
       "value": 40,
       "target": "spacing-9",
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "modal-header-color",
-      "value": "oklch(0.2903638304034356 0.04510521893393582 249.60793765273496)",
+      "value": {
+        "r": 0.09803921729326248,
+        "g": 0.1764705926179886,
+        "b": 0.2549019753932953,
+        "a": 1
+      },
       "target": "color-blue-900",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "modal-body-text-color",
-      "value": "oklch(0.5128226971186197 0.021715263646084042 56.8926971260039)",
+      "value": {
+        "r": 0.4431372582912445,
+        "g": 0.3921568691730499,
+        "b": 0.35686275362968445,
+        "a": 1
+      },
       "target": "color-grey-800",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "modal-body-font-size",
       "value": 16,
       "target": "text-base",
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "modal-header-font-size",
       "value": 20,
       "target": "text-lg",
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "modal-header-font-weight",
       "value": "Semibold",
       "target": "font-weight-bold",
+      "type": "STRING",
       "description": null
     },
     {
       "name": "modal-bg",
-      "value": "oklch(0.9999886181908528 0.00005373434945601296 0)",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
       "target": "color-white",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "button-height 2",
       "value": 40,
       "target": "spacing-9",
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "button-secondary-hover-text-color",
-      "value": "oklch(0.22064504359018808 0.036754177825071996 248.35112561722332)",
+      "value": {
+        "r": 0.0470588244497776,
+        "g": 0.10980392247438431,
+        "b": 0.16862745583057404,
+        "a": 1
+      },
       "target": "color-blue-950",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "input-placeholder-text-color",
-      "value": "oklch(0.5128226971186197 0.021715263646084042 56.8926971260039)",
+      "value": {
+        "r": 0.4431372582912445,
+        "g": 0.3921568691730499,
+        "b": 0.35686275362968445,
+        "a": 1
+      },
       "target": "color-grey-800",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "input-bg-color",
-      "value": "oklch(0.9778701989649833 0.0041275481400082185 56.43821251220534)",
+      "value": {
+        "r": 0.9803921580314636,
+        "g": 0.9686274528503418,
+        "b": 0.9607843160629272,
+        "a": 1
+      },
       "target": "color-grey-50",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "input-text-color",
-      "value": "oklch(0.2903638304034356 0.04510521893393582 249.60793765273496)",
+      "value": {
+        "r": 0.09803921729326248,
+        "g": 0.1764705926179886,
+        "b": 0.2549019753932953,
+        "a": 1
+      },
       "target": "color-blue-900",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "input-bg-active-color",
-      "value": "oklch(0.961165959308709 0.006676323025820137 53.457304471822646)",
+      "value": {
+        "r": 0.9647058844566345,
+        "g": 0.9450980424880981,
+        "b": 0.9333333373069763,
+        "a": 1
+      },
       "target": "color-grey-100",
-      "description": null
-    },
-    {
-      "name": "button-secondary-hover-decoration 2",
-      "value": "Underline",
-      "target": null,
-      "description": null
-    },
-    {
-      "name": "font-body",
-      "value": "Inter",
-      "target": "font-inter",
-      "description": null
-    },
-    {
-      "name": "bg-body",
-      "value": "oklch(0.9778701989649833 0.0041275481400082185 56.43821251220534)",
-      "target": "color-grey-50",
-      "description": null
-    },
-    {
-      "name": "text-body",
-      "value": "oklch(0.22064504359018808 0.036754177825071996 248.35112561722332)",
-      "target": "color-blue-950",
-      "description": null
-    },
-    {
-      "name": "leading-body",
-      "value": 1.6,
-      "target": "leading-normal",
-      "description": null
-    },
-    {
-      "name": "tracking-body",
-      "value": "-0.009em",
-      "target": "tracking-normal",
-      "description": null
-    },
-    {
-      "name": "leading-heading",
-      "value": 1.45,
-      "target": "leading-snug",
-      "description": null
-    },
-    {
-      "name": "tracking-heading",
-      "value": "-0.011em",
-      "target": "tracking-tight",
-      "description": null
-    },
-    {
-      "name": "font-weight-heading",
-      "value": "Semibold",
-      "target": "font-weight-bold",
-      "description": null
-    },
-    {
-      "name": "selection-bg",
-      "value": "oklch(0.9318985841255369 0.03240637128799265 270.3926431217407)",
-      "target": "color-purple-100",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-link",
-      "value": "oklch(0.49520078456250793 0.14479214891924955 256.96105608148923)",
+      "value": {
+        "r": 0.13333334028720856,
+        "g": 0.3764705955982208,
+        "b": 0.6980392336845398,
+        "a": 1
+      },
       "target": "color-blue-700",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-link-hover",
-      "value": "oklch(0.3992558242730704 0.10787932215196669 255.99294911345658)",
+      "value": {
+        "r": 0.10196078568696976,
+        "g": 0.27843138575553894,
+        "b": 0.501960813999176,
+        "a": 1
+      },
       "target": "color-blue-800",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "spinner-fg",
-      "value": "oklch(0.3992558242730704 0.10787932215196669 255.99294911345658)",
+      "value": {
+        "r": 0.10196078568696976,
+        "g": 0.27843138575553894,
+        "b": 0.501960813999176,
+        "a": 1
+      },
       "target": "color-blue-800",
+      "type": "COLOR",
       "description": "Foreground of spinner."
     },
     {
       "name": "spinner-bg",
-      "value": "oklch(0.8941095231263522 0.01543178963329343 61.34702443294979)",
+      "value": {
+        "r": 0.8941176533699036,
+        "g": 0.8549019694328308,
+        "b": 0.8235294222831726,
+        "a": 1
+      },
       "target": "color-grey-300",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "input-radius",
       "value": 6,
       "target": "radius-sm",
-      "description": null
-    },
-    {
-      "name": "selection-text-color",
-      "value": "oklch(0.2564237319699434 0.08626987616179185 280.2665803339628)",
-      "target": "color-purple-950",
+      "type": "FLOAT",
       "description": null
     }
   ],
   "semantic": [
     {
       "name": "warning-text-color",
-      "value": "oklch(0.4520689571827139 0.0961148162691226 57.06845838474611)",
+      "value": {
+        "r": 0.4901960790157318,
+        "g": 0.27450981736183167,
+        "b": 0.08627451211214066,
+        "a": 1
+      },
       "target": "color-orange-800",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "warning-bg-weak",
-      "value": "oklch(0.9540103836401782 0.054879271876297535 96.82068890424667)",
+      "value": {
+        "r": 0.9803921580314636,
+        "g": 0.9437254667282104,
+        "b": 0.7803921699523926,
+        "a": 1
+      },
       "target": "color-orange-100",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "warning-stroke",
-      "value": "oklch(0.7953178590987169 0.15750398167438495 85.40924459625613)",
+      "value": {
+        "r": 0.9166666865348816,
+        "g": 0.7017592787742615,
+        "b": 0.11076390743255615,
+        "a": 1
+      },
       "target": "color-orange-400",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "border-width-warning",
       "value": 2,
       "target": "border-width-3",
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "success-bg-weak",
-      "value": "oklch(0.9437958020790783 0.03869522508401024 160.8551683396551)",
+      "value": {
+        "r": 0.843137264251709,
+        "g": 0.9607843160629272,
+        "b": 0.8941176533699036,
+        "a": 1
+      },
       "target": "color-green-100",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "warning-bg",
-      "value": "oklch(0.913449603919725 0.10295453408771876 96.56810147114703)",
+      "value": {
+        "r": 0.9647058844566345,
+        "g": 0.8901960849761963,
+        "b": 0.572549045085907,
+        "a": 1
+      },
       "target": "color-orange-200",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "warning-bg-strong",
-      "value": "oklch(0.7953178590987169 0.15750398167438495 85.40924459625613)",
+      "value": {
+        "r": 0.9166666865348816,
+        "g": 0.7017592787742615,
+        "b": 0.11076390743255615,
+        "a": 1
+      },
       "target": "color-orange-400",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "success-bg",
-      "value": "oklch(0.7379828205067956 0.11780731685495621 160.4365651986363)",
+      "value": {
+        "r": 0.3686274588108063,
+        "g": 0.7568627595901489,
+        "b": 0.5686274766921997,
+        "a": 1
+      },
       "target": "color-green-400",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "success-bg-strong",
-      "value": "oklch(0.4899654442782103 0.09354903978640819 167.9255434611221)",
+      "value": {
+        "r": 0.07450980693101883,
+        "g": 0.4431372582912445,
+        "b": 0.33725491166114807,
+        "a": 1
+      },
       "target": "color-green-700",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "success-text-color",
-      "value": "oklch(0.36908122122554965 0.0553377236988369 177.24971933151028)",
+      "value": {
+        "r": 0.0941176488995552,
+        "g": 0.2862745225429535,
+        "b": 0.24705882370471954,
+        "a": 1
+      },
       "target": "color-green-900",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "destructive-text-color",
-      "value": "oklch(0.411595646904038 0.10100581191274324 31.587825913561772)",
+      "value": {
+        "r": 0.47058823704719543,
+        "g": 0.19607843458652496,
+        "b": 0.14901961386203766,
+        "a": 1
+      },
       "target": "color-red-900",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "destructive-bg-weak",
-      "value": "oklch(0.9445501228384328 0.024726189127451847 29.87795001221005)",
+      "value": {
+        "r": 0.9921568632125854,
+        "g": 0.9058823585510254,
+        "b": 0.8901960849761963,
+        "a": 1
+      },
       "target": "color-red-100",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "destructive-bg",
-      "value": "oklch(0.6942787873498408 0.12880404612225008 31.205496276000503)",
+      "value": {
+        "r": 0.8823529481887817,
+        "g": 0.48627451062202454,
+        "b": 0.4156862795352936,
+        "a": 1
+      },
       "target": "color-red-500",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "destructive-bg-strong",
-      "value": "oklch(0.5619617119569467 0.15248124042580202 31.794983258430744)",
+      "value": {
+        "r": 0.7439999580383301,
+        "g": 0.2925800681114197,
+        "b": 0.21599999070167542,
+        "a": 1
+      },
       "target": "color-red-700",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "info-text-color",
-      "value": "oklch(0.9999886181908528 0.00005373434945601296 0)",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
       "target": "color-white",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "info-bg",
-      "value": "oklch(0.2903638304034356 0.04510521893393582 249.60793765273496)",
+      "value": {
+        "r": 0.09803921729326248,
+        "g": 0.1764705926179886,
+        "b": 0.2549019753932953,
+        "a": 1
+      },
       "target": "color-blue-900",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "focus-border-color",
-      "value": "oklch(0.3992558242730704 0.10787932215196669 255.99294911345658)",
+      "value": {
+        "r": 0.10196078568696976,
+        "g": 0.27843138575553894,
+        "b": 0.501960813999176,
+        "a": 1
+      },
       "target": "color-blue-800",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "border-width-focus",
       "value": 2,
       "target": "border-width-3",
+      "type": "FLOAT",
       "description": null
     },
     {
       "name": "disabled-bg",
-      "value": "oklch(0.9386432041365775 0.008573222910703851 44.8437201563877)",
+      "value": {
+        "r": 0.9411764740943909,
+        "g": 0.9137254953384399,
+        "b": 0.9019607901573181,
+        "a": 1
+      },
       "target": "color-grey-200",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "disabled-text-color",
-      "value": "oklch(0.42055464277250465 0.017629829299455838 57.20727998394062)",
+      "value": {
+        "r": 0.3333333432674408,
+        "g": 0.29411765933036804,
+        "b": 0.2666666805744171,
+        "a": 1
+      },
       "target": "color-grey-900",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "disabled-icon-color",
-      "value": "oklch(0.6445190811447986 0.025161898688078468 56.7458039076113)",
+      "value": {
+        "r": 0.6039215922355652,
+        "g": 0.5411764979362488,
+        "b": 0.49803921580314636,
+        "a": 1
+      },
       "target": "color-grey-700",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "success-hover-bg-strong",
-      "value": "oklch(0.41660941048909605 0.0673302584587661 176.45061585268638)",
+      "value": {
+        "r": 0.0941176488995552,
+        "g": 0.3450980484485626,
+        "b": 0.29411765933036804,
+        "a": 1
+      },
       "target": "color-green-800",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "destructive-hover-bg-strong",
-      "value": "oklch(0.508470887732483 0.13600532178957647 31.770496342824508)",
+      "value": {
+        "r": 0.6470588445663452,
+        "g": 0.2549019753932953,
+        "b": 0.1882352977991104,
+        "a": 1
+      },
       "target": "color-red-800",
-      "description": null
-    },
-    {
-      "name": "disabled-bg 2",
-      "value": "oklch(0.9999886181908528 0.00005373434945601296 0)",
-      "target": null,
-      "description": null
-    },
-    {
-      "name": "error-text-color 2",
-      "value": "oklch(0.52012568323021 0.11394420628544678 61.00578502954736)",
-      "target": "color-orange-700",
-      "description": null
-    },
-    {
-      "name": "error-bg 2",
-      "value": "oklch(0.9540103836401782 0.054879271876297535 96.82068890424667)",
-      "target": "color-orange-100",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "color-accent",
-      "value": "oklch(0.5926918663435724 0.1492319661621314 254.13696672631704)",
+      "value": {
+        "r": 0.2078431397676468,
+        "g": 0.49803921580314636,
+        "b": 0.8313725590705872,
+        "a": 1
+      },
       "target": "color-blue-600",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "callout-bg",
-      "value": "oklch(0.5533924663310683 0.18965288422289175 279.6002068504981)",
+      "value": {
+        "r": 0.3803921639919281,
+        "g": 0.364705890417099,
+        "b": 0.8666666746139526,
+        "a": 1
+      },
       "target": "color-purple-600",
+      "type": "COLOR",
       "description": null
     },
     {
       "name": "callout-text-color",
-      "value": "oklch(0.9618954411988504 0.017969588086076016 272.2006356545273)",
+      "value": {
+        "r": 0.9333333373069763,
+        "g": 0.9490196108818054,
+        "b": 1,
+        "a": 1
+      },
       "target": "color-purple-50",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "selection-text-color",
+      "value": {
+        "r": 0.11372549086809158,
+        "g": 0.10588235408067703,
+        "b": 0.29411765933036804,
+        "a": 1
+      },
+      "target": "color-purple-950",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "selection-bg",
+      "value": {
+        "r": 0.9333333373069763,
+        "g": 0.9490196108818054,
+        "b": 1,
+        "a": 1
+      },
+      "target": "color-purple-50",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "bg-body",
+      "value": {
+        "r": 0.9803921580314636,
+        "g": 0.9686274528503418,
+        "b": 0.9607843160629272,
+        "a": 1
+      },
+      "target": "color-grey-50",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "text-body",
+      "value": {
+        "r": 0.0470588244497776,
+        "g": 0.10980392247438431,
+        "b": 0.16862745583057404,
+        "a": 1
+      },
+      "target": "color-blue-950",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "font-body",
+      "value": "Inter",
+      "target": "font-inter",
+      "type": "STRING",
+      "description": null
+    },
+    {
+      "name": "tracking-body",
+      "value": "-0.009em",
+      "target": "tracking-normal",
+      "type": "STRING",
+      "description": null
+    },
+    {
+      "name": "leading-body",
+      "value": 1.600000023841858,
+      "target": "leading-normal",
+      "type": "FLOAT",
+      "description": null
+    },
+    {
+      "name": "font-weight-heading",
+      "value": "Semibold",
+      "target": "font-weight-bold",
+      "type": "STRING",
+      "description": null
+    },
+    {
+      "name": "tracking-heading",
+      "value": "-0.011em",
+      "target": "tracking-tight",
+      "type": "STRING",
+      "description": null
+    },
+    {
+      "name": "leading-heading",
+      "value": 1.4500000476837158,
+      "target": "leading-snug",
+      "type": "FLOAT",
       "description": null
     }
   ]
