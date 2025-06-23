@@ -1687,7 +1687,7 @@
       "description": null
     },
     {
-      "name": "color-link",
+      "name": "link-text",
       "value": {
         "r": 0.13333334028720856,
         "g": 0.3764705955982208,
@@ -1699,7 +1699,7 @@
       "description": null
     },
     {
-      "name": "color-link-hover",
+      "name": "link-text-hover",
       "value": {
         "r": 0.10196078568696976,
         "g": 0.27843138575553894,

@@ -228,8 +228,8 @@
   --color-input-bg-color: var(--color-grey-50);
   --color-input-text-color: var(--color-blue-900);
   --color-input-bg-active-color: var(--color-grey-100);
-  --color-color-link: var(--color-blue-700);
-  --color-color-link-hover: var(--color-blue-800);
+  --color-link-text: var(--color-blue-700);
+  --color-link-text-hover: var(--color-blue-800);
   --color-spinner-fg: var(--color-blue-800);
   --color-spinner-bg: var(--color-grey-300);
   --input-radius: var(--radius-sm);
@@ -384,11 +384,11 @@ outline instead of border for focus anyway. */
 }
 
 a {
-  color: var(--color-link);
+  color: var(--color-link-text);
   text-decoration: none;
 
   &:hover {
-    color: var(--color-link-hover);
+    color: var(--color-link-text-hover);
     text-decoration: underline;
   }
 }
@@ -880,8 +880,8 @@ A regular spinner
 .Spinner {
   /* Base size. */
   --size: 2rem;
-  --bg: var(--spinner-bg);
-  --fg: var(--spinner-fg);
+  --bg: var(--color-spinner-bg);
+  --fg: var(--color-spinner-fg);
   text-indent: -9999em;
   display: inline-block;
   font-size: var(--size);
@@ -911,8 +911,8 @@ A regular spinner
   }
 
   &--light {
-    --bg: var(--spinner-fg);
-    --fg: var(--spinner-bg);
+    --bg: var(--color-spinner-fg);
+    --fg: var(--color-spinner-bg);
   }
 }
 }

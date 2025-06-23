@@ -36,8 +36,8 @@ A regular spinner
 .Spinner {
   /* Base size. */
   --size: 2rem;
-  --bg: var(--spinner-bg);
-  --fg: var(--spinner-fg);
+  --bg: var(--color-spinner-bg);
+  --fg: var(--color-spinner-fg);
   text-indent: -9999em;
   display: inline-block;
   font-size: var(--size);
@@ -67,7 +67,7 @@ A regular spinner
   }
 
   &--light {
-    --bg: var(--spinner-fg);
-    --fg: var(--spinner-bg);
+    --bg: var(--color-spinner-fg);
+    --fg: var(--color-spinner-bg);
   }
 }
