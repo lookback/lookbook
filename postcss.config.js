@@ -7,9 +7,7 @@ module.exports = (ctx) => ({
   plugins: {
     'postcss-import': {},
     './postcss/postcss-header': {
-      header: `/*! ${ctx.file?.basename || 'stdin'} v${
-        pkg.version
-      } ${new Date().toISOString()} */`,
+      header: `/*! ${ctx.file?.basename || 'stdin'} v${pkg.version} */`,
     },
     './postcss/postcss-figma-variables': {
       variables,
