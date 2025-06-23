@@ -5,10 +5,12 @@
   "main": "index.js",
   "types": "dist/types.d.ts",
   "scripts": {
-    "start": "npm run build:css -- --watch",
     "build": "concurrently npm:build:* && npm run generate-types",
-    "build:css": "postcss src/lookbook.css --no-map --dir dist --verbose",
+    "build:css": "./build-css.sh",
     "build:colors": "cat gen/figma-variables.json | node scripts/generate-colors.js > dist/colors.json",
+    "start": "concurrently npm:watch:*",
+    "watch:gen": "node watch.js",
+    "watch:css": "./build-css.sh -w",
     "generate-types": "cat dist/colors.json | node scripts/generate-types.js > dist/types.d.ts",
     "vars": "echo '@figma-variables' | postcss --no-map"
   },
@@ -35,13 +37,14 @@
   "homepage": "https://github.com/lookback/lookbook#readme",
   "devDependencies": {
     "@figma/plugin-typings": "*",
+    "chokidar": "^4.0.3",
     "concurrently": "^9",
     "prettier": "=2.0.5"
   },
   "dependencies": {
-    "postcss-import": "^16",
+    "postcss": "^8",
     "postcss-cli": "^11",
-    "postcss": "^8"
+    "postcss-import": "^16"
   },
   "peerDependencies": {
     "@tailwindcss/postcss": "^4",

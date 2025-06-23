@@ -1,7 +1,6 @@
 # The Lookbook 💅
 
-[![CircleCI](https://img.shields.io/circleci/build/github/lookback/lookbook?style=flat
-)](https://app.circleci.com/pipelines/github/lookback/lookbook?branch=main)
+[![CircleCI](https://img.shields.io/circleci/build/github/lookback/lookbook?style=flat)](https://app.circleci.com/pipelines/github/lookback/lookbook?branch=main)
 
 Lookback's central location for shared colors and styles ✨ This repository is a build chain for building a distributable `.css` file for use in various web products of Lookback.
 
@@ -70,3 +69,13 @@ This repo includes a Figma plugin to generate the design tokens from our design 
 1. `Plugins -> Development -> Lookback Export Variables`.
 2. Save into this repo as `gen/figma-variables.json`. Replace existing.
 3. Done. Inspect the diff.
+
+## Dev
+
+Run:
+
+```bash
+npm start
+```
+
+to continously build `dist/lookbook.css` based on changes in the CSS in `src` as well as the generated tokens in `gen/figma-variables.json`.
