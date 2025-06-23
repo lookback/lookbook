@@ -1,5 +1,11 @@
 @theme {
   --color-*: initial;
+  --radius-*: initial;
+  --tracking-*: initial;
+  --leading-*: initial;
+  --spacing-*: initial;
+  --text-*: initial;
+  --font-weight-*: initial;
   @figma-variables;
 }
 

@@ -19,6 +19,12 @@
 
 @theme {
   --color-*: initial;
+  --radius-*: initial;
+  --tracking-*: initial;
+  --leading-*: initial;
+  --spacing-*: initial;
+  --text-*: initial;
+  --font-weight-*: initial;
   --color-grey-950: oklch(0.29585763349948846 0.015857620516237233 58.97110783172263);
   --color-grey-900: oklch(0.42055464277250465 0.017629829299455804 57.20727998394045);
   --color-grey-800: oklch(0.5128226971186197 0.021715263646083994 56.89269712600382);
