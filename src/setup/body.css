@@ -22,6 +22,7 @@
   letter-spacing: var(--tracking-body);
   color: var(--color-text-body);
   accent-color: var(--color-accent);
+  caret-color: var(--color-caret);
 }
 
 @media (prefers-reduced-motion: no-preference) {

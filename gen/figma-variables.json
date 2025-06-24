@@ -1301,7 +1301,7 @@
     {
       "name": "button-font-family",
       "value": "Inter",
-      "target": "font-inter",
+      "target": "font-body",
       "type": "STRING",
       "description": null
     },
@@ -1625,7 +1625,7 @@
       "description": null
     },
     {
-      "name": "input-placeholder-text-color",
+      "name": "input-placeholder-text",
       "value": {
         "r": 0.4431372582912445,
         "g": 0.3921568691730499,
@@ -1637,7 +1637,7 @@
       "description": null
     },
     {
-      "name": "input-bg-color",
+      "name": "input-bg",
       "value": {
         "r": 0.9803921580314636,
         "g": 0.9686274528503418,
@@ -1649,7 +1649,7 @@
       "description": null
     },
     {
-      "name": "input-text-color",
+      "name": "input-text",
       "value": {
         "r": 0.09803921729326248,
         "g": 0.1764705926179886,
@@ -1661,7 +1661,7 @@
       "description": null
     },
     {
-      "name": "input-bg-active-color",
+      "name": "input-bg-active",
       "value": {
         "r": 0.9647058844566345,
         "g": 0.9450980424880981,
@@ -1940,6 +1940,109 @@
         "a": 0
       },
       "target": null,
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-tertiary-disabled-text",
+      "value": {
+        "r": 0.6039215922355652,
+        "g": 0.5411764979362488,
+        "b": 0.49803921580314636,
+        "a": 1
+      },
+      "target": "grey-700",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-cta-disabled-bg",
+      "value": {
+        "r": 0.9411764740943909,
+        "g": 0.9137254953384399,
+        "b": 0.9019607901573181,
+        "a": 1
+      },
+      "target": "grey-200",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-icon-disabled",
+      "value": {
+        "r": 0.6039215922355652,
+        "g": 0.5411764979362488,
+        "b": 0.49803921580314636,
+        "a": 1
+      },
+      "target": "grey-700",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-cta-disabled-text-color",
+      "value": {
+        "r": 0.3333333432674408,
+        "g": 0.29411765933036804,
+        "b": 0.2666666805744171,
+        "a": 1
+      },
+      "target": "grey-900",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "input-bg-selected",
+      "value": {
+        "r": 0.3333333432674408,
+        "g": 0.29411765933036804,
+        "b": 0.2666666805744171,
+        "a": 1
+      },
+      "target": "grey-900",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "input-text-selected",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "target": "white",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "input-spacing-inline",
+      "value": 20,
+      "target": "spacing-6",
+      "type": "FLOAT",
+      "description": null
+    },
+    {
+      "name": "button-primary-disabled-bg",
+      "value": {
+        "r": 0.9411764740943909,
+        "g": 0.9137254953384399,
+        "b": 0.9019607901573181,
+        "a": 1
+      },
+      "target": "grey-200",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-primary-disabled-text",
+      "value": {
+        "r": 0.3333333432674408,
+        "g": 0.29411765933036804,
+        "b": 0.2666666805744171,
+        "a": 1
+      },
+      "target": "grey-900",
       "type": "COLOR",
       "description": null
     }
@@ -2348,6 +2451,18 @@
       "target": "focus-border",
       "type": "COLOR",
       "description": "This controls the top level `outline` property for the `:focus-visible`."
+    },
+    {
+      "name": "caret",
+      "value": {
+        "r": 0.10196078568696976,
+        "g": 0.27843138575553894,
+        "b": 0.501960813999176,
+        "a": 1
+      },
+      "target": "blue-800",
+      "type": "COLOR",
+      "description": null
     }
   ]
 }

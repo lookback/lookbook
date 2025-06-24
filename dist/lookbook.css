@@ -186,11 +186,12 @@
   --tracking-heading: var(--tracking-tight);
   --leading-heading: var(--leading-snug);
   --color-outline: var(--color-focus-border);
+  --color-caret: var(--color-blue-900);
   --color-button-primary-bg: var(--color-blue-900);
   --button-radius: 9999px;
   --color-button-primary-text: var(--color-white);
   --button-font-size: var(--text-base);
-  --button-font-family: var(--font-inter);
+  --button-font-family: var(--font-body);
   --button-font-weight: var(--font-weight-bold);
   --color-button-secondary-text: var(--color-blue-800);
   --color-button-tertiary-text: var(--color-blue-800);
@@ -223,10 +224,10 @@
   --modal-header-font-weight: var(--font-weight-bold);
   --color-modal-bg: var(--color-white);
   --color-button-secondary-hover-text: var(--color-blue-950);
-  --color-input-placeholder-text-color: var(--color-grey-800);
-  --color-input-bg-color: var(--color-grey-50);
-  --color-input-text-color: var(--color-blue-900);
-  --color-input-bg-active-color: var(--color-grey-100);
+  --color-input-placeholder-text: var(--color-grey-800);
+  --color-input-bg: var(--color-grey-50);
+  --color-input-text: var(--color-blue-900);
+  --color-input-bg-active: var(--color-grey-100);
   --color-link-text: var(--color-blue-700);
   --color-link-text-hover: var(--color-blue-800);
   --color-spinner-fg: var(--color-blue-800);
@@ -250,6 +251,14 @@
   --color-button-tertiary-bg: oklch(0.9999886181908528 0.00005373434945601296 0 / 0);
   --color-button-tertiary-hover-bg: oklch(0.9999886181908528 0.00005373434945601296 0 / 0);
   --color-button-tertiary-active-bg: oklch(0.9999886181908528 0.00005373434945601296 0 / 0);
+  --color-button-tertiary-disabled-text: var(--color-grey-700);
+  --color-button-cta-disabled-bg: var(--color-grey-200);
+  --color-button-icon-disabled: var(--color-grey-700);
+  --color-button-cta-disabled-text-color: var(--color-grey-900);
+  --color-input-bg-selected: var(--color-grey-900);
+  --color-input-text-selected: var(--color-white);
+  --input-spacing-inline: var(--spacing-6);
+  --color-button-primary-disabled-bg: var(--color-grey-200);
 }
 
 @theme {
@@ -397,6 +406,7 @@ outline instead of border for focus anyway. */
   letter-spacing: var(--tracking-body);
   color: var(--color-text-body);
   accent-color: var(--color-accent);
+  caret-color: var(--color-caret);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -523,96 +533,85 @@ h6 {
 @layer lookbook-base{
 
 label {
-  font-weight: bold;
+  font-weight: var(--font-weight-bold);
 }
 
-:where(input, textarea) {
-  &::placeholder {
-    color: var(--placeholder-color);
-  }
+:where(input, textarea)::placeholder {
+  color: var(--color-input-placeholder-text);
 }
 
 [contenteditable='true'] {
   &[aria-placeholder]:empty::before {
     content: attr(aria-placeholder);
-    color: var(--placeholder-color);
+    color: var(--color-input-placeholder-text);
     display: inline-block;
     pointer-events: none;
   }
 
   &[aria-disabled='true'] {
-    --placeholder-color: var(--grey-90);
     cursor: default;
+    pointer-events: none;
   }
 }
 
-:where(input, textarea, select) {
+:where(input, textarea, select, [contenteditable='true']) {
+  appearance: none;
   border-radius: var(--input-radius);
-  border: 1px solid var(--grey-60);
-  transition: color 150ms ease-out, border-color 150ms ease;
+  background-color: var(--color-input-bg);
+  color: var(--color-input-text);
+  font-weight: var(--font-weight-bold);
+  padding-inline: var(--input-spacing-inline);
 
-  &:focus {
-    border-color: var(--grey-80);
+  &:enabled:focus {
+    background-color: var(--color-input-bg-active);
+    color: var(--color-input-text-active);
   }
 
-  &:disabled {
-    background-color: var(--grey-20);
-    opacity: 0.8;
-    color: var(--grey-90);
+  &:where(:disabled, [aria-disabled='true']) {
+    background-color: var(--color-disabled-bg);
+    color: var(--color-disabled-text);
   }
 }
 
-:where(input, textarea) {
-  padding: var(--spacing-1) var(--spacing-2);
-  background-color: #fefefe;
+:where(input, select) {
+  height: var(--spacing-10);
+}
 
-  &:focus {
-    background-color: #fff;
-  }
-
-  @media screen and (prefers-color-scheme: dark) {
-    border: 0;
-  }
+:where(textarea, [contenteditable='true']) {
+  padding: var(--input-spacing-inline);
 }
 
 input:where([type='search']) {
   border-radius: 4em;
   background-repeat: no-repeat;
   background-size: 1em;
-  background-position: left 0.5em center;
-  padding-left: 2.2em;
-  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.08338 2.05691C2.33463 4.92505 -0.811209 12.7211 2.05694 19.4698C4.92508 26.2186 12.7211 29.3644 19.4699 26.4963C20.4385 26.0846 21.3328 25.5715 22.1459 24.9745L29.5824 32.412C30.3634 33.1931 31.6297 33.1932 32.4108 32.4122C33.1919 31.6312 33.192 30.3649 32.411 29.5838L24.9737 22.1454C27.656 18.4917 28.3977 13.5574 26.4963 9.08335C23.6281 2.3346 15.8321 -0.811239 9.08338 2.05691ZM20.9137 20.7623C23.4505 18.1642 24.324 14.1986 22.815 10.6479C20.8109 5.93228 15.3635 3.73416 10.6479 5.73824C5.93231 7.74232 3.73419 13.1897 5.73827 17.9053C7.74235 22.6209 13.1897 24.819 17.9053 22.8149C19.0001 22.3496 19.9593 21.6987 20.7616 20.9145C20.7856 20.8878 20.8104 20.8616 20.8361 20.8359C20.8615 20.8105 20.8874 20.786 20.9137 20.7623Z" fill="currentColor" /></svg>');
+  background-position: left var(--spacing-4) center;
+  padding-left: var(--spacing-9);
+  /* Sadly no variables in embedded SVGs. The color is --grey-700: */
+  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.08338 2.05691C2.33463 4.92505 -0.811209 12.7211 2.05694 19.4698C4.92508 26.2186 12.7211 29.3644 19.4699 26.4963C20.4385 26.0846 21.3328 25.5715 22.1459 24.9745L29.5824 32.412C30.3634 33.1931 31.6297 33.1932 32.4108 32.4122C33.1919 31.6312 33.192 30.3649 32.411 29.5838L24.9737 22.1454C27.656 18.4917 28.3977 13.5574 26.4963 9.08335C23.6281 2.3346 15.8321 -0.811239 9.08338 2.05691ZM20.9137 20.7623C23.4505 18.1642 24.324 14.1986 22.815 10.6479C20.8109 5.93228 15.3635 3.73416 10.6479 5.73824C5.93231 7.74232 3.73419 13.1897 5.73827 17.9053C7.74235 22.6209 13.1897 24.819 17.9053 22.8149C19.0001 22.3496 19.9593 21.6987 20.7616 20.9145C20.7856 20.8878 20.8104 20.8616 20.8361 20.8359C20.8615 20.8105 20.8874 20.786 20.9137 20.7623Z" fill="oklch(0.7339257262016716 0.03164836056507093 62.42273383732768)" /></svg>');
 }
 
 select {
-  background-color: white;
-  padding: var(--control-padding);
-  transition: box-shadow 300ms ease;
-
-  &:where(:focus-visible, :hover):enabled {
-    box-shadow: var(--shadow-xs);
-  }
+  text-overflow: ellipsis;
 
   &:not([multiple]) {
-    padding-right: 2em; /* give room for the chevron bg */
+    padding-right: var(--spacing-8); /* give room for the chevron bg */
     background-repeat: no-repeat;
-    background-size: 0.8em;
-    background-position: right 0.7em center;
+    background-size: 0.75em;
+    background-position: right var(--spacing-4) center;
     background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0.679556 5.56825C1.54021 4.76907 2.88576 4.81891 3.68493 5.67956L12 14.6342L20.3151 5.67956C21.1142 4.81891 22.4598 4.76907 23.3204 5.56825C24.1811 6.36742 24.2309 7.71297 23.4318 8.57362L13.5583 19.2065C13.156 19.6399 12.5913 19.8861 12 19.8861C11.4087 19.8861 10.844 19.6399 10.4417 19.2065L0.568245 8.57362C-0.23093 7.71297 -0.181094 6.36742 0.679556 5.56825Z" fill="currentColor"/></svg>');
-  }
-
-  @media screen and (prefers-color-scheme: dark) {
-    border: 0;
   }
 }
 
 select[multiple] {
   --padding: 4px;
   padding: var(--padding);
+  height: fit-content;
+  resize: block;
 
   option {
     padding: 0.3em 0.5em;
-    border-radius: calc(var(--radius-lg) - var(--padding));
+    border-radius: calc(var(--input-radius) - var(--padding) / 2);
 
     &:hover:not(:checked):enabled {
       background-color: var(--grey-20);
@@ -623,23 +622,23 @@ select[multiple] {
     }
 
     &:checked {
-      background-color: var(--blue-80);
-      color: var(--grey-20);
+      background-color: var(--color-input-bg-selected);
+      color: var(--color-input-text-selected);
     }
   }
 }
 
 progress {
-  --bg-color: var(--grey-30);
-  --filler-color: var(--grey-90);
+  --bg-color: var(--color-input-bg);
+  --filler-color: var(--color-accent);
   --radius: 3em;
-  height: 8px;
+  height: var(--spacing-2);
   width: 100%;
   background-color: var(--bg-color);
   border-radius: var(--radius);
 
   :is(&.done, &[value='1'], &[value='100']) {
-    --filler-color: var(--green-60);
+    --filler-color: var(--color-success-bg-strong);
   }
 
   &::-webkit-progress-bar {
@@ -658,6 +657,12 @@ progress {
     background-color: var(--filler-color);
     transition: width 100ms ease;
   }
+}
+
+input[type='color'] {
+  appearance: auto;
+  padding: inherit;
+  height: revert-layer;
 }
 
 fieldset {
