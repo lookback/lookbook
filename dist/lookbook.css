@@ -186,29 +186,28 @@
   --tracking-heading: var(--tracking-tight);
   --leading-heading: var(--leading-snug);
   --color-outline: var(--color-focus-border);
-  --color-button-primary-default-bg: var(--color-blue-900);
+  --color-button-primary-bg: var(--color-blue-900);
   --button-radius: 9999px;
-  --color-button-primary-default-text: var(--color-white);
+  --color-button-primary-text: var(--color-white);
   --button-font-size: var(--text-base);
   --button-font-family: var(--font-inter);
   --button-font-weight: var(--font-weight-bold);
   --color-button-secondary-text: var(--color-blue-800);
-  --color-button-tertiary-text: var(--color-grey-800);
+  --color-button-tertiary-text: var(--color-blue-800);
   --color-button-success-bg: var(--color-success-bg-strong);
   --color-button-success-text: var(--color-white);
   --color-button-destructive-bg: var(--color-destructive-bg-strong);
   --color-button-destructive-text: var(--color-white);
-  --color-button-primary-cta-text-color: var(--color-blue-900);
-  --color-button-primary-cta-bg: var(--color-white);
+  --color-button-cta-text-color: var(--color-blue-900);
+  --color-button-cta-bg: var(--color-white);
   --button-height: var(--spacing-9);
   --button-padding-inline: var(--spacing-6);
-  --color-button-primary-default-hover-bg: var(--color-blue-800);
-  --color-button-primary-cta-hover-text-color: var(--color-blue-950);
+  --color-button-primary-hover-bg: var(--color-blue-800);
+  --color-button-cta-hover-text-color: var(--color-blue-950);
   --color-button-border: var(--color-grey-400);
   --button-border-width: var(--border-width-2);
-  --button-secondary-hover-decoration: Underline;
   --color-button-hover-border: var(--color-grey-600);
-  --color-button-tertiary-hover-text: var(--color-grey-950);
+  --color-button-tertiary-hover-text: var(--color-blue-900);
   --button-tertiary-hover-decoration: Underline;
   --color-button-success-hover-bg: var(--color-success-hover-bg-strong);
   --color-button-destructive-hover-bg: var(--color-destructive-hover-bg-strong);
@@ -233,6 +232,24 @@
   --color-spinner-fg: var(--color-blue-800);
   --color-spinner-bg: var(--color-grey-300);
   --input-radius: var(--radius-sm);
+  --color-button-cta-active-bg: var(--color-grey-50);
+  --color-button-primary-active-text: var(--color-grey-200);
+  --color-button-success-active-text: var(--color-grey-200);
+  --color-button-destructive-active-text: var(--color-grey-200);
+  --color-button-secondary-active-bg: var(--color-grey-100);
+  --color-button-tertiary-active-text: var(--color-blue-950);
+  --color-button-primary-active-bg: var(--color-blue-800);
+  --color-button-secondary-bg: oklch(0.9999886181908528 0.00005373434945601296 0 / 0);
+  --color-button-secondary-hover-bg: oklch(0.9999886181908528 0.00005373434945601296 0 / 0);
+  --color-button-primary-hover-text: var(--color-white);
+  --color-button-secondary-active-text: var(--color-blue-950);
+  --color-button-success-hover-text: var(--color-white);
+  --color-button-success-active-bg: var(--color-success-hover-bg-strong);
+  --color-button-destructive-active-bg: var(--color-destructive-hover-bg-strong);
+  --color-button-destructive-hover-text: var(--color-white);
+  --color-button-tertiary-bg: oklch(0.9999886181908528 0.00005373434945601296 0 / 0);
+  --color-button-tertiary-hover-bg: oklch(0.9999886181908528 0.00005373434945601296 0 / 0);
+  --color-button-tertiary-active-bg: oklch(0.9999886181908528 0.00005373434945601296 0 / 0);
 }
 
 @theme {
@@ -652,11 +669,13 @@ fieldset {
 }
 
 @layer lookbook-components{
-
 .btn {
-  --bg: var(--color-button-primary-default-bg);
-  --text: var(--color-button-primary-default-text);
-  --text-active: var(--text);
+  --bg: var(--color-button-primary-bg);
+  --text: var(--color-button-primary-text);
+  --bg-hover: var(--color-button-primary-hover-bg);
+  --text-hover: var(--color-button-primary-hover-text);
+  --bg-active: var(--color-button-primary-active-bg);
+  --text-active: var(--color-button-primary-active-text);
 
   display: inline-flex;
   gap: var(--spacing-3);
@@ -676,222 +695,88 @@ fieldset {
   color: var(--text);
   border: 0 solid var(--color-button-border);
 
-  &:where(:focus, :hover, :active) {
+  &:where(:focus, :hover, :active, :disabled) {
     text-decoration: none;
   }
 
-  &:active {
+  &:enabled:hover {
+    border-color: var(--color-button-hover-border);
+    color: var(--text-hover);
+    background-color: var(--bg-hover);
+  }
+
+  &:enabled:active {
     border-color: var(--color-button-hover-border);
     color: var(--text-active);
-    background-color: var(--color-button-hover-bg);
+    background-color: var(--bg-active);
+  }
+
+  &:disabled {
+    background-color: var(--color-disabled-bg);
+    color: var(--color-disabled-text);
+    border-width: 0;
+  }
+
+  &:where(.btn-destructive, .btn-success) {
+    --color-outline: var(--bg);
   }
 
   &-secondary {
-    --bg: none;
+    --bg: var(--color-button-secondary-bg);
     --text: var(--color-button-secondary-text);
-    --text-active: var(--color-button-secondary-hover-text);
+    --bg-active: var(--color-button-secondary-active-bg);
+    --text-active: var(--color-button-secondary-active-text);
+    --bg-hover: var(--color-button-secondary-hover-bg);
+    --text-hover: var(--color-button-secondary-hover-text);
     border-width: var(--button-border-width);
-  }
-}
-
-/* .btn {
-  --bg: var(--blue-80);
-  --bg-active: var(--blue-90);
-  --bg-disabled: var(--grey-30);
-  --bg-focused: var(--blue-90);
-  --bg-hover: var(--blue-80);
-  --text: #fff;
-  --text-active: #e4e4e4;
-  --text-disabled: var(--grey-80);
-  --text-focused: var(--text-hover);
-  --text-hover: #fff;
-  --outline-color: var(--bg-focused);
-
-  border-radius: var(--button-radius);
-  position: relative;
-  text-align: center;
-  display: inline-block;
-  font-weight: bold;
-  background-color: var(--bg);
-  color: var(--text);
-  -webkit-tap-highlight-color: transparent;
-  text-decoration: none;
-  user-select: none;
-  white-space: nowrap;
-  border: 0;
-  padding: var(--control-padding);
-  transition: box-shadow 150ms ease-out;
-  cursor: pointer;
-
-  &:focus,
-  &:hover,
-  &:active {
-    text-decoration: none;
+    outline-offset: -2px;
   }
 
-  &:focus-visible {
-    background-color: var(--bg-focused);
-    color: var(--text-focused);
+  &-success {
+    --bg: var(--color-button-success-bg);
+    --text: var(--color-button-success-text);
+    --bg-active: var(--color-button-success-active-bg);
+    --text-active: var(--color-button-success-active-text);
+    --bg-hover: var(--color-button-success-hover-bg);
+    --text-hover: var(--color-button-success-hover-text);
   }
 
-  &:hover {
-    background-color: var(--bg-hover);
-    color: var(--text-hover);
+  &-destructive {
+    --bg: var(--color-button-destructive-bg);
+    --text: var(--color-button-destructive-text);
+    --bg-active: var(--color-button-destructive-active-bg);
+    --text-active: var(--color-button-destructive-active-text);
+    --bg-hover: var(--color-button-destructive-hover-bg);
+    --text-hover: var(--color-button-destructive-hover-text);
   }
 
-  &:active {
-    background-color: var(--bg-active);
-    color: var(--text-active);
-  }
+  &-tertiary {
+    --bg: var(--color-button-tertiary-bg);
+    --text: var(--color-button-tertiary-text);
+    --bg-active: var(--color-button-tertiary-active-bg);
+    --text-active: var(--color-button-tertiary-active-text);
+    --bg-hover: var(--color-button-tertiary-hover-bg);
+    --text-hover: var(--color-button-tertiary-hover-text);
+    outline-offset: -2px;
 
-  &.dark {
-    --text: var(--blue-80);
-    --text-active: var(--blue-80);
-    --text-disabled: var(--grey-70);
-    --text-hover: var(--blue-80);
-    --bg: var(--blue-10);
-    --bg-active: var(--blue-20);
-    --bg-disabled: var(--grey-40);
-    --bg-focused: var(--blue-20);
-    --bg-hover: var(--blue-20);
-    --outline-color: var(--text);
+    &:enabled {
+      position: relative;
+
+      &:active {
+        top: 1px;
+      }
+    }
+
+    &:enabled:where(:hover, :active, :focus-visible) {
+      text-decoration: underline;
+    }
 
     &:disabled {
-      opacity: 0.9;
-    }
-  }
-
-  &:disabled {
-    box-shadow: none;
-    cursor: default;
-    background-color: var(--bg-disabled);
-    color: var(--text-disabled);
-    pointer-events: none;
-  }
-
-  @media screen and (prefers-reduced-motion: reduce) {
-    transition: none;
-  }
-}
-
-.btn-primary {
-  --bg: var(--green-70);
-  --bg-active: var(--green-90);
-  --bg-focused: var(--green-90);
-  --bg-hover: var(--green-80);
-
-  &.dark {
-    --bg: var(--green-40);
-    --bg-active: color(theme('colors.green-40') tint(5%));
-    --bg-disabled: color(theme('colors.green-40') blend(#fff 60%) shade(10%));
-    --bg-focused: color(theme('colors.green-40') tint(30%));
-    --bg-hover: color(theme('colors.green-40') tint(30%));
-    --text-active: var(--green-80);
-    --text-disabled: var(--grey-80);
-    --text-hover: var(--green-90);
-    --text: var(--green-90);
-  }
-}
-
-.btn-secondary {
-  --bg: var(--grey-30);
-  --bg-active: var(--grey-50);
-  --bg-focused: var(--grey-50);
-  --bg-hover: var(--grey-40);
-  --text-active: color(theme('colors.blue-70') shade(20%));
-  --text-disabled: var(--grey-70);
-  --text-hover: var(--blue-70);
-  --text-focused: var(--blue-70);
-  --text: var(--blue-60);
-  --outline-color: var(--text-focused);
-
-  &.dark {
-    --bg: var(--blue-80);
-    --bg-active: color(theme('colors.blue-80') tint(5%));
-    --bg-disabled: color(theme('colors.blue-80') blend(#fff 60%) shade(10%));
-    --bg-focused: color(theme('colors.blue-80') tint(15%));
-    --bg-hover: color(theme('colors.blue-80') tint(10%));
-    --text-active: var(--blue-30);
-    --text-disabled: var(--grey-90);
-    --text-hover: var(--blue-10);
-    --text-focused: var(--blue-30);
-    --text: var(--blue-20);
-
-    &:disabled {
-      opacity: 0.7;
+      color: var(--color-disabled-icon);
+      background: none;
     }
   }
 }
-
-.btn-danger {
-  --bg: var(--red-60);
-  --bg-focused: var(--red-80);
-  --bg-hover: var(--red-70);
-  --bg-active: var(--red-80);
-
-  &.dark {
-    --bg: var(--red-40);
-    --bg-active: color(theme('colors.red-40') tint(5%));
-    --bg-disabled: color(theme('colors.red-40') blend(#fff 60%) shade(10%));
-    --bg-focused: color(theme('colors.red-40') tint(30%));
-    --bg-hover: color(theme('colors.red-40') tint(30%));
-    --text: var(--red-100);
-    --text-active: var(--red-90);
-    --text-disabled: var(--grey-80);
-    --text-hover: var(--red-90);
-  }
-}
-
-.btn-link {
-  --bg: transparent;
-  --text: var(--link-color);
-  --text-hover: var(--link-color-hover);
-  --text-active: var(--blue-80);
-  --text-disabled: var(--grey-90);
-  --outline-color: var(--text);
-
-  transition: none;
-  position: relative;
-
-  &:hover,
-  &:active,
-  &:focus-visible {
-    background-color: transparent;
-    box-shadow: none;
-    text-decoration: underline;
-  }
-
-  &:active {
-    top: 1px;
-  }
-
-  &:disabled {
-    background-color: transparent;
-    opacity: 0.8;
-    text-decoration: none;
-  }
-
-  &.btn-link--danger {
-    --text: var(--red-60);
-    --text-active: var(--red-80);
-    --text-hover: var(--red-70);
-  }
-
-  &.dark {
-    --bg: transparent;
-    --text: var(--blue-30);
-    --text-active: color(theme('colors.blue-50') shade(10%));
-    --text-hover: var(--blue-50);
-    --outline-color: var(--blue-80);
-
-    &.btn-link--danger {
-      --text: var(--red-40);
-      --text-active: var(--red-60);
-      --text-hover: var(--red-50);
-      --outline-color: var(--red-80);
-    }
-  }
-} */
 }
 
 @layer lookbook-components{

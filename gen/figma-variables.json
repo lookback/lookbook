@@ -1261,7 +1261,7 @@
   ],
   "theme": [
     {
-      "name": "button-primary-default-bg",
+      "name": "button-primary-bg",
       "value": {
         "r": 0.09803921729326248,
         "g": 0.1764705926179886,
@@ -1280,7 +1280,7 @@
       "description": null
     },
     {
-      "name": "button-primary-default-text",
+      "name": "button-primary-text",
       "value": {
         "r": 1,
         "g": 1,
@@ -1327,12 +1327,12 @@
     {
       "name": "button-tertiary-text",
       "value": {
-        "r": 0.4431372582912445,
-        "g": 0.3921568691730499,
-        "b": 0.35686275362968445,
+        "r": 0.10196078568696976,
+        "g": 0.27843138575553894,
+        "b": 0.501960813999176,
         "a": 1
       },
-      "target": "grey-800",
+      "target": "blue-800",
       "type": "COLOR",
       "description": null
     },
@@ -1385,7 +1385,7 @@
       "description": null
     },
     {
-      "name": "button-primary-cta-text-color",
+      "name": "button-cta-text-color",
       "value": {
         "r": 0.09803921729326248,
         "g": 0.1764705926179886,
@@ -1397,7 +1397,7 @@
       "description": null
     },
     {
-      "name": "button-primary-cta-bg",
+      "name": "button-cta-bg",
       "value": {
         "r": 1,
         "g": 1,
@@ -1423,7 +1423,7 @@
       "description": null
     },
     {
-      "name": "button-primary-default-hover-bg",
+      "name": "button-primary-hover-bg",
       "value": {
         "r": 0.10196078568696976,
         "g": 0.27843138575553894,
@@ -1435,7 +1435,7 @@
       "description": null
     },
     {
-      "name": "button-primary-cta-hover-text-color",
+      "name": "button-cta-hover-text-color",
       "value": {
         "r": 0.0470588244497776,
         "g": 0.10980392247438431,
@@ -1466,13 +1466,6 @@
       "description": null
     },
     {
-      "name": "button-secondary-hover-decoration",
-      "value": "Underline",
-      "target": null,
-      "type": "STRING",
-      "description": null
-    },
-    {
       "name": "button-hover-border",
       "value": {
         "r": 0.7215686440467834,
@@ -1487,12 +1480,12 @@
     {
       "name": "button-tertiary-hover-text",
       "value": {
-        "r": 0.20000000298023224,
-        "g": 0.16862745583057404,
-        "b": 0.14509804546833038,
+        "r": 0.09803921729326248,
+        "g": 0.1764705926179886,
+        "b": 0.2549019753932953,
         "a": 1
       },
-      "target": "grey-950",
+      "target": "blue-900",
       "type": "COLOR",
       "description": null
     },
@@ -1732,6 +1725,222 @@
       "value": 6,
       "target": "radius-sm",
       "type": "FLOAT",
+      "description": null
+    },
+    {
+      "name": "button-cta-active-bg",
+      "value": {
+        "r": 0.9803921580314636,
+        "g": 0.9686274528503418,
+        "b": 0.9607843160629272,
+        "a": 1
+      },
+      "target": "grey-50",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-primary-active-text",
+      "value": {
+        "r": 0.9411764740943909,
+        "g": 0.9137254953384399,
+        "b": 0.9019607901573181,
+        "a": 1
+      },
+      "target": "grey-200",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-success-active-text",
+      "value": {
+        "r": 0.9411764740943909,
+        "g": 0.9137254953384399,
+        "b": 0.9019607901573181,
+        "a": 1
+      },
+      "target": "grey-200",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-destructive-active-text",
+      "value": {
+        "r": 0.9411764740943909,
+        "g": 0.9137254953384399,
+        "b": 0.9019607901573181,
+        "a": 1
+      },
+      "target": "grey-200",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-secondary-active-bg",
+      "value": {
+        "r": 0.9647058844566345,
+        "g": 0.9450980424880981,
+        "b": 0.9333333373069763,
+        "a": 1
+      },
+      "target": "grey-100",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-tertiary-active-text",
+      "value": {
+        "r": 0.0470588244497776,
+        "g": 0.10980392247438431,
+        "b": 0.16862745583057404,
+        "a": 1
+      },
+      "target": "blue-950",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-primary-active-bg",
+      "value": {
+        "r": 0.10196078568696976,
+        "g": 0.27843138575553894,
+        "b": 0.501960813999176,
+        "a": 1
+      },
+      "target": "blue-800",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-secondary-bg",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 0
+      },
+      "target": null,
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-secondary-hover-bg",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 0
+      },
+      "target": null,
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-primary-hover-text",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "target": "white",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-secondary-active-text",
+      "value": {
+        "r": 0.0470588244497776,
+        "g": 0.10980392247438431,
+        "b": 0.16862745583057404,
+        "a": 1
+      },
+      "target": "blue-950",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-success-hover-text",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "target": "white",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-success-active-bg",
+      "value": {
+        "r": 0.0941176488995552,
+        "g": 0.3450980484485626,
+        "b": 0.29411765933036804,
+        "a": 1
+      },
+      "target": "success-hover-bg-strong",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-destructive-active-bg",
+      "value": {
+        "r": 0.6470588445663452,
+        "g": 0.2549019753932953,
+        "b": 0.1882352977991104,
+        "a": 1
+      },
+      "target": "destructive-hover-bg-strong",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-destructive-hover-text",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "target": "white",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-tertiary-bg",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 0
+      },
+      "target": null,
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-tertiary-hover-bg",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 0
+      },
+      "target": null,
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-tertiary-active-bg",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 0
+      },
+      "target": null,
+      "type": "COLOR",
       "description": null
     }
   ],
