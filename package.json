@@ -45,7 +45,8 @@
   "dependencies": {
     "postcss": "^8",
     "postcss-cli": "^11",
-    "postcss-import": "^16"
+    "postcss-import": "^16",
+    "postcss-nested": "^7"
   },
   "peerDependencies": {
     "@tailwindcss/postcss": "^4",
