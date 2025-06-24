@@ -49,11 +49,9 @@ postcss src/input.css --dir build --verbose
 
 We use npm to publish new versions of the Lookbook package. To release a new version, follow these steps:
 
-1. `npm run build`.
-2. Inspect the diff in `dist/`.
-3. Commit.
-4. Bump the version with `npm version <new-version>`.
-5. `npm publish && git push origin && git push --tags origin`.
+1. Bump the version with `npm version <new-version>`.
+    - **Note:** this will run `npm run build && git add dist` so that the built CSS (with a new header comment with the new version) is included in the tagged version commit. This is usually not a problem, since `npm version` refuses to run if you have a dirty working directory.
+2. `npm publish && git push origin && git push --tags origin`.
 
 ## Generating design tokens from Figma
 
