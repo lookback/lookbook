@@ -14,5 +14,5 @@ outline instead of border for focus anyway. */
 
 /* Add spacing when focusing on elements which makes the page scroll: */
 :where(:focus-visible, :target) {
-  scroll-margin-block: calc((var(--base-leading) * 1rem));
+  scroll-margin-block: 1rlh;
 }

@@ -176,7 +176,7 @@
   --color-callout-bg: var(--color-purple-600);
   --color-callout-text: var(--color-purple-50);
   --color-selection-text: var(--color-purple-950);
-  --color-selection-bg: var(--color-purple-50);
+  --color-selection-bg: var(--color-purple-100);
   --color-bg-body: var(--color-grey-50);
   --color-text-body: var(--color-blue-950);
   --font-body: var(--font-inter);
@@ -367,7 +367,7 @@ outline instead of border for focus anyway. */
 
 /* Add spacing when focusing on elements which makes the page scroll: */
 :where(:focus-visible, :target) {
-  scroll-margin-block: calc((var(--base-leading) * 1rem));
+  scroll-margin-block: 1rlh;
 }
 }
 
@@ -477,8 +477,8 @@ mark {
 }
 
 ::target-text {
-  background-color: var(--callout-bg);
-  color: var(--callout-text);
+  background-color: var(--color-callout-bg);
+  color: var(--color-callout-text);
 }
 }
 

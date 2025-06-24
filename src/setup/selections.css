@@ -4,6 +4,6 @@
 }
 
 ::target-text {
-  background-color: var(--callout-bg);
-  color: var(--callout-text);
+  background-color: var(--color-callout-bg);
+  color: var(--color-callout-text);
 }

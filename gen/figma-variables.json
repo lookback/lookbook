@@ -2262,12 +2262,12 @@
     {
       "name": "selection-bg",
       "value": {
-        "r": 0.9333333373069763,
-        "g": 0.9490196108818054,
+        "r": 0.8784313797950745,
+        "g": 0.9098039269447327,
         "b": 1,
         "a": 1
       },
-      "target": "purple-50",
+      "target": "purple-100",
       "type": "COLOR",
       "description": null
     },
