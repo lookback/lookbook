@@ -12,7 +12,8 @@
     "watch:gen": "node watch.js",
     "watch:css": "./build-css.sh -w",
     "generate-types": "cat dist/colors.json | node scripts/generate-types.js > dist/types.d.ts",
-    "vars": "echo '@figma-variables' | postcss --no-map"
+    "vars": "echo '@figma-variables' | postcss --no-map",
+    "prepublish": "npm run --silent vars > dist/vars"
   },
   "repository": {
     "type": "git",
