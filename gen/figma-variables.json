@@ -1385,7 +1385,7 @@
       "description": null
     },
     {
-      "name": "button-cta-text-color",
+      "name": "button-cta-text",
       "value": {
         "r": 0.09803921729326248,
         "g": 0.1764705926179886,
@@ -1435,7 +1435,7 @@
       "description": null
     },
     {
-      "name": "button-cta-hover-text-color",
+      "name": "button-cta-hover-text",
       "value": {
         "r": 0.0470588244497776,
         "g": 0.10980392247438431,
@@ -2036,6 +2036,114 @@
     },
     {
       "name": "button-primary-disabled-text",
+      "value": {
+        "r": 0.3333333432674408,
+        "g": 0.29411765933036804,
+        "b": 0.2666666805744171,
+        "a": 1
+      },
+      "target": "grey-900",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-cta-hover-bg",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "target": "white",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-cta-active-text",
+      "value": {
+        "r": 0.09803921729326248,
+        "g": 0.1764705926179886,
+        "b": 0.2549019753932953,
+        "a": 1
+      },
+      "target": "blue-900",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-secondary-disabled-bg",
+      "value": {
+        "r": 0.9411764740943909,
+        "g": 0.9137254953384399,
+        "b": 0.9019607901573181,
+        "a": 1
+      },
+      "target": "grey-200",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-secondary-disabled-text",
+      "value": {
+        "r": 0.3333333432674408,
+        "g": 0.29411765933036804,
+        "b": 0.2666666805744171,
+        "a": 1
+      },
+      "target": "grey-900",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-success-disabled-bg",
+      "value": {
+        "r": 0.9411764740943909,
+        "g": 0.9137254953384399,
+        "b": 0.9019607901573181,
+        "a": 1
+      },
+      "target": "grey-200",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-success-disabled-text",
+      "value": {
+        "r": 0.3333333432674408,
+        "g": 0.29411765933036804,
+        "b": 0.2666666805744171,
+        "a": 1
+      },
+      "target": "grey-900",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-tertiary-disabled-bg",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 0
+      },
+      "target": null,
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-destructive-disabled-bg",
+      "value": {
+        "r": 0.9411764740943909,
+        "g": 0.9137254953384399,
+        "b": 0.9019607901573181,
+        "a": 1
+      },
+      "target": "grey-200",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-destructive-disabled-text",
       "value": {
         "r": 0.3333333432674408,
         "g": 0.29411765933036804,

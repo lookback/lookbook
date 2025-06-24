@@ -5,6 +5,8 @@
   --text-hover: var(--color-button-primary-hover-text);
   --bg-active: var(--color-button-primary-active-bg);
   --text-active: var(--color-button-primary-active-text);
+  --bg-disabled: var(--color-button-primary-disabled-bg);
+  --text-disabled: var(--color-button-primary-disabled-text);
 
   display: inline-flex;
   gap: var(--spacing-3);
@@ -41,8 +43,8 @@
   }
 
   &:disabled {
-    background-color: var(--color-disabled-bg);
-    color: var(--color-disabled-text);
+    background-color: var(--bg-disabled);
+    color: var(--text-disabled);
     border-width: 0;
   }
 
@@ -57,6 +59,8 @@
     --text-active: var(--color-button-secondary-active-text);
     --bg-hover: var(--color-button-secondary-hover-bg);
     --text-hover: var(--color-button-secondary-hover-text);
+    --bg-disabled: var(--color-button-secondary-disabled-bg);
+    --text-disabled: var(--color-button-secondary-disabled-text);
     border-width: var(--button-border-width);
     outline-offset: -2px;
   }
@@ -68,6 +72,8 @@
     --text-active: var(--color-button-success-active-text);
     --bg-hover: var(--color-button-success-hover-bg);
     --text-hover: var(--color-button-success-hover-text);
+    --bg-disabled: var(--color-button-success-disabled-bg);
+    --text-disabled: var(--color-button-success-disabled-text);
   }
 
   &-destructive {
@@ -77,6 +83,8 @@
     --text-active: var(--color-button-destructive-active-text);
     --bg-hover: var(--color-button-destructive-hover-bg);
     --text-hover: var(--color-button-destructive-hover-text);
+    --bg-disabled: var(--color-button-destructive-disabled-bg);
+    --text-disabled: var(--color-button-destructive-disabled-text);
   }
 
   &-tertiary {
@@ -86,6 +94,8 @@
     --text-active: var(--color-button-tertiary-active-text);
     --bg-hover: var(--color-button-tertiary-hover-bg);
     --text-hover: var(--color-button-tertiary-hover-text);
+    --bg-disabled: var(--color-button-tertiary-disabled-bg);
+    --text-disabled: var(--color-button-tertiary-disabled-text);
     outline-offset: -2px;
 
     &:enabled {

@@ -186,7 +186,7 @@
   --tracking-heading: var(--tracking-tight);
   --leading-heading: var(--leading-snug);
   --color-outline: var(--color-focus-border);
-  --color-caret: var(--color-blue-900);
+  --color-caret: var(--color-blue-800);
   --color-button-primary-bg: var(--color-blue-900);
   --button-radius: 9999px;
   --color-button-primary-text: var(--color-white);
@@ -199,12 +199,12 @@
   --color-button-success-text: var(--color-white);
   --color-button-destructive-bg: var(--color-destructive-bg-strong);
   --color-button-destructive-text: var(--color-white);
-  --color-button-cta-text-color: var(--color-blue-900);
+  --color-button-cta-text: var(--color-blue-900);
   --color-button-cta-bg: var(--color-white);
   --button-height: var(--spacing-9);
   --button-padding-inline: var(--spacing-6);
   --color-button-primary-hover-bg: var(--color-blue-800);
-  --color-button-cta-hover-text-color: var(--color-blue-950);
+  --color-button-cta-hover-text: var(--color-blue-950);
   --color-button-border: var(--color-grey-400);
   --button-border-width: var(--border-width-2);
   --color-button-hover-border: var(--color-grey-600);
@@ -259,6 +259,16 @@
   --color-input-text-selected: var(--color-white);
   --input-spacing-inline: var(--spacing-6);
   --color-button-primary-disabled-bg: var(--color-grey-200);
+  --color-button-primary-disabled-text: var(--color-grey-900);
+  --color-button-cta-hover-bg: var(--color-white);
+  --color-button-cta-active-text: var(--color-blue-900);
+  --color-button-secondary-disabled-bg: var(--color-grey-200);
+  --color-button-secondary-disabled-text: var(--color-grey-900);
+  --color-button-success-disabled-bg: var(--color-grey-200);
+  --color-button-success-disabled-text: var(--color-grey-900);
+  --color-button-tertiary-disabled-bg: oklch(0.9999886181908528 0.00005373434945601296 0 / 0);
+  --color-button-destructive-disabled-bg: var(--color-grey-200);
+  --color-button-destructive-disabled-text: var(--color-grey-900);
 }
 
 @theme {
@@ -681,6 +691,8 @@ fieldset {
   --text-hover: var(--color-button-primary-hover-text);
   --bg-active: var(--color-button-primary-active-bg);
   --text-active: var(--color-button-primary-active-text);
+  --bg-disabled: var(--color-button-primary-disabled-bg);
+  --text-disabled: var(--color-button-primary-disabled-text);
 
   display: inline-flex;
   gap: var(--spacing-3);
@@ -717,8 +729,8 @@ fieldset {
   }
 
   &:disabled {
-    background-color: var(--color-disabled-bg);
-    color: var(--color-disabled-text);
+    background-color: var(--bg-disabled);
+    color: var(--text-disabled);
     border-width: 0;
   }
 
@@ -733,6 +745,8 @@ fieldset {
     --text-active: var(--color-button-secondary-active-text);
     --bg-hover: var(--color-button-secondary-hover-bg);
     --text-hover: var(--color-button-secondary-hover-text);
+    --bg-disabled: var(--color-button-secondary-disabled-bg);
+    --text-disabled: var(--color-button-secondary-disabled-text);
     border-width: var(--button-border-width);
     outline-offset: -2px;
   }
@@ -744,6 +758,8 @@ fieldset {
     --text-active: var(--color-button-success-active-text);
     --bg-hover: var(--color-button-success-hover-bg);
     --text-hover: var(--color-button-success-hover-text);
+    --bg-disabled: var(--color-button-success-disabled-bg);
+    --text-disabled: var(--color-button-success-disabled-text);
   }
 
   &-destructive {
@@ -753,6 +769,8 @@ fieldset {
     --text-active: var(--color-button-destructive-active-text);
     --bg-hover: var(--color-button-destructive-hover-bg);
     --text-hover: var(--color-button-destructive-hover-text);
+    --bg-disabled: var(--color-button-destructive-disabled-bg);
+    --text-disabled: var(--color-button-destructive-disabled-text);
   }
 
   &-tertiary {
@@ -762,6 +780,8 @@ fieldset {
     --text-active: var(--color-button-tertiary-active-text);
     --bg-hover: var(--color-button-tertiary-hover-bg);
     --text-hover: var(--color-button-tertiary-hover-text);
+    --bg-disabled: var(--color-button-tertiary-disabled-bg);
+    --text-disabled: var(--color-button-tertiary-disabled-text);
     outline-offset: -2px;
 
     &:enabled {
