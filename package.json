@@ -13,7 +13,8 @@
     "watch:css": "./build-css.sh -w",
     "generate-types": "cat dist/colors.json | node scripts/generate-types.js > dist/types.d.ts",
     "vars": "echo '@figma-variables' | postcss --no-map",
-    "prepublishOnly": "npm run --silent vars > dist/vars"
+    "prepublishOnly": "npm run --silent vars > dist/vars",
+    "preversion": "npm run build"
   },
   "repository": {
     "type": "git",
