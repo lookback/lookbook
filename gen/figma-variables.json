@@ -1951,7 +1951,7 @@
         "b": 0.49803921580314636,
         "a": 1
       },
-      "target": "grey-700",
+      "target": "disabled-icon",
       "type": "COLOR",
       "description": null
     },
@@ -1963,7 +1963,7 @@
         "b": 0.9019607901573181,
         "a": 1
       },
-      "target": "grey-200",
+      "target": "disabled-bg",
       "type": "COLOR",
       "description": null
     },
@@ -1987,7 +1987,7 @@
         "b": 0.2666666805744171,
         "a": 1
       },
-      "target": "grey-900",
+      "target": "disabled-text",
       "type": "COLOR",
       "description": null
     },
@@ -2030,7 +2030,7 @@
         "b": 0.9019607901573181,
         "a": 1
       },
-      "target": "grey-200",
+      "target": "disabled-bg",
       "type": "COLOR",
       "description": null
     },
@@ -2042,7 +2042,7 @@
         "b": 0.2666666805744171,
         "a": 1
       },
-      "target": "grey-900",
+      "target": "disabled-text",
       "type": "COLOR",
       "description": null
     },
@@ -2078,7 +2078,7 @@
         "b": 0.9019607901573181,
         "a": 1
       },
-      "target": "grey-200",
+      "target": "disabled-bg",
       "type": "COLOR",
       "description": null
     },
@@ -2090,7 +2090,7 @@
         "b": 0.2666666805744171,
         "a": 1
       },
-      "target": "grey-900",
+      "target": "disabled-text",
       "type": "COLOR",
       "description": null
     },
@@ -2102,7 +2102,7 @@
         "b": 0.9019607901573181,
         "a": 1
       },
-      "target": "grey-200",
+      "target": "disabled-bg",
       "type": "COLOR",
       "description": null
     },
@@ -2114,7 +2114,7 @@
         "b": 0.2666666805744171,
         "a": 1
       },
-      "target": "grey-900",
+      "target": "disabled-text",
       "type": "COLOR",
       "description": null
     },
@@ -2138,7 +2138,7 @@
         "b": 0.9019607901573181,
         "a": 1
       },
-      "target": "grey-200",
+      "target": "disabled-bg",
       "type": "COLOR",
       "description": null
     },
@@ -2150,7 +2150,7 @@
         "b": 0.2666666805744171,
         "a": 1
       },
-      "target": "grey-900",
+      "target": "disabled-text",
       "type": "COLOR",
       "description": null
     },
@@ -2344,7 +2344,7 @@
       "description": null
     },
     {
-      "name": "info-text",
+      "name": "info-text-2",
       "value": {
         "r": 1,
         "g": 1,
@@ -2356,7 +2356,7 @@
       "description": null
     },
     {
-      "name": "info-bg",
+      "name": "info-bg-2",
       "value": {
         "r": 0.09803921729326248,
         "g": 0.1764705926179886,
@@ -2593,6 +2593,66 @@
         "a": 1
       },
       "target": "blue-800",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "info-bg-strong",
+      "value": {
+        "r": 0.13333334028720856,
+        "g": 0.3764705955982208,
+        "b": 0.6980392336845398,
+        "a": 1
+      },
+      "target": "blue-700",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "info-bg-weak",
+      "value": {
+        "r": 0.8823529481887817,
+        "g": 0.9647058844566345,
+        "b": 0.9960784316062927,
+        "a": 1
+      },
+      "target": "blue-100",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "info-hover-bg-strong",
+      "value": {
+        "r": 0.10196078568696976,
+        "g": 0.27843138575553894,
+        "b": 0.501960813999176,
+        "a": 1
+      },
+      "target": "blue-800",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "info-bg",
+      "value": {
+        "r": 0.2980392277240753,
+        "g": 0.6509804129600525,
+        "b": 0.9215686321258545,
+        "a": 1
+      },
+      "target": "blue-500",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "info-text",
+      "value": {
+        "r": 0.09803921729326248,
+        "g": 0.1764705926179886,
+        "b": 0.2549019753932953,
+        "a": 1
+      },
+      "target": "blue-900",
       "type": "COLOR",
       "description": null
     }
