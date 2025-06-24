@@ -269,6 +269,8 @@
   --color-button-tertiary-disabled-bg: oklch(0.9999886181908528 0.00005373434945601296 0 / 0);
   --color-button-destructive-disabled-bg: var(--color-grey-200);
   --color-button-destructive-disabled-text: var(--color-grey-900);
+  --color-input-text-active: var(--color-blue-900);
+  --color-input-option-bg-hover: var(--color-grey-300);
 }
 
 @theme {
@@ -572,7 +574,7 @@ label {
   font-weight: var(--font-weight-bold);
   padding-inline: var(--input-spacing-inline);
 
-  &:enabled:focus {
+  &:enabled:not(select[multiple]):focus {
     background-color: var(--color-input-bg-active);
     color: var(--color-input-text-active);
   }
@@ -620,11 +622,11 @@ select[multiple] {
   resize: block;
 
   option {
-    padding: 0.3em 0.5em;
+    padding: var(--spacing-2) var(--spacing-3);
     border-radius: calc(var(--input-radius) - var(--padding) / 2);
 
     &:hover:not(:checked):enabled {
-      background-color: var(--grey-20);
+      background-color: var(--color-input-option-bg-hover);
     }
 
     &:not(:last-child) {
