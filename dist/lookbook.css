@@ -270,7 +270,7 @@
   --color-button-destructive-disabled-bg: var(--color-grey-200);
   --color-button-destructive-disabled-text: var(--color-grey-900);
   --color-input-text-active: var(--color-blue-900);
-  --color-input-option-bg-hover: var(--color-grey-300);
+  --color-input-option-bg-hover: var(--color-grey-200);
 }
 
 @theme {
@@ -458,8 +458,7 @@ pre {
 
 :where(code, kbd, mark) {
   border-radius: var(--radius-xs);
-  color: var(--color-grey-900);
-  padding: 0.1em 0.4em;
+  padding: 0.1em 0.2em;
   background-color: var(--color-grey-200);
 }
 
