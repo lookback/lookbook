@@ -712,6 +712,7 @@ fieldset {
   font-weight: var(--button-font-weight);
   border-radius: var(--button-radius);
   height: var(--button-height);
+  line-height: 1;
   padding-inline: var(--button-padding-inline);
   font-family: var(--button-font-family);
   background-color: var(--bg);
