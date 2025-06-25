@@ -849,40 +849,43 @@ A regular spinner
 
 .Spinner {
   /* Base size. */
-  --size: 2rem;
+  --size: var(--spacing-8);
   --bg: var(--color-spinner-bg);
   --fg: var(--color-spinner-fg);
-  text-indent: -9999em;
-  display: inline-block;
-  font-size: var(--size);
-  position: relative;
-  aspect-ratio: 1;
-  /* 
-   * Pythagoras to determine the tallest bounding box we need to ensure the height remains fixed when the `::after` element rotates, that is the extreme at 45deg.
-   */
-  height: calc(sqrt(2) * 1em);
-
-  &::after {
-    content: ' ';
-    display: inline-block;
-    position: absolute;
-    border-radius: 50%;
-    width: 1em;
-    height: 1em;
-    left: calc(50% - 0.5em);
-    top: calc(50% - 0.5em);
-
-    text-indent: -9999em;
-    overflow: hidden;
-    border: 2px solid var(--bg);
-    border-left-color: var(--fg);
-    transform: translateZ(0);
-    animation: spinner 0.8s infinite linear;
-  }
 
   &--light {
     --bg: var(--color-spinner-fg);
     --fg: var(--color-spinner-bg);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    display: inline-block;
+    font-size: var(--size);
+    position: relative;
+    aspect-ratio: 1;
+    /* 
+       * Pythagoras to determine the tallest bounding box we need to ensure the height remains fixed when the `::after` element rotates, that is the extreme at 45deg.
+       */
+    height: calc(sqrt(2) * 1em);
+    text-indent: -9999em;
+
+    &::after {
+      content: ' ';
+      display: inline-block;
+      position: absolute;
+      border-radius: 50%;
+      width: 1em;
+      height: 1em;
+      left: calc(50% - 0.5em);
+      top: calc(50% - 0.5em);
+
+      text-indent: -9999em;
+      overflow: hidden;
+      border: 2px solid var(--bg);
+      border-left-color: var(--fg);
+      transform: translateZ(0);
+      animation: spinner 0.8s infinite linear;
+    }
   }
 }
 }
