@@ -11,6 +11,7 @@
   display: inline-flex;
   gap: var(--spacing-3);
   align-items: center;
+  justify-content: center;
   -webkit-tap-highlight-color: transparent;
   text-decoration: none;
   user-select: none;
