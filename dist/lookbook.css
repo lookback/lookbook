@@ -149,6 +149,12 @@
   --tracking-normal: -0.009em;
   --tracking-wider: 0.1em;
   --tracking-widest: 0.15em;
+  --border-width-4: 3px;
+  --radius-2xs: 2px;
+  --opacity-1: 20px;
+  --opacity-2: 40px;
+  --opacity-3: 60px;
+  --opacity-4: 80px;
   --color-warning-text: var(--color-orange-800);
   --color-warning-bg-weak: var(--color-orange-100);
   --color-warning-stroke: var(--color-orange-400);
@@ -163,8 +169,6 @@
   --color-destructive-bg-weak: var(--color-red-100);
   --color-destructive-bg: var(--color-red-500);
   --color-destructive-bg-strong: var(--color-red-700);
-  --color-info-text-2: var(--color-white);
-  --color-info-bg-2: var(--color-blue-900);
   --color-focus-border: var(--color-blue-800);
   --border-width-focus: var(--border-width-3);
   --color-disabled-bg: var(--color-grey-200);
@@ -178,7 +182,7 @@
   --color-selection-text: var(--color-purple-950);
   --color-selection-bg: var(--color-purple-100);
   --color-bg-body: var(--color-grey-50);
-  --color-text-body: var(--color-blue-950);
+  --color-text-body: var(--color-blue-900);
   --font-body: var(--font-inter);
   --tracking-body: var(--tracking-normal);
   --leading-body: var(--leading-normal);
@@ -192,6 +196,12 @@
   --color-info-hover-bg-strong: var(--color-blue-800);
   --color-info-bg: var(--color-blue-500);
   --color-info-text: var(--color-blue-900);
+  --color-container-body: var(--color-white);
+  --color-disabled-bg-dark: var(--color-grey-400);
+  --color-success-stroke: var(--color-green-400);
+  --opacity-light-dark: var(--opacity-4);
+  --opacity-dark-light: var(--opacity-2);
+  --opacity-dark-dark: var(--opacity-1);
   --color-button-primary-bg: var(--color-blue-900);
   --button-radius: 9999px;
   --color-button-primary-text: var(--color-white);
@@ -218,16 +228,12 @@
   --color-button-success-hover-bg: var(--color-success-hover-bg-strong);
   --color-button-destructive-hover-bg: var(--color-destructive-hover-bg-strong);
   --modal-size-sm: var(--spacing-17);
-  --modal-padding-block: var(--spacing-8);
-  --modal-padding-inline: var(--spacing-9);
-  --modal-spacing-between-elements: var(--spacing-8);
-  --modal-footer-padding: var(--spacing-9);
-  --color-modal-header-color: var(--color-blue-900);
-  --color-modal-body-text-color: var(--color-grey-800);
+  --color-modal-header: var(--color-text-body);
+  --color-modal-body-text: var(--color-grey-800);
   --modal-body-font-size: var(--text-base);
   --modal-header-font-size: var(--text-lg);
   --modal-header-font-weight: var(--font-weight-bold);
-  --color-modal-bg: var(--color-white);
+  --color-modal-bg: var(--color-container-body);
   --color-button-secondary-hover-text: var(--color-blue-950);
   --color-input-placeholder-text: var(--color-grey-800);
   --color-input-bg: var(--color-grey-50);
@@ -260,8 +266,6 @@
   --color-button-cta-disabled-bg: var(--color-disabled-bg);
   --color-button-icon-disabled: var(--color-grey-700);
   --color-button-cta-disabled-text-color: var(--color-disabled-text);
-  --color-input-bg-selected: var(--color-grey-900);
-  --color-input-text-selected: var(--color-white);
   --input-spacing-inline: var(--spacing-6);
   --color-button-primary-disabled-bg: var(--color-disabled-bg);
   --color-button-primary-disabled-text: var(--color-disabled-text);
@@ -276,6 +280,8 @@
   --color-button-destructive-disabled-text: var(--color-disabled-text);
   --color-input-text-active: var(--color-blue-900);
   --color-input-option-bg-hover: var(--color-grey-300);
+  --color-input-bg-disabled: var(--color-disabled-bg);
+  --color-input-placeholder-disabled-text: var(--color-disabled-text);
 }
 
 @theme {
@@ -703,6 +709,7 @@ fieldset {
   display: inline-flex;
   gap: var(--spacing-3);
   align-items: center;
+  justify-content: center;
   -webkit-tap-highlight-color: transparent;
   text-decoration: none;
   user-select: none;

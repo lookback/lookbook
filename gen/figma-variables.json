@@ -1257,6 +1257,48 @@
       "target": null,
       "type": "STRING",
       "description": null
+    },
+    {
+      "name": "border-width-4",
+      "value": 3,
+      "target": null,
+      "type": "FLOAT",
+      "description": null
+    },
+    {
+      "name": "radius-2xs",
+      "value": 2,
+      "target": null,
+      "type": "FLOAT",
+      "description": null
+    },
+    {
+      "name": "opacity-1",
+      "value": 20,
+      "target": null,
+      "type": "FLOAT",
+      "description": null
+    },
+    {
+      "name": "opacity-2",
+      "value": 40,
+      "target": null,
+      "type": "FLOAT",
+      "description": null
+    },
+    {
+      "name": "opacity-3",
+      "value": 60,
+      "target": null,
+      "type": "FLOAT",
+      "description": null
+    },
+    {
+      "name": "opacity-4",
+      "value": 80,
+      "target": null,
+      "type": "FLOAT",
+      "description": null
     }
   ],
   "theme": [
@@ -1528,47 +1570,19 @@
       "description": null
     },
     {
-      "name": "modal-padding-block",
-      "value": 32,
-      "target": "spacing-8",
-      "type": "FLOAT",
-      "description": null
-    },
-    {
-      "name": "modal-padding-inline",
-      "value": 40,
-      "target": "spacing-9",
-      "type": "FLOAT",
-      "description": null
-    },
-    {
-      "name": "modal-spacing-between-elements",
-      "value": 32,
-      "target": "spacing-8",
-      "type": "FLOAT",
-      "description": null
-    },
-    {
-      "name": "modal-footer-padding",
-      "value": 40,
-      "target": "spacing-9",
-      "type": "FLOAT",
-      "description": null
-    },
-    {
-      "name": "modal-header-color",
+      "name": "modal-header",
       "value": {
         "r": 0.09803921729326248,
         "g": 0.1764705926179886,
         "b": 0.2549019753932953,
         "a": 1
       },
-      "target": "blue-900",
+      "target": "text-body",
       "type": "COLOR",
       "description": null
     },
     {
-      "name": "modal-body-text-color",
+      "name": "modal-body-text",
       "value": {
         "r": 0.4431372582912445,
         "g": 0.3921568691730499,
@@ -1608,7 +1622,7 @@
         "b": 1,
         "a": 1
       },
-      "target": "white",
+      "target": "container-body",
       "type": "COLOR",
       "description": null
     },
@@ -1992,30 +2006,6 @@
       "description": null
     },
     {
-      "name": "input-bg-selected",
-      "value": {
-        "r": 0.3333333432674408,
-        "g": 0.29411765933036804,
-        "b": 0.2666666805744171,
-        "a": 1
-      },
-      "target": "grey-900",
-      "type": "COLOR",
-      "description": null
-    },
-    {
-      "name": "input-text-selected",
-      "value": {
-        "r": 1,
-        "g": 1,
-        "b": 1,
-        "a": 1
-      },
-      "target": "white",
-      "type": "COLOR",
-      "description": null
-    },
-    {
       "name": "input-spacing-inline",
       "value": 20,
       "target": "spacing-6",
@@ -2175,6 +2165,30 @@
         "a": 1
       },
       "target": "grey-300",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "input-bg-disabled",
+      "value": {
+        "r": 0.9411764740943909,
+        "g": 0.9137254953384399,
+        "b": 0.9019607901573181,
+        "a": 1
+      },
+      "target": "disabled-bg",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "input-placeholder-disabled-text",
+      "value": {
+        "r": 0.3333333432674408,
+        "g": 0.29411765933036804,
+        "b": 0.2666666805744171,
+        "a": 1
+      },
+      "target": "disabled-text",
       "type": "COLOR",
       "description": null
     }
@@ -2344,30 +2358,6 @@
       "description": null
     },
     {
-      "name": "info-text-2",
-      "value": {
-        "r": 1,
-        "g": 1,
-        "b": 1,
-        "a": 1
-      },
-      "target": "white",
-      "type": "COLOR",
-      "description": null
-    },
-    {
-      "name": "info-bg-2",
-      "value": {
-        "r": 0.09803921729326248,
-        "g": 0.1764705926179886,
-        "b": 0.2549019753932953,
-        "a": 1
-      },
-      "target": "blue-900",
-      "type": "COLOR",
-      "description": null
-    },
-    {
       "name": "focus-border",
       "value": {
         "r": 0.10196078568696976,
@@ -2521,12 +2511,12 @@
     {
       "name": "text-body",
       "value": {
-        "r": 0.0470588244497776,
-        "g": 0.10980392247438431,
-        "b": 0.16862745583057404,
+        "r": 0.09803921729326248,
+        "g": 0.1764705926179886,
+        "b": 0.2549019753932953,
         "a": 1
       },
-      "target": "blue-950",
+      "target": "blue-900",
       "type": "COLOR",
       "description": null
     },
@@ -2654,6 +2644,63 @@
       },
       "target": "blue-900",
       "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "container-body",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "target": "white",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "disabled-bg-dark",
+      "value": {
+        "r": 0.843137264251709,
+        "g": 0.7960784435272217,
+        "b": 0.7568627595901489,
+        "a": 1
+      },
+      "target": "grey-400",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "success-stroke",
+      "value": {
+        "r": 0.3686274588108063,
+        "g": 0.7568627595901489,
+        "b": 0.5686274766921997,
+        "a": 1
+      },
+      "target": "green-400",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "opacity-light-dark",
+      "value": 80,
+      "target": "opacity-4",
+      "type": "FLOAT",
+      "description": null
+    },
+    {
+      "name": "opacity-dark-light",
+      "value": 40,
+      "target": "opacity-2",
+      "type": "FLOAT",
+      "description": null
+    },
+    {
+      "name": "opacity-dark-dark",
+      "value": 20,
+      "target": "opacity-1",
+      "type": "FLOAT",
       "description": null
     }
   ]
