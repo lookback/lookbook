@@ -152,10 +152,10 @@
   --tracking-widest: 0.15em;
   --border-width-4: 2.5px;
   --radius-2xs: 2px;
-  --opacity-1: 20px;
-  --opacity-2: 40px;
-  --opacity-3: 60px;
-  --opacity-4: 80px;
+  --opacity-1: 20%;
+  --opacity-2: 40%;
+  --opacity-3: 60%;
+  --opacity-4: 80%;
   --color-shadow-sm: oklch(0 0 0 / 0.10000000149011612);
   --shadow-sm-y: 1px;
   --shadow-sm-blur: 8px;

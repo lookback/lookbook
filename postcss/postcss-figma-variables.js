@@ -106,6 +106,11 @@ const transformValue = (v, result) => {
     return weight;
   }
 
+  if (v.name.startsWith('opacity-')) {
+    const percentage = v.value + '%';
+    return percentage;
+  }
+
   if (REM_UNIT.some((prefix) => v.name.startsWith(prefix))) {
     if (typeof v.value === 'number') {
       const rem = v.value / 16;
