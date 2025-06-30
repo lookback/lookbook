@@ -313,6 +313,8 @@
   --input-spacing-block: var(--spacing-5);
   --color-input-label: var(--color-grey-800);
   --color-input-text-disabled: var(--color-disabled-text);
+  --color-control-bg: var(--color-success-bg-strong);
+  --control-height: var(--spacing-6);
 }
 
 @theme {
@@ -461,7 +463,7 @@ outline instead of border for focus anyway. */
   background-color: var(--color-bg-body);
   letter-spacing: var(--tracking-body);
   color: var(--color-text-body);
-  accent-color: var(--color-accent);
+  accent-color: var(--color-control-bg);
   caret-color: var(--color-caret);
 }
 
@@ -614,7 +616,7 @@ label {
   }
 }
 
-:where(input, textarea, select, [contenteditable='true']) {
+:where(input:not([type='radio'], [type='checkbox'], [type='range']), textarea, select, [contenteditable='true']) {
   /* We change the border width on :focus, but use box shadow to avoid layout shifts. */
   --border-width: var(--input-border-width);
   --border-color: var(--color-input-border);
@@ -659,7 +661,7 @@ label:has(+ :user-invalid) {
   color: var(--color-warning-text);
 }
 
-:where(input, select) {
+:where(input:not([type='radio'], [type='checkbox'], [type='range']), select) {
   height: var(--spacing-10);
 }
 
@@ -718,7 +720,7 @@ select[multiple] {
 }
 
 progress {
-  --bg-color: var(--color-input-bg);
+  --bg-color: var(--color-grey-300);
   --filler-color: var(--color-accent);
   --radius: 3em;
   height: var(--spacing-2);

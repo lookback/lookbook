@@ -21,7 +21,7 @@
   background-color: var(--color-bg-body);
   letter-spacing: var(--tracking-body);
   color: var(--color-text-body);
-  accent-color: var(--color-accent);
+  accent-color: var(--color-control-bg);
   caret-color: var(--color-caret);
 }
 

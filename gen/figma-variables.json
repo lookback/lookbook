@@ -2407,6 +2407,25 @@
       "target": "disabled-text",
       "type": "COLOR",
       "description": null
+    },
+    {
+      "name": "control-bg",
+      "value": {
+        "r": 0.07450980693101883,
+        "g": 0.4431372582912445,
+        "b": 0.33725491166114807,
+        "a": 1
+      },
+      "target": "success-bg-strong",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "control-height",
+      "value": 20,
+      "target": "spacing-6",
+      "type": "FLOAT",
+      "description": "Radio buttons, checkboxes"
     }
   ],
   "semantic": [
