@@ -295,10 +295,10 @@ min-w-13=min-w-18
 min-w-14=min-w-19
 min-w-15=min-w-20
 
-theme('boxShadow.DEFAULT')=var(--box-shadow-default)
-theme('boxShadow.small')=var(--box-shadow-small)
-theme('boxShadow.large')=var(--box-shadow-large)
-theme('boxShadow.huge')=var(--box-shadow-huge)
+theme('boxShadow.DEFAULT')=var(--shadow-md)
+theme('boxShadow.small')=var(--shadow-sm)
+theme('boxShadow.large')=var(--shadow-md)
+theme('boxShadow.huge')=var(--shadow-lg)
 theme('borderRadius.DEFAULT')=var(--radius-sm)
 theme('borderRadius.lg')=var(--radius-lg)
 theme('borderRadius.huge')=var(--radius-lg)

@@ -7,6 +7,8 @@
  * @property {string | null} [description] The description of the variable, if available.
  */
 
+const { Declaration } = require('postcss');
+
 /** Add Figma variables as Tailwind @theme variables.
  *
  * This plugin will find a `@figma-variables` mark in the input and replace it with `--var: name` declarations.
@@ -48,7 +50,10 @@ const plugin = ({ variables }) => {
 
         atRule.replaceWith([
           ...declOf(primitives),
+          ...shadowsOf(primitives),
+
           ...declOf(semantic),
+
           ...declOf(theme),
         ]);
       },
@@ -113,6 +118,27 @@ const transformValue = (v, result) => {
   }
 
   return valueOf(v) + unitOf(v);
+};
+
+/**
+ * Shadows are "special": they're composite config vars built up of other tokens.
+ *
+ * @param {FigmaVariable[]} variables
+ */
+const shadowsOf = (variables) => {
+  return (
+    variables
+      // Match shadow-sm, shadow-md, etc.
+      .filter((v) => /^shadow-[a-z]{2}$/.test(v.name))
+      .map((v) => {
+        const [, size] = v.name.match(/^shadow-([a-z]{2})$/);
+
+        return new Declaration({
+          prop: `--shadow-${size}`,
+          value: `0 var(--shadow-${size}-y) var(--shadow-${size}-blur) var(--color-shadow-${size})`,
+        });
+      })
+  );
 };
 
 const UNIT_LESS = ['leading-'];

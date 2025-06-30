@@ -16,7 +16,6 @@
   text-decoration: none;
   user-select: none;
   white-space: nowrap;
-  transition: box-shadow 150ms ease-out;
 
   font-weight: var(--button-font-weight);
   border-radius: var(--button-radius);

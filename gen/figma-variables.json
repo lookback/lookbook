@@ -1299,6 +1299,84 @@
       "target": null,
       "type": "FLOAT",
       "description": null
+    },
+    {
+      "name": "shadow-sm",
+      "value": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.10000000149011612
+      },
+      "target": null,
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "shadow-sm-y",
+      "value": 1,
+      "target": null,
+      "type": "FLOAT",
+      "description": null
+    },
+    {
+      "name": "shadow-sm-blur",
+      "value": 8,
+      "target": null,
+      "type": "FLOAT",
+      "description": null
+    },
+    {
+      "name": "shadow-md",
+      "value": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0.05999999865889549
+      },
+      "target": null,
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "shadow-md-y",
+      "value": 4,
+      "target": null,
+      "type": "FLOAT",
+      "description": null
+    },
+    {
+      "name": "shadow-md-blur",
+      "value": 4,
+      "target": null,
+      "type": "FLOAT",
+      "description": null
+    },
+    {
+      "name": "shadow-lg",
+      "value": {
+        "r": 0.7411764860153198,
+        "g": 0.6784313917160034,
+        "b": 0.6274510025978088,
+        "a": 0.800000011920929
+      },
+      "target": null,
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "shadow-lg-y",
+      "value": 10,
+      "target": null,
+      "type": "FLOAT",
+      "description": null
+    },
+    {
+      "name": "shadow-lg-blur",
+      "value": 30,
+      "target": null,
+      "type": "FLOAT",
+      "description": null
     }
   ],
   "theme": [
@@ -2450,12 +2528,12 @@
     {
       "name": "destructive-text",
       "value": {
-        "r": 0.47058823704719543,
-        "g": 0.19607843458652496,
-        "b": 0.14901961386203766,
+        "r": 0.6470588445663452,
+        "g": 0.2549019753932953,
+        "b": 0.1882352977991104,
         "a": 1
       },
-      "target": "red-900",
+      "target": "red-800",
       "type": "COLOR",
       "description": null
     },
@@ -2874,6 +2952,18 @@
         "a": 1
       },
       "target": "grey-500",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "destructive-text-dark",
+      "value": {
+        "r": 0.47058823704719543,
+        "g": 0.19607843458652496,
+        "b": 0.14901961386203766,
+        "a": 1
+      },
+      "target": "red-900",
       "type": "COLOR",
       "description": null
     }

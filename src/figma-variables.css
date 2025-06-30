@@ -6,6 +6,7 @@
   --spacing-*: initial;
   --text-*: initial;
   --font-weight-*: initial;
+  --shadow-*: initial;
   @figma-variables;
 }
 

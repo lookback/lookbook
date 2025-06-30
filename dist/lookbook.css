@@ -25,6 +25,7 @@
   --spacing-*: initial;
   --text-*: initial;
   --font-weight-*: initial;
+  --shadow-*: initial;
   --color-grey-950: oklch(0.29585763349948846 0.015857620516237233 58.97110783172263);
   --color-grey-900: oklch(0.42055464277250465 0.017629829299455804 57.20727998394045);
   --color-grey-800: oklch(0.5128226971186197 0.021715263646083994 56.89269712600382);
@@ -155,6 +156,18 @@
   --opacity-2: 40px;
   --opacity-3: 60px;
   --opacity-4: 80px;
+  --color-shadow-sm: oklch(0 0 0 / 0.10000000149011612);
+  --shadow-sm-y: 1px;
+  --shadow-sm-blur: 8px;
+  --color-shadow-md: oklch(0 0 0 / 0.05999999865889549);
+  --shadow-md-y: 4px;
+  --shadow-md-blur: 4px;
+  --color-shadow-lg: oklch(0.7575678458655628 0.025982996238674172 61.53416599290369 / 0.800000011920929);
+  --shadow-lg-y: 10px;
+  --shadow-lg-blur: 30px;
+  --shadow-sm: 0 var(--shadow-sm-y) var(--shadow-sm-blur) var(--color-shadow-sm);
+  --shadow-md: 0 var(--shadow-md-y) var(--shadow-md-blur) var(--color-shadow-md);
+  --shadow-lg: 0 var(--shadow-lg-y) var(--shadow-lg-blur) var(--color-shadow-lg);
   --color-warning-text: var(--color-orange-800);
   --color-warning-bg-weak: var(--color-orange-100);
   --color-warning-stroke: var(--color-orange-400);
@@ -165,7 +178,7 @@
   --color-success-bg: var(--color-green-400);
   --color-success-bg-strong: var(--color-green-700);
   --color-success-text: var(--color-green-900);
-  --color-destructive-text: var(--color-red-900);
+  --color-destructive-text: var(--color-red-800);
   --color-destructive-bg-weak: var(--color-red-100);
   --color-destructive-bg: var(--color-red-500);
   --color-destructive-bg-strong: var(--color-red-700);
@@ -205,6 +218,7 @@
   --color-disabled-bg-light: var(--color-grey-100);
   --color-border-light: var(--color-grey-300);
   --color-border-dark: var(--color-grey-500);
+  --color-destructive-text-dark: var(--color-red-900);
   --color-button-primary-bg: var(--color-blue-900);
   --button-radius: 9999px;
   --color-button-primary-text: var(--color-white);
@@ -767,7 +781,6 @@ fieldset {
   text-decoration: none;
   user-select: none;
   white-space: nowrap;
-  transition: box-shadow 150ms ease-out;
 
   font-weight: var(--button-font-weight);
   border-radius: var(--button-radius);
