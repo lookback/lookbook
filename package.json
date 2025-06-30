@@ -9,6 +9,7 @@
     "build:css": "./build-css.sh",
     "build:colors": "cat gen/figma-variables.json | node scripts/generate-colors.js > dist/colors.json",
     "start": "concurrently npm:watch:*",
+    "test": "./scripts/list-missing-vars.sh",
     "watch:gen": "node watch.js",
     "watch:css": "./build-css.sh -w",
     "generate-types": "cat dist/colors.json | node scripts/generate-types.js > dist/types.d.ts",
