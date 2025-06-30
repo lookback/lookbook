@@ -15,8 +15,6 @@ https://github.com/tailwindcss/tailwindcss/issues/1259 resolves so we can pass
 a config object to the Tailwind PostCSS config instead.
 */
 
-const USE_P3_COLORS = !!process.env.LOOKBOOK_USE_P3 || false;
-
 // Only provide "real" colours here, no aliases.
 // These are exposed as CSS variables on :root. See tailwind-variables.js.
 const colors = {
@@ -30,10 +28,17 @@ const colorAliases = {
   white: '#fff',
 };
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: {
-    enabled: false,
-  },
+  /*
+    Paths are relative to your project root, not your tailwind.config.js file, so if your tailwind.config.js file is in a custom location, you should still write your paths relative to the root of your project.
+  */
+  content: [
+    // Source tree, with the app view code
+    './src/**/*.{tsx,ts}',
+    // Often imported components from our (built) lib in node_modules
+    './node_modules/@lookback/component/build/**/*.js',
+  ],
 
   theme: {
     baseSize,
@@ -71,33 +76,6 @@ module.exports = {
       f2: toRem(28),
       f1: toRem(34),
       f0: toRem(42),
-    },
-
-    negativeMargin: () => {
-      const mk = (fac) => `calc((var(--base-leading) * 1rem) ${fac})`;
-
-      return {
-        auto: 'auto',
-        px: '1px',
-        full: '100%',
-        screen: '100vw',
-        '0': 0,
-        '1': mk('/ 4'),
-        '2': mk('/ 2'),
-        '3': mk('* 1'),
-        '4': mk('* 2'),
-        '5': mk('* 3'),
-        '6': mk('* 4'),
-        '7': mk('* 5'),
-        '8': mk('* 6'),
-        '9': mk('* 8'),
-        '10': mk('* 11'),
-        '11': mk('* 15'),
-        '12': mk('* 20'),
-        '13': mk('* 28'),
-        '14': mk('* 40'),
-        '15': mk('* 55'),
-      };
     },
 
     spacing: () => {
@@ -325,140 +303,4 @@ module.exports = {
       },
     },
   },
-
-  variants: {
-    accessibility: [],
-    backgroundColor: ['dark', 'hover', 'focus', 'group-hover', 'group-focus'],
-    borderRadius: [],
-    borderStyle: [],
-    cursor: ['hover', 'focus'],
-    display: ['responsive', 'group-hover', 'group-focus'],
-    flexDirection: ['responsive'],
-    alignItems: [],
-    alignSelf: [],
-    gap: [],
-    justifyContent: [],
-    flex: [],
-    flexGrow: [],
-    flexShrink: [],
-    flexWrap: [],
-    fontFamily: [],
-    fontWeight: ['hover', 'focus', 'group-hover', 'group-focus'],
-    lineHeight: [],
-    listStyleType: [],
-    margin: [],
-    maxWidth: [],
-    opacity: ['hover', 'focus', 'group-hover', 'group-focus'],
-    overflow: [],
-    padding: [],
-    position: [],
-    inset: [],
-    boxShadow: [
-      'hover',
-      'focus',
-      'focus-visible',
-      'group-hover',
-      'group-focus',
-    ],
-    fill: [],
-    textAlign: [],
-    textColor: ['hover', 'focus', 'group-hover', 'group-focus'],
-    fontSize: ['responsive'],
-    fontStyle: [],
-    textTransform: [],
-    textOverflow: [],
-    textDecoration: [
-      'hover',
-      'focus-visible',
-      'focus',
-      'group-hover',
-      'group-focus',
-    ],
-    fontSmoothing: [],
-    letterSpacing: [],
-    userSelect: [],
-    verticalAlign: [],
-    visibility: ['responsive', 'group-hover', 'group-focus'],
-    whitespace: [],
-    wordBreak: [],
-    width: ['responsive'],
-    maxHeight: [],
-    minHeight: [],
-    height: [],
-    zIndex: ['hover', 'focus'],
-    fontVariantNumeric: [],
-    pointerEvents: [],
-    ringWidth: ['focus', 'focus-visible'],
-    ringColor: ['focus', 'focus-visible'],
-    ringOffsetWidth: ['focus', 'focus-visible'],
-    ringOffsetColor: ['focus', 'focus-visible'],
-    ringOpacity: ['focus', 'focus-visible'],
-    outline: ['focus', 'focus-visible', 'hover'],
-  },
-
-  corePlugins: {
-    preflight: false,
-    animation: false,
-    backgroundImage: false,
-    backgroundClip: false,
-    backgroundAttachment: false,
-    backgroundPosition: false,
-    backgroundRepeat: false,
-    backgroundSize: false,
-    borderOpacity: false,
-    boxSizing: false,
-    container: false,
-    clear: false,
-    divideWidth: false,
-    divideColor: false,
-    divideOpacity: false,
-    divideStyle: false,
-    appearance: false,
-    borderCollapse: false,
-    alignContent: false,
-    gradientColorStops: false,
-    gridAutoColumns: false,
-    gridAutoRows: false,
-    gridTemplateColumns: false,
-    gridColumn: false,
-    gridColumnStart: false,
-    gridColumnEnd: false,
-    gridTemplateRows: false,
-    gridRow: false,
-    gridRowStart: false,
-    gridAutoFlow: false,
-    gridRowEnd: false,
-    float: false,
-    listStylePosition: false,
-    negativeMargin: false,
-    placeholderColor: false,
-    resize: false,
-    stroke: false,
-    strokeWidth: false,
-    space: false,
-    scale: false,
-    rotate: false,
-    textOpacity: false,
-    translate: false,
-    skew: false,
-    transformOrigin: false,
-    transform: false,
-    tableLayout: false,
-    transitionProperty: false,
-    transitionDuration: false,
-    transitionTimingFunction: false,
-    transitionDelay: false,
-    order: false,
-    objectPosition: false,
-    objectFit: false,
-    placeSelf: false,
-    placeholderOpacity: false,
-  },
-
-  plugins: [
-    // Use all colors from Figma as CSS variable on the :root element
-    require('./lib/plugins/tailwind-variables')({
-      useP3: USE_P3_COLORS,
-    }),
-  ],
 };

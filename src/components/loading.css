@@ -1,7 +1,3 @@
-/*
-LOADING INDICATORS
-----------------------------------------------------------------*/
-
 @keyframes spinner {
   0% {
     transform: rotate(0deg);
@@ -11,87 +7,44 @@ LOADING INDICATORS
   }
 }
 
-@keyframes dots {
-  0%,
-  20% {
-    color: rgb(0 0 0 / 0%);
-    text-shadow: 0.25em 0 0 rgb(0 0 0 / 0%), 0.5em 0 0 rgb(0 0 0 / 0%);
-  }
-
-  40% {
-    color: currentColor;
-    text-shadow: 0.25em 0 0 rgb(0 0 0 / 0%), 0.5em 0 0 rgb(0 0 0 / 0%);
-  }
-
-  60% {
-    text-shadow: 0.25em 0 0 currentColor, 0.5em 0 0 rgb(0 0 0 / 0%);
-  }
-
-  80%,
-  100% {
-    text-shadow: 0.25em 0 0 currentColor, 0.5em 0 0 currentColor;
-  }
-}
-
-/*
-A regular spinner
-----------------------------------------------------------------*/
-
 .Spinner {
   /* Base size. */
-  --size: 2rem;
-  --bg: color(theme('colors.grey-90') alpha(20%));
-  --fg: color(theme('colors.blue-80') alpha(80%));
-
-  &::after {
-    content: ' ';
-    display: inline-block;
-    position: absolute;
-    border-radius: 50%;
-    width: 1em;
-    height: 1em;
-    left: calc(50% - 0.5em);
-    top: calc(50% - 0.5em);
-
-    text-indent: -9999em;
-    overflow: hidden;
-    border: 2px solid var(--bg);
-    border-left-color: var(--fg);
-    transform: translateZ(0);
-    animation: spinner 0.8s infinite linear;
-  }
-
-  display: inline-block;
-  font-size: var(--size);
-  position: relative;
-  aspect-ratio: 1;
-  /* 
-   * Pythagoras to determine the tallest bounding box we need to ensure the height remains fixed when the `::after` element rotates, that is the extreme at 45deg.
-   */
-  height: calc(sqrt(2) * 1em);
+  --size: var(--spacing-8);
+  --bg: var(--color-spinner-bg);
+  --fg: var(--color-spinner-fg);
 
   &--light {
-    --bg: color(theme('colors.grey-30') alpha(20%));
-    --fg: color(theme('colors.grey-30') alpha(90%));
+    --bg: var(--color-spinner-fg);
+    --fg: var(--color-spinner-bg);
   }
 
-  @media screen and (prefers-color-scheme: dark) {
-    --bg: color(theme('colors.grey-40') alpha(20%));
-    --fg: color(theme('colors.grey-30') alpha(80%));
-  }
-}
+  @media (prefers-reduced-motion: no-preference) {
+    display: inline-block;
+    font-size: var(--size);
+    position: relative;
+    aspect-ratio: 1;
+    /* 
+       * Pythagoras to determine the tallest bounding box we need to ensure the height remains fixed when the `::after` element rotates, that is the extreme at 45deg.
+       */
+    height: calc(sqrt(2) * 1em);
+    text-indent: -9999em;
 
-/*
-Gradually appearing dots after text.
+    &::after {
+      content: ' ';
+      display: inline-block;
+      position: absolute;
+      border-radius: 50%;
+      width: 1em;
+      height: 1em;
+      left: calc(50% - 0.5em);
+      top: calc(50% - 0.5em);
 
-Usage:
-
-<h1 class="LoadingDots>Loading</h1>
-----------------------------------------------------------------*/
-
-.LoadingDots {
-  &::after {
-    content: '.';
-    animation: dots 1.5s steps(5, end) infinite;
+      text-indent: -9999em;
+      overflow: hidden;
+      border: 2px solid var(--bg);
+      border-left-color: var(--fg);
+      transform: translateZ(0);
+      animation: spinner 0.8s infinite linear;
+    }
   }
 }
