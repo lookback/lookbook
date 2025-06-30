@@ -1653,12 +1653,12 @@
     {
       "name": "input-bg",
       "value": {
-        "r": 0.9803921580314636,
-        "g": 0.9686274528503418,
-        "b": 0.9607843160629272,
+        "r": 1,
+        "g": 1,
+        "b": 1,
         "a": 1
       },
-      "target": "grey-50",
+      "target": "white",
       "type": "COLOR",
       "description": null
     },
@@ -1677,12 +1677,12 @@
     {
       "name": "input-bg-active",
       "value": {
-        "r": 0.9647058844566345,
-        "g": 0.9450980424880981,
-        "b": 0.9333333373069763,
+        "r": 1,
+        "g": 1,
+        "b": 1,
         "a": 1
       },
-      "target": "grey-100",
+      "target": "white",
       "type": "COLOR",
       "description": null
     },
@@ -2284,6 +2284,49 @@
         "a": 1
       },
       "target": "grey-900",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "input-bg-filled",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "target": "white",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "input-spacing-block",
+      "value": 16,
+      "target": "spacing-5",
+      "type": "FLOAT",
+      "description": null
+    },
+    {
+      "name": "input-label",
+      "value": {
+        "r": 0.4431372582912445,
+        "g": 0.3921568691730499,
+        "b": 0.35686275362968445,
+        "a": 1
+      },
+      "target": "grey-800",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "input-text-disabled",
+      "value": {
+        "r": 0.3333333432674408,
+        "g": 0.29411765933036804,
+        "b": 0.2666666805744171,
+        "a": 1
+      },
+      "target": "disabled-text",
       "type": "COLOR",
       "description": null
     }

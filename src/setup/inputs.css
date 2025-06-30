@@ -1,9 +1,15 @@
 label {
   font-weight: var(--font-weight-bold);
+  color: var(--color-input-label);
+
+  &:has(+ :where(input, textarea, select, [contenteditable='true'])) {
+    margin-bottom: var(--spacing-3);
+  }
 }
 
 :where(input, textarea)::placeholder {
   color: var(--color-input-placeholder-text);
+  font-style: italic;
 }
 
 [contenteditable='true'] {
@@ -15,28 +21,53 @@ label {
   }
 
   &[aria-disabled='true'] {
-    cursor: default;
-    pointer-events: none;
+    pointer-events: none; /* Required to prevent input! */
   }
 }
 
 :where(input, textarea, select, [contenteditable='true']) {
+  /* We change the border width on :focus, but use box shadow to avoid layout shifts. */
+  --border-width: var(--input-border-width);
+  --border-color: var(--color-input-border);
   appearance: none;
   border-radius: var(--input-radius-sm);
   background-color: var(--color-input-bg);
   color: var(--color-input-text);
   font-weight: var(--font-weight-bold);
-  padding-inline: var(--input-spacing-inline);
+  padding: var(--input-spacing-block) var(--input-spacing-inline);
+  box-shadow: inset 0 0 0 var(--border-width) var(--border-color);
 
-  &:enabled:not(select[multiple]):focus {
+  &:where(:not(select[multiple]):focus) {
+    --border-width: var(--input-border-width-active);
+    --border-color: var(--color-input-border-active);
     background-color: var(--color-input-bg-active);
     color: var(--color-input-text-active);
   }
 
   &:where(:disabled, [aria-disabled='true']) {
-    background-color: var(--color-disabled-bg);
-    color: var(--color-disabled-text);
+    background-color: var(--color-input-bg-disabled);
+    color: var(--color-input-text-disabled);
+    box-shadow: none;
+
+    &::placeholder {
+      color: var(--color-input-placeholder-disabled-text);
+    }
   }
+
+  /* This has to be on a separate declaration... */
+  &[aria-disabled='true'][aria-placeholder]:empty::before {
+    color: var(--color-input-placeholder-disabled-text);
+  }
+
+  /* Error states */
+  &:where(:user-invalid, :user-invalid:focus) {
+    --border-color: var(--color-warning-stroke);
+    --border-width: var(--border-width-warning);
+  }
+}
+
+label:has(+ :user-invalid) {
+  color: var(--color-warning-text);
 }
 
 :where(input, select) {
@@ -46,6 +77,7 @@ label {
 :where(textarea, [contenteditable='true']) {
   padding: var(--input-spacing-inline);
   border-radius: var(--input-radius-lg);
+  font-weight: var(--font-weight-normal);
 }
 
 input:where([type='search']) {
@@ -63,6 +95,7 @@ select {
 
   &:not([multiple]) {
     padding-right: var(--spacing-8); /* give room for the chevron bg */
+    line-height: 1;
     background-repeat: no-repeat;
     background-size: 0.75em;
     background-position: right var(--spacing-4) center;
