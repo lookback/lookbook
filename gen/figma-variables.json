@@ -2811,7 +2811,7 @@
       "description": null
     },
     {
-      "name": "border-color-light",
+      "name": "border-light",
       "value": {
         "r": 0.8941176533699036,
         "g": 0.8549019694328308,
@@ -2823,7 +2823,7 @@
       "description": null
     },
     {
-      "name": "border-color-dark",
+      "name": "border-dark",
       "value": {
         "r": 0.7843137383460999,
         "g": 0.7254902124404907,

@@ -203,8 +203,8 @@
   --opacity-dark-light: var(--opacity-2);
   --opacity-dark-dark: var(--opacity-1);
   --color-disabled-bg-light: var(--color-grey-100);
-  --color-border-color-light: var(--color-grey-300);
-  --color-border-color-dark: var(--color-grey-500);
+  --color-border-light: var(--color-grey-300);
+  --color-border-dark: var(--color-grey-500);
   --color-button-primary-bg: var(--color-blue-900);
   --button-radius: 9999px;
   --color-button-primary-text: var(--color-white);
@@ -294,6 +294,7 @@
   --input-radius-lg: var(--radius-md);
   --input-border-width-active: var(--border-width-3);
   --color-popover-bg: var(--color-container-body);
+  --color-input-bg-selected: var(--color-grey-900);
 }
 
 @theme {
