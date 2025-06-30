@@ -1260,7 +1260,7 @@
     },
     {
       "name": "border-width-4",
-      "value": 3,
+      "value": 2.5,
       "target": null,
       "type": "FLOAT",
       "description": null
@@ -1491,12 +1491,12 @@
     {
       "name": "button-border",
       "value": {
-        "r": 0.843137264251709,
-        "g": 0.7960784435272217,
-        "b": 0.7568627595901489,
+        "r": 0.7843137383460999,
+        "g": 0.7254902124404907,
+        "b": 0.6745098233222961,
         "a": 1
       },
-      "target": "grey-400",
+      "target": "grey-500",
       "type": "COLOR",
       "description": null
     },
@@ -1735,7 +1735,7 @@
       "description": null
     },
     {
-      "name": "input-radius",
+      "name": "input-radius-sm",
       "value": 6,
       "target": "radius-sm",
       "type": "FLOAT",
@@ -2171,12 +2171,12 @@
     {
       "name": "input-bg-disabled",
       "value": {
-        "r": 0.9411764740943909,
-        "g": 0.9137254953384399,
-        "b": 0.9019607901573181,
+        "r": 0.9647058844566345,
+        "g": 0.9450980424880981,
+        "b": 0.9333333373069763,
         "a": 1
       },
-      "target": "disabled-bg",
+      "target": "disabled-bg-light",
       "type": "COLOR",
       "description": null
     },
@@ -2189,6 +2189,101 @@
         "a": 1
       },
       "target": "disabled-text",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "input-border",
+      "value": {
+        "r": 0.7843137383460999,
+        "g": 0.7254902124404907,
+        "b": 0.6745098233222961,
+        "a": 1
+      },
+      "target": "grey-500",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "input-border-active",
+      "value": {
+        "r": 0.4431372582912445,
+        "g": 0.7411764860153198,
+        "b": 0.9372549057006836,
+        "a": 1
+      },
+      "target": "blue-400",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "input-border-width",
+      "value": 1.5,
+      "target": "border-width-2",
+      "type": "FLOAT",
+      "description": null
+    },
+    {
+      "name": "modal-backdrop-bg",
+      "value": {
+        "r": 0.09803921729326248,
+        "g": 0.1764705926179886,
+        "b": 0.2549019753932953,
+        "a": 1
+      },
+      "target": "blue-900",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "modal-backdrop-opacity",
+      "value": 80,
+      "target": "opacity-4",
+      "type": "FLOAT",
+      "description": null
+    },
+    {
+      "name": "modal-backdrop-blur",
+      "value": 10,
+      "target": null,
+      "type": "FLOAT",
+      "description": null
+    },
+    {
+      "name": "input-radius-lg",
+      "value": 12,
+      "target": "radius-md",
+      "type": "FLOAT",
+      "description": null
+    },
+    {
+      "name": "input-border-width-active",
+      "value": 2,
+      "target": "border-width-3",
+      "type": "FLOAT",
+      "description": null
+    },
+    {
+      "name": "popover-bg",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "target": "container-body",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "input-bg-selected",
+      "value": {
+        "r": 0.3333333432674408,
+        "g": 0.29411765933036804,
+        "b": 0.2666666805744171,
+        "a": 1
+      },
+      "target": "grey-900",
       "type": "COLOR",
       "description": null
     }
@@ -2701,6 +2796,42 @@
       "value": 20,
       "target": "opacity-1",
       "type": "FLOAT",
+      "description": null
+    },
+    {
+      "name": "disabled-bg-light",
+      "value": {
+        "r": 0.9647058844566345,
+        "g": 0.9450980424880981,
+        "b": 0.9333333373069763,
+        "a": 1
+      },
+      "target": "grey-100",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "border-color-light",
+      "value": {
+        "r": 0.8941176533699036,
+        "g": 0.8549019694328308,
+        "b": 0.8235294222831726,
+        "a": 1
+      },
+      "target": "grey-300",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "border-color-dark",
+      "value": {
+        "r": 0.7843137383460999,
+        "g": 0.7254902124404907,
+        "b": 0.6745098233222961,
+        "a": 1
+      },
+      "target": "grey-500",
+      "type": "COLOR",
       "description": null
     }
   ]

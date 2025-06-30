@@ -22,7 +22,7 @@ label {
 
 :where(input, textarea, select, [contenteditable='true']) {
   appearance: none;
-  border-radius: var(--input-radius);
+  border-radius: var(--input-radius-sm);
   background-color: var(--color-input-bg);
   color: var(--color-input-text);
   font-weight: var(--font-weight-bold);
@@ -45,6 +45,7 @@ label {
 
 :where(textarea, [contenteditable='true']) {
   padding: var(--input-spacing-inline);
+  border-radius: var(--input-radius-lg);
 }
 
 input:where([type='search']) {
@@ -77,7 +78,7 @@ select[multiple] {
 
   option {
     padding: var(--spacing-2) var(--spacing-3);
-    border-radius: calc(var(--input-radius) - var(--padding) / 2);
+    border-radius: calc(var(--input-radius-sm) - var(--padding) / 2);
 
     &:hover:not(:checked):enabled {
       background-color: var(--color-input-option-bg-hover);
@@ -89,7 +90,7 @@ select[multiple] {
 
     &:checked {
       background-color: var(--color-input-bg-selected);
-      color: var(--color-input-text-selected);
+      color: var(--color-white);
     }
   }
 }

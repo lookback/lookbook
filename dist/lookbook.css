@@ -149,7 +149,7 @@
   --tracking-normal: -0.009em;
   --tracking-wider: 0.1em;
   --tracking-widest: 0.15em;
-  --border-width-4: 3px;
+  --border-width-4: 2.5px;
   --radius-2xs: 2px;
   --opacity-1: 20px;
   --opacity-2: 40px;
@@ -202,6 +202,9 @@
   --opacity-light-dark: var(--opacity-4);
   --opacity-dark-light: var(--opacity-2);
   --opacity-dark-dark: var(--opacity-1);
+  --color-disabled-bg-light: var(--color-grey-100);
+  --color-border-color-light: var(--color-grey-300);
+  --color-border-color-dark: var(--color-grey-500);
   --color-button-primary-bg: var(--color-blue-900);
   --button-radius: 9999px;
   --color-button-primary-text: var(--color-white);
@@ -220,7 +223,7 @@
   --button-padding-inline: var(--spacing-6);
   --color-button-primary-hover-bg: var(--color-blue-800);
   --color-button-cta-hover-text: var(--color-blue-950);
-  --color-button-border: var(--color-grey-400);
+  --color-button-border: var(--color-grey-500);
   --button-border-width: var(--border-width-2);
   --color-button-hover-border: var(--color-grey-600);
   --color-button-tertiary-hover-text: var(--color-blue-900);
@@ -243,7 +246,7 @@
   --color-link-text-hover: var(--color-blue-800);
   --color-spinner-fg: var(--color-blue-800);
   --color-spinner-bg: var(--color-grey-300);
-  --input-radius: var(--radius-sm);
+  --input-radius-sm: var(--radius-sm);
   --color-button-cta-active-bg: var(--color-grey-50);
   --color-button-primary-active-text: var(--color-grey-200);
   --color-button-success-active-text: var(--color-grey-200);
@@ -280,8 +283,17 @@
   --color-button-destructive-disabled-text: var(--color-disabled-text);
   --color-input-text-active: var(--color-blue-900);
   --color-input-option-bg-hover: var(--color-grey-300);
-  --color-input-bg-disabled: var(--color-disabled-bg);
+  --color-input-bg-disabled: var(--color-disabled-bg-light);
   --color-input-placeholder-disabled-text: var(--color-disabled-text);
+  --color-input-border: var(--color-grey-500);
+  --color-input-border-active: var(--color-blue-400);
+  --input-border-width: var(--border-width-2);
+  --color-modal-backdrop-bg: var(--color-blue-900);
+  --modal-backdrop-opacity: var(--opacity-4);
+  --modal-backdrop-blur: 10px;
+  --input-radius-lg: var(--radius-md);
+  --input-border-width-active: var(--border-width-3);
+  --color-popover-bg: var(--color-container-body);
 }
 
 @theme {
@@ -578,7 +590,7 @@ label {
 
 :where(input, textarea, select, [contenteditable='true']) {
   appearance: none;
-  border-radius: var(--input-radius);
+  border-radius: var(--input-radius-sm);
   background-color: var(--color-input-bg);
   color: var(--color-input-text);
   font-weight: var(--font-weight-bold);
@@ -601,6 +613,7 @@ label {
 
 :where(textarea, [contenteditable='true']) {
   padding: var(--input-spacing-inline);
+  border-radius: var(--input-radius-lg);
 }
 
 input:where([type='search']) {
@@ -633,7 +646,7 @@ select[multiple] {
 
   option {
     padding: var(--spacing-2) var(--spacing-3);
-    border-radius: calc(var(--input-radius) - var(--padding) / 2);
+    border-radius: calc(var(--input-radius-sm) - var(--padding) / 2);
 
     &:hover:not(:checked):enabled {
       background-color: var(--color-input-option-bg-hover);
@@ -645,7 +658,7 @@ select[multiple] {
 
     &:checked {
       background-color: var(--color-input-bg-selected);
-      color: var(--color-input-text-selected);
+      color: var(--color-white);
     }
   }
 }
