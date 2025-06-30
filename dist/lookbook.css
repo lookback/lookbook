@@ -219,6 +219,7 @@
   --color-border-light: var(--color-grey-300);
   --color-border-dark: var(--color-grey-500);
   --color-destructive-text-dark: var(--color-red-900);
+  --color-muted: var(--color-grey-800);
   --color-button-primary-bg: var(--color-blue-900);
   --button-radius: 9999px;
   --color-button-primary-text: var(--color-white);
@@ -533,6 +534,10 @@ kbd {
 mark {
   background-color: var(--color-callout-bg);
   color: var(--color-callout-text);
+}
+
+hr {
+  border-color: var(--color-border-dark);
 }
 }
 

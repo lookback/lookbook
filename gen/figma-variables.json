@@ -2985,6 +2985,18 @@
       "target": "red-900",
       "type": "COLOR",
       "description": null
+    },
+    {
+      "name": "muted",
+      "value": {
+        "r": 0.4431372582912445,
+        "g": 0.3921568691730499,
+        "b": 0.35686275362968445,
+        "a": 1
+      },
+      "target": "grey-800",
+      "type": "COLOR",
+      "description": null
     }
   ]
 }

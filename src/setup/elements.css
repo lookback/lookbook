@@ -56,3 +56,7 @@ mark {
   background-color: var(--color-callout-bg);
   color: var(--color-callout-text);
 }
+
+hr {
+  border-color: var(--color-border-dark);
+}
