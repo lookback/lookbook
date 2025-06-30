@@ -76,5 +76,8 @@
   "blue-200": "#c2e9fe",
   "blue-100": "#e1f6fe",
   "blue-50": "#f5fcff",
-  "white": "#ffffff"
+  "white": "#ffffff",
+  "shadow-sm": "#0000001a",
+  "shadow-md": "#0000000f",
+  "shadow-lg": "#bdada0cc"
 }
