@@ -1,4 +1,4 @@
-/*! lookbook.css v7.0.0-beta.12 */
+/*! lookbook.css v7.0.0-beta.11 */
 
 @layer theme, /* Tailwind */
   base, /* Tailwind */
@@ -507,6 +507,7 @@ pre {
   border-radius: var(--radius-xs);
   padding: 0.1em 0.2em;
   background-color: var(--color-grey-200);
+  white-space: nowrap;
 }
 
 code {
