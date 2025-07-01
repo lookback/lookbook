@@ -666,8 +666,9 @@ label:has(+ :user-invalid) {
   color: var(--color-warning-text);
 }
 
-:where(input:not([type='radio'], [type='checkbox'], [type='range']), select) {
+:where(input:not([type='radio'], [type='checkbox'], [type='range']), select:not([multiple])) {
   height: var(--spacing-10);
+  line-height: 1;
 }
 
 :where(textarea, [contenteditable='true']) {
@@ -681,7 +682,7 @@ input:where([type='search']) {
   background-repeat: no-repeat;
   background-size: 1em;
   background-position: left var(--spacing-4) center;
-  padding-left: var(--spacing-9);
+  padding-left: 2.3em; /* Will size with text. */
   /* Sadly no variables in embedded SVGs. The color is --grey-700: */
   background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.08338 2.05691C2.33463 4.92505 -0.811209 12.7211 2.05694 19.4698C4.92508 26.2186 12.7211 29.3644 19.4699 26.4963C20.4385 26.0846 21.3328 25.5715 22.1459 24.9745L29.5824 32.412C30.3634 33.1931 31.6297 33.1932 32.4108 32.4122C33.1919 31.6312 33.192 30.3649 32.411 29.5838L24.9737 22.1454C27.656 18.4917 28.3977 13.5574 26.4963 9.08335C23.6281 2.3346 15.8321 -0.811239 9.08338 2.05691ZM20.9137 20.7623C23.4505 18.1642 24.324 14.1986 22.815 10.6479C20.8109 5.93228 15.3635 3.73416 10.6479 5.73824C5.93231 7.74232 3.73419 13.1897 5.73827 17.9053C7.74235 22.6209 13.1897 24.819 17.9053 22.8149C19.0001 22.3496 19.9593 21.6987 20.7616 20.9145C20.7856 20.8878 20.8104 20.8616 20.8361 20.8359C20.8615 20.8105 20.8874 20.786 20.9137 20.7623Z" fill="oklch(0.7339257262016716 0.03164836056507093 62.42273383732768)" /></svg>');
 }
@@ -691,7 +692,6 @@ select {
 
   &:not([multiple]) {
     padding-right: var(--spacing-8); /* give room for the chevron bg */
-    line-height: 1;
     background-repeat: no-repeat;
     background-size: 0.75em;
     background-position: right var(--spacing-4) center;
