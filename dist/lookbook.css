@@ -499,13 +499,13 @@ pre {
   border-radius: var(--radius-md);
   font-size: var(--text-sm);
   padding: var(--spacing-5);
-  background-color: var(--color-info-bg);
-  color: var(--color-info-text);
+  background-color: var(--color-info-bg-strong);
+  color: var(--color-white);
 }
 
 :where(code, kbd, mark) {
   border-radius: var(--radius-xs);
-  padding: 0.1em 0.2em;
+  padding-inline: 0.2em;
   background-color: var(--color-grey-200);
   white-space: nowrap;
 }
@@ -525,11 +525,11 @@ pre code {
 kbd {
   --border: var(--color-grey-600);
   font-family: var(--font-sans);
-  font-weight: bold;
+  font-weight: var(--font-weight-bold);
   background-color: #fefefe;
+  color: var(--color-text-body);
   border: 1px solid var(--border);
   box-shadow: 0 2px 0 var(--border);
-  padding-block: 1px;
 }
 
 mark {
