@@ -1,4 +1,4 @@
-/*! lookbook.css v7.0.0-beta.14 */
+/*! lookbook.css v7.0.0-beta.13 */
 
 @layer theme, /* Tailwind */
   base, /* Tailwind */
@@ -1015,6 +1015,10 @@ fieldset {
   display: flex;
   gap: var(--spacing-3);
   align-items: center;
+
+  > :where(input:not([type='range'], [type='radio'], [type='checkbox']), .input-group__input) {
+    flex: 1;
+  }
 
   .btn {
     border-radius: var(--radius-sm);
