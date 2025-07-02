@@ -1719,12 +1719,12 @@
     {
       "name": "input-placeholder-text",
       "value": {
-        "r": 0.4431372582912445,
-        "g": 0.3921568691730499,
-        "b": 0.35686275362968445,
+        "r": 0.3333333432674408,
+        "g": 0.29411765933036804,
+        "b": 0.2666666805744171,
         "a": 1
       },
-      "target": "grey-800",
+      "target": "grey-900",
       "type": "COLOR",
       "description": null
     },
@@ -2079,7 +2079,7 @@
         "b": 0.2666666805744171,
         "a": 1
       },
-      "target": "disabled-text",
+      "target": "disabled-text-dark",
       "type": "COLOR",
       "description": null
     },
@@ -2110,7 +2110,7 @@
         "b": 0.2666666805744171,
         "a": 1
       },
-      "target": "disabled-text",
+      "target": "disabled-text-dark",
       "type": "COLOR",
       "description": null
     },
@@ -2158,7 +2158,7 @@
         "b": 0.2666666805744171,
         "a": 1
       },
-      "target": "disabled-text",
+      "target": "disabled-text-dark",
       "type": "COLOR",
       "description": null
     },
@@ -2182,7 +2182,7 @@
         "b": 0.2666666805744171,
         "a": 1
       },
-      "target": "disabled-text",
+      "target": "disabled-text-dark",
       "type": "COLOR",
       "description": null
     },
@@ -2218,7 +2218,7 @@
         "b": 0.2666666805744171,
         "a": 1
       },
-      "target": "disabled-text",
+      "target": "disabled-text-dark",
       "type": "COLOR",
       "description": null
     },
@@ -2266,7 +2266,7 @@
         "b": 0.2666666805744171,
         "a": 1
       },
-      "target": "disabled-text",
+      "target": "disabled-text-dark",
       "type": "COLOR",
       "description": null
     },
@@ -2296,8 +2296,8 @@
     },
     {
       "name": "input-border-width",
-      "value": 1.5,
-      "target": "border-width-2",
+      "value": 1,
+      "target": "border-width-1",
       "type": "FLOAT",
       "description": null
     },
@@ -2387,24 +2387,24 @@
     {
       "name": "input-label",
       "value": {
-        "r": 0.4431372582912445,
-        "g": 0.3921568691730499,
-        "b": 0.35686275362968445,
+        "r": 0.3333333432674408,
+        "g": 0.29411765933036804,
+        "b": 0.2666666805744171,
         "a": 1
       },
-      "target": "grey-800",
+      "target": "grey-900",
       "type": "COLOR",
       "description": null
     },
     {
       "name": "input-text-disabled",
       "value": {
-        "r": 0.3333333432674408,
-        "g": 0.29411765933036804,
-        "b": 0.2666666805744171,
+        "r": 0.4431372582912445,
+        "g": 0.3921568691730499,
+        "b": 0.35686275362968445,
         "a": 1
       },
-      "target": "disabled-text",
+      "target": "disabled-text-light",
       "type": "COLOR",
       "description": null
     },
@@ -2426,6 +2426,210 @@
       "target": "spacing-6",
       "type": "FLOAT",
       "description": "Radio buttons, checkboxes"
+    },
+    {
+      "name": "button-input-success-bg",
+      "value": {
+        "r": 0.07450980693101883,
+        "g": 0.4431372582912445,
+        "b": 0.33725491166114807,
+        "a": 1
+      },
+      "target": "success-bg-strong",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-input-success-hover-bg",
+      "value": {
+        "r": 0.0941176488995552,
+        "g": 0.3450980484485626,
+        "b": 0.29411765933036804,
+        "a": 1
+      },
+      "target": "success-hover-bg-strong",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-input-success-active-bg",
+      "value": {
+        "r": 0.0941176488995552,
+        "g": 0.3450980484485626,
+        "b": 0.29411765933036804,
+        "a": 1
+      },
+      "target": "success-hover-bg-strong",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-input-success-disabled-bg",
+      "value": {
+        "r": 0.9411764740943909,
+        "g": 0.9137254953384399,
+        "b": 0.9019607901573181,
+        "a": 1
+      },
+      "target": "disabled-bg",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-input-success-text",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "target": "white",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-input-success-hover-text",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "target": "white",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-input-success-active-text",
+      "value": {
+        "r": 0.9411764740943909,
+        "g": 0.9137254953384399,
+        "b": 0.9019607901573181,
+        "a": 1
+      },
+      "target": "grey-200",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-input-success-disabled-text",
+      "value": {
+        "r": 0.3333333432674408,
+        "g": 0.29411765933036804,
+        "b": 0.2666666805744171,
+        "a": 1
+      },
+      "target": "disabled-text-dark",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-destructive-bg",
+      "value": {
+        "r": 0.7439999580383301,
+        "g": 0.2925800681114197,
+        "b": 0.21599999070167542,
+        "a": 1
+      },
+      "target": "destructive-bg-strong",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-destructive-hover-bg",
+      "value": {
+        "r": 0.6470588445663452,
+        "g": 0.2549019753932953,
+        "b": 0.1882352977991104,
+        "a": 1
+      },
+      "target": "destructive-hover-bg-strong",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-destructive-active-bg",
+      "value": {
+        "r": 0.6470588445663452,
+        "g": 0.2549019753932953,
+        "b": 0.1882352977991104,
+        "a": 1
+      },
+      "target": "destructive-hover-bg-strong",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-destructive-disabled-bg",
+      "value": {
+        "r": 0.9411764740943909,
+        "g": 0.9137254953384399,
+        "b": 0.9019607901573181,
+        "a": 1
+      },
+      "target": "disabled-bg",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-destructive-text",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "target": "white",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-destructive-hover-text",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "target": "white",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-destructive-active-text",
+      "value": {
+        "r": 0.9411764740943909,
+        "g": 0.9137254953384399,
+        "b": 0.9019607901573181,
+        "a": 1
+      },
+      "target": "grey-200",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-destructive-disabled-text",
+      "value": {
+        "r": 0.3333333432674408,
+        "g": 0.29411765933036804,
+        "b": 0.2666666805744171,
+        "a": 1
+      },
+      "target": "disabled-text-dark",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "input-bg-filled-dark",
+      "value": {
+        "r": 0.9647058844566345,
+        "g": 0.9450980424880981,
+        "b": 0.9333333373069763,
+        "a": 1
+      },
+      "target": "grey-100",
+      "type": "COLOR",
+      "description": null
     }
   ],
   "semantic": [
@@ -2624,7 +2828,7 @@
       "description": null
     },
     {
-      "name": "disabled-text",
+      "name": "disabled-text-dark",
       "value": {
         "r": 0.3333333432674408,
         "g": 0.29411765933036804,
@@ -2988,6 +3192,18 @@
     },
     {
       "name": "muted",
+      "value": {
+        "r": 0.4431372582912445,
+        "g": 0.3921568691730499,
+        "b": 0.35686275362968445,
+        "a": 1
+      },
+      "target": "grey-800",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "disabled-text-light",
       "value": {
         "r": 0.4431372582912445,
         "g": 0.3921568691730499,

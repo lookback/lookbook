@@ -1,6 +1,21 @@
+/* Icons inlined as SVG backgrounds for some input types. Sadly can't use variables inside of these
+embeddings, so we have to duplicate them. */
+:root {
+  --input-icon-pencil: url('data:image/svg+xml;utf8,<svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.018 2.08266C13.23 1.87073 13.4816 1.70261 13.7585 1.58792C14.0354 1.47322 14.3322 1.41418 14.6319 1.41418C14.9316 1.41418 15.2284 1.47322 15.5053 1.58792C15.7822 1.70261 16.0338 1.87073 16.2457 2.08266C16.4577 2.29459 16.6258 2.5462 16.7405 2.8231C16.8552 3.1 16.9142 3.39679 16.9142 3.69651C16.9142 3.99622 16.8552 4.29301 16.7405 4.56991C16.6258 4.84682 16.4577 5.09842 16.2457 5.31035L5.35229 16.2038L0.914215 17.4142L2.1246 12.9761L13.018 2.08266Z" stroke="oklch(0.7339257262016716 0.03164836056507093 62.42273383732768)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+
+  --input-icon-pencil-warning: url('data:image/svg+xml;utf8,<svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.018 2.08266C13.23 1.87073 13.4816 1.70261 13.7585 1.58792C14.0354 1.47322 14.3322 1.41418 14.6319 1.41418C14.9316 1.41418 15.2284 1.47322 15.5053 1.58792C15.7822 1.70261 16.0338 1.87073 16.2457 2.08266C16.4577 2.29459 16.6258 2.5462 16.7405 2.8231C16.8552 3.1 16.9142 3.39679 16.9142 3.69651C16.9142 3.99622 16.8552 4.29301 16.7405 4.56991C16.6258 4.84682 16.4577 5.09842 16.2457 5.31035L5.35229 16.2038L0.914215 17.4142L2.1246 12.9761L13.018 2.08266Z" stroke="oklch(0.4520689571827139 0.0961148162691226 57.06845838474611)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+
+  --input-icon-pencil-active: url('data:image/svg+xml;utf8,<svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.018 2.08266C13.23 1.87073 13.4816 1.70261 13.7585 1.58792C14.0354 1.47322 14.3322 1.41418 14.6319 1.41418C14.9316 1.41418 15.2284 1.47322 15.5053 1.58792C15.7822 1.70261 16.0338 1.87073 16.2457 2.08266C16.4577 2.29459 16.6258 2.5462 16.7405 2.8231C16.8552 3.1 16.9142 3.39679 16.9142 3.69651C16.9142 3.99622 16.8552 4.29301 16.7405 4.56991C16.6258 4.84682 16.4577 5.09842 16.2457 5.31035L5.35229 16.2038L0.914215 17.4142L2.1246 12.9761L13.018 2.08266Z" stroke="oklch(0.3992558242730704 0.10787932215196669 255.99294911345658)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+
+  --input-icon-pencil-disabled: url('data:image/svg+xml;utf8,<svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.018 2.08266C13.23 1.87073 13.4816 1.70261 13.7585 1.58792C14.0354 1.47322 14.3322 1.41418 14.6319 1.41418C14.9316 1.41418 15.2284 1.47322 15.5053 1.58792C15.7822 1.70261 16.0338 1.87073 16.2457 2.08266C16.4577 2.29459 16.6258 2.5462 16.7405 2.8231C16.8552 3.1 16.9142 3.39679 16.9142 3.69651C16.9142 3.99622 16.8552 4.29301 16.7405 4.56991C16.6258 4.84682 16.4577 5.09842 16.2457 5.31035L5.35229 16.2038L0.914215 17.4142L2.1246 12.9761L13.018 2.08266Z" stroke="oklch(0.6445190811447986 0.025161898688078468 56.7458039076113)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+
+  --input-icon-search: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.08338 2.05691C2.33463 4.92505 -0.811209 12.7211 2.05694 19.4698C4.92508 26.2186 12.7211 29.3644 19.4699 26.4963C20.4385 26.0846 21.3328 25.5715 22.1459 24.9745L29.5824 32.412C30.3634 33.1931 31.6297 33.1932 32.4108 32.4122C33.1919 31.6312 33.192 30.3649 32.411 29.5838L24.9737 22.1454C27.656 18.4917 28.3977 13.5574 26.4963 9.08335C23.6281 2.3346 15.8321 -0.811239 9.08338 2.05691ZM20.9137 20.7623C23.4505 18.1642 24.324 14.1986 22.815 10.6479C20.8109 5.93228 15.3635 3.73416 10.6479 5.73824C5.93231 7.74232 3.73419 13.1897 5.73827 17.9053C7.74235 22.6209 13.1897 24.819 17.9053 22.8149C19.0001 22.3496 19.9593 21.6987 20.7616 20.9145C20.7856 20.8878 20.8104 20.8616 20.8361 20.8359C20.8615 20.8105 20.8874 20.786 20.9137 20.7623Z" fill="oklch(0.7339257262016716 0.03164836056507093 62.42273383732768)" /></svg>');
+}
+
 label {
   font-weight: var(--font-weight-bold);
   color: var(--color-input-label);
+  font-size: var(--text-sm);
 
   &:has(+ :where(input, textarea, select, [contenteditable='true'])) {
     margin-bottom: var(--spacing-3);
@@ -73,6 +88,37 @@ label:has(+ :user-invalid) {
 :where(input:not([type='radio'], [type='checkbox'], [type='range']), select:not([multiple])) {
   height: var(--spacing-10);
   line-height: 1;
+
+  &.mode-inline {
+    font-weight: normal;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    border-bottom: var(--border-width) solid var(--border-color);
+    font-size: var(--text-lg);
+    background-repeat: no-repeat;
+    background-size: 0.8em; /* = 16px */
+    background-position: right var(--spacing-4) center;
+    padding-right: 2.5em;
+    background-image: var(--input-icon-pencil);
+
+    &:focus {
+      background-image: var(--input-icon-pencil-active);
+    }
+
+    &:disabled {
+      background-image: var(--input-icon-pencil-disabled);
+    }
+
+    &:is(:user-invalid, :user-invalid:focus) {
+      background-image: var(--input-icon-pencil-warning);
+    }
+  }
+
+  &.mode-bg {
+    background-color: var(--color-input-bg-filled-dark);
+    font-weight: normal;
+  }
 }
 
 :where(textarea, [contenteditable='true']) {
@@ -88,7 +134,7 @@ input:where([type='search']) {
   background-position: left var(--spacing-4) center;
   padding-left: 2.3em; /* Will size with text. */
   /* Sadly no variables in embedded SVGs. The color is --grey-700: */
-  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.08338 2.05691C2.33463 4.92505 -0.811209 12.7211 2.05694 19.4698C4.92508 26.2186 12.7211 29.3644 19.4699 26.4963C20.4385 26.0846 21.3328 25.5715 22.1459 24.9745L29.5824 32.412C30.3634 33.1931 31.6297 33.1932 32.4108 32.4122C33.1919 31.6312 33.192 30.3649 32.411 29.5838L24.9737 22.1454C27.656 18.4917 28.3977 13.5574 26.4963 9.08335C23.6281 2.3346 15.8321 -0.811239 9.08338 2.05691ZM20.9137 20.7623C23.4505 18.1642 24.324 14.1986 22.815 10.6479C20.8109 5.93228 15.3635 3.73416 10.6479 5.73824C5.93231 7.74232 3.73419 13.1897 5.73827 17.9053C7.74235 22.6209 13.1897 24.819 17.9053 22.8149C19.0001 22.3496 19.9593 21.6987 20.7616 20.9145C20.7856 20.8878 20.8104 20.8616 20.8361 20.8359C20.8615 20.8105 20.8874 20.786 20.9137 20.7623Z" fill="oklch(0.7339257262016716 0.03164836056507093 62.42273383732768)" /></svg>');
+  background-image: var(--input-icon-search);
 }
 
 select {
