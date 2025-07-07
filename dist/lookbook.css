@@ -1038,6 +1038,91 @@ fieldset {
 }
 }
 
+@layer lookbook-components{
+.Badge {
+  --fg: var(--color-success-text);
+  --bg: var(--color-success-bg-weak);
+  border-radius: var(--radius-lg);
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4em 0.6em;
+  line-height: 1.2;
+  color: var(--fg);
+  background-color: var(--bg);
+
+  &--custom {
+    --color: oklch(40% 0.1643 var(--hue, 250));
+    --bg: oklch(from var(--color) 97% 0.02 h);
+    --fg: var(--color);
+
+    /** Apply this class to support background color darken when :hover, parent is aria-selected, etc. */
+    &.Badge--interactive {
+      &:where(:hover, :focus-visible, [aria-selected='true'] *) {
+        --bg: oklch(from var(--color) 94% 0.02 h);
+      }
+    }
+  }
+
+  &--purple {
+    --fg: var(--color-purple-900);
+    --bg: var(--color-purple-100);
+  }
+
+  &--grey {
+    --fg: var(--color-grey-900);
+    --bg: var(--color-grey-100);
+  }
+
+  &--negative {
+    --fg: var(--color-destructive-text);
+    --bg: var(--color-destructive-bg-weak);
+  }
+
+  &--orange {
+    --fg: var(--color-orange-900);
+    --bg: var(--color-orange-100);
+  }
+
+  &--invert {
+    background-color: var(--fg);
+    color: var(--bg);
+  }
+
+  /* Keep correct text color when used on links. */
+  &:is(a):where(:hover, :focus-visible),
+  a {
+    color: var(--fg);
+  }
+
+  /* We kinda need an `outline` here for a11y, otherwise it's impossible to see differences in the theme
+     colour. */
+  &:where([aria-selected='true'] *) {
+    outline: 2px solid;
+  }
+}
+}
+
+@layer lookbook-components{
+.StatusBadge {
+  --fg: var(--color-success-text);
+  --bg: var(--color-success-bg-weak);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  line-height: 1.2;
+  border-radius: var(--radius-lg);
+  padding: 0.35em 1.35em;
+  color: var(--fg);
+  background-color: var(--bg);
+  letter-spacing: var(--tracking-wider);
+
+  &--negative {
+    --fg: var(--color-destructive-text);
+    --bg: var(--color-destructive-bg-weak);
+  }
+}
+}
+
 @layer lookbook-utils{
 /*
 Gradually appearing dots after text.

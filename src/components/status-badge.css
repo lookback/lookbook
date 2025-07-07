@@ -1,0 +1,18 @@
+.StatusBadge {
+  --fg: var(--color-success-text);
+  --bg: var(--color-success-bg-weak);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  line-height: 1.2;
+  border-radius: var(--radius-lg);
+  padding: 0.35em 1.35em;
+  color: var(--fg);
+  background-color: var(--bg);
+  letter-spacing: var(--tracking-wider);
+
+  &--negative {
+    --fg: var(--color-destructive-text);
+    --bg: var(--color-destructive-bg-weak);
+  }
+}
