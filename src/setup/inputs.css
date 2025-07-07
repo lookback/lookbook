@@ -116,7 +116,7 @@ label:has(+ :user-invalid) {
 }
 
 :where(textarea, [contenteditable='true']) {
-  padding: var(--input-spacing-inline);
+  padding: var(--input-spacing-block) var(--input-spacing-inline);
   border-radius: var(--input-radius-lg);
   font-weight: var(--font-weight-normal);
 }
