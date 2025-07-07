@@ -2637,6 +2637,66 @@
       "target": "radius-md",
       "type": "FLOAT",
       "description": null
+    },
+    {
+      "name": "input-icon",
+      "value": {
+        "r": 0.3333333432674408,
+        "g": 0.29411765933036804,
+        "b": 0.2666666805744171,
+        "a": 1
+      },
+      "target": "grey-900",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "input-icon-active",
+      "value": {
+        "r": 0.4431372582912445,
+        "g": 0.7411764860153198,
+        "b": 0.9372549057006836,
+        "a": 1
+      },
+      "target": "input-border-active",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "input-border-warning",
+      "value": {
+        "r": 0.9166666865348816,
+        "g": 0.7017592787742615,
+        "b": 0.11076390743255615,
+        "a": 1
+      },
+      "target": "warning-stroke",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "input-icon-warning",
+      "value": {
+        "r": 0.9166666865348816,
+        "g": 0.7017592787742615,
+        "b": 0.11076390743255615,
+        "a": 1
+      },
+      "target": "input-border-warning",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "input-icon-disabled",
+      "value": {
+        "r": 0.6039215922355652,
+        "g": 0.5411764979362488,
+        "b": 0.49803921580314636,
+        "a": 1
+      },
+      "target": "disabled-icon",
+      "type": "COLOR",
+      "description": null
     }
   ],
   "semantic": [
