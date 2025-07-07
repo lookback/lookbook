@@ -1,4 +1,4 @@
-/*! lookbook.css v7.0.0-beta.18 */
+/*! lookbook.css v7.0.0-beta.17 */
 
 @layer theme, /* Tailwind */
   base, /* Tailwind */
@@ -707,14 +707,10 @@ label {
   }
 
   /* Error states */
-  &:where(:user-invalid, :user-invalid:focus) {
+  &:where(:user-invalid, :user-invalid:focus, .input-invalid) {
     --border-color: var(--color-warning-stroke);
     --border-width: var(--border-width-warning);
   }
-}
-
-label:has(+ :user-invalid) {
-  color: var(--color-warning-text);
 }
 
 :where(input:not([type='radio'], [type='checkbox'], [type='range']), select:not([multiple])) {
@@ -1120,6 +1116,14 @@ fieldset {
     --fg: var(--color-destructive-text);
     --bg: var(--color-destructive-bg-weak);
   }
+}
+}
+
+@layer lookbook-components{
+.input-warning {
+  color: var(--color-warning-text);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--text-sm);
 }
 }
 
