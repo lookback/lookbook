@@ -73,13 +73,13 @@
   --color-green-950: oklch(0.26267812849242383 0.040491645093017836 181.78607749414385);
   --color-green-900: oklch(0.36908122122554965 0.0553377236988369 177.24971933151028);
   --color-green-800: oklch(0.41660941048909605 0.0673302584587661 176.45061585268638);
-  --color-green-700: oklch(0.4899654442782103 0.09354903978640819 167.9255434611221);
+  --color-green-700: oklch(0.4919398654616786 0.08856942302023314 173.57337295464282);
   --color-green-600: oklch(0.5547074400335019 0.10396520668635736 167.91311539190616);
   --color-green-500: oklch(0.6480341867211402 0.12591789060909053 165.17234148482976);
-  --color-green-400: oklch(0.7379828205067956 0.11780731685495621 160.4365651986363);
-  --color-green-300: oklch(0.8409574944344255 0.08516958759236462 156.25370593101198);
-  --color-green-200: oklch(0.8980102956353234 0.06895117111055506 159.0290841832634);
-  --color-green-100: oklch(0.9437958020790783 0.03869522508401024 160.8551683396551);
+  --color-green-400: oklch(0.7427318346943275 0.10379188287990472 171.35819701208771);
+  --color-green-300: oklch(0.8439430507549325 0.07553361345211922 165.06931515986324);
+  --color-green-200: oklch(0.9015687085022864 0.05941757721694069 172.5386272921462);
+  --color-green-100: oklch(0.9421297351441882 0.03716408045602811 178.04243219359785);
   --color-green-50: oklch(0.982212296452249 0.012421764569750544 165.03350070529);
   --color-orange-950: oklch(0.26934990357033844 0.05563104646700414 50.32988383581561);
   --color-orange-900: oklch(0.36607123832536415 0.07094400998341119 53.20425866407521);
@@ -220,7 +220,7 @@
   --color-border-dark: var(--color-grey-500);
   --color-destructive-text-dark: var(--color-red-900);
   --color-muted: var(--color-grey-800);
-  --color-disabled-text-light: var(--color-grey-800);
+  --color-disabled-text-light: var(--color-grey-700);
   --color-button-primary-bg: var(--color-blue-900);
   --button-radius: 9999px;
   --color-button-primary-text: var(--color-white);
@@ -300,7 +300,7 @@
   --color-input-text-active: var(--color-blue-900);
   --color-input-option-bg-hover: var(--color-grey-300);
   --color-input-bg-disabled: var(--color-disabled-bg-light);
-  --color-input-placeholder-disabled-text: var(--color-disabled-text-dark);
+  --color-input-placeholder-disabled-text: var(--color-disabled-text-light);
   --color-input-border: var(--color-grey-500);
   --color-input-border-active: var(--color-blue-400);
   --input-border-width: var(--border-width-1);
@@ -333,7 +333,8 @@
   --color-button-destructive-hover-text: var(--color-white);
   --color-button-destructive-active-text: var(--color-grey-200);
   --color-button-destructive-disabled-text: var(--color-disabled-text-dark);
-  --color-input-bg-filled-dark: var(--color-grey-100);
+  --color-input-bg-filled-dark: var(--color-grey-50);
+  --modal-border-radius: var(--radius-md);
 }
 
 @theme {
@@ -727,11 +728,6 @@ label:has(+ :user-invalid) {
     &:is(:user-invalid, :user-invalid:focus) {
       background-image: var(--input-icon-pencil-warning);
     }
-  }
-
-  &.mode-bg {
-    background-color: var(--color-input-bg-filled-dark);
-    font-weight: normal;
   }
 }
 
