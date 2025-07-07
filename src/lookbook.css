@@ -18,3 +18,5 @@
 @import 'components' layer(lookbook-components);
 
 @import 'utils' layer(lookbook-utils);
+
+@import 'tailwind-utils';

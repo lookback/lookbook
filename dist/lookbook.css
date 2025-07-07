@@ -1065,3 +1065,15 @@ Usage:
   }
 }
 }
+
+/* Custom Tailwind utils are imported without layer. */
+
+@utility margin-trim-end {
+  margin-trim: block-end;
+
+  @supports not (margin-trim: block-end) {
+    & > :last-child {
+      margin-block-end: 0;
+    }
+  }
+}
