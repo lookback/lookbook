@@ -9,13 +9,13 @@ Lookback's central location for shared colors and styles ✨ This repository is 
 
 ## Usage
 
-1. Install dependencies:
+Install dependencies:
 
 ```bash
 npm install --save @lookback/lookbook tailwindcss @tailwindcss/postcss postcss postcss-cli
 ```
 
-2. Set up the PostCSS config:
+Set up the PostCSS config:
 
 ```js
 // postcss.config.js
@@ -29,21 +29,32 @@ module.exports = {
 };
 ```
 
-3. Add to the main app CSS entry point:
+Add to the main app CSS entry point:
 
 ```css
 /* src/input.css */
 
+/* 1 */
 @import '@lookback/lookbook/dist/lookbook.css';
-
+/* 2 */
 @import './your-app.css' layer(app);
+/* 3 */
+@source "../../node_modules/@lookback/component";
 ```
 
-4. Build the CSS:
+Explanation:
+
+1. Import Lookbook, which has *internal* CSS layers set up.
+2. Import your app. It *must* be imported into the `app` layer, as defined in 1).
+3. Explicitly tell Tailwind we want to scan `@lookback/component` for util class name usage.
+
+Build the CSS:
 
 ```bash
 postcss src/input.css --dir build --verbose
 ```
+
+**Done!**
 
 ## Releasing new versions
 
