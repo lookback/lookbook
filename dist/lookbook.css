@@ -1,4 +1,4 @@
-/*! lookbook.css v7.0.0-beta.16 */
+/*! lookbook.css v7.0.0-beta.17 */
 
 @layer theme, /* Tailwind */
   base, /* Tailwind */
@@ -177,7 +177,7 @@
   --color-warning-bg-strong: var(--color-orange-400);
   --color-success-bg: var(--color-green-400);
   --color-success-bg-strong: var(--color-green-700);
-  --color-success-text: var(--color-green-900);
+  --color-success-text: var(--color-green-800);
   --color-destructive-text: var(--color-red-800);
   --color-destructive-bg-weak: var(--color-red-100);
   --color-destructive-bg: var(--color-red-500);
