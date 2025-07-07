@@ -13,12 +13,23 @@ embeddings, so we have to duplicate them. */
 }
 
 label {
-  font-weight: var(--font-weight-bold);
-  color: var(--color-input-label);
-  font-size: var(--text-sm);
+  &:where(
+    &:has(
+        /* Target labels immediately preceding an input. */
+        + :where(input, textarea, select, [contenteditable='true']),
+        /* Target labels immediately preceeding any element which has an input. */
+        + * > :where(input, textarea, select, [contenteditable='true'])
+    ),
+        /* Manually apply with a class. */
+        &.label
+    ) {
+    font-weight: var(--font-weight-bold);
+    color: var(--color-input-label);
+    font-size: var(--text-sm);
 
-  &:has(+ :where(input, textarea, select, [contenteditable='true'])) {
-    margin-bottom: var(--spacing-3);
+    &:not(.label) {
+      margin-bottom: var(--spacing-3);
+    }
   }
 }
 
