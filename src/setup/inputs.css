@@ -114,11 +114,6 @@ label:has(+ :user-invalid) {
       background-image: var(--input-icon-pencil-warning);
     }
   }
-
-  &.mode-bg {
-    background-color: var(--color-input-bg-filled-dark);
-    font-weight: normal;
-  }
 }
 
 :where(textarea, [contenteditable='true']) {
