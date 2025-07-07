@@ -1,4 +1,4 @@
-/*! lookbook.css v7.0.0-beta.15 */
+/*! lookbook.css v7.0.0-beta.16 */
 
 @layer theme, /* Tailwind */
   base, /* Tailwind */
@@ -335,6 +335,11 @@
   --color-button-destructive-disabled-text: var(--color-disabled-text-dark);
   --color-input-bg-filled-dark: var(--color-grey-50);
   --modal-border-radius: var(--radius-md);
+  --color-input-icon: var(--color-grey-900);
+  --color-input-icon-active: var(--color-input-border-active);
+  --color-input-border-warning: var(--color-warning-stroke);
+  --color-input-icon-warning: var(--color-input-border-warning);
+  --color-input-icon-disabled: var(--color-disabled-icon);
 }
 
 @theme {
