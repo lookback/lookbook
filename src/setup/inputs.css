@@ -28,6 +28,7 @@ label {
     font-size: var(--text-sm);
 
     &:not(.label) {
+      display: block;
       margin-bottom: var(--spacing-3);
     }
   }

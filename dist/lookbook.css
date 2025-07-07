@@ -648,6 +648,7 @@ label {
     font-size: var(--text-sm);
 
     &:not(.label) {
+      display: block;
       margin-bottom: var(--spacing-3);
     }
   }
@@ -1021,13 +1022,12 @@ fieldset {
 }
 
 @layer lookbook-components{
-
 .input-group {
   display: flex;
   gap: var(--spacing-3);
   align-items: center;
 
-  > :where(input:not([type='range'], [type='radio'], [type='checkbox']), .input-group__input) {
+  :where(& > input:not([type='range'], [type='radio'], [type='checkbox']), .input-group__input) {
     flex: 1;
   }
 
@@ -1035,11 +1035,6 @@ fieldset {
     border-radius: var(--radius-sm);
     height: calc(var(--spacing-10) - 4px);
   }
-}
-
-label:has(+ .input-group) {
-  margin-bottom: var(--spacing-3);
-  display: block;
 }
 }
 

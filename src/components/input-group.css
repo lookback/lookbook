@@ -3,7 +3,7 @@
   gap: var(--spacing-3);
   align-items: center;
 
-  > :where(input:not([type='range'], [type='radio'], [type='checkbox']), .input-group__input) {
+  :where(& > input:not([type='range'], [type='radio'], [type='checkbox']), .input-group__input) {
     flex: 1;
   }
 
@@ -11,9 +11,4 @@
     border-radius: var(--radius-sm);
     height: calc(var(--spacing-10) - 4px);
   }
-}
-
-label:has(+ .input-group) {
-  margin-bottom: var(--spacing-3);
-  display: block;
 }
