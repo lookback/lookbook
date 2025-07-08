@@ -451,7 +451,12 @@ legend {
 
 /* Text inputs take care of their own focus: it usually looks messed up when applying
 outline instead of border for focus anyway. */
-:is(:focus-visible, button:focus-visible):not(input, select, textarea, [contenteditable]) {
+:is(:focus-visible, button:focus-visible):not(
+    input:not([type='radio'], [type='checkbox'], [type='range']),
+    select,
+    textarea,
+    [contenteditable]
+) {
   outline: 3px solid var(--color-outline, black);
   outline-offset: 0.15em;
   box-shadow: 0 0 0 6px white;
