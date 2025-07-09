@@ -1,4 +1,4 @@
-/*! lookbook.css v7.0.0-beta.23 */
+/*! lookbook.css v7.0.0-beta.21 */
 
 @layer theme, /* Tailwind */
   base, /* Tailwind */
@@ -1234,6 +1234,70 @@ Usage:
   &::after {
     content: '.';
     animation: dots 1.5s steps(5, end) infinite;
+  }
+}
+}
+
+@layer lookbook-utils{
+/* Apply anywhere where you want to transition TO height: auto. */
+.trans-appear-height {
+  transition: height 300ms ease;
+  overflow-y: clip;
+
+  @starting-style {
+    height: 0;
+  }
+}
+
+.trans-appear-pop {
+  transform: scale(1);
+  transition: transform 500ms;
+  transition-timing-function:
+    /* From https://linear-easing-generator.netlify.app */ linear(
+    0,
+    0.01,
+    0.042 1.6%,
+    0.172 3.4%,
+    0.856 9.5%,
+    1.092 12.1%,
+    1.237 14.5%,
+    1.279,
+    1.301 16.9%,
+    1.305,
+    1.302 18.6%,
+    1.275 20.3%,
+    0.986 29.3%,
+    0.933,
+    0.909 34.6%,
+    0.908,
+    0.916 38.1%,
+    1.004 47%,
+    1.02,
+    1.028 52.2%,
+    1.026 55.9%,
+    0.999 64.7%,
+    0.992 69.5%,
+    1.002 86.5%,
+    1
+  );
+
+  @starting-style {
+    transform: scale(0);
+  }
+}
+
+.trans-appear-majestic {
+  transform: none;
+  opacity: 1;
+  transition-duration: 1.5s;
+  transition-timing-function: ease;
+  transition-property: transform, opacity, box-shadow;
+  transition-delay: 0s, 0s, 250ms;
+
+  @starting-style {
+    transform: perspective(1000px) translate3d(0, 0, -80px);
+    opacity: 0;
+    box-shadow: none !important;
   }
 }
 }
