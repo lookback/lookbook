@@ -1,0 +1,37 @@
+/* Apply this class to the top level <nav>. */
+.TabList {
+  --color: var(--color-text-body);
+  --active-border: var(--border-width-4);
+  --bottom-border: var(--border-width-1);
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-4);
+  border-bottom: var(--bottom-border) solid var(--color-border-light);
+
+  [role='tab'] {
+    display: inline-block;
+    padding: var(--spacing-4);
+    text-decoration: none;
+    position: relative;
+
+    &:where(&, & a) {
+      color: var(--color);
+    }
+
+    &:is([aria-current='page'], [aria-selected='true']) {
+      pointer-events: none;
+      font-weight: var(--font-weight-bold);
+
+      &::after {
+        content: '';
+        position: absolute;
+        inset-inline: 0;
+        bottom: calc(var(--bottom-border) * -1);
+        height: var(--active-border);
+        background-color: var(--color);
+      }
+    }
+  }
+}
