@@ -227,7 +227,7 @@
   --button-font-size: var(--text-base);
   --button-font-family: var(--font-body);
   --button-font-weight: var(--font-weight-bold);
-  --color-button-secondary-text: var(--color-blue-800);
+  --color-button-secondary-text: var(--color-blue-700);
   --color-button-tertiary-text: var(--color-blue-800);
   --color-button-success-bg: var(--color-success-bg-strong);
   --color-button-success-text: var(--color-white);
@@ -253,7 +253,7 @@
   --modal-header-font-size: var(--text-lg);
   --modal-header-font-weight: var(--font-weight-bold);
   --color-modal-bg: var(--color-container-body);
-  --color-button-secondary-hover-text: var(--color-blue-950);
+  --color-button-secondary-hover-text: var(--color-blue-800);
   --color-input-placeholder-text: var(--color-grey-900);
   --color-input-bg: var(--color-white);
   --color-input-text: var(--color-blue-900);
