@@ -60,7 +60,6 @@ label {
   border-radius: var(--input-radius-sm);
   background-color: var(--color-input-bg);
   color: var(--color-input-text);
-  font-weight: var(--font-weight-bold);
   padding: var(--input-spacing-block) var(--input-spacing-inline);
   box-shadow: inset 0 0 0 var(--border-width) var(--border-color);
 
