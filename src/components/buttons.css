@@ -31,13 +31,13 @@
     text-decoration: none;
   }
 
-  &:enabled:where(:hover, [aria-expanded='true']) {
+  &:where(:hover, [aria-expanded='true']) {
     border-color: var(--color-button-hover-border);
     color: var(--text-hover);
     background-color: var(--bg-hover);
   }
 
-  &:enabled:active {
+  &:active {
     border-color: var(--color-button-hover-border);
     color: var(--text-active);
     background-color: var(--bg-active);
@@ -99,7 +99,7 @@
     --text-disabled: var(--color-button-tertiary-disabled-text);
     outline-offset: -2px;
 
-    &:enabled {
+    &:not(:disabled) {
       position: relative;
 
       &:active {
@@ -107,7 +107,7 @@
       }
     }
 
-    &:enabled:where(:hover, :active, :focus-visible) {
+    &:where(:hover, :active, :focus-visible) {
       text-decoration: underline;
     }
 
