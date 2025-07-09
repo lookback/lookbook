@@ -7,12 +7,12 @@
  * @property {string | null} [description] The description of the variable, if available.
  */
 
-const { Declaration } = require('postcss');
+const MAGIC_COMMENT = '=inject-tailwind-variables';
 
 /** Add Figma variables as Tailwind @theme variables.
  *
- * This plugin will find a `@figma-variables` mark in the input and replace it with `--var: name` declarations.
- * Thus, the `@figma-variables` mark MUST be inside of a valid selector, such as `:root`.
+ * This plugin will find a `=inject-tailwind-variables` mark in the input and replace it with `--var: name`
+ * declarations. Thus, the `=inject-tailwind-variables` mark MUST be inside of a valid selector, such as `:root`.
  *
  * @param {object} options
  * @param {object} options.variables The imported Figma variables, such as `require('./gen/figma-variables.json')`.
@@ -24,39 +24,68 @@ const plugin = ({ variables }) => {
   return {
     postcssPlugin: 'postcss-figma-variables',
 
-    AtRule: {
-      'figma-variables': (atRule, { Declaration, result }) => {
-        /** @param {FigmaVariable[]} variables */
-        const declOf = (variables) => {
-          return variables
-            .filter((v) => {
-              if (/\s+/.test(v.name)) {
-                result.warn(
-                  `Skipping variable "${v.name}" as it contains whitespace.`,
-                  { node: atRule }
-                );
-                return false;
-              }
-              return true;
+    Once(root, { Declaration, result }) {
+      /**
+       * @param {FigmaVariable[]} variables
+       * @param {(msg: string) => void} onWarn
+       */
+      const declOf = (variables, onWarn) => {
+        return variables
+          .filter((v) => {
+            if (/\s+/.test(v.name)) {
+              onWarn(
+                `Skipping variable "${v.name}" as it contains whitespace.`
+              );
+              return false;
+            }
+            return true;
+          })
+          .map(
+            (v) =>
+              new Declaration({
+                prop: `--${nameOf(v.name, v.type)}`,
+                value: transformValue(v, result),
+              })
+          );
+      };
+
+      /**
+       * Shadows are "special": they're composite config vars built up of other tokens.
+       *
+       * @param {FigmaVariable[]} variables
+       */
+      const shadowsOf = (variables) => {
+        return (
+          variables
+            // Match shadow-sm, shadow-md, etc.
+            .filter((v) => /^shadow-[a-z]{2}$/.test(v.name))
+            .map((v) => {
+              const [, size] = v.name.match(/^shadow-([a-z]{2})$/);
+
+              return new Declaration({
+                prop: `--shadow-${size}`,
+                value: `0 var(--shadow-${size}-y) var(--shadow-${size}-blur) var(--color-shadow-${size})`,
+              });
             })
-            .map(
-              (v) =>
-                new Declaration({
-                  prop: `--${nameOf(v.name, v.type)}`,
-                  value: transformValue(v, result),
-                })
-            );
-        };
+        );
+      };
 
-        atRule.replaceWith([
-          ...declOf(primitives),
-          ...shadowsOf(primitives),
+      const onWarn = (msg) => {
+        result.warn(msg);
+      };
 
-          ...declOf(semantic),
+      root.walkComments((comment) => {
+        if (comment.text.trim() == MAGIC_COMMENT) {
+          comment.replaceWith([
+            ...declOf(primitives, onWarn),
+            ...shadowsOf(primitives, onWarn),
 
-          ...declOf(theme),
-        ]);
-      },
+            ...declOf(semantic, onWarn),
+
+            ...declOf(theme, onWarn),
+          ]);
+        }
+      });
     },
   };
 };
@@ -123,27 +152,6 @@ const transformValue = (v, result) => {
   }
 
   return valueOf(v) + unitOf(v);
-};
-
-/**
- * Shadows are "special": they're composite config vars built up of other tokens.
- *
- * @param {FigmaVariable[]} variables
- */
-const shadowsOf = (variables) => {
-  return (
-    variables
-      // Match shadow-sm, shadow-md, etc.
-      .filter((v) => /^shadow-[a-z]{2}$/.test(v.name))
-      .map((v) => {
-        const [, size] = v.name.match(/^shadow-([a-z]{2})$/);
-
-        return new Declaration({
-          prop: `--shadow-${size}`,
-          value: `0 var(--shadow-${size}-y) var(--shadow-${size}-blur) var(--color-shadow-${size})`,
-        });
-      })
-  );
 };
 
 const UNIT_LESS = ['leading-'];

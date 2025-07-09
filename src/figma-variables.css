@@ -7,7 +7,7 @@
   --text-*: initial;
   --font-weight-*: initial;
   --shadow-*: initial;
-  @figma-variables;
+  /* =inject-tailwind-variables */
 }
 
 @theme {
