@@ -1,6 +1,6 @@
 {
   "name": "@lookback/lookbook",
-  "version": "7.0.0-beta.23",
+  "version": "7.0.0-beta.24",
   "description": "The design system of Lookback",
   "main": "index.js",
   "types": "dist/types.d.ts",
