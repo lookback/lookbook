@@ -1,6 +1,8 @@
-/*
-COMPONENTS
-----------------------------------------------------------------*/
-
 @import 'buttons.css';
 @import 'loading.css';
+@import 'input-group.css';
+@import 'badge.css';
+@import 'status-badge.css';
+@import 'input-warning.css';
+@import 'box.css';
+@import 'tablist.css';

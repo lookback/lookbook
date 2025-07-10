@@ -1,9 +1,0 @@
-/*
-UTILITY LAYER
-
-Put things here to override the base styling.
-----------------------------------------------------------------*/
-
-@import 'tailwindcss/utilities';
-
-@import 'custom-utils';

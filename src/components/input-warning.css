@@ -1,0 +1,5 @@
+.input-warning {
+  color: var(--color-warning-text);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--text-sm);
+}

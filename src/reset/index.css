@@ -1,8 +1,0 @@
-@import 'reset.css';
-@import 'tailwind-reset.css';
-
-/* Fixes for greedy resets */
-
-:where(dialog) {
-  margin: auto; /* Fixes centered positioning */
-}

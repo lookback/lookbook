@@ -1,0 +1,14 @@
+.input-group {
+  display: flex;
+  gap: var(--spacing-3);
+  align-items: center;
+
+  :where(& > input:not([type='range'], [type='radio'], [type='checkbox']), .input-group__input) {
+    flex: 1;
+  }
+
+  .btn {
+    border-radius: var(--radius-sm);
+    height: calc(var(--spacing-10) - 4px);
+  }
+}
