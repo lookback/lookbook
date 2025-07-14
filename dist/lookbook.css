@@ -221,6 +221,7 @@
   --color-destructive-text-dark: var(--color-red-900);
   --color-muted: var(--color-grey-800);
   --color-disabled-text-light: var(--color-grey-700);
+  --color-info-stroke: var(--color-blue-400);
   --color-button-primary-bg: var(--color-blue-900);
   --button-radius: 9999px;
   --color-button-primary-text: var(--color-white);
@@ -284,7 +285,7 @@
   --color-button-tertiary-disabled-text: var(--color-disabled-icon);
   --color-button-cta-disabled-bg: var(--color-disabled-bg);
   --color-button-icon-disabled: var(--color-grey-700);
-  --color-button-cta-disabled-text-color: var(--color-disabled-text-dark);
+  --color-button-cta-disabled-text: var(--color-disabled-text-dark);
   --input-spacing-inline: var(--spacing-6);
   --color-button-primary-disabled-bg: var(--color-disabled-bg);
   --color-button-primary-disabled-text: var(--color-disabled-text-dark);

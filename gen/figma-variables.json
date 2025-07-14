@@ -2072,7 +2072,7 @@
       "description": null
     },
     {
-      "name": "button-cta-disabled-text-color",
+      "name": "button-cta-disabled-text",
       "value": {
         "r": 0.3333333432674408,
         "g": 0.29411765933036804,
@@ -3278,6 +3278,18 @@
         "a": 1
       },
       "target": "grey-700",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "info-stroke",
+      "value": {
+        "r": 0.4431372582912445,
+        "g": 0.7411764860153198,
+        "b": 0.9372549057006836,
+        "a": 1
+      },
+      "target": "blue-400",
       "type": "COLOR",
       "description": null
     }
