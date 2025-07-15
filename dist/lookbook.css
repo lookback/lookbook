@@ -533,23 +533,15 @@ pre {
   color: var(--color-white);
 }
 
-:where(code, kbd, mark) {
+:where(code, kbd, mark):not(pre > *) {
   border-radius: var(--radius-xs);
   padding-inline: 0.2em;
   background-color: var(--color-grey-200);
   white-space: nowrap;
 }
 
-code {
-  font-size: 0.875em;
-}
-
-pre code {
-  font-size: inherit;
-  padding: 0;
-  background: none;
-  border: 0;
-  color: inherit;
+code:not(pre code) {
+  font-size-adjust: cap-height 0.65;
 }
 
 kbd {
@@ -874,6 +866,13 @@ fieldset {
   color: var(--text);
   border: 0 solid var(--color-button-border);
 
+  &:where([aria-label], :has(> .sr-only)):has(> .icon:first-child) {
+    --button-height: 2.5em; /* Let these square, icon-only buttons be sized with .text-{size} helpers. */
+    aspect-ratio: 1 / 1;
+    padding: 0;
+    border-radius: 999em;
+  }
+
   &:where(:focus, :hover, :active, :disabled) {
     text-decoration: none;
   }
@@ -961,6 +960,21 @@ fieldset {
     &:disabled {
       color: var(--color-disabled-icon);
       background: none;
+    }
+
+    &:where([aria-label], :has(> .sr-only)):has(> .icon:first-child) {
+      transition: background-color 150ms ease;
+
+      &:not(:disabled) {
+        &:hover {
+          background-color: var(--color-grey-200);
+        }
+
+        &:active {
+          top: auto;
+          background-color: var(--color-grey-300);
+        }
+      }
     }
   }
 }

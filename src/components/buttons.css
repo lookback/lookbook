@@ -27,6 +27,13 @@
   color: var(--text);
   border: 0 solid var(--color-button-border);
 
+  &:where([aria-label], :has(> .sr-only)):has(> .icon:first-child) {
+    --button-height: 2.5em; /* Let these square, icon-only buttons be sized with .text-{size} helpers. */
+    aspect-ratio: 1 / 1;
+    padding: 0;
+    border-radius: 999em;
+  }
+
   &:where(:focus, :hover, :active, :disabled) {
     text-decoration: none;
   }
@@ -114,6 +121,21 @@
     &:disabled {
       color: var(--color-disabled-icon);
       background: none;
+    }
+
+    &:where([aria-label], :has(> .sr-only)):has(> .icon:first-child) {
+      transition: background-color 150ms ease;
+
+      &:not(:disabled) {
+        &:hover {
+          background-color: var(--color-grey-200);
+        }
+
+        &:active {
+          top: auto;
+          background-color: var(--color-grey-300);
+        }
+      }
     }
   }
 }
