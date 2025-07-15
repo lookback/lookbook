@@ -2758,24 +2758,24 @@
     {
       "name": "warning-bg",
       "value": {
-        "r": 0.9647058844566345,
-        "g": 0.8901960849761963,
-        "b": 0.572549045085907,
-        "a": 1
-      },
-      "target": "orange-200",
-      "type": "COLOR",
-      "description": null
-    },
-    {
-      "name": "warning-bg-strong",
-      "value": {
         "r": 0.9166666865348816,
         "g": 0.7017592787742615,
         "b": 0.11076390743255615,
         "a": 1
       },
       "target": "orange-400",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "warning-bg-strong",
+      "value": {
+        "r": 0.5921568870544434,
+        "g": 0.34117648005485535,
+        "b": 0.06666667014360428,
+        "a": 1
+      },
+      "target": "orange-700",
       "type": "COLOR",
       "description": null
     },
