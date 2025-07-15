@@ -86,7 +86,7 @@ label {
   }
 
   /* Error states */
-  &:where(:user-invalid, :user-invalid:focus, .input-invalid) {
+  &:where(:user-invalid, :user-invalid:focus, .input-invalid, [aria-invalid='true']) {
     --border-color: var(--color-warning-stroke);
     --border-width: var(--border-width-warning);
   }
