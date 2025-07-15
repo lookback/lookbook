@@ -18,18 +18,18 @@ embeddings, so we have to duplicate them. */
         + :where(input, textarea, select, [contenteditable='true']),
         /* Target labels immediately preceeding any element which has an input. */
         + * > :where(input, textarea, select, [contenteditable='true'])
-    ),
+        ),
         /* Manually apply with a class. */
         .label
     ) {
   font-weight: var(--font-weight-bold);
   color: var(--color-input-label);
   font-size: var(--text-sm);
-}
 
-label:not(.label) {
-  display: block;
-  margin-bottom: var(--spacing-3);
+  &:not(.label) {
+    display: block;
+    margin-bottom: var(--spacing-3);
+  }
 }
 
 :where(input, textarea)::placeholder {
