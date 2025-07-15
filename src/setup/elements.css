@@ -24,23 +24,15 @@ pre {
   color: var(--color-white);
 }
 
-:where(code, kbd, mark) {
+:where(code, kbd, mark):not(pre > *) {
   border-radius: var(--radius-xs);
   padding-inline: 0.2em;
   background-color: var(--color-grey-200);
   white-space: nowrap;
 }
 
-code {
-  font-size: 0.875em;
-}
-
-pre code {
-  font-size: inherit;
-  padding: 0;
-  background: none;
-  border: 0;
-  color: inherit;
+code:not(pre code) {
+  font-size-adjust: cap-height 0.65;
 }
 
 kbd {
