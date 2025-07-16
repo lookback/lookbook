@@ -3292,6 +3292,18 @@
       "target": "blue-400",
       "type": "COLOR",
       "description": null
+    },
+    {
+      "name": "destructive-stroke",
+      "value": {
+        "r": 0.9411764740943909,
+        "g": 0.5490196347236633,
+        "b": 0.47843137383461,
+        "a": 1
+      },
+      "target": "red-400",
+      "type": "COLOR",
+      "description": null
     }
   ]
 }

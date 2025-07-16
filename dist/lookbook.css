@@ -1,4 +1,4 @@
-/*! lookbook.css v7.0.0-beta.28 */
+/*! lookbook.css v7.0.0-beta.27 */
 
 @layer theme, /* Tailwind */
   base, /* Tailwind */
@@ -1058,8 +1058,8 @@ fieldset {
   border-radius: var(--radius-lg);
   display: inline-flex;
   align-items: center;
-  padding: 0.4em 0.6em;
-  line-height: 1;
+  padding: 0.3em 0.6em;
+  line-height: 1.3;
   color: var(--fg);
   background-color: var(--bg);
 
