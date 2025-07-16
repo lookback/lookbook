@@ -1,4 +1,4 @@
-/*! lookbook.css v7.0.0-beta.27 */
+/*! lookbook.css v7.0.0-beta.29 */
 
 @layer theme, /* Tailwind */
   base, /* Tailwind */
@@ -222,6 +222,7 @@
   --color-muted: var(--color-grey-800);
   --color-disabled-text-light: var(--color-grey-700);
   --color-info-stroke: var(--color-blue-400);
+  --color-destructive-stroke: var(--color-red-400);
   --color-button-primary-bg: var(--color-blue-900);
   --button-radius: 9999px;
   --color-button-primary-text: var(--color-white);
