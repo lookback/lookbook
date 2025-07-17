@@ -342,6 +342,8 @@
   --color-input-border-warning: var(--color-warning-stroke);
   --color-input-icon-warning: var(--color-input-border-warning);
   --color-input-icon-disabled: var(--color-disabled-icon);
+  --color-button-tertiary-destructive-text: var(--color-destructive-text);
+  --color-button-tertiary-destructive-text-hover: var(--color-destructive-text-dark);
 }
 
 @theme {
@@ -944,6 +946,7 @@ fieldset {
     --text-hover: var(--color-button-tertiary-hover-text);
     --bg-disabled: var(--color-button-tertiary-disabled-bg);
     --text-disabled: var(--color-button-tertiary-disabled-text);
+    --color-outline: var(--text);
     outline-offset: -2px;
 
     &:not(:disabled) {
@@ -976,6 +979,12 @@ fieldset {
           background-color: var(--color-grey-300);
         }
       }
+    }
+
+    &--destructive {
+      --text: var(--color-button-tertiary-destructive-text);
+      --text-hover: var(--color-button-tertiary-destructive-text-hover);
+      --text-active: var(--color-button-tertiary-destructive-text-hover);
     }
   }
 }

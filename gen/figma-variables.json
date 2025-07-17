@@ -2697,6 +2697,30 @@
       "target": "disabled-icon",
       "type": "COLOR",
       "description": null
+    },
+    {
+      "name": "button-tertiary-destructive-text",
+      "value": {
+        "r": 0.6470588445663452,
+        "g": 0.2549019753932953,
+        "b": 0.1882352977991104,
+        "a": 1
+      },
+      "target": "destructive-text",
+      "type": "COLOR",
+      "description": null
+    },
+    {
+      "name": "button-tertiary-destructive-text-hover",
+      "value": {
+        "r": 0.47058823704719543,
+        "g": 0.19607843458652496,
+        "b": 0.14901961386203766,
+        "a": 1
+      },
+      "target": "destructive-text-dark",
+      "type": "COLOR",
+      "description": null
     }
   ],
   "semantic": [

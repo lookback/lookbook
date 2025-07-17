@@ -104,6 +104,7 @@
     --text-hover: var(--color-button-tertiary-hover-text);
     --bg-disabled: var(--color-button-tertiary-disabled-bg);
     --text-disabled: var(--color-button-tertiary-disabled-text);
+    --color-outline: var(--text);
     outline-offset: -2px;
 
     &:not(:disabled) {
@@ -136,6 +137,12 @@
           background-color: var(--color-grey-300);
         }
       }
+    }
+
+    &--destructive {
+      --text: var(--color-button-tertiary-destructive-text);
+      --text-hover: var(--color-button-tertiary-destructive-text-hover);
+      --text-active: var(--color-button-tertiary-destructive-text-hover);
     }
   }
 }
