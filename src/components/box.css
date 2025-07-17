@@ -1,0 +1,26 @@
+.Box {
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-7) var(--spacing-8);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--color-white);
+  transform: translateZ(0); /* Optimise performance */
+
+  & > :last-child:not(dialog) {
+    margin-bottom: 0;
+  }
+
+  &--hoverable {
+    background-color: rgb(from var(--color-white) r g b / 85%);
+
+    &:where(:hover, :focus-visible, :focus-within) {
+      box-shadow: var(--shadow-lg);
+      background-color: var(--color-white);
+      text-decoration: none;
+    }
+
+    &:has(.BlockLink__Link:focus-visible) {
+      outline: 3px solid black;
+    }
+  }
+}

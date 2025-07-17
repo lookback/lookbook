@@ -1,20 +1,21 @@
 {
   "name": "@lookback/lookbook",
-  "version": "6.5.0",
+  "version": "7.0.0-beta.30",
   "description": "The design system of Lookback",
   "main": "index.js",
   "types": "dist/types.d.ts",
   "scripts": {
-    "clean": "rm -rf dist",
-    "prebuild": "npm run clean",
-    "start": "scripts/watch",
-    "test": "[ -z \"$CI\" ] && pa11y ./test/test.html || mkdir -p test-output && cp dist/lookbook.css test/lookbook.css && pa11y -S ./test-output/screenshot.png --config test/pa11y.config.json -r html ./test/test.html > test-output/results.html",
-    "build": "mkdir dist && cp colors.json dist/colors.json && scripts/build --full && npm run generate-types",
-    "update-colors": "scripts/fetch-figma-colors && npm run generate-types",
-    "generate-types": "scripts/generate-types",
-    "dist": "scripts/distribute \"dist/*.{css,json}\"",
-    "prepublishOnly": "npm run build",
-    "sizes": "mkdir -p sizes && ./scripts/sizes.sh --json > ./sizes/sizes.json && ./scripts/sizes.sh --html > ./sizes/sizes.html"
+    "build": "concurrently npm:build:* && npm run generate-types",
+    "build:css": "./build-css.sh",
+    "build:colors": "cat gen/figma-variables.json | node scripts/generate-colors.js > dist/colors.json",
+    "start": "concurrently npm:watch:*",
+    "test": "./scripts/list-missing-vars.sh",
+    "watch:gen": "node watch.js",
+    "watch:css": "./build-css.sh -w",
+    "generate-types": "cat dist/colors.json | node scripts/generate-types.js > dist/types.d.ts",
+    "vars": "echo '/* =inject-tailwind-variables */' | postcss --no-map",
+    "prepublishOnly": "npm run --silent vars > dist/vars",
+    "version": "npm run build && git add dist"
   },
   "repository": {
     "type": "git",
@@ -22,10 +23,9 @@
   },
   "license": "UNLICENSED",
   "files": [
+    "index.js",
     "lib",
-    "tailwind.config.js",
-    "dist",
-    "colors.json"
+    "dist"
   ],
   "keywords": [
     "css",
@@ -39,24 +39,21 @@
   },
   "homepage": "https://github.com/lookback/lookbook#readme",
   "devDependencies": {
-    "aws-sdk": "^2",
-    "fast-glob": "^3",
-    "pa11y": "^8",
-    "postcss": "^8",
-    "postcss-cli": "^11",
-    "prettier": "=2.0.5",
-    "@figma/plugin-typings": "*"
-  },
-  "peerDependencies": {
-    "postcss": "^8"
+    "@figma/plugin-typings": "*",
+    "@types/node": "^24.0.4",
+    "chokidar": "^4.0.3",
+    "concurrently": "^9",
+    "postcss-cli": "^11.0.1",
+    "prettier": "=2.0.5"
   },
   "dependencies": {
-    "@csstools/postcss-minify": "^2",
-    "@fullhuman/postcss-purgecss": "^6",
-    "autoprefixer": "^10",
-    "postcss-color-function": "^4",
+    "@tailwindcss/postcss": "^4",
+    "postcss": "^8",
     "postcss-import": "^16",
-    "postcss-nested": "^7",
-    "tailwindcss": "=2.0.2"
+    "postcss-nested": "^7"
+  },
+  "peerDependencies": {
+    "postcss": "^8",
+    "tailwindcss": "^4"
   }
 }

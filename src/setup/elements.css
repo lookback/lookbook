@@ -1,71 +1,55 @@
-/*
-HTML ELEMENTS
-----------------------------------------------------------------*/
-
 :where(abbr[title], abbr[data-tooltip]) {
   cursor: help;
 }
 
 a {
-  color: var(--link-color);
+  color: var(--color-link-text);
   text-decoration: none;
 
   &:hover {
-    color: var(--link-color-hover);
+    color: var(--color-link-text-hover);
     text-decoration: underline;
   }
 }
 
 :where(dt, summary) {
-  font-weight: 600;
-}
-
-:where(code, pre, tt, kbd, samp) {
-  font-family: theme('fontFamily.mono');
+  font-weight: bold;
 }
 
 pre {
-  border-radius: theme('borderRadius.lg');
-  font-size: theme('fontSize.f6');
-  padding: theme('spacing.3');
-  background-color: var(--blue-90);
-  color: white;
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  padding: var(--spacing-5);
+  background-color: var(--color-info-bg-strong);
+  color: var(--color-white);
 }
 
-:where(code, kbd, mark) {
-  border-radius: theme('borderRadius.DEFAULT');
-  color: var(--grey-100);
-  padding: 0.1em 0.4em;
-  background-color: var(--grey-40);
+:where(code, kbd, mark):not(pre > *) {
+  border-radius: var(--radius-xs);
+  padding-inline: 0.2em;
+  background-color: var(--color-grey-200);
+  white-space: nowrap;
 }
 
-code {
-  font-size: 0.875em;
-}
-
-pre code {
-  font-size: inherit;
-  padding: 0;
-  background: none;
-  border: 0;
-  color: inherit;
+code:not(pre code) {
+  font-size-adjust: cap-height 0.65;
 }
 
 kbd {
-  --border: var(--grey-60);
-  font-family: theme('fontFamily.sans');
-  font-weight: bold;
+  --border: var(--color-grey-600);
+  font-family: var(--font-sans);
+  font-weight: var(--font-weight-bold);
   background-color: #fefefe;
+  color: var(--color-text-body);
   border: 1px solid var(--border);
   box-shadow: 0 2px 0 var(--border);
-  padding-block: 1px;
 }
 
 mark {
-  background-color: var(--orange-30);
-  color: var(--orange-80);
+  background-color: var(--color-callout-bg);
+  color: var(--color-callout-text);
 }
 
-figcaption {
-  color: var(--grey-80);
+hr {
+  border-color: var(--color-border-dark);
 }

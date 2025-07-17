@@ -1,0 +1,31 @@
+@theme {
+  --color-*: initial;
+  --radius-*: initial;
+  --tracking-*: initial;
+  --leading-*: initial;
+  --spacing-*: initial;
+  --text-*: initial;
+  --font-weight-*: initial;
+  --shadow-*: initial;
+  /* =inject-tailwind-variables */
+}
+
+@theme {
+  /** This was missing from the builtin Tailwind utils. */
+  --spacing-0: 0;
+}
+
+/* Overrides for the default Tailwind theme */
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@media (resolution: 1x) {
+  :root {
+    /* This is 1.5px in Figma. */
+    --border-width-2: 2px;
+    /* This is 2.5px in Figma. */
+    --border-width-4: 3px;
+  }
+}

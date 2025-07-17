@@ -12,36 +12,15 @@ jobs:
       - restore_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
 
-      - run:
-          name: Dependencies
-          command: npm install --no-audit --no-save
+      - run: npm install --no-audit --no-save
 
       - save_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
           paths:
             - ./node_modules
-    
-      - run:
-          name: Build
-          command: npm run build
-          
-      - run:
-          name: Install browsers
-          command: npx puppeteer browsers install
-
-      - run:
-          name: Test
-          command: npm test
-
-      - store_test_results:
-          path: test-output
-
-      - run:
-          name: Write file sizes report
-          command: npm run sizes
-
-      - store_artifacts:
-          path: sizes
+            
+      - run: npm test
+      - run: npm run build
 
       - store_artifacts:
           path: dist

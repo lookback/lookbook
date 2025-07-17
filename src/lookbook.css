@@ -1,11 +1,22 @@
-@charset "utf-8";
+@layer theme, /* Tailwind */
+  base, /* Tailwind */
+  lookbook-base,
+  components, /* Tailwind */
+  lookbook-components,
+  app,
+  utilities, /* Tailwind */
+  lookbook-utils;
 
-/*
-* The LOOKBOOK
-*
-* Copyright Lookback
-*/
+/* =inject-tailwind */
 
-@import 'base.css';
+@import 'figma-variables.css' layer(theme);
 
-@import 'utils.css';
+@import 'reset' layer(lookbook-base);
+
+@import 'setup' layer(lookbook-base);
+
+@import 'components' layer(lookbook-components);
+
+@import 'utils' layer(lookbook-utils);
+
+@import 'tailwind-utils';
